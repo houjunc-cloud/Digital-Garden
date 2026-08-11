@@ -13,6 +13,6 @@ The cuspidal rank one spherical varieties of adjoint type are given in Knop's ta
 3. $P_{\alpha_2, SO_4} \backslash SO_5$
 4. $H_{G_2} \backslash G_2$ where $H_{G_2}=\operatorname{GL}_2^{\mathrm{long}}\ltimes\left(U_{2\alpha_1+\alpha_2}U_{3\alpha_1+\alpha_2}U_{3\alpha_1+2\alpha_2}\right)$
 
-The problem is that the twisted Levi variety could be non-affine, and the support of a spherical root could conta
+The problem is that the twisted Levi variety could be non-affine, and the support of a spherical root could contain the one of some other spherical roots.
 
 
