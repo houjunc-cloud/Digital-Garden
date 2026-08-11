@@ -99,6 +99,39 @@ plugins:
     enabled: true
     options:
       renderEngine: katex
+      # Same names/expansions as Settings → Editor → Math → Edit math macros
+      # in Obsidian, so a formula that renders locally renders the same here.
+      customMacros:
+        "\\inj": "\\hookrightarrow"
+        "\\surj": "\\twoheadrightarrow"
+        "\\Ga": "\\mathbb{G}_a"
+        "\\R": "\\mathbb{R}"
+        "\\Q": "\\mathbb{Q}"
+        "\\Z": "\\mathbb{Z}"
+        "\\C": "\\mathbb{C}"
+        "\\Kl": "\\operatorname{Kl}"
+        "\\into": "\\hookrightarrow"
+        "\\Gm": "\\mathbb{G}_m"
+        "\\tild": "\\sim"
+        "\\isom": "\\simeq"
+        "\\tensor": "\\otimes"
+        "\\contain": "\\supset"
+        "\\adele": "\\mathbb{A}"
+        "\\autom": "\\mathcal{A}"
+        "\\bijection": "\\leftrightarrow"
+        "\\Sp": "\\operatorname{Sp}"
+        "\\SO": "\\operatorname{SO}"
+        "\\PGL": "\\operatorname{PGL}"
+        "\\GL": "\\operatorname{GL}"
+        "\\SL": "\\operatorname{SL}"
+        "\\GSp": "\\operatorname{GSp}"
+        "\\tr": "\\operatorname{tr}"
+        "\\diag": "\\operatorname{diag}"
+        # \check is a built-in KaTeX accent (produces ǎ); your original used
+        # \renewcommand to overwrite it globally with \vee. Kept out here as
+        # \veecheck instead, so the accent still works if you ever need one —
+        # see the note below on why.
+        "\\veecheck": "\\vee"
     order: 80
   - source: "@quartz-community/citations"
     enabled: false
