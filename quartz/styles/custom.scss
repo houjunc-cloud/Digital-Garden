@@ -21,8 +21,17 @@
   --accent-l: 33%;
 
   // The theme also redefines --headerFont (to Schibsted Grotesk); --bodyFont
-  // and --codeFont it leaves alone, so only this one needs restating.
-  --headerFont: "Newsreader", Georgia, "Times New Roman", serif;
+  // and --codeFont it leaves alone, but all three need CJK fallbacks appended:
+  // Newsreader, Source Sans Pro and IBM Plex Mono carry no Chinese glyphs, so
+  // without these the browser picks a fallback per-character and the result is
+  // inconsistent. Latin still renders in the configured face — the CJK font
+  // only takes over for characters the first font can't supply.
+  --headerFont: "Newsreader", Georgia, "Songti SC", "Noto Serif CJK SC",
+    "Source Han Serif SC", SimSun, serif;
+  --bodyFont: "Source Sans Pro", system-ui, "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  --codeFont: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo,
+    "PingFang SC", "Noto Sans CJK SC", monospace;
 }
 
 // #8fc7a3 — same hue, lifted for contrast against the dark background.

@@ -37,7 +37,7 @@ c.pageTitle = "HJC's Garden"
 c.pageTitleSuffix = " · digital garden"
 c.enableSPA = true
 c.enablePopovers = true
-c.locale = "en-US"
+c.locale = "zh-CN"
 if (baseUrl) c.baseUrl = baseUrl
 
 // Keep templates, scratch space, and Obsidian internals out of the built site.

@@ -35,13 +35,13 @@ cd ~/"Digital Garden"
 npx quartz build --serve
 ```
 
-> **Node lives in `~/.local/node`** on this machine — it was installed as a
-> plain tarball rather than system-wide, so `node` and `npx` are only on your
-> PATH if you say so. Add this line to `~/.zshrc` once and every new terminal
-> will find them:
+> **Node and gh live under `~/.local`** on this machine — both were installed as
+> plain tarballs rather than system-wide, so `node`, `npx` and `gh` are only on
+> your PATH if you say so. Add this line to `~/.zshrc` once and every new
+> terminal will find them:
 >
 > ```
-> export PATH="$HOME/.local/node/bin:$PATH"
+> export PATH="$HOME/.local/node/bin:$HOME/.local/bin:$PATH"
 > ```
 >
 > Until you do, prefix commands with it: `PATH="$HOME/.local/node/bin:$PATH" npx quartz build --serve`

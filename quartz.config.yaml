@@ -8,7 +8,7 @@ configuration:
   # replace `null` with `provider: plausible` (and register the domain with
   # Plausible, otherwise it reports nowhere).
   analytics: null
-  locale: en-US
+  locale: zh-CN
   baseUrl: hjc-garden.pages.dev
   ignorePatterns:
     - private
