@@ -8,3 +8,5 @@ We consider twisted Levi variety $X^L_{\psi} := X^0P/(U,\psi)$ ($U$ acts freely 
 
 
 
+
+
