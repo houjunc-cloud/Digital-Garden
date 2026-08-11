@@ -1,3 +1,3 @@
 [[2026-08-11]]的问题1
 
-Assume $S_X = 0$ and $P(X)=B$ and $X$ affine homogeneous first. Then $X = H \backslash G$. We consider twisted Levi variety $X^L_{\psi} := X^0P/(U,\psi)$, then $X^L/(N_L, \psi) \into X/(N,\psi)$ where $P=LU$ with $\Delta_L = supp~ \sigma$, $\sigma \in \Sigma_X$. The orbital integral $\mathcal O_{\gamma}(f):= \int_{S_{\gamma} \backslash H(\adele) \times N}$ for $\gamma \in H(F)\backslash G(F)/N(F)$
+Assume $S_X = 0$ and $P(X)=B$ and $X$ affine homogeneous first. Then $X = H \backslash G$. We consider twisted Levi variety $X^L_{\psi} := X^0P/(U,\psi)$, then $X^L/(N_L, \psi) \into X/(N,\psi)$ where $P=LU$ with $\Delta_L = supp~ \sigma$, $\sigma \in \Sigma_X$. The orbital integral $\mathcal O_{\gamma}(F):= \int_{N_\gamma (\adele) \times N (\adele)} F(\gamma n) \xi(n) dn$ for $\gamma \in H(F)\backslash G(F)/N(F)$
