@@ -18,7 +18,9 @@ The cuspidal rank one spherical varieties of adjoint type are given in Knop's ta
 3. $P_{\alpha_2, SO_4} \backslash SO_5$
 4. $H_{G_2} \backslash G_2$ where $H_{G_2}=\operatorname{GL}_2^{\mathrm{long}}\ltimes\left(U_{2\alpha_1+\alpha_2}U_{3\alpha_1+\alpha_2}U_{3\alpha_1+2\alpha_2}\right)$
 
-whose spherical roots are all of the form $\alpha = \alpha_1 + \alpha_2$, hence $\alpha^\vee = \alpha_i^\vee|_{X^*(A_X)}$. This table should be interpreted as 
+whose spherical roots are all of the form $\alpha = \alpha_1 + \alpha_2$, hence $\alpha^\vee = \alpha_i^\vee|_{X^*(A_X)}$. 
+
+How is Knop's table related to SV's Levi variety? 
 
 The problem is that the twisted Levi variety could be non-affine (for example of the form $(P_{\alpha_2, SO_4}, \psi) \backslash SO_5$) and not rank one (for example $GL_2 \backslash GL_3$), also the support of a spherical root could contain the support of some other spherical roots.
 
