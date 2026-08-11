@@ -6,7 +6,7 @@ We consider twisted Levi variety $X^L_{\psi} := X^0P/(U,\psi)$ ($U$ acts freely 
 
 # Spherical roots of twisted Levi variety
 
-The cuspidal rank one spherical varieties of adjoint type 
+The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumptions
 
 
 
