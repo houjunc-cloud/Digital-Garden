@@ -15,6 +15,6 @@ The cuspidal rank one spherical varieties of adjoint type are given in Knop's ta
 
 whose spherical roots are all of the form $\alpha_1 + \alpha_2$.
 
-The problem is that the twisted Levi variety could be non-affine, not rank one and the support of a spherical root could contain the support of some other spherical roots.
+The problem is that the twisted Levi variety could be non-affine (for example of the form $(P_{\alpha_2, SO_4}, \psi) \backslash SO_5$), not rank one and the support of a spherical root could contain the support of some other spherical roots.
 
 
