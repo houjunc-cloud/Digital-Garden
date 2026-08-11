@@ -17,6 +17,6 @@ whose spherical roots are all of the form $\alpha_1 + \alpha_2$.
 
 The problem is that the twisted Levi variety could be non-affine (for example of the form $(P_{\alpha_2, SO_4}, \psi) \backslash SO_5$) and not rank one (for example $GL_2 \backslash GL_3$), also the support of a spherical root could contain the support of some other spherical roots.
 
-One first reduces to $X^L_\psi \surj X^L_\psi/Z(L)^0$ 
+To match this classification, one first reduces to the adjoint type $X^L_\psi \surj X^L_\psi/Z(L)^0$,  
 
 
