@@ -12,3 +12,6 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+# Machine-local Claude Code config (contains absolute paths)
+.claude/settings.local.json

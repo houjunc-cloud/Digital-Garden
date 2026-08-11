@@ -1,3 +1,45 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ---------------------------------------------------------------------------
+// Re-assert the garden theme over @quartz-themes/default.
+//
+// The theme package's stylesheet is injected *after* index.css (where the
+// `configuration.theme` block in quartz.config.yaml ends up), and it defines
+// its own accent at `:root:root` and its heading font at
+// `html[saved-theme="…"] body h1`. Both outrank what the config emits, so the
+// green accent and Newsreader headers get overwritten.
+//
+// Rather than fight it per-property, override the theme's own knobs — the
+// `--accent-*` triplet every derived colour in the theme is computed from —
+// at a specificity that beats `:root:root`.
+// ---------------------------------------------------------------------------
+
+// #3b6b4c, the light-mode `secondary` from quartz.config.yaml.
+:root:root:root {
+  --accent-h: 141;
+  --accent-s: 29%;
+  --accent-l: 33%;
+
+  // The theme also redefines --headerFont (to Schibsted Grotesk); --bodyFont
+  // and --codeFont it leaves alone, so only this one needs restating.
+  --headerFont: "Newsreader", Georgia, "Times New Roman", serif;
+}
+
+// #8fc7a3 — same hue, lifted for contrast against the dark background.
+:root:root:root[saved-theme="dark"] {
+  --accent-h: 141;
+  --accent-s: 33%;
+  --accent-l: 67%;
+}
+
+// Headings: hand them back to the configured header font (Newsreader).
+:root:root:root body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--headerFont);
+  }
+}
