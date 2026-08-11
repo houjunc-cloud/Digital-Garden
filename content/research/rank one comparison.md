@@ -6,6 +6,11 @@ We consider twisted Levi variety $X^L_{\psi} := X^0P/(U,\psi)$ ($U$ acts freely 
 
 # Spherical roots of twisted Levi variety
 
+## Untwisted Levi variety (SV)
+
+$X^L_\Theta$
+##  Support of spherical roots
+
 The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption * can only be:
 
 1. $GL_2 \backslash PGL_3$
