@@ -10,5 +10,6 @@ The cuspidal rank one spherical varieties of adjoint type are given in Knop's ta
 
 1. $GL_2 \backslash PGL_3$
 2. $PGL_2^\Delta \backslash PGL_2 \times PGL_2$
-3. 
+3. $(P_{\alpha_2, SO_4}, \psi) \backslash SO_5$
+4. 
 
