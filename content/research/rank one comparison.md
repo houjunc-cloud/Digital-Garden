@@ -8,7 +8,7 @@ We consider twisted Levi variety $X^L_{\psi} := X^0P/(U,\psi)$ ($U$ acts freely 
 
 ## Untwisted Levi variety (SV)
 
-$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta)$
+$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = \Theta ^\perp \subset X^*(A_X)$.
 ##  Support of spherical roots
 
 The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption * can only be:
