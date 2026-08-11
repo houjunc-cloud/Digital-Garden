@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Runs scripts/autosync.sh once a minute so notes publish themselves.
+
+  The script exits immediately when content/ is unchanged, so the steady-state
+  cost is one `git status` per minute. Install:
+
+    cp scripts/autosync.plist ~/Library/LaunchAgents/com.hjc.garden-autosync.plist
+    launchctl load ~/Library/LaunchAgents/com.hjc.garden-autosync.plist
+
+  Stop it:
+
+    launchctl unload ~/Library/LaunchAgents/com.hjc.garden-autosync.plist
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.hjc.garden-autosync</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/houjunchen/Digital Garden/scripts/autosync.sh</string>
+  </array>
+
+  <key>StartInterval</key>
+  <integer>60</integer>
+
+  <!-- Don't fire during login; wait for the first interval instead. -->
+  <key>RunAtLoad</key>
+  <false/>
+
+  <!-- The script keeps its own timestamped log; these catch anything that
+       escapes it, such as a bash-level failure. -->
+  <key>StandardOutPath</key>
+  <string>/Users/houjunchen/Library/Logs/garden-autosync.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/houjunchen/Library/Logs/garden-autosync.err.log</string>
+</dict>
+</plist>
