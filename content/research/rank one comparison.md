@@ -6,6 +6,7 @@ We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts
 
 # Spherical roots of twisted Levi variety
 
+We assume $X$ is wavefront for simplicity.
 ## Untwisted Levi variety (SV)
 
 $X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots from Whittaker induction (since $X^L_{\Theta, \psi}$ = )
