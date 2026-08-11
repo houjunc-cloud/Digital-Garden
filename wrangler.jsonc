@@ -1,0 +1,18 @@
+{
+  // Serves the Quartz build as static assets from a Cloudflare Worker.
+  //
+  // Without this file the Worker has nothing to serve but its starter script,
+  // which answers every path with "Hello world" — including paths that should
+  // 404. `not_found_handling` points unknown URLs at the 404.html Quartz emits,
+  // so excluded notes (drafts, anything under content/private/) return a real
+  // 404 instead of silently resolving.
+  //
+  // `name` must match the Worker in the Cloudflare dashboard — renaming it here
+  // creates a second Worker rather than updating the existing one.
+  "name": "digital-garden",
+  "compatibility_date": "2026-08-11",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

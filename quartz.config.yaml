@@ -9,7 +9,7 @@ configuration:
   # Plausible, otherwise it reports nowhere).
   analytics: null
   locale: zh-CN
-  baseUrl: hjc-garden.pages.dev
+  baseUrl: digital-garden.houjunc16.workers.dev
   ignorePatterns:
     - private
     - templates
