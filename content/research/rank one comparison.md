@@ -48,6 +48,6 @@ $G_X$ has $2^{\Delta_X}$ - many relevant orbit families (family means all releva
 
 ## Matching of Distribution
 
-### Matching from 
+### Matching from X^{L,ad}_{\alpha, \psi)$ to 
 
 
