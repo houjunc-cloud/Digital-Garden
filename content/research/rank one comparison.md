@@ -14,7 +14,7 @@ $X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X
 >[!Statement]
 >$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L$  comes from a BZSV subquadruple of $X$
 
-If so, then a large part of the comparison can be localized to a subcomparison. Ho
+If so, then a large part of the comparison can be localized to a subcomparison between $X^L_{\Theta, \psi}$ and $G_$, but its meaning is still unclear
 
 ^BZSV-subquadruple
 
