@@ -14,7 +14,7 @@ $X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X
 >[!Proposition]
 >$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L = W-Ind_M^L (M \cap HU)\backslash M$  for a Levi $M \subset L$ with $\Delta_M = \Delta_L \backslash S_{\Theta, \psi}$, where $S_{\Theta, \psi} = \{\alpha \in \Delta_L | \psi_\Theta \text{ is nontrivial on } \mathfrak g_\alpha\}$, assuming $H1$ gives the open Borel orbit in $H \backslash G$)
 
-It suffices to prove $X^L_$
+It suffices to prove $L \cap HU = (M \cap HU) $
 
 With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^L_\Theta / Z(L)$.
 ##  Support of spherical roots
