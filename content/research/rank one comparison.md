@@ -49,7 +49,7 @@ $G_X$ has $2^{\Delta_X}$ - many relevant orbit families (family means all releva
 
 - compute all relevant orbits of $X$ and show there are $2^{\Delta_X}$ - many of them and they are indexed by $\Delta_X$.
 
-This step is essential: we must study the "most singular part" of $X$, no matter what that is. And the rest should be distributed into all $X^0P_\Theta$
+This step is essential: we must study the "most singular part" of $X$, no matter what that is. And the rest should be distributed into all $X^0P_\Theta$.
 
 - show part of the relevant orbits of $X^L_{\alpha, \psi}$ match those of $G_{X,\alpha}$ (the Levi of $G_X$ with simple root $\alpha$), in other words, we ignore the extra Whittaker induced part.
 
