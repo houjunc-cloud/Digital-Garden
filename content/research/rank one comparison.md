@@ -9,7 +9,7 @@ We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts
 We assume $X$ is wavefront to avoid some technical issues.
 ## Untwisted Levi variety (SV)
 
-$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there may be extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. These roots are not spherical roots of $X$. It is worth noting that we only know this space is quasi-affine homogeneous spherical satisfying \*. For example, $X = Sp_2^\diag \times Sp_2 \backslash Sp_2 \times Sp_4$ and one of its Levi variety corresponds to quadruple $(Sp_4,SL_2,(2,1^2),std)$. I don't know how to prove the following but I believe it's true.
+$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there may be extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. These new roots are not spherical roots of $X$. It is worth noting that we only know this space is quasi-affine homogeneous spherical satisfying \*. For example, $X = Sp_2^\diag \times Sp_2 \backslash Sp_2 \times Sp_4$ and one of its Levi variety corresponds to quadruple $(Sp_4,SL_2,(2,1^2),std)$. I don't know how to prove the following but I believe it's true.
 
 >[!Statement]
 >$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L$  comes from a BZSV subquadruple of $X$
