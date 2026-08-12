@@ -25,10 +25,6 @@ How is Knop's table related to SV's Levi variety? Well, the latter by definition
 
 In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one. Also Whittaker induction does not change $S^p(X)$. Hence it is still tempered and falls into the classification above up to central isogeny, with twisted unipotent.
 
-The problem is that the twisted Levi variety could be non-affine (for example of the form $(P_{\alpha_2, SO_4}, \psi) \backslash SO_5$) and not rank one (for example $GL_2 \backslash GL_3$), also the support of a spherical root could contain the support of some other spherical roots.
-
-To match this classification, the idea is to reduce to rank one adjoint type first, then use some $p$-adic diffeomorphism to go back to $X$ (as CCL or Jacquet did for $SL_2 \times Z_{GL_2} \surj GL_2$ to separate the toric part and tangent part, hopefully)
-
-So reduce to the adjoint type $X^L_\psi \surj X^L_\psi/Z(L)^0$,  
+So reduce to the adjoint-type $X^L_\psi \surj X^L_\psi/Z(L)$,  
 
 
