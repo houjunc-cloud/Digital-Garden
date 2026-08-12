@@ -18,6 +18,8 @@ If so, then a large part of the comparison can be localized to part of a subcomp
 
 ^BZSV-subquadruple
 
+Or, one passes to 
+
 With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^{L,ad}_\Theta :=X^L_\Theta / Z(L)$.
 ##  Support of Spherical Roots
 
