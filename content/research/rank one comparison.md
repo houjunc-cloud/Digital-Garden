@@ -1,6 +1,6 @@
 [[2026-08-11]]的问题1
 
-Assume $S_X = 0$ and $P(X)=B$ and $X$ affine homogeneous with no type N roots first (Call it assumption *). $F$ is a number field. Then $X = H \backslash G$ and $X_1$ is $G_X$ Whittaker. We ignore the rationality problem for now.  
+Assume $S_X = 0$ and $P(X)=B$ and $X$ affine homogeneous with no type N roots first (Call it assumption \*). $F$ is a number field. Then $X = H \backslash G$ and $X_1$ is $G_X$ Whittaker. We ignore the rationality problem for now.  
 
 We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts freely on $X^0P$), then $X^L_{\alpha, \psi}/(N_L, \psi) \into X/(N,\psi)$ where $P=LU$ with $\Delta_L = supp~ \alpha$, $\alpha \in \Sigma_X$. The orbital integral $\mathcal O_{\gamma, X}(F):= \int_{N_\gamma (\adele) \times N (\adele)} F(\gamma n) \xi(n) dn$ for $\gamma \in X^0P(F)/N(F)$ and $F = p_{G !}(f) \in C^\infty_c (X(F))$ can be rewritten as $\mathcal O_{\gamma, X}(F) = \mathcal O_{\gamma, X^L_\psi}(p_{X!}(F))$ where $p_{X!}(f) = \mathcal F_U(f) = \int_{U(\adele)} F(\gamma u) \xi_U(u)du$ is the pushforward map/Fourier transform induced by $X^0P=X^0L \to X^L_{\alpha, \psi}$. 
 
@@ -9,7 +9,7 @@ We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts
 We assume $X$ is wavefront to avoid some technical issues.
 ## Untwisted Levi variety (SV)
 
-$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. It is worth noting that we only know this space is quasi-affine homogeneous spherical satisfying *. It may correspond to a complete
+$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. It is worth noting that we only know this space is quasi-affine homogeneous spherical satisfying \*. It may correspond to a complete
 
 >[!Proposition]
 >$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L$  for a Levi $M \subset L$ with $\Delta_M = \Delta_L \backslash S_{\Theta, \psi}$, where $S_{\Theta, \psi} = \{\alpha \in \Delta_L | \psi_\Theta \text{ is nontrivial on } \mathfrak g_\alpha\}$, assuming $H1$ gives the open Borel orbit in $H \backslash G$)
@@ -19,7 +19,7 @@ It suffices to prove $L \cap (HU, \psi_\Theta) = (M \cap HU) (V, \psi_\Theta)$ w
 With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^L_\Theta / Z(L)$.
 ##  Support of spherical roots
 
-The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption * can only be:
+The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption \* can only be:
 
 1. $GL_2 \backslash PGL_3$
 2. $PGL_2^\Delta \backslash PGL_2 \times PGL_2$
