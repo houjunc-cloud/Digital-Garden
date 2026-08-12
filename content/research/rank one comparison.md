@@ -38,7 +38,7 @@ In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has 
 
 ## Matching of L and G
 
- $X^L_{\Theta, \psi}/(N_L, \psi) \into X/(N,\psi)$ and the 
+ $X^L_{\Theta, \psi}/(N_L, \psi) \into X/(N,\psi)$ since stabilizer lies in $N_L$, 
 
 ## Matching of G and G_X
 
