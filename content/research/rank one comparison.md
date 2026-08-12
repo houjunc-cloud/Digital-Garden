@@ -32,7 +32,7 @@ whose spherical roots are all of the form $\alpha = \alpha_1 + \alpha_2$, hence 
 
 How is Knop's table related to SV's Levi variety? Well, the latter by definition puts back the toric direction that Knop has modded out in Localization of spherical variety, i.e. $X^L_\Theta / T_Z \isom Z^L_\Theta$ where $T_Z = \Gm^{\Gamma_Z} \into A_{X, \Theta}$. 
 
-In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one. Hence it falls into the classification above up to central isogeny, with twisted unipotent.
+In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one, so it has no . It falls into the classification above up to central isogeny, with twisted unipotent.
 
 So the cuspidal adjoint-type $X^L_{\alpha, \psi} \surj X^L_{\alpha, \psi}/Z(L)$ is exactly one of the four above. Hence in this case, the statement above is true.
 
