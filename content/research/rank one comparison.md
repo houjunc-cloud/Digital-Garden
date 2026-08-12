@@ -9,7 +9,7 @@ We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts
 We assume $X$ is wavefront to avoid some technical issues.
 ## Untwisted Levi variety (SV)
 
-$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. It is worth noting that we only know this space is quasi-affine homogeneous spherical satisfying \*. For example, $X = Sp_2^\diag \times Sp_2 \backslash Sp_2 \times Sp_4$ and one of its Levi variety corresponds to quadruple $(Sp_4,SL_2,(2,1^2),std)$. I don't know how to prove the following but I believe it's true. It is true for rank one localization.
+$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. It is worth noting that we only know this space is quasi-affine homogeneous spherical satisfying \*. For example, $X = Sp_2^\diag \times Sp_2 \backslash Sp_2 \times Sp_4$ and one of its Levi variety corresponds to quadruple $(Sp_4,SL_2,(2,1^2),std)$. I don't know how to prove the following but I believe it's true.
 
 >[!Statement]
 >$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L$  comes from a BZSV subquadruple of $X$
@@ -32,6 +32,6 @@ How is Knop's table related to SV's Levi variety? Well, the latter by definition
 
 In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one. Also Whittaker induction does not change $S^p(X)$. Hence it is still tempered and falls into the classification above up to central isogeny, with twisted unipotent.
 
-So the cuspidal adjoint-type $X^L_{\alpha, \psi} \surj X^L_{\alpha, \psi}/Z(L)$ is exactly one of the four above.
+So the cuspidal adjoint-type $X^L_{\alpha, \psi} \surj X^L_{\alpha, \psi}/Z(L)$ is exactly one of the four above. Hence in this case, the statement above is true.
 
 
