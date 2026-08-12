@@ -18,7 +18,7 @@ If so, then a large part of the comparison can be localized to part of a subcomp
 
 ^BZSV-subquadruple
 
-With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^L_\Theta^{ad}:=X^L_\Theta / Z(L)$.
+With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^{L,ad}_\Theta :=X^L_\Theta / Z(L)$.
 ##  Support of Spherical Roots
 
 The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption \* can only be:
@@ -32,7 +32,7 @@ whose spherical roots are all of the form $\alpha = \alpha_1 + \alpha_2$, hence 
 
 How is Knop's table related to SV's Levi variety? Well, the latter by definition puts back the toric direction that Knop has modded out in Localization of spherical variety, i.e. $X^L_\Theta / T_Z \isom Z^L_\Theta$ where $T_Z = \Gm^{\Gamma_Z} \into A_{X, \Theta}$. 
 
-In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one, so it only has one spherical root. It falls into the classification above up to central isogeny, with twisted unipotent. The cuspidal adjoint-type $X^L_{\alpha, \psi} \surj X^L_{\alpha, \psi}/Z(L)$ is exactly one of the four above. Hence in this case, the statement above is true.
+In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one, so it only has one spherical root. It falls into the classification above up to central isogeny, with twisted unipotent. The cuspidal adjoint-type $X^L_{\alpha, \psi} \surj X^a{L,ad}_{\alpha, \psi}$ is exactly one of the four above. Hence in this case, the statement above is true.
 
 # Matching of Orbits
 
