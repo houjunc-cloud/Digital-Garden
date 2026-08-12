@@ -9,7 +9,7 @@ We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts
 We assume $X$ is wavefront to avoid some technical issues.
 ## Untwisted Levi variety (SV)
 
-$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction (since $X^L_{\Theta, \psi} = (L \cap (HU,\psi)) \backslash L = WInd_M^L (M \cap HU)\backslash M)$ , assuming $H1$ gives the open Borel orbit in $H \backslash G$). With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^L_\Theta / Z(L)$.
+$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction (since $X^L_{\Theta, \psi} = (L \cap (HU,\psi)) \backslash L = W-Ind_M^L (M \cap HU)\backslash M)$ , assuming $H1$ gives the open Borel orbit in $H \backslash G$). With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^L_\Theta / Z(L)$.
 ##  Support of spherical roots
 
 The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption * can only be:
