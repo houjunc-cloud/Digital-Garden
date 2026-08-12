@@ -4,10 +4,10 @@ Assume $S_X = 0$ and $P(X)=B$ and $X$ affine homogeneous with no type N roots fi
 
 We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts freely on $X^0P$), then $X^L_{\alpha, \psi}/(N_L, \psi) \into X/(N,\psi)$ where $P=LU$ with $\Delta_L = supp~ \alpha$, $\alpha \in \Sigma_X$. The orbital integral $\mathcal O_{\gamma, X}(F):= \int_{N_\gamma (\adele) \times N (\adele)} F(\gamma n) \xi(n) dn$ for $\gamma \in X^0P(F)/N(F)$ and $F = p_{G !}(f) \in C^\infty_c (X(F))$ can be rewritten as $\mathcal O_{\gamma, X}(F) = \mathcal O_{\gamma, X^L_\psi}(p_{X!}(F))$ where $p_{X!}(f) = \mathcal F_U(f) = \int_{U(\adele)} F(\gamma u) \xi_U(u)du$ is the pushforward map/Fourier transform induced by $X^0P=X^0L \to X^L_{\alpha, \psi}$. 
 
-# Twisted Levi variety
+# Twisted Levi Variety
 
 We assume $X$ is wavefront to avoid some technical issues.
-## Untwisted Levi variety (SV)
+## Untwisted Levi Variety (SV)
 
 $X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there may be extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. ==These new roots are not spherical roots of $X$==. It is worth noting that we only know this space is quasi-affine homogeneous spherical satisfying \*. For example, $X = Sp_2^\diag \times Sp_2 \backslash Sp_2 \times Sp_4$ and one of its Levi variety corresponds to quadruple $(Sp_4,SL_2,(2,1^2),std)$. I don't know how to prove the following but I believe it's true.
 
@@ -19,7 +19,7 @@ If so, then a large part of the comparison can be localized to a subcomparison b
 ^BZSV-subquadruple
 
 With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^L_\Theta / Z(L)$.
-##  Support of spherical roots
+##  Support of Spherical Roots
 
 The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption \* can only be:
 
@@ -36,7 +36,12 @@ In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has 
 
 # Matching of Orbits
 
-## Matching from G to L
+## Matching of L and G
+
 The first two cases are fine
+
+## Matching of G and G_X
+
+## Matching of Periods
 
 
