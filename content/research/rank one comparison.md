@@ -36,6 +36,7 @@ In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has 
 
 # Matching of Orbits
 
+## Matching from G to L
 The first two cases are fine
 
 
