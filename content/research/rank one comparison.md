@@ -20,7 +20,7 @@ If so, then a large part of the comparison can be localized to part of a subcomp
 
 With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^{L,ad}_\Theta :=X^L_\Theta / Z(L)$.
 
-Consider the rank $|\Theta|$ variety $X^{L,ad}_{\Theta, \psi}$ or its isogeny to avoid the Whittaker problem above; we know $X^*(X^{L,ad}_{\Theta})_\Q = \Q \Theta$, there is no room for other new simple roots to be added.
+Consider the rank $|\Theta|$ variety $X^{L,ad}_{\Theta, \psi}$ or its isogeny to avoid the Whittaker problem above; we know $X^*(X^{L,ad}_{\Theta})_\Q = \Q \Theta$, there is no room for other new simple roots to be added, therefore it is not a Whittaker induction.
 ##  Support of Spherical Roots
 
 The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption \* can only be:
@@ -40,7 +40,7 @@ In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has 
 
 ## Matching of L and G
 
- $X^L_{\Theta, \psi}/(N_L, \psi) \into X/(N,\psi)$ since stabilizer lies in $N_L$, the problem is from $X^{L,ad}_{\Theta, \psi}$ to $X^L_{\Theta, \psi}$
+ $X^L_{\Theta, \psi}/(N_L, \psi) \into X/(N,\psi)$ since stabilizer lies in $N_L$, the problem is from $X^{L,ad}_{\Theta, \psi}$ to $X^L_{\Theta, \psi}$.
  
 ## Matching of G and G_X
 
