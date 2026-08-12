@@ -34,4 +34,6 @@ How is Knop's table related to SV's Levi variety? Well, the latter by definition
 
 In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one, so it only has one spherical root. It falls into the classification above up to central isogeny, with twisted unipotent. The cuspidal adjoint-type $X^L_{\alpha, \psi} \surj X^L_{\alpha, \psi}/Z(L)$ is exactly one of the four above. Hence in this case, the statement above is true.
 
+The first two 
+
 
