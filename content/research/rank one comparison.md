@@ -20,7 +20,7 @@ If so, then a large part of the comparison can be localized to part of a subcomp
 
 With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^{L,ad}_\Theta :=X^L_\Theta / Z(L)$.
 
-Consider the rank $|\Theta|$ variety $X^{L,ad}_{\Theta, \psi}$ or its isogeny to avoid the Whittaker problem above; we know $X^*(X^{L,ad}_{\Theta})_\Q = \Q \Theta$, there is no room for other new simple roots to be added, therefore it is not a Whittaker induction. 
+Or, consider the rank $|\Theta|$ variety $X^{L,ad}_{\Theta, \psi}$ or its isogeny to avoid the Whittaker problem above; we know $X^*(X^{L,ad}_{\Theta})_\Q = \Q \Theta$, there is no room for other new simple roots to be added, therefore it is not a Whittaker induction. 
 
 In fact, $X^{L,ad}_{\Theta, \psi}$ is not a good notation since the $\psi$ -twisting is not preserved by $Z(L)^0$, that also explains why Whittaker induction is killed.
 ##  Support of Spherical Roots
