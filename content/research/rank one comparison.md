@@ -43,8 +43,10 @@ In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has 
 
 $G_X$ has $2^{\Delta_X}$ - many relevant orbit families. To have orbit matching, we must 
 
+- compute all relevant orbits of $X$ and show there are $2^{\Delta_X}$ - many of them
+- show part of the relevant orbits of $X^L_{\alpha, \psi}$ match those of $G_{X,\alpha}$ (the Levi of $G_X$ with simple root $\alpha$), in other words, we ignore the extra Whittaker induced part.
 
-compute all relevant orbits of $X$, and show part of the relevant orbits of $X^L_{\alpha, \psi}$ match those of $G_{X,\alpha}$ (the Levi of $G_X$ with simple root $\alpha$), in other words, we ignore the extra Whittaker induced part.
+
 
 ## Matching of Distribution
 
