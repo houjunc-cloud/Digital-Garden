@@ -12,7 +12,7 @@ We assume $X$ is wavefront to avoid some technical issues.
 $X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction.
 
 >[!Proposition]
->$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L = W-Ind_M^L (M \cap HU)\backslash M$  for a Levi $M \subset L$ with $\Delta_M = \Delta_L \backslash S_{\Theta, \psi}$, where $S_{\Theta, \psi} = \{\alpha \in \Delta_L | \psi_\Theta \text{ is nontrivial on } \mathfrak g_\alpha\}$, assuming $H1$ gives the open Borel orbit in $H \backslash G$)
+>$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L$  for a Levi $M \subset L$ with $\Delta_M = \Delta_L \backslash S_{\Theta, \psi}$, where $S_{\Theta, \psi} = \{\alpha \in \Delta_L | \psi_\Theta \text{ is nontrivial on } \mathfrak g_\alpha\}$, assuming $H1$ gives the open Borel orbit in $H \backslash G$)
 
 It suffices to prove $L \cap (HU, \psi_\Theta) = (M \cap HU) (V, \psi_\Theta)$ where $Q=MV$ is the parabolic of $L$
 
