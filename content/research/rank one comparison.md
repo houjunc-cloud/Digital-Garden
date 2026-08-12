@@ -9,7 +9,7 @@ We consider twisted Levi variety $X^L_{\alpha, \psi} := X^0P/(U,\psi)$ ($U$ acts
 We assume $X$ is wavefront to avoid some technical issues.
 ## Untwisted Levi variety (SV)
 
-$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. 
+$X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction. It is worth noting that we only know this space is homogeneous spherical, and it could be unexpected 
 
 >[!Proposition]
 >$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L$  for a Levi $M \subset L$ with $\Delta_M = \Delta_L \backslash S_{\Theta, \psi}$, where $S_{\Theta, \psi} = \{\alpha \in \Delta_L | \psi_\Theta \text{ is nontrivial on } \mathfrak g_\alpha\}$, assuming $H1$ gives the open Borel orbit in $H \backslash G$)
