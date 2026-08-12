@@ -38,7 +38,7 @@ In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has 
 
 ## Matching of L and G
 
- $X^L_{\Theta, \psi}/(N_L, \psi) \into X/(N,\psi)$ since stabilizer lies in $N_L$, so identification of localization is fine.
+ $X^L_{\Theta, \psi}/(N_L, \psi) \into X/(N,\psi)$ since stabilizer lies in $N_L$, the problem is to $X^L_{\Theta, \psi}$
 ## Matching of G and G_X
 
 $G_X$ has $2^{\Delta_X}$ - many relevant orbit families (family means all relevant orbits inside one Borel orbit). To have orbit matching, we must 
@@ -48,6 +48,5 @@ $G_X$ has $2^{\Delta_X}$ - many relevant orbit families (family means all releva
 
 ## Matching of Distribution
 
-### Matching from X^{L,ad}_{\alpha, \psi)$ to 
 
 
