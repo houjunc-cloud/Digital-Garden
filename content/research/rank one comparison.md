@@ -11,7 +11,10 @@ We assume $X$ is wavefront to avoid some technical issues.
 
 $X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X_\Theta) = A_{X,\Theta} \subset X^*(A_X)$. From the untwisted to the twisted case, besides $\Theta$ there are extra spherical roots (simple roots in $supp~\Theta$) from Whittaker induction.
 
->[!theorem]
+>[!Proposition]
+>$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L = W-Ind_M^L (M \cap HU)\backslash M$  for a Levi $M \subset L$ with $\Delta_M = \Delta_L \backslash S_{\Theta, \psi}$, where $S_{\Theta, \psi} = \{\alpha \in \Delta_L | \psi_\Theta \text{ is nontrivial on } \mathfrak g_\alpha\}$, assuming $H1$ gives the open Borel orbit in $H \backslash G$)
+
+It suffices to prove $X^L_$
 
 With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is isogenous to the adjoint-type $L_{ad} = L/Z(L)$-variety $X^L_\Theta / Z(L)$.
 ##  Support of spherical roots
