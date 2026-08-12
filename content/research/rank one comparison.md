@@ -14,7 +14,7 @@ $X^L_\Theta$ has the same rank as $X$, and has spherical roots $\Theta$ and $Z(X
 >[!Statement]
 >$X^L_{\Theta, \psi} = (L \cap (HU,\psi_\Theta)) \backslash L$  comes from a BZSV subquadruple of $X$
 
-If so, then a large part of the comparison can be localized to a subcomparison between $X^L_{\Theta, \psi}$ and $L_{X^L_{\Theta, \psi}}$, but its meaning is still unclear since the extra Whittaker induced spherical roots will obstruct the identification of $L_{X^L_{\Theta, \psi}}$ with some part of $G_X$ (again the example $X = Sp_2^\diag \times Sp_2 \backslash Sp_2 \times Sp_4$).
+If so, then a large part of the comparison can be localized to a subcomparison between $X^L_{\Theta, \psi}$ and $L_{X^L_{\Theta, \psi}}$.
 
 ^BZSV-subquadruple
 
@@ -41,7 +41,7 @@ In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has 
  $X^L_{\Theta, \psi}/(N_L, \psi) \into X/(N,\psi)$ since stabilizer lies in $N_L$, so identification of localization is fine.
 ## Matching of G and G_X
 
-$G_X$ has $2^{\Delta_X}$ -many relevant orbit families. To have orbit matching, we must compute all relevant orbits of $X$, and show part of the relevant orbits of $X^L_{\alpha, \psi}$ match those of $G_{X,\alpha}$ (the Levi of $G_X$ with simple root $\alpha$), in other wordswe ignore the extra Whittaker induced part).
+$G_X$ has $2^{\Delta_X}$ -many relevant orbit families. To have orbit matching, we must compute all relevant orbits of $X$, and show part of the relevant orbits of $X^L_{\alpha, \psi}$ match those of $G_{X,\alpha}$ (the Levi of $G_X$ with simple root $\alpha$), in other words, we ignore the extra Whittaker induced part.
 
 ## Matching of Periods
 
