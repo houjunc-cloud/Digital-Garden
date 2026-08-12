@@ -25,6 +25,6 @@ How is Knop's table related to SV's Levi variety? Well, the latter by definition
 
 In particular, when $\Theta = \{\alpha\}$, $X^L_{\alpha, \psi}/Z(X_\alpha)$ has rank one. Also Whittaker induction does not change $S^p(X)$. Hence it is still tempered and falls into the classification above up to central isogeny, with twisted unipotent.
 
-So reduce to the adjoint-type $X^L_\psi \surj X^L_\psi/Z(L)$,  
+So the adjoint-type $X^L_\psi \surj X^L_\psi/Z(L)$ is exactly one of the four above.
 
 
