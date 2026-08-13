@@ -4,4 +4,4 @@ Assume $\Delta_1$ is polarizable. $\Delta_{G_X} = \Delta_{X_1} = \Delta_{X_1^L} 
 
 >[!Statement]
 >$(\Delta_{G_X} \backslash \Delta_{L_1}) \contain(\Delta_G \backslash \Delta_L)$
->Thus 
+>Thus $\Delta_{X^L}$ is divided into $\Delta_{X_1^L}$ and $W \subset \Delta_{G_X} \backslash $
