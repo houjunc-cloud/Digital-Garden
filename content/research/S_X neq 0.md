@@ -1,3 +1,3 @@
 [[2026-08-11]]的问题2
 
-The problem is 
+Assume $\Delta_1$ is polarizable. $\Delta_{X_1} = \Delta_{}$
