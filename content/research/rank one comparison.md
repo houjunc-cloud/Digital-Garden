@@ -56,7 +56,7 @@ This step is essential: we must study the "most singular part" of $X$, no matter
 
 Some new progress: Relate the relevant orbits to families of Lagrangians in the Whittaker reduction of $M$, then it becomes a problem of comparing the Whittaker reduction of $M$ and $M_1$.
 
-1. (I think )If we believe
+1. (the most )If we believe
 
 ## Matching of Distribution
 
