@@ -4,6 +4,6 @@ Mao and Rallis consider the comparison of $(G,G,\rho,0)$ and $(H = SL_2,1,0,\iot
 
 To fit in Venkatesh's principle, $G \times H$ acts on $\Tilde{M} = \mathcal O_{min}(G')$. $\Tilde{M} //_{Wh}H = V_{\rho} = M$ and $\Tilde{M}//_{Wh} G:=\Tilde{M}//_{\mathcal O_G} G = T^*(SL_2 , \Psi) = M_1$ where $\mathcal O_G$ is a lifting of $\iota_{reg, SL_2}$, i.e. $\iota'$. In the end, $\Tilde{M}//_{Wh}(G \times H) = \mathcal J (SL_2)$.
 
-On the speci$\Tilde{M}^\vee$
+On the spectral side, $\Tilde{M}^\vee = $
 
- In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well, so .
+ In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (at least in this case), so .
