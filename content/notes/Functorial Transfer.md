@@ -1,2 +1,2 @@
 
-In BZSV it is suggested that if there is a $G \times H$ - action on hyperspherical Hamiltonian space $M$, then 
+In BZSV it is suggested that if there is a $G^\vee \times H^\vee$ - action on a hyperspherical Hamiltonian space $M^\vee$, one should have $$
