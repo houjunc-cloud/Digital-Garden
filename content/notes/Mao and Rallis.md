@@ -21,7 +21,7 @@ To fit in "Venkatesh's principle", $G \times H$ acts on $\Tilde{M} = \mathcal O_
 
 For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is 
 
-GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') $
+GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection $ since Hamiltonian reduction and induction revers
 
 
 
