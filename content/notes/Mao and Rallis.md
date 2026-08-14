@@ -8,7 +8,7 @@ On the spectral side, $\Tilde{M}^\vee = $
 
  In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (at least in this case). After quantization, the picture becomes:
 
-- $\mathcal O_{min}(G') \to \Pi_{G'}$, the corresponding minimal representation. After taking $(N,\psi)$ and $(U_\theta,tr)$-coinvariants:
-- $M_1 \to \Omega_{\psi, \rho}$ 
-- $M \to ind^{H}_{N}\psi$
+- $\mathcal O_{min}(G') \to \Pi_{G'} = : \Pi$, the corresponding minimal representation. After taking $(N,\psi)$-coinvariants:
+- $M_1 \to \Pi_{U_\theta, \psi}= \Omega_{\psi, \rho}$ 
+- $M \to \Pi_{N_G,tr}ind^{H}_{N}\psi$
 
