@@ -11,3 +11,4 @@ On the spectral side, $\Tilde{M}^\vee = $
 - $\mathcal O_{min}(G') \to \Pi_{G'}$, after taking $(N,\psi)$ and $(U_\theta,tr)$-coinvariants:
 - $M_1 \to ind^{H}_{N}\psi$ 
 - $M \to \Omega_{\psi, \rho}$
+
