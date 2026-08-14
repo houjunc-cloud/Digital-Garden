@@ -6,7 +6,7 @@ To fit in Venkatesh's principle, $G \times H$ acts on $\Tilde{M} = \mathcal O_{m
 
 On the spectral side, $\Tilde{M}^\vee = $
 
- In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (since $(G,H)$ is ). After quantization, the picture becomes:
+ In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (since $(G,H)$ cocentralize each other). After quantization, the picture becomes:
 
 - $\mathcal O_{min}(G') \to \Pi_{G'} = : \Pi$, the corresponding minimal representation. After taking $(N,\psi)$-coinvariants:
 - $M_1 \to \Pi_{U_\theta, \psi}= \Omega_{\psi, \rho}$ which is the Weil representation attached to the symplectic $G$-space $V_\rho$
