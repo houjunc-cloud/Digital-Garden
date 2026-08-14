@@ -6,4 +6,6 @@ To fit in Venkatesh's principle, $G \times H$ acts on $\Tilde{M} = \mathcal O_{m
 
 On the spectral side, $\Tilde{M}^\vee = $
 
- In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (at least in this case), so .
+ In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (at least in this case). After quantization, the picture becomes:
+
+- 
