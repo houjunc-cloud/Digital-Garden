@@ -6,14 +6,14 @@ To fit in Venkatesh's principle, $G \times H$ acts on $\Tilde{M} = \mathcal O_{m
 
 On the spectral side, $\Tilde{M}^\vee = $
 
- In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (since $(G,H)$ cocentralize each other), i.e. 
+ In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (since $(G,H)$ cocentralize each other), i.e. the following draft:
  
  M --Quant--> \Pi
  |                          |
- Wh-red            
- |
- v
- M//_{Wh} G --Quant-->\Pi_{}
+ Wh-red            "Wh-red"
+ |                          |
+ v                         v
+ M//_{Wh} G --Quant-->\Pi_{(N,\psi)}
  
  After quantization, the picture becomes:
 
