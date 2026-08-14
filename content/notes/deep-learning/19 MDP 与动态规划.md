@@ -33,7 +33,7 @@ date: 2026-08-14
 
 **策略** $\pi:\mathcal{S}\to\mathcal{P}(\mathcal{A})$（平稳、随机）。
 
-**轨迹分布**：$s_0\sim\rho_0$，$a_t\sim\pi(\cdot|s_t)$，$s_{t+1}\sim P(\cdot|s_t,a_t)$。由 Ionescu-Tulcea 定理，这在轨迹空间 $(\mathcal{S}\times\mathcal{A})^\infty$ 上唯一确定一个概率测度 $\Pr^\pi$。
+**轨迹分布**：$s_0\sim\rho_0$，$a_t\sim\pi(\cdot|s_t)$，$s_{t+1}\sim P(\cdot|s_t,a_t)$。由 [Ionescu-Tulcea 定理](https://en.wikipedia.org/wiki/Ionescu-Tulcea_theorem)，这在轨迹空间 $(\mathcal{S}\times\mathcal{A})^\infty$ 上唯一确定一个概率测度 $\Pr^\pi$。
 
 **回报与值函数**：
 $$G_t=\sum_{k=0}^{\infty}\gamma^kr_{t+k},\qquad V^\pi(s)=\mathbb{E}^\pi[G_0|s_0=s],\qquad Q^\pi(s,a)=\mathbb{E}^\pi[G_0|s_0=s,a_0=a].$$
@@ -60,7 +60,7 @@ $$\|T^\pi V_1-T^\pi V_2\|_\infty\le\gamma\|V_1-V_2\|_\infty,\qquad \|T^*V_1-T^*V
 $$|(T^*V_1)(s)-(T^*V_2)(s)|=\Big|\max_a\big[r+\gamma\mathbb{E}V_1\big]-\max_a\big[r+\gamma\mathbb{E}V_2\big]\Big|\le\max_a\Big|\gamma\mathbb{E}_{s'}[V_1(s')-V_2(s')]\Big|\le\gamma\|V_1-V_2\|_\infty,$$
 用到 $|\max_af(a)-\max_ag(a)|\le\max_a|f(a)-g(a)|$ 与转移核是概率测度。$\square$
 
-**定理（Bellman 方程）.** 由 **Banach 不动点定理**，$T^\pi$ 与 $T^*$ 各有唯一不动点：
+**定理（Bellman 方程）.** 由 **[Banach 不动点定理](https://en.wikipedia.org/wiki/Banach_fixed-point_theorem)**，$T^\pi$ 与 $T^*$ 各有唯一不动点：
 $$V^\pi=T^\pi V^\pi\qquad\text{（Bellman 期望方程）},$$
 $$V^*=T^*V^*\qquad\text{（Bellman 最优方程）},$$
 且对任意初始 $V_0$，$\|(T^*)^nV_0-V^*\|_\infty\le\gamma^n\|V_0-V^*\|_\infty$。
@@ -109,7 +109,7 @@ $$V^\pi\le T^{\pi'}V^\pi\le (T^{\pi'})^2V^\pi\le\cdots\to V^{\pi'}.\qquad\square
 
 **定理（有限终止）.** 有限 MDP 上策略迭代在至多 $|\mathcal{A}|^{|\mathcal{S}|}$ 次迭代内**精确**收敛（策略数有限且严格改进）。
 
-**实际上快得多**：Ye (2011) 证明策略迭代（对固定 $\gamma$）是**强多项式**的，迭代次数 $O\big(\frac{|\mathcal{S}|^2|\mathcal{A}|}{1-\gamma}\log\frac{|\mathcal S|^2}{1-\gamma}\big)$。这是运筹学里的一个漂亮结果——**策略迭代其实是单纯形法的一个变种**（见 §4）。
+**实际上快得多**：[Ye (2011)](https://web.stanford.edu/~yyye/simplexmdp1.pdf) 证明策略迭代（对固定 $\gamma$）是**强多项式**的，迭代次数 $O\big(\frac{|\mathcal{S}|^2|\mathcal{A}|}{1-\gamma}\log\frac{|\mathcal S|^2}{1-\gamma}\big)$。这是运筹学里的一个漂亮结果——**策略迭代其实是单纯形法的一个变种**（见 §4）。
 
 **修正策略迭代**：策略评估只做 $m$ 步而非到收敛。$m=1$ 是值迭代，$m=\infty$ 是策略迭代。**实践中的 actor-critic 就是这个谱系上的点**（critic 做不完全的策略评估，actor 做策略改进）。
 
@@ -157,11 +157,11 @@ $$\mathbb{E}^\pi\Big[\sum_t\gamma^tr(s_t,a_t)\Big]=\frac{1}{1-\gamma}\,\mathbb{E
 **探索–利用权衡.** 上述全部假设已知 $P,r$。未知时必须探索。
 
 **多臂赌博机**（无状态的特例）：
-- **UCB**：$a_t=\arg\max_a\big[\hat\mu_a+\sqrt{\frac{2\log t}{n_a}}\big]$，遗憾 $O(\sqrt{KT\log T})$。
+- **[UCB](https://link.springer.com/article/10.1023/A:1013689704352)**：$a_t=\arg\max_a\big[\hat\mu_a+\sqrt{\frac{2\log t}{n_a}}\big]$，遗憾 $O(\sqrt{KT\log T})$。
 - **Thompson 采样**：从后验采一个参数，按它贪心。遗憾同阶，实践中常更好。
-- **下界**（Lai–Robbins 1985）：任何一致好的算法遗憾 $\ge\Omega(\sum_{a\ne a^*}\frac{\log T}{\Delta_a})$。**这是信息论下界**（用 KL 散度构造难以区分的实例）。
+- **下界**（[Lai–Robbins 1985](https://doi.org/10.1016/0196-8858(85)90002-8)）：任何一致好的算法遗憾 $\ge\Omega(\sum_{a\ne a^*}\frac{\log T}{\Delta_a})$。**这是信息论下界**（用 KL 散度构造难以区分的实例）。
 
-**表格 MDP 的最优遗憾**：$\tilde\Theta(\sqrt{HSAT})$（$H$=视界，Azar et al. 2017 的 UCBVI 达到）。
+**表格 MDP 的最优遗憾**：$\tilde\Theta(\sqrt{HSAT})$（$H$=视界，[Azar et al. 2017](https://arxiv.org/abs/1703.05449) 的 UCBVI 达到）。
 
 **深度 RL 中的探索**：$\epsilon$-贪心（最常用，理论上很差）、熵正则（SAC）、内在动机（好奇心、随机网络蒸馏 RND）、参数噪声。**理论与实践在这里差距极大**——有理论保证的方法在深度 RL 中基本不可用。
 
@@ -195,13 +195,13 @@ $$\mathbb{E}^\pi\Big[\sum_t\gamma^tr(s_t,a_t)\Big]=\frac{1}{1-\gamma}\,\mathbb{E
 
 ## 参考
 
-- Sutton & Barto, *Reinforcement Learning: An Introduction* (2nd ed., 2018). §3–4。免费在线，Feng 指定。
+- [Sutton & Barto, *Reinforcement Learning: An Introduction*](http://incompleteideas.net/book/the-book-2nd.html) (2nd ed., 2018). §3–4。[免费 PDF](http://incompleteideas.net/book/RLbook2020.pdf)，Feng 指定。
 - Puterman, *Markov Decision Processes: Discrete Stochastic Dynamic Programming* (1994). **最严格的参考**，测度论设定、LP 对偶、收敛性证明都在这里。对数学家首选。
 - Bertsekas, *Dynamic Programming and Optimal Control*, Vol. 1–2.
-- Agarwal, Jiang, Kakade, Sun, *Reinforcement Learning: Theory and Algorithms* (2022). 免费在线讲义，现代理论视角，含样本复杂度分析。
+- [Agarwal, Jiang, Kakade, Sun, *Reinforcement Learning: Theory and Algorithms*](https://rltheorybook.github.io/). 免费在线讲义，现代理论视角，含样本复杂度分析。
 - Lattimore & Szepesvári, *Bandit Algorithms* (2020). 探索理论的标准参考。
 - Ye, *The simplex and policy-iteration methods are strongly polynomial for the Markov decision problem with a fixed discount rate*, Math. of OR 2011.
-- David Silver 的 UCL RL 课程（YouTube）。Feng 指定，讲得很清楚。
+- [David Silver 的 UCL RL 课程](https://www.davidsilver.uk/teaching/)。Feng 指定，讲得很清楚。
 
 ## Related
 

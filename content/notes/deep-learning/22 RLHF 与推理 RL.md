@@ -34,7 +34,7 @@ date: 2026-08-14
 
 ## 2. 奖励建模
 
-**Bradley–Terry 模型.** 给定两个回答 $y_w$（胜）、$y_l$（负），假设
+**[Bradley–Terry 模型](https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model).** 给定两个回答 $y_w$（胜）、$y_l$（负），假设
 $$\Pr[y_w\succ y_l\,|\,x]=\frac{\exp(r^*(x,y_w))}{\exp(r^*(x,y_w))+\exp(r^*(x,y_l))}=\sigma\big(r^*(x,y_w)-r^*(x,y_l)\big).$$
 
 **这是 Luce 选择公理的二元情形**，也是 Elo 评分系统的基础。
@@ -53,7 +53,7 @@ $$\mathcal{L}_{\mathrm{RM}}(\psi)=-\mathbb{E}_{(x,y_w,y_l)\sim\mathcal{D}}\Big[\
 
 **奖励黑客（reward hacking）.** 策略会找到 $r_\psi$ 高但实际不好的输出——因为 $r_\psi$ 只在训练分布上准确，而 RL 会把策略推到分布外。表现：过长的回答、迎合、格式化的空话、特定关键词堆砌。
 
-**这是 Goodhart 定律的实例。**Gao–Schulman–Hilton (2023) 给出定量规律：真实奖励与代理奖励的差距随 $\sqrt{D_{\mathrm{KL}}(\pi\|\pi_{\mathrm{ref}})}$ 增长。**这直接给了 KL 惩罚一个经验依据。**
+**这是 Goodhart 定律的实例。**[Gao–Schulman–Hilton (2023)](https://arxiv.org/abs/2210.10760) 给出定量规律：真实奖励与代理奖励的差距随 $\sqrt{D_{\mathrm{KL}}(\pi\|\pi_{\mathrm{ref}})}$ 增长。**这直接给了 KL 惩罚一个经验依据。**
 
 ## 3. KL 约束的 RL 目标 —— 一切的核心
 
@@ -83,7 +83,7 @@ $$\Pr[y_w\succ y_l]=\sigma\big(r(x,y_w)-r(x,y_l)\big)=\sigma\Big(\beta\log\frac{
 
 **$\beta\log Z(x)$ 在相减时消掉了！**（因为它只依赖 $x$——正是 §2 提到的平移不变性。）
 
-**DPO 损失（Rafailov et al. 2023）：**
+**DPO 损失（[Rafailov et al. 2023](https://arxiv.org/abs/2305.18290)）：**
 $$\boxed{\mathcal{L}_{\mathrm{DPO}}(\theta)=-\mathbb{E}_{(x,y_w,y_l)}\left[\log\sigma\left(\beta\log\frac{\pi_\theta(y_w|x)}{\pi_{\mathrm{ref}}(y_w|x)}-\beta\log\frac{\pi_\theta(y_l|x)}{\pi_{\mathrm{ref}}(y_l|x)}\right)\right]}$$
 
 **这是一个标准的二分类损失，可以直接用 SGD 优化。没有奖励模型、没有采样、没有 PPO。**
@@ -100,11 +100,11 @@ $$\nabla_\theta\mathcal{L}_{\mathrm{DPO}}=-\beta\,\mathbb{E}\Big[\underbrace{\si
 **DPO 的局限（重要，不要只记住优点）：**
 
 1. **离策略**。偏好数据来自其他模型，不来自 $\pi_\theta$。分布偏移导致效果不如在线 RL。修复：在线 DPO、迭代 DPO（用当前模型采样、标注、再训）。
-2. **在数据外的行为无约束**。Xu et al. (2024) 指出 DPO 可能提高**未见过的**低质量回答的概率——因为它只约束了 $y_w$ 与 $y_l$ 的相对概率，两者都降低而其他上升是可行的。
+2. **在数据外的行为无约束**。[Xu et al. (2024)](https://arxiv.org/abs/2404.10719) 指出 DPO 可能提高**未见过的**低质量回答的概率——因为它只约束了 $y_w$ 与 $y_l$ 的相对概率，两者都降低而其他上升是可行的。
 3. **不能利用可验证奖励**。DPO 需要成对偏好；数学题的对错是标量。
 4. **对 $\beta$ 与数据质量敏感**。
 
-**变体**：IPO（换损失函数避免过拟合到确定性偏好）、KTO（用 Kahneman–Tversky 前景理论，只需单个"好/坏"标签而非成对）、SimPO（去掉 $\pi_{\mathrm{ref}}$，用长度归一化的对数概率）、ORPO（把 SFT 与偏好合并成一步）。
+**变体**：[IPO](https://arxiv.org/abs/2310.12036)（换损失函数避免过拟合到确定性偏好）、[KTO](https://arxiv.org/abs/2402.01306)（用 Kahneman–Tversky 前景理论，只需单个"好/坏"标签而非成对）、[SimPO](https://arxiv.org/abs/2405.14734)（去掉 $\pi_{\mathrm{ref}}$，用长度归一化的对数概率）、ORPO（把 SFT 与偏好合并成一步）。
 
 ## 5. GRPO 与推理 RL
 
@@ -116,7 +116,7 @@ PPO 需要 critic $V_\phi$（与策略同样大的网络），在 LLM 上：
 - **critic 难训**：奖励只在序列末尾，中间状态的价值估计方差极大；
 - 而 LLM 的 MDP 转移是**确定的**（见 [[19 MDP 与动态规划#6-与-llm-的接口]]），critic 的作用被削弱。
 
-### 5.2 GRPO（DeepSeekMath, 2024）
+### 5.2 GRPO（[DeepSeekMath, 2024](https://arxiv.org/abs/2402.03300)）
 
 **去掉 critic，用组内统计做 baseline。**
 
@@ -150,7 +150,7 @@ $\rho_{i,t}=\dfrac{\pi_\theta(y_{i,t}|x,y_{i,<t})}{\pi_{\theta_{\mathrm{old}}}(y
 - **可以无限扩展**（不需要人类标注）；
 - **信号是稀疏但准确的**。
 
-**DeepSeek-R1-Zero 的结果（2025）**：**纯 RL，无 SFT**，直接在基座模型上用 GRPO + 规则奖励训练，模型自发涌现出：
+**[DeepSeek-R1-Zero 的结果（2025）](https://arxiv.org/abs/2501.12948)**：**纯 RL，无 SFT**，直接在基座模型上用 GRPO + 规则奖励训练，模型自发涌现出：
 
 - 长推理链（回答长度从数百 token 自发增长到数千）；
 - **自我验证与回溯**（"wait, let me reconsider..."）；
@@ -172,8 +172,8 @@ GRPO 被大规模使用后暴露出若干问题，一系列改进相继出现：
 
 | 算法 | 主要改动 | 解决的问题 |
 |---|---|---|
-| **DAPO** (2025) | 解耦上下裁剪边界（clip-higher）、**动态采样**（丢弃全对/全错的组）、token 级损失聚合、超长回答的软惩罚 | 熵坍缩、无梯度的组浪费算力、长回答被长度归一化稀释 |
-| **GSPO** (Qwen, 2025) | 重要性比与裁剪在**序列级**而非 token 级 | token 级比值的方差在长序列上累积；对 MoE 训练尤其不稳定 |
+| **[DAPO](https://arxiv.org/abs/2503.14476)** (2025) | 解耦上下裁剪边界（clip-higher）、**动态采样**（丢弃全对/全错的组）、token 级损失聚合、超长回答的软惩罚 | 熵坍缩、无梯度的组浪费算力、长回答被长度归一化稀释 |
+| **[GSPO](https://arxiv.org/abs/2507.18071)** (Qwen, 2025) | 重要性比与裁剪在**序列级**而非 token 级 | token 级比值的方差在长序列上累积；对 MoE 训练尤其不稳定 |
 | **Dr. GRPO** | 去掉 $\mathrm{std}$ 归一化与长度归一化 | 这两项引入了**系统性偏差**（偏好长回答、偏好低方差的题） |
 | **VAPO / VinePPO** | 重新引入价值估计但用蒙特卡洛树 | 稀疏奖励下的信用分配 |
 
@@ -194,9 +194,9 @@ GRPO 被大规模使用后暴露出若干问题，一系列改进相继出现：
 - ORM：只看最终答案对不对。信号稀疏，但标注便宜（自动）。
 - PRM：给推理链的**每一步**打分。信号稠密，信用分配容易，但标注昂贵。
 
-**Lightman et al. (2023), "Let's Verify Step by Step"** ：在 MATH 数据集上用于 best-of-$n$ 重排时，PRM 显著优于 ORM 与多数投票（约 78% vs 约 72%）。且 PRM 更不容易奖励"过程错误但答案碰巧对"的解答——这一点在训练信号的质量上比准确率差距更重要。
+**[Lightman et al. (2023), "Let's Verify Step by Step"](https://arxiv.org/abs/2305.20050)** ：在 MATH 数据集上用于 best-of-$n$ 重排时，PRM 显著优于 ORM 与多数投票（约 78% vs 约 72%）。且 PRM 更不容易奖励"过程错误但答案碰巧对"的解答——这一点在训练信号的质量上比准确率差距更重要。
 
-**自动获得过程标签.** **Math-Shepherd / OmegaPRM**：从某个中间步骤出发**多次 rollout**，用"能到达正确答案的比例"作为该步的价值估计——**这就是 Monte Carlo 值估计**（[[20 值函数方法#1-从模型已知到样本]]），只是应用在推理树上。
+**自动获得过程标签.** **[Math-Shepherd](https://arxiv.org/abs/2312.08935) / [OmegaPRM](https://arxiv.org/abs/2406.06592)**：从某个中间步骤出发**多次 rollout**，用"能到达正确答案的比例"作为该步的价值估计——**这就是 Monte Carlo 值估计**（[[20 值函数方法#1-从模型已知到样本]]），只是应用在推理树上。
 
 **推理时搜索：**
 
@@ -215,7 +215,7 @@ GRPO 被大规模使用后暴露出若干问题，一系列改进相继出现：
 ## 7. 未解的问题
 
 1. **RL 是在教新能力还是只在提取已有能力？**
- Yue et al. (2025) 的实验：RLVR 训练后模型的 pass@1 大幅提升，但 **pass@$k$（$k$ 大）不如基座模型**——说明 RL 把概率质量集中到已有的正确路径上，而**缩小了**能解决的问题集合。若成立，这意味着 RL 的收益有天花板，且天花板由预训练决定。这是当前最重要的争论之一，证据两边都有。
+ [Yue et al. (2025)](https://arxiv.org/abs/2504.13837) 的实验：RLVR 训练后模型的 pass@1 大幅提升，但 **pass@$k$（$k$ 大）不如基座模型**——说明 RL 把概率质量集中到已有的正确路径上，而**缩小了**能解决的问题集合。若成立，这意味着 RL 的收益有天花板，且天花板由预训练决定。这是当前最重要的争论之一，证据两边都有。
 
 2. **奖励模型的可扩展性。**人类无法评价超出自己能力的输出（"可扩展监督"问题）。方向：辩论（debate）、递归奖励建模、weak-to-strong 泛化。**这是对齐研究的核心难题，且它有清晰的形式化空间**（博弈论、交互式证明系统——事实上 debate 的理论基础正是 IP = PSPACE 那一套）。
 

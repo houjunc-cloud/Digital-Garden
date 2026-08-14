@@ -31,14 +31,14 @@ date: 2026-08-14
 
 $$\text{Lean 类型检查器接受一个证明项}\quad\Longleftrightarrow\quad\text{证明正确}$$
 
-由 **Curry–Howard 对应**，"证明"就是"程序"，"定理"就是"类型"，"验证证明"就是"类型检查"。这是**完全可靠、完全自动、完全便宜**的奖励信号——比任何人类评价或答案匹配都强。
+由 **[Curry–Howard 对应](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence)**，"证明"就是"程序"，"定理"就是"类型"，"验证证明"就是"类型检查"。这是**完全可靠、完全自动、完全便宜**的奖励信号——比任何人类评价或答案匹配都强。
 
 > [!tip] 这是数学在 AI 中的独特地位
 > 数学是**唯一一个拥有完美自动验证器的知识领域**。物理需要实验，生物需要实验，法律与伦理没有基准真理。数学有 Lean。
 >
 > 于是数学成为 AI 推理能力的**天然试验场与训练场**：可以生成无限多的训练信号，无需人类标注，无奖励黑客。这不是巧合——AI 在数学上的快速进步与这个结构性优势直接相关。
 
-**主要系统**：Lean 4（+ mathlib，当前最活跃）、Isabelle/HOL、Coq/Rocq、Metamath。
+**主要系统**：[Lean 4](https://lean-lang.org/)（+ [mathlib](https://leanprover-community.github.io/mathlib-overview.html)，当前最活跃）、Isabelle/HOL、Coq/Rocq、Metamath。
 
 **mathlib** 是关键基础设施：一个统一的、社区维护的形式化数学库，覆盖到本科加相当一部分研究生课程（交换代数、代数几何的基础、测度论、泛函分析、范畴论、部分数论）。**它既是 AI 的训练数据，也是 AI 输出的评价标准。**
 
@@ -54,7 +54,7 @@ $$\text{Lean 类型检查器接受一个证明项}\quad\Longleftrightarrow\quad\
 2. **证明搜索**：把证明视为 MDP——状态是当前的证明目标（goal），动作是策略（tactic）调用，转移由 Lean 内核给出，奖励是"证明完成"。**用 AlphaZero 的 MCTS + 价值/策略网络**（见 [[20 值函数方法#6-alphagoalphazerofeng-的案例]]）。
 3. **测试时 RL（test-time RL）**：**这是最有意思的部分**。遇到难题时，生成该问题的大量**变体**（改变常数、弱化结论、特殊化），在变体上做 RL 训练，用学到的东西攻击原题。**这是"课程学习"的自动化版本。**
 
-**成绩**：2024 年 IMO 达到银牌水平（6 题中解出 4 题，28/42 分，恰好差 1 分到金牌）。工作发表在 *Nature* (2025)。
+**成绩**（[Nature 论文](https://www.nature.com/articles/s41586-025-09833-y)）：2024 年 IMO 达到银牌水平（6 题中解出 4 题，28/42 分，恰好差 1 分到金牌）。工作发表在 *Nature* (2025)。
 
 **代价**：某些题目用了远超比赛时限的计算（数天）。**这是"能力"与"效率"分离的典型案例**——见 [[09 Scaling laws#5-推理时-scaling|推理时 scaling]]。
 
@@ -73,7 +73,7 @@ $$\text{Lean 类型检查器接受一个证明项}\quad\Longleftrightarrow\quad\
 >
 > **两条路线在收敛**：非形式化模型生成候选证明，形式化系统验证。这个混合方案（"informal-to-formal pipeline"）是当前主流方向。
 
-### 2.3 AlphaGeometry：神经–符号
+### 2.3 [AlphaGeometry](https://www.nature.com/articles/s41586-023-06747-5)：神经–符号
 
 欧氏几何有一个特殊性质：**存在完备的符号推理引擎**（演绎数据库 + 代数方法）。但纯符号方法卡在需要**辅助构造**（加辅助线、辅助点）的题上——这是搜索空间爆炸的地方。
 
@@ -96,17 +96,17 @@ $$\text{Lean 类型检查器接受一个证明项}\quad\Longleftrightarrow\quad\
 
 ### 3.1 已有的成功案例
 
-**扭结理论（Davies et al., Nature 2021）.** 用监督学习预测扭结的**签名**（signature，代数不变量）从其**几何不变量**（体积、子午/纵向平移）。网络表现很好 ⟹ 存在未知的关系。用**显著性分析**（saliency）找出哪些输入最重要，缩小到三个量，人类数学家据此发现并证明了一个新的定理（关于 signature 与 "natural slope" 的不等式）。
+**扭结理论（[Davies et al., Nature 2021](https://www.nature.com/articles/s41586-021-04086-x)）.** 用监督学习预测扭结的**签名**（signature，代数不变量）从其**几何不变量**（体积、子午/纵向平移）。网络表现很好 ⟹ 存在未知的关系。用**显著性分析**（saliency）找出哪些输入最重要，缩小到三个量，人类数学家据此发现并证明了一个新的定理（关于 signature 与 "natural slope" 的不等式）。
 
 **表示论：组合不变性猜想.** 同一篇 Nature 论文用 GNN 预测 Kazhdan–Lusztig 多项式（从 Bruhat 区间的图结构），发现了一个结构（"hypercube 分解"），导致对对称群情形的一个新猜想与部分证明。
 
-**FunSearch（Romera-Paredes et al., Nature 2024）.** 用 LLM 生成**程序**（而非直接生成答案），用评价函数打分，做进化搜索。在**cap set 问题**上找到了比已知更好的构造（$n=8$ 时的新下界），在**装箱问题**上找到了更好的启发式。
+**[FunSearch（Romera-Paredes et al., Nature 2024）](https://www.nature.com/articles/s41586-023-06924-6).** 用 LLM 生成**程序**（而非直接生成答案），用评价函数打分，做进化搜索。在**cap set 问题**上找到了比已知更好的构造（$n=8$ 时的新下界），在**装箱问题**上找到了更好的启发式。
 
 > **关键设计**：让 LLM 生成**程序**而不是对象。程序是紧凑的、可解释的、可组合的，且可以自动评估。**这利用了 LLM 的代码能力，同时保证了可验证性。**这是一个非常聪明的框架转换。
 
-**PatternBoost / 组合构造.** 用 Transformer 在已知的好构造上训练，生成新候选，用局部搜索改进，迭代。在多个极值组合问题上改进了已知界。
+**[PatternBoost](https://arxiv.org/abs/2411.00566) / 组合构造.** 用 Transformer 在已知的好构造上训练，生成新候选，用局部搜索改进，迭代。在多个极值组合问题上改进了已知界。
 
-**符号回归.** 从数据拟合出**闭式公式**（AI Feynman、PySR）。已在物理定律重发现、以及若干数学猜想（如某些序列的显式公式）上有用。
+**符号回归.** 从数据拟合出**闭式公式**（[AI Feynman](https://arxiv.org/abs/1905.11481)、[PySR](https://github.com/MilesCranmer/PySR)）。已在物理定律重发现、以及若干数学猜想（如某些序列的显式公式）上有用。
 
 ### 3.2 Erdős 问题与研究级数学
 
@@ -185,9 +185,9 @@ $$\text{Lean 类型检查器接受一个证明项}\quad\Longleftrightarrow\quad\
 3. 用它来检查自己的证明（"找出这个论证的漏洞"比"证明这个定理"有用得多）。
 
 **想做 AI4Math 研究：**
-1. **学 Lean**：*Mathematics in Lean*（Avigad–Massot），几周入门；
+1. **学 Lean**：[*Mathematics in Lean*](https://leanprover-community.github.io/mathematics_in_lean/)（Avigad–Massot），几周入门；
 2. **参与 mathlib**：从形式化你自己领域的基础结果开始；
-3. **看 Formal Conjectures / miniF2F / PutnamBench** 等基准，理解当前的能力边界；
+3. **看 [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) / [miniF2F](https://github.com/openai/miniF2F) / [PutnamBench](https://github.com/trishullab/PutnamBench)** 等基准，理解当前的能力边界；
 4. 关注 Terence Tao 的博客与他在形式化上的实验——他是最认真在做这件事的一线数学家。
 
 **想做深度学习理论：**
@@ -199,9 +199,9 @@ $$\text{Lean 类型检查器接受一个证明项}\quad\Longleftrightarrow\quad\
 - Trinh, Wu, Le, He, Luong, *Solving olympiad geometry without human demonstrations* (AlphaGeometry), Nature 2024.
 - DeepMind, *Olympiad-level formal mathematical reasoning with reinforcement learning* (AlphaProof), Nature 2025.
 - Romera-Paredes et al., *Mathematical discoveries from program search with large language models* (FunSearch), Nature 2024.
-- Avigad, Massot, *Mathematics in Lean*. mathlib 的官方教程。
+- [Avigad, Massot, *Mathematics in Lean*](https://leanprover-community.github.io/mathematics_in_lean/). mathlib 的官方教程。
 - Buzzard 的博客 *Xena Project*，以及他关于形式化 Fermat 大定理的项目。
-- Terence Tao 的博客，形式化与 AI 辅助数学的实验记录。
+- [Terence Tao 的博客](https://terrytao.wordpress.com/)，形式化与 AI 辅助数学的实验记录。
 - *Formal Conjectures*（Google DeepMind 的开放基准，收集尚未形式化证明的猜想）。
 - Wang et al., *Goedel-Prover-V2* (Princeton, 2025). 开源的 Lean 4 定理证明器。
 
