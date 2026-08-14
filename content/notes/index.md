@@ -22,3 +22,9 @@ The rules I try to follow:
 
 Every note declares its stage in frontmatter, so nothing here pretends to be more
 settled than it is.
+
+## 系列讲义
+
+有些东西一条笔记装不下，需要一整套互相引用的模块。这些放在子目录里，各有自己的索引页：
+
+- [[notes/deep-learning/index|深度学习（为纯数学研究者重写）]] — 在 Tony Feng 的 Berkeley Math 270 框架上按数学主题重组的 24 篇讲义：学习理论、逼近论、信息论、优化、NTK/mean-field、架构、生成模型、强化学习、AI for Math。

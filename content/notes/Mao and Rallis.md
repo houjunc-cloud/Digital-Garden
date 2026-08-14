@@ -21,7 +21,7 @@ On the spectral side, $\Tilde{M}^\vee = $
 - $M_1 \to \Pi_{U_\theta, \psi}= \Omega_{\psi, \rho}$ which is the Weil representation attached to the symplectic $G$-space $V_\rho$
 - $M \to \Pi_{N_G,tr} =ind^{H}_{N}\psi$ which is the Whittaker induction of $SL_2$
 
-For the MWZ distrubution, 
+For the MWZ distrubution/RTF, the geometric side of $RTF_M$ is 
 
 
 
