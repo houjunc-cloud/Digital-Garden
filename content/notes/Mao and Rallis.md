@@ -9,4 +9,5 @@ On the spectral side, $\Tilde{M}^\vee = $
  In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (at least in this case). After quantization, the picture becomes:
 
 - $\mathcal O_{min}(G') \to \Pi_{G'}$
-- 
+- $M_1 \to ind^{H}_{N}\psi$
+- $M \to $
