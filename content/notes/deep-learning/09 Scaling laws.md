@@ -14,6 +14,11 @@ date: 2026-08-14
 >
 > 前置：[[03 信息论]]（损失就是压缩率）、[[08 泛化之谜]]（幂律的可能来源）。
 
+> [!question] 卡住了从哪儿看起
+> - [CS336 Lec 9: Scaling laws 基础](https://github.com/stanford-cs336/spring2025-lectures/blob/fb79eb018fa047bf99c4c785dcbbd62fff361e54/nonexecutable/2025%20Lecture%209%20-%20Scaling%20laws%20basics.pdf)、[Lec 11: 细节](https://github.com/stanford-cs336/spring2025-lectures/blob/00191bba00d6d64621dc46ccaed9122681413a24/nonexecutable/2025%20Lecture%2011%20-%20Scaling%20details.pdf) — 含如何实际拟合一条 scaling law
+> - [Kaplan 等 (2020)](https://arxiv.org/abs/2001.08361) 与 [Hoffmann 等, Chinchilla (2022)](https://arxiv.org/abs/2203.15556) — 两篇原文，对照着读最能看清分歧
+> - [Bahri 等, *Explaining neural scaling laws*](https://arxiv.org/abs/2102.06701) — §4 理论解释的来源
+
 ## 1. 经验事实
 
 **Kaplan et al. (2020), "Scaling Laws for Neural Language Models".** 训练一系列不同大小的 Transformer，测量交叉熵损失 $L$（单位 nat/token）。发现：

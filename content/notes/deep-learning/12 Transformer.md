@@ -14,6 +14,13 @@ date: 2026-08-14
 >
 > 前置：[[11 序列模型与状态空间]]（attention 从 seq2seq 的瓶颈问题中来）、[[06 初始化归一化与训练动力学]]（残差流与 pre-LN）。
 
+> [!question] 卡住了从哪儿看起
+> - [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — 纯图解，**没有画面感的话先看这个**
+> - [Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) — Feng 指定，逐行代码注释原论文
+> - [Anthropic, *A Mathematical Framework for Transformer Circuits*](https://transformer-circuits.pub/2021/framework/index.html) — **§2.3 电路视角的来源**，对数学家最友好
+> - [Phuong & Hutter, *Formal Algorithms for Transformers*](https://arxiv.org/abs/2207.09238) — 只有定义和伪代码，零废话
+> - [CS336 Lec 3: 架构](https://github.com/stanford-cs336/spring2025-lectures/blob/main/nonexecutable/2025%20Lecture%203%20-%20architecture.pdf) — 现代变体（RoPE / SwiGLU / GQA）的实践取舍
+
 ## 1. 定义
 
 **Scaled dot-product attention.** 输入 $X\in\R^{T\times d}$，

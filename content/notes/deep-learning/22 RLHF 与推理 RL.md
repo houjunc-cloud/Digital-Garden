@@ -15,6 +15,13 @@ date: 2026-08-14
 >
 > 前置：[[21 策略梯度方法]]（PPO、KL 信任域）、[[18 大语言模型]]。
 
+> [!question] 卡住了从哪儿看起
+> - [CS336 Lec 15: RLHF](https://github.com/stanford-cs336/spring2025-lectures/blob/61eddac004df975466cff0329b615f2d24230069/nonexecutable/2025%20Lecture%2015%20-%20RLHF%20Alignment.pdf)、[Lec 16: RLVR](https://github.com/stanford-cs336/spring2025-lectures/blob/e94e33f433985e57036b25215dff2a4292e67a4f/nonexecutable/2025%20Lecture%2016%20-%20RLVR.pdf) — **最贴近本篇的讲义**
+> - [CS336 作业 5：自己实现 SFT + GRPO](https://github.com/stanford-cs336/assignment5-alignment) — 想真正搞懂就做这个
+> - [CS285 Lec 14: LLM RL](https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-14.pdf) — 从 RL 理论一侧看 LLM 微调
+> - [Rafailov 等, *DPO*](https://arxiv.org/abs/2305.18290) — §4 推导的原文，附录写得很清楚
+> - [DeepSeek-R1 论文](https://arxiv.org/abs/2501.12948) — §5.3 的一手材料
+
 ## 1. 为什么需要 RL
 
 预训练目标是模仿语料（[[18 大语言模型#1-目标函数|MLE]]），SFT 是模仿演示。两者的共同局限：

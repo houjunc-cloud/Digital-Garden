@@ -14,6 +14,13 @@ date: 2026-08-14
 >
 > 前置：泛函分析的基本知识（Banach 不动点定理）。
 
+> [!question] 卡住了从哪儿看起
+> - [Sutton & Barto, *RL: An Introduction*](http://incompleteideas.net/book/RLbook2020.pdf) §3–4 — Feng 指定，免费 PDF
+> - [David Silver 的 UCL RL 课](https://www.davidsilver.uk/teaching/) Lec 2–3 — Feng 指定，MDP 与 DP 讲得极清楚
+> - [Agarwal, Jiang, Kakade, Sun, *RL: Theory and Algorithms*](https://rltheorybook.github.io/) — **严格版本**，含 LP 对偶与样本复杂度
+> - [CS285 Lec 4: RL Basics](https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-4.pdf) — 深度 RL 视角的设定
+> - Puterman, *Markov Decision Processes* — 测度论设定的标准参考
+
 ## 1. 设定
 
 **定义（MDP）.** 五元组 $(\mathcal{S},\mathcal{A},P,r,\gamma)$：

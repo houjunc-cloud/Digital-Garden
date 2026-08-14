@@ -14,6 +14,13 @@ date: 2026-08-14
 >
 > 前置：[[06 初始化归一化与训练动力学]] 的方差分析、[[05 优化的数学]] 的梯度流。
 
+> [!question] 卡住了从哪儿看起
+> - [Bartlett, Montanari, Rakhlin, *Deep learning: a statistical viewpoint*](https://arxiv.org/abs/2103.09177) — **首选综述**，NTK 与后续发展串在一起
+> - [Jacot, Gabriel, Hongler, *Neural Tangent Kernel*](https://arxiv.org/abs/1806.07572) — 原始论文，比想象中好读
+> - [Roberts, Yaida, Hanin, *Principles of Deep Learning Theory*](https://arxiv.org/abs/2106.10165) — $1/n$ 展开的有效场论版本
+> - Ambrosio–Gigli–Savaré, *Gradient Flows in Metric Spaces* — mean-field 那一节的工具书（Wasserstein 梯度流）
+> - 全部资源见 [[00 外部资源地图]]
+
 ## 1. 高斯过程极限（训练前）
 
 考虑单隐层网络

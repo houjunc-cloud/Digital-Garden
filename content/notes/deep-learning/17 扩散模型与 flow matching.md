@@ -17,6 +17,13 @@ date: 2026-08-14
 >
 > 前置：[[14 生成建模的统一视角]]、[[15 变分自编码器]]（ELBO）、基本的 Itô 微积分。
 
+> [!question] 卡住了从哪儿看起
+> - [MIT 6.S184 讲义](https://diffusion.csail.mit.edu/) — **首选**，SDE / ODE / flow matching 一条线讲下来
+> - [Calvin Luo, *Understanding Diffusion Models: A Unified Perspective*](https://arxiv.org/abs/2208.11970) — ELBO 到 score matching 的**每一步代数都写全了**，卡在推导上就看这个
+> - [Yang Song 的 score-based 博客](https://yang-song.net/blog/2021/score/) — Score-SDE 作者本人的讲法，图很好
+> - [Lipman 等, *Flow Matching Guide and Code*](https://arxiv.org/abs/2412.06264) — flow matching 的官方长教程，含代码
+> - [Sander Dieleman 的 diffusion 系列](https://sander.ai/) — 直觉性讨论，品味很好
+
 ## 1. 前向过程
 
 **离散（DDPM, Ho–Jain–Abbeel 2020）.** 给定方差调度 $\beta_1,\dots,\beta_T$，

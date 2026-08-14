@@ -17,6 +17,12 @@ date: 2026-08-14
 >
 > 这一篇标为 🌱 seedling —— 这个领域每几个月就变一次，下面的具体成绩会过时，但**结构性的判断**应该更稳定。
 
+> [!question] 卡住了从哪儿看起
+> - [Mathematics in Lean](https://leanprover-community.github.io/mathematics_in_lean/) — Lean 4 的标准教程，几周可入门
+> - [Lean 社区主页](https://leanprover-community.github.io/) 与 [mathlib 概览](https://leanprover-community.github.io/mathlib-overview.html) — 看看你的领域被形式化到什么程度了
+> - [Terence Tao 的博客](https://terrytao.wordpress.com/) — 一线数学家做形式化与 AI 辅助的实时记录，**最值得跟的一个源**
+> - [Kevin Buzzard, Xena Project](https://xenaproject.wordpress.com/) — 形式化数学的布道与实践
+
 ## 1. 为什么形式化是关键接口
 
 回顾 [[22 RLHF 与推理 RL#53-rlvr可验证奖励|RLVR]] 的核心前提：**需要一个便宜、准确的验证器。**
