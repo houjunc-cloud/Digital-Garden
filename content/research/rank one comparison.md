@@ -56,8 +56,8 @@ This step is essential: we must study the "most singular part" of $X$, no matter
 
 Some new progress: Relate the relevant orbits to families of Lagrangians in the Whittaker reduction of $M$, then it becomes a problem of comparing the Whittaker reduction of $M$ and $M_1$.
 
-1. (perfect explanation but assumption not true in many cases) If we believe 
-2. Study niversal centralizer
+1. (perfect explanation but assumption not true in many cases) If we believe Venkatesh's principle, assume $G \times H$ 
+2. universal centralizer + BZSV duality, old way
 
 ## Matching of Distribution
 
