@@ -54,6 +54,8 @@ This step is essential: we must study the "most singular part" of $X$, no matter
 
 - show part of the relevant orbits of $X^L_{\alpha, \psi}$ match those of $G_{X,\alpha}$ (the Levi of $G_X$ with simple root $\alpha$), in other words, we ignore the extra Whittaker induced part.
 
+Some new progress: Relate the relevant orbits to families of Lag
+
 ## Matching of Distribution
 
 
