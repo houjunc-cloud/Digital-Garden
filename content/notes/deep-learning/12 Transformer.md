@@ -51,7 +51,7 @@ $$\mathrm{Attn}(x_i)=\sum_j \frac{\kappa(q_i,k_j)}{\sum_{j'}\kappa(q_i,k_{j'})}v
 
 ### 2.2 联想记忆 / 现代 Hopfield 网络
 
-**定理（Ramsauer et al. 2021）.** 定义能量
+**定理（[Ramsauer et al. 2021](https://arxiv.org/abs/2008.02217)）.** 定义能量
 $$E(\xi)=-\mathrm{lse}(\beta,K\xi)+\frac12\|\xi\|^2+\text{const},\qquad \mathrm{lse}(\beta,z)=\beta^{-1}\log\sum_i e^{\beta z_i}.$$
 其凹凸过程（CCCP）的更新恰是
 $$\xi^{\mathrm{new}}=K^\top\mathrm{softmax}(\beta K\xi).$$
@@ -66,7 +66,7 @@ $$\xi^{\mathrm{new}}=K^\top\mathrm{softmax}(\beta K\xi).$$
 
 ### 2.3 残差流上的读写（电路视角）
 
-**Elhage et al. (2021), "A Mathematical Framework for Transformer Circuits".**
+**[Elhage et al. (2021), "A Mathematical Framework for Transformer Circuits"](https://transformer-circuits.pub/2021/framework/index.html).**
 
 把注意力头重写。定义两个矩阵：
 $$W_{QK}:=W_QW_K^\top\in\R^{d\times d}\quad(\text{“QK 电路”，决定}\textbf{从哪读}),$$
@@ -97,7 +97,7 @@ $$\mathrm{PE}(t,2i)=\sin\!\Big(\frac{t}{10000^{2i/d}}\Big),\qquad \mathrm{PE}(t,
 
 ### 3.2 RoPE：正确的做法
 
-**旋转位置编码（Su et al. 2021）**。把 $d_k$ 维分成 $d_k/2$ 个二维块，第 $m$ 块用频率 $\theta_m=10000^{-2m/d_k}$。定义分块对角旋转
+**[旋转位置编码（Su et al. 2021）](https://arxiv.org/abs/2104.09864)**。把 $d_k$ 维分成 $d_k/2$ 个二维块，第 $m$ 块用频率 $\theta_m=10000^{-2m/d_k}$。定义分块对角旋转
 $$R_t=\bigoplus_{m=1}^{d_k/2}\begin{pmatrix}\cos t\theta_m & -\sin t\theta_m\\ \sin t\theta_m & \cos t\theta_m\end{pmatrix}\in SO(d_k),$$
 然后
 $$q_t\leftarrow R_tq_t,\qquad k_s\leftarrow R_sk_s.$$
@@ -116,16 +116,16 @@ $$\langle R_tq,\ R_sk\rangle = q^\top R_t^\top R_sk=q^\top R_{s-t}k.$$
 
 **长度外推.** RoPE 在训练长度外性能骤降。修复方法都是在改频率：
 - **位置插值（PI）**：$t\mapsto t\cdot L_{\text{train}}/L_{\text{target}}$，压缩所有频率。
-- **NTK-aware / YaRN**：高频（局部）保持不变，低频（全局）插值。理由：高频负责局部语法，不该动；低频负责长程，需要拉伸。
+- **NTK-aware / [YaRN](https://arxiv.org/abs/2309.00071)**：高频（局部）保持不变，低频（全局）插值。理由：高频负责局部语法，不该动；低频负责长程，需要拉伸。
 - **训练时用更大的 base**（如 $500000$ 而非 $10000$），LLaMA-3 的做法。
 
-**ALiBi**（Press et al. 2022）：直接给 logits 加线性偏置 $-m\cdot|i-j|$，无需可学参数，外推性好但表达力弱于 RoPE。
+**[ALiBi](https://arxiv.org/abs/2108.12409)**（Press et al. 2022）：直接给 logits 加线性偏置 $-m\cdot|i-j|$，无需可学参数，外推性好但表达力弱于 RoPE。
 
 ## 4. 表达力
 
 ### 4.1 上界：Transformer 在 $\mathsf{TC}^0$ 内
 
-**定理（Merrill–Sabharwal 2023; Hao–Angluin–Frank 2022）.** 固定深度、多项式宽度、$O(\log n)$ 精度的 Transformer（软 attention）可被**均匀 $\mathsf{TC}^0$** 电路模拟。
+**定理（[Merrill–Sabharwal 2023](https://arxiv.org/abs/2207.00729); Hao–Angluin–Frank 2022）.** 固定深度、多项式宽度、$O(\log n)$ 精度的 Transformer（软 attention）可被**均匀 $\mathsf{TC}^0$** 电路模拟。
 
 **推论（在 $\mathsf{TC}^0\subsetneq\mathsf{NC}^1$ 的标准猜想下）**：固定深度 Transformer **无法**解决 $\mathsf{NC}^1$-完全问题，例如：
 - 计算**正则语言的成员资格**（一般情形，如 $S_5$ 上的字问题）；
@@ -137,13 +137,13 @@ $$\langle R_tq,\ R_sk\rangle = q^\top R_t^\top R_sk=q^\top R_{s-t}k.$$
 > [!note] 这个结果的实践意义
 > 它精确解释了**为什么需要 chain-of-thought**。CoT 让模型生成中间 token，每个 token 是一次完整的前向传播，于是**有效深度变成 $O(\text{生成长度})$**。
 >
-> **定理（Merrill–Sabharwal 2024）.** 带 $T(n)$ 步 CoT 的 Transformer 的表达力等价于 $\mathsf{TIME}(T(n))$ 内的图灵机（多项式步 CoT $\Rightarrow$ $\mathsf{P}$）。
+> **定理（[Merrill–Sabharwal 2024](https://arxiv.org/abs/2310.07923)）.** 带 $T(n)$ 步 CoT 的 Transformer 的表达力等价于 $\mathsf{TIME}(T(n))$ 内的图灵机（多项式步 CoT $\Rightarrow$ $\mathsf{P}$）。
 >
 > **所以"让模型思考更久"不是启发式技巧，是严格意义上的计算类提升。**这是 [[09 Scaling laws#5-推理时-scaling|推理时 scaling]] 的理论基础，也是 [[22 RLHF 与推理 RL]] 的存在理由。
 
 ### 4.2 下界：万有性
 
-**定理（Yun et al. 2020）.** 带位置编码的 Transformer 是紧集上连续序列到序列函数的万有逼近器。
+**定理（[Yun et al. 2020](https://arxiv.org/abs/1912.10077)）.** 带位置编码的 Transformer 是紧集上连续序列到序列函数的万有逼近器。
 
 **定理（Pérez–Marinković–Barceló 2019）.** 带任意精度与无界步数的 Transformer 是图灵完备的。
 
@@ -151,7 +151,7 @@ $$\langle R_tq,\ R_sk\rangle = q^\top R_t^\top R_sk=q^\top R_{s-t}k.$$
 
 ### 4.3 Induction head {#induction-head}
 
-**Olsson et al. (2022), "In-context Learning and Induction Heads".**
+**[Olsson et al. (2022), "In-context Learning and Induction Heads"](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html).**
 
 **机制**：一个两头组成的电路，实现模式 $[A][B]\dots[A]\to[B]$：
 
@@ -169,13 +169,13 @@ $$\langle R_tq,\ R_sk\rangle = q^\top R_t^\top R_sk=q^\top R_{s-t}k.$$
 >
 > 数学结构：残差流 $\R^d$ 上有一族近似正交的子空间，每个头是一对低秩映射（读 / 写）。整个网络是这些映射的组合图。**这本质上是在做一个"表示的分解"**——不是群表示，但精神相通。
 
-**Superposition.** Elhage et al. (2022) 观察到：网络在 $d$ 维空间里存储 $\gg d$ 个"特征"，利用高维空间中随机向量近似正交（Johnson–Lindenstrauss）。这解释了为什么单个神经元往往对应多个不相关概念（polysemanticity），也是**稀疏自编码器（SAE）**方法的动机——用过完备字典恢复稀疏的特征基。**数学内容是压缩感知 / 字典学习。**
+**Superposition.** [Elhage et al. (2022)](https://transformer-circuits.pub/2022/toy_model/index.html) 观察到：网络在 $d$ 维空间里存储 $\gg d$ 个"特征"，利用高维空间中随机向量近似正交（Johnson–Lindenstrauss）。这解释了为什么单个神经元往往对应多个不相关概念（polysemanticity），也是**稀疏自编码器（SAE）**方法的动机——用过完备字典恢复稀疏的特征基。**数学内容是压缩感知 / 字典学习。**
 
 ## 5. 优化困难
 
 Transformer 比 CNN 难训得多。已知的具体困难：
 
-**(a) 必须用 Adam。**SGD 在 Transformer 上表现极差（差距可达数倍 loss）。原因（Zhang et al. 2020; Kunstner et al. 2023）：梯度的**重尾**分布与**不同参数块间的尺度差异极大**（embedding vs attention vs FFN）。Adam 的逐坐标归一化解决了这个问题。见 [[05 优化的数学#51-rmsprop-与-adam]]。
+**(a) 必须用 Adam。**SGD 在 Transformer 上表现极差（差距可达数倍 loss）。原因（[Zhang et al. 2020](https://arxiv.org/abs/1912.03194); [Kunstner et al. 2023](https://arxiv.org/abs/2304.13960)）：梯度的**重尾**分布与**不同参数块间的尺度差异极大**（embedding vs attention vs FFN）。Adam 的逐坐标归一化解决了这个问题。见 [[05 优化的数学#51-rmsprop-与-adam]]。
 
 **(b) 必须 warmup（post-LN）或至少有益（pre-LN）。**见 [[06 初始化归一化与训练动力学#23-位置pre-ln-vs-post-ln]]。
 
@@ -203,7 +203,7 @@ Transformer 比 CNN 难训得多。已知的具体困难：
 
 ## 7. 视觉与多模态
 
-**ViT（Dosovitskiy et al. 2021）.** 把图像切成 $16\times16$ 的 patch，每个 patch 线性投影成 token，然后就是标准 Transformer。
+**[ViT（Dosovitskiy et al. 2021）](https://arxiv.org/abs/2010.11929).** 把图像切成 $16\times16$ 的 patch，每个 patch 线性投影成 token，然后就是标准 Transformer。
 
 **结论**：数据量小时不如 CNN（缺少平移等变的归纳偏置），数据量大时（JFT-300M）超过 CNN。**这是 [[10 归纳偏置与等变性#5-geometric-deep-learning-的统一框架|归纳偏置 vs 数据量]]权衡的最清晰实证。**
 
@@ -212,7 +212,7 @@ Transformer 比 CNN 难训得多。已知的具体困难：
 ## 参考
 
 - Vaswani et al., *Attention is all you need*, NeurIPS 2017.
-- Rush, *The Annotated Transformer* (Harvard NLP). Feng 指定，最好的代码级讲解。
+- [Rush, *The Annotated Transformer*](https://nlp.seas.harvard.edu/annotated-transformer/) (Harvard NLP). Feng 指定，最好的代码级讲解。
 - Elhage et al., *A mathematical framework for transformer circuits*, Anthropic 2021. **对数学家最合适的 Transformer 内部结构讲解。**
 - Olsson et al., *In-context learning and induction heads*, Anthropic 2022.
 - Ramsauer et al., *Hopfield networks is all you need*, ICLR 2021.

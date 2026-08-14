@@ -21,7 +21,7 @@ date: 2026-08-14
 
 ## 1. 经验事实
 
-**Kaplan et al. (2020), "Scaling Laws for Neural Language Models".** 训练一系列不同大小的 Transformer，测量交叉熵损失 $L$（单位 nat/token）。发现：
+**[Kaplan et al. (2020), "Scaling Laws for Neural Language Models"](https://arxiv.org/abs/2001.08361).** 训练一系列不同大小的 Transformer，测量交叉熵损失 $L$（单位 nat/token）。发现：
 
 $$L(N)\approx\Big(\frac{N_c}{N}\Big)^{\alpha_N},\qquad L(D)\approx\Big(\frac{D_c}{D}\Big)^{\alpha_D},\qquad L(C)\approx\Big(\frac{C_c}{C}\Big)^{\alpha_C},$$
 
@@ -45,7 +45,7 @@ $$\boxed{C\approx 6ND}\quad\text{(FLOP)}.$$
 
 **问题.** 给定 $C$，如何分配 $N$ 与 $D$ 使 $L$ 最小？
 
-**Chinchilla 的参数化（Hoffmann et al. 2022）.**
+**Chinchilla 的参数化（[Hoffmann et al. 2022](https://arxiv.org/abs/2203.15556)）.**
 $$L(N,D)=E+\frac{A}{N^{\alpha}}+\frac{B}{D^{\beta}}.$$
 
 三项的含义：
@@ -73,7 +73,7 @@ Kaplan 的结论是 $N_{\mathrm{opt}}\propto C^{0.73}$，即**应当把预算主
 
 **Chinchilla 说这是错的**：同样的计算量下，70B/1.4T 的模型（Chinchilla）全面优于 280B/300B（Gopher）。**GPT-3 严重欠训练。**
 
-**分歧的原因**（Besiroglu et al. 2024 的复现分析）：
+**分歧的原因**（[Besiroglu et al. 2024](https://arxiv.org/abs/2404.10102) 的复现分析）：
 - Kaplan 对所有实验用了**固定的余弦学习率调度长度**，导致小 $D$ 的运行没有完成衰减，损失被高估。
 - Kaplan 没有计入 embedding 参数，两边定义不同。
 
@@ -86,13 +86,13 @@ Chinchilla 最优是**训练计算最优**。但模型训完要部署，推理�
 $$C_{\text{total}}=6ND_{\text{train}}+2ND_{\mathrm{inf}}$$
 的最优解偏向**更小的模型、更多的训练数据**。
 
-**这就是为什么 LLaMA 系列远超 Chinchilla 比例训练**：LLaMA-3 8B 用了 15T token，$D/N\approx1875$，是 Chinchilla 比例的 90 倍。Sardana et al. (2024) 给出了含推理的修正最优解。**"过度训练小模型"在部署经济学下是理性的。**
+**这就是为什么 LLaMA 系列远超 Chinchilla 比例训练**：LLaMA-3 8B 用了 15T token，$D/N\approx1875$，是 Chinchilla 比例的 90 倍。[Sardana et al. (2024)](https://arxiv.org/abs/2401.00448) 给出了含推理的修正最优解。**"过度训练小模型"在部署经济学下是理性的。**
 
 ## 3. 数据受限的 scaling
 
-**问题.** 高质量文本总量有限。Villalobos et al. (2024) 估计公开高质量文本约 $10^{14}$ token 量级，按当前增速在 2026–2032 年间耗尽。
+**问题.** 高质量文本总量有限。[Villalobos et al. (2024)](https://arxiv.org/abs/2211.04325) 估计公开高质量文本约 $10^{14}$ token 量级，按当前增速在 2026–2032 年间耗尽。
 
-**Muennighoff et al. (2023), "Scaling Data-Constrained Language Models".** 在固定数据上重复训练（多 epoch）：
+**[Muennighoff et al. (2023), "Scaling Data-Constrained Language Models"](https://arxiv.org/abs/2305.16264).** 在固定数据上重复训练（多 epoch）：
 
 - **前 ~4 个 epoch**：重复数据几乎和新数据一样有效。
 - **4–16 epoch**：收益快速衰减。
@@ -101,7 +101,7 @@ $$C_{\text{total}}=6ND_{\text{train}}+2ND_{\mathrm{inf}}$$
 修正的 scaling law 引入"有效数据量" $D_{\mathrm{eff}}=D\cdot(1-e^{-k/\tau})$（$k$=epoch 数，$\tau\approx15$）。
 
 **应对策略**：
-- **合成数据**（用模型生成训练数据）——有模型坍缩（model collapse）风险，Shumailov et al. 2024 证明递归训练在纯合成数据上导致分布尾部丢失；实践中需混入真实数据。
+- **合成数据**（用模型生成训练数据）——有模型坍缩（model collapse）风险，[Shumailov et al. 2024](https://www.nature.com/articles/s41586-024-07566-y) 证明递归训练在纯合成数据上导致分布尾部丢失；实践中需混入真实数据。
 - **多模态**（图像/视频/音频的 token 量远大于文本）。
 - **提高数据质量**（去重、过滤、课程化）——见 [[18 大语言模型#数据]]。
 - **把计算转移到推理时**——见 §5。
@@ -110,13 +110,13 @@ $$C_{\text{total}}=6ND_{\text{train}}+2ND_{\mathrm{inf}}$$
 
 三条候选理论：
 
-**(a) 数据流形维度（Sharma–Kaplan 2022）.** 若数据集中在内蕴维 $d$ 的流形上，目标函数 Lipschitz，用分片线性函数逼近，则参数数 $N$ 对应分辨率 $\varepsilon\sim N^{-1/d}$，损失 $\sim\varepsilon^{s}\sim N^{-s/d}$。于是
+**(a) 数据流形维度（[Sharma–Kaplan 2022](https://arxiv.org/abs/2004.10802)）.** 若数据集中在内蕴维 $d$ 的流形上，目标函数 Lipschitz，用分片线性函数逼近，则参数数 $N$ 对应分辨率 $\varepsilon\sim N^{-1/d}$，损失 $\sim\varepsilon^{s}\sim N^{-s/d}$。于是
 $$\alpha_N\approx \frac{s}{d}\quad(\text{对分片线性 }s\approx4).$$
 观测 $\alpha_N\approx0.076$ $\Rightarrow$ $d\approx 50$。这个数在文本、图像、视频间惊人地一致。
 
-**(b) 随机特征模型（Maloney–Roberts–Sully 2022; Bahri et al. 2024）.** 在可解的随机特征模型中，若数据协方差的特征值满足 $\lambda_i\sim i^{-1-\alpha}$，则损失的 scaling 指数直接由 $\alpha$ 决定。这**把 scaling law 归约到"为什么真实数据的协方差谱是幂律"**——一个更基本但同样未解的问题。这与 [[08 泛化之谜#3-良性过拟合benign-overfitting|良性过拟合]]的谱条件是同一个谱。
+**(b) 随机特征模型（[Maloney–Roberts–Sully 2022](https://arxiv.org/abs/2210.16859); [Bahri et al. 2024](https://arxiv.org/abs/2102.06701)）.** 在可解的随机特征模型中，若数据协方差的特征值满足 $\lambda_i\sim i^{-1-\alpha}$，则损失的 scaling 指数直接由 $\alpha$ 决定。这**把 scaling law 归约到"为什么真实数据的协方差谱是幂律"**——一个更基本但同样未解的问题。这与 [[08 泛化之谜#3-良性过拟合benign-overfitting|良性过拟合]]的谱条件是同一个谱。
 
-**(c) 技能/组合视角（Michaud et al. 2023, "quantization model"）.** 假设能力由离散的"量子"（quanta）组成，每个量子的使用频率服从 Zipf 律 $p_k\sim k^{-(1+\alpha)}$。模型按频率顺序学会量子，学会前 $K$ 个的损失 $\sim\sum_{k>K}p_k\sim K^{-\alpha}$。这**同时解释了平滑的幂律与个别能力的"涌现"**：整体损失平滑下降，但每个量子的习得是突变的。
+**(c) 技能/组合视角（[Michaud et al. 2023, "quantization model"](https://arxiv.org/abs/2303.13506)）.** 假设能力由离散的"量子"（quanta）组成，每个量子的使用频率服从 Zipf 律 $p_k\sim k^{-(1+\alpha)}$。模型按频率顺序学会量子，学会前 $K$ 个的损失 $\sim\sum_{k>K}p_k\sim K^{-\alpha}$。这**同时解释了平滑的幂律与个别能力的"涌现"**：整体损失平滑下降，但每个量子的习得是突变的。
 
 > 三条解释都把幂律归结到**数据的某种幂律结构**（流形维度、协方差谱、Zipf 频率）。Zipf 律在自然语言中是老观察（Zipf 1935），所以 (c) 也许最接近真相。但没有一条是定理。
 
@@ -129,7 +129,7 @@ $$\alpha_N\approx \frac{s}{d}\quad(\text{对分片线性 }s\approx4).$$
 - **树搜索**：MCTS、beam search over reasoning steps。
 - **长思考（extended thinking）**：训练模型自发生成长推理链，见 [[22 RLHF 与推理 RL]]。
 
-**经验规律**（Snell et al. 2024; OpenAI o1 报告）：准确率关于**推理计算量**同样呈幂律，且在某些任务上**推理时计算比训练时计算更有效率**——即用小模型 + 大推理预算可以超过大模型 + 贪心解码。
+**经验规律**（[Snell et al. 2024](https://arxiv.org/abs/2408.03314); OpenAI o1 报告）：准确率关于**推理计算量**同样呈幂律，且在某些任务上**推理时计算比训练时计算更有效率**——即用小模型 + 大推理预算可以超过大模型 + 贪心解码。
 
 **理论上的简单模型.** Best-of-$n$ 配一个准确率 $p$ 的 verifier：成功率 $1-(1-p)^n$，即 $\log(\text{失败率})\propto -n$——**指数改善**。但实际是幂律，因为 verifier 不完美且样本不独立（模型的错误是相关的）。这个 gap 的定量刻画是开放问题。
 
@@ -137,9 +137,9 @@ $$\alpha_N\approx \frac{s}{d}\quad(\text{对分片线性 }s\approx4).$$
 
 ## 6. 涌现能力：真的还是测量假象？
 
-**Wei et al. (2022)** 报告某些能力（多位数算术、词义消歧）在模型规模跨过阈值后**突然**出现，此前接近随机。
+**[Wei et al. (2022)](https://arxiv.org/abs/2206.07682)** 报告某些能力（多位数算术、词义消歧）在模型规模跨过阈值后**突然**出现，此前接近随机。
 
-**Schaeffer, Miranda, Koyejo (NeurIPS 2023 best paper), "Are Emergent Abilities of Large Language Models a Mirage?"** 反驳：涌现是**度量选择**的产物。
+**[Schaeffer, Miranda, Koyejo (NeurIPS 2023 best paper), "Are Emergent Abilities a Mirage?"](https://arxiv.org/abs/2304.15004)** 反驳：涌现是**度量选择**的产物。
 
 - 若用**非线性/不连续**度量（如"完全正确"的精确匹配、多选题准确率），平滑改善的底层能力会显示为突变。
 - 若用**连续**度量（如 token 级编辑距离、对数似然），同样的模型显示平滑改善。

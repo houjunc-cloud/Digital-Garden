@@ -31,10 +31,10 @@ $$K^{(1)}(x,x')=\sigma_a^2\,\mathbb{E}_{w}\big[h(w\cdot x)h(w\cdot x')\big].$$
 
 *证明.* 对任意有限点集 $x_1,\dots,x_k$，$(f(x_1),\dots,f(x_k))$ 是 $m$ 个 i.i.d. 随机向量的 $1/\sqrt m$ 倍和，直接用多元 CLT。$\square$
 
-**深层版本（Lee et al. 2018; Matthews et al. 2018）.** 逐层取极限，核满足递推
+**深层版本（[Lee et al. 2018](https://arxiv.org/abs/1711.00165); Matthews et al. 2018）.** 逐层取极限，核满足递推
 $$K^{(\ell+1)}(x,x')=\sigma_w^2\,\mathbb{E}_{(u,v)\sim\mathcal{N}(0,\Lambda^{(\ell)})}\big[h(u)h(v)\big]+\sigma_b^2,\qquad \Lambda^{(\ell)}=\begin{pmatrix}K^{(\ell)}(x,x)&K^{(\ell)}(x,x')\\ K^{(\ell)}(x,x')&K^{(\ell)}(x',x')\end{pmatrix}.$$
 
-**对 ReLU 有闭式**（Cho–Saul 弧余弦核）：令 $\theta=\arccos\frac{K(x,x')}{\sqrt{K(x,x)K(x',x')}}$，
+**对 ReLU 有闭式**（[Cho–Saul 弧余弦核](https://papers.nips.cc/paper_files/paper/2009/hash/5751ec3e9a4feab575962e78e006250d-Abstract.html)）：令 $\theta=\arccos\frac{K(x,x')}{\sqrt{K(x,x)K(x',x')}}$，
 $$\mathbb{E}[\mathrm{ReLU}(u)\mathrm{ReLU}(v)]=\frac{\sqrt{K(x,x)K(x',x')}}{2\pi}\big(\sin\theta+(\pi-\theta)\cos\theta\big).$$
 
 > 这个递推**就是** [[06 初始化归一化与训练动力学#11-混沌边缘|混沌边缘]]的相关性映射。同一个数学，两种包装。
@@ -49,7 +49,7 @@ $$\dot f_{\theta_t}(x)=\langle\nabla_\theta f_{\theta_t}(x),\dot\theta_t\rangle=
 $$\boxed{\Theta_t(x,x'):=\big\langle\nabla_\theta f_{\theta_t}(x),\ \nabla_\theta f_{\theta_t}(x')\big\rangle}$$
 是 **神经正切核（Neural Tangent Kernel）**。
 
-**定理（Jacot–Gabriel–Hongler 2018）.** 在 NTK 参数化下（每层乘 $1/\sqrt{n_\ell}$），当所有隐藏层宽度 $\to\infty$：
+**定理（[Jacot–Gabriel–Hongler 2018](https://arxiv.org/abs/1806.07572)）.** 在 NTK 参数化下（每层乘 $1/\sqrt{n_\ell}$），当所有隐藏层宽度 $\to\infty$：
 
 1. **初始化时** $\Theta_0$ 依概率收敛到一个**确定性**核 $\Theta_\infty$（不依赖随机初始化）；
 2. **训练中** $\Theta_t$ 保持常数：$\sup_{t\le T}\|\Theta_t-\Theta_\infty\|\to 0$。
@@ -65,8 +65,8 @@ $$\Theta^{(\ell+1)}=\Theta^{(\ell)}\odot \dot K^{(\ell)}+K^{(\ell+1)},\qquad \do
 
 ### 2.1 后果与解释力
 
-- **收敛保证.** 若 $\Theta_\infty\succ0$（对不同的输入点成立，需要数据点两两不平行），则梯度流**全局收敛到零训练误差**，尽管 $L$ 非凸。这是深度学习第一个严格的全局收敛结果。有限宽版本（Du et al., Allen-Zhu–Li–Song, Zou et al.）给出所需宽度的多项式界（虽然指数很大）。
-- **谱偏置.** $e^{-\Theta_\infty t}$ 沿 $\Theta_\infty$ 的特征方向以不同速率衰减：**大特征值方向学得快**。对均匀分布在球面上的数据，NTK 的特征函数是球谐函数，特征值随频率**多项式衰减**。故网络**先学低频、后学高频**——这是"spectral bias / frequency principle"（Rahaman et al. 2019; Xu et al. 2019）的严格解释，也解释了为什么早停有正则化效果。
+- **收敛保证.** 若 $\Theta_\infty\succ0$（对不同的输入点成立，需要数据点两两不平行），则梯度流**全局收敛到零训练误差**，尽管 $L$ 非凸。这是深度学习第一个严格的全局收敛结果。有限宽版本（[Du et al.](https://arxiv.org/abs/1810.02054), [Allen-Zhu–Li–Song](https://arxiv.org/abs/1811.03962), Zou et al.）给出所需宽度的多项式界（虽然指数很大）。
+- **谱偏置.** $e^{-\Theta_\infty t}$ 沿 $\Theta_\infty$ 的特征方向以不同速率衰减：**大特征值方向学得快**。对均匀分布在球面上的数据，NTK 的特征函数是球谐函数，特征值随频率**多项式衰减**。故网络**先学低频、后学高频**——这是"spectral bias / frequency principle"（[Rahaman et al. 2019](https://arxiv.org/abs/1806.08734); Xu et al. 2019）的严格解释，也解释了为什么早停有正则化效果。
 - **可计算.** NTK 可以显式算出，于是"无限宽神经网络"就是一个具体的核方法，可以直接和 SVM/GP 比较。
 
 ## 3. Lazy regime：NTK 的致命缺陷
@@ -82,7 +82,7 @@ $$f_\theta(x)\approx f_{\theta_0}(x)+\langle\nabla_\theta f_{\theta_0}(x),\theta
 - **深度学习的核心卖点就是"学表示"**（预训练模型的中间层特征可迁移）。NTK 下这不可能发生。
 - **NTK 无法解释卷积网络优于全连接**的幅度，也无法解释迁移学习。
 
-**Chizat–Oyallon–Bach (2019)** 把这个现象命名为 **lazy training**，并指出它不是"宽"造成的，而是**输出缩放**造成的：若 $f=\alpha\cdot g_\theta$ 且 $\alpha\to\infty$（同时缩放学习率），任何模型都进入 lazy regime。**NTK 是一个人为的缩放选择的产物。**
+**[Chizat–Oyallon–Bach (2019)](https://arxiv.org/abs/1812.07956)** 把这个现象命名为 **lazy training**，并指出它不是"宽"造成的，而是**输出缩放**造成的：若 $f=\alpha\cdot g_\theta$ 且 $\alpha\to\infty$（同时缩放学习率），任何模型都进入 lazy regime。**NTK 是一个人为的缩放选择的产物。**
 
 > [!warning] 这是理解整块内容的关键
 > "无限宽极限"不唯一。**取什么极限取决于你怎么缩放输出层和学习率**：
@@ -106,7 +106,7 @@ $$f_{\mu}(x)=\int\phi(x;\theta)\,d\mu(\theta).$$
 $$\mathcal{L}[\mu]=\frac12\mathbb{E}_{(x,y)}\Big[\Big(\int\phi(x;\theta)d\mu(\theta)-y\Big)^2\Big]$$
 是 $\mu$ 的**凸**泛函（二次的）。
 
-**定理（Chizat–Bach 2018; Mei–Montanari–Nguyen 2018; Rotskoff–Vanden-Eijnden 2018）.** $m\to\infty$ 时，SGD 的经验测度 $\mu_t^{(m)}$ 收敛到 McKean–Vlasov 型 PDE 的解：
+**定理（[Chizat–Bach 2018](https://arxiv.org/abs/1805.09545); [Mei–Montanari–Nguyen 2018](https://arxiv.org/abs/1804.06561); Rotskoff–Vanden-Eijnden 2018）.** $m\to\infty$ 时，SGD 的经验测度 $\mu_t^{(m)}$ 收敛到 McKean–Vlasov 型 PDE 的解：
 $$\partial_t\mu_t=\nabla_\theta\cdot\big(\mu_t\,\nabla_\theta\Psi[\mu_t]\big),\qquad \Psi[\mu](\theta):=\frac{\delta\mathcal{L}}{\delta\mu}(\theta)=\mathbb{E}_{x}\big[(f_\mu(x)-y)\phi(x;\theta)\big].$$
 
 **这是 $\mathcal{L}$ 在 Wasserstein-2 空间 $(\mathcal{P}_2(\R^p),W_2)$ 上的梯度流**（Otto 微积分意义下）。
@@ -159,7 +159,7 @@ $$\partial_t\mu=\nabla\cdot(\mu\nabla\Psi[\mu])+\varepsilon\Delta\mu,$$
 
 ## 6. 有限宽修正
 
-$1/m$ 展开（Hanin–Nica; Yaida; Roberts–Yaida–Hanin 的 *Principles of Deep Learning Theory*）把网络视为高斯过程的微扰：
+$1/m$ 展开（Hanin–Nica; Yaida; [Roberts–Yaida–Hanin, *Principles of Deep Learning Theory*](https://arxiv.org/abs/2106.10165)）把网络视为高斯过程的微扰：
 $$\Theta_t = \Theta_\infty + \frac{1}{m}\Theta^{(1)}+O(1/m^2).$$
 
 $O(1/m)$ 项包含**核的涨落**与**核的演化**——后者正是特征学习的一阶效应。深度/宽度比 $L/m$ 是控制参数：$L/m\to0$ 时理论受控，$L/m$ 有限时出现非高斯效应。**这个视角与统计物理的微扰展开完全平行**（Roberts–Yaida 的书就是按有效场论写的），对物理背景的人特别友好。
@@ -173,7 +173,7 @@ $O(1/m)$ 项包含**核的涨落**与**核的演化**——后者正是特征学
 - Mei, Montanari, Nguyen, *A mean field view of the landscape of two-layer neural networks*, PNAS 2018.
 - Ambrosio, Gigli, Savaré, *Gradient Flows in Metric Spaces and in the Space of Probability Measures* (2008). Wasserstein 梯度流的标准参考。
 - Roberts, Yaida, Hanin, *The Principles of Deep Learning Theory* (CUP 2022). 有效场论视角的 $1/m$ 展开。
-- Bartlett, Montanari, Rakhlin, *Deep learning: a statistical viewpoint*, Acta Numerica 2021. **最好的综述**，把 NTK、良性过拟合、隐式正则化串起来。
+- [Bartlett, Montanari, Rakhlin, *Deep learning: a statistical viewpoint*](https://arxiv.org/abs/2103.09177), Acta Numerica 2021. **最好的综述**，把 NTK、良性过拟合、隐式正则化串起来。
 
 ## Related
 
