@@ -9,9 +9,11 @@ On the spectral side, $\Tilde{M}^\vee = $
  In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (since $(G,H)$ cocentralize each other), i.e. 
  
  M --Quant--> \Pi
+ |                          |
+ Wh-red            
  |
- |
- |
+ v
+ M//_{Wh} G --Quant-->\Pi_{}
  
  After quantization, the picture becomes:
 
