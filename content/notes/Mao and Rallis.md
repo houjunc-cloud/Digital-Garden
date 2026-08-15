@@ -34,7 +34,7 @@ For a regular \(a\neq 0\), the relevant \(N\)-orbit is unique, and the fiberwise
 $$
 \dim \mathcal S(\mathcal J)_{N,\xi_N;\,a}=1.
 $$
- and on $\{a \neq 0\}$
+ and 
  
  $$
 \mathcal S(\mathbb G_m\times \mathcal J)_{N,\xi_N}
