@@ -21,7 +21,7 @@ To fit in "Venkatesh's principle", $G \times H$ acts on $\Tilde{M} = \mathcal O_
 
 For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is 
 
-GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since Hamiltonian reduction and induction are adjoint to each other (?).
+GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle.
 
 
 
