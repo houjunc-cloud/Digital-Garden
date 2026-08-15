@@ -13,6 +13,7 @@
 新目标（先处理掉orbit的问题）：
 1. 继续试例子，第一类outside Mao and Rallis的theta，第二类non theta
 2. formulate [[rank one comparison#^d7befa]] 的Lagrangian
+3. regular情形下可能可以变成去比universal centralizer[[rank one comparison#^39b499]]
 
 
 
