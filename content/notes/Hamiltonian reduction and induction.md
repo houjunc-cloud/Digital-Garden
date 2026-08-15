@@ -1,0 +1,2 @@
+- They are adjoint to each other
+- 
