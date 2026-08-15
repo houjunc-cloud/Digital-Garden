@@ -42,7 +42,7 @@ $$
 \mathcal S(\mathbb G_m),
 $$
 up to the usual choices of measures and normalizations.
- The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{N}\psi)_{U_\theta,\psi}$. Therefore, the orbit matching and function matching is automatic! (It is the same idea of another paper of Mao, which suggests to do matching by comparing two representations)
+ The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{U_{\theta}}\psi)_{U_\theta,\psi}$. Therefore, the orbit matching and function matching is automatic! (It is the same idea of another paper of Mao, which suggests to do matching by comparing two representations)
 
  After quantization, the picture becomes:
  
@@ -50,7 +50,7 @@ up to the usual choices of measures and normalizations.
 - $M_1 \to \Pi_{U_\theta, \psi}= \Omega_{\psi, \rho} = \mathcal S(Y)$ which is the Weil representation attached to the symplectic $G$-space $V_\rho$
 - $M \to \Pi_{N_G = U_{\iota'},tr} =ind^{H}_{N = U_\theta}\psi$ which is the Whittaker induction of $SL_2$
 
-GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle for both $G$ and $H$ ==(note that Venkatesh's principle more precisely is duality commutes with "nilpotent orbit dual" Hamiltonian reduction, in particular principal/regular Whittaker reduction v.s. zero Hamiltonian reduction = symplectic reduction)==, also in the $D_4$ case [S. K. Devalapurkar](https://arxiv.org/pdf/2404.09853 ) checked derived geometric Satake for this duality. This space satisfies all BZSV conditions except hypersphericality. 
+GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle for both $G$ and $H$ ==(note that Venkatesh's principle more generally is duality commutes with "nilpotent orbit dual" Hamiltonian reduction, in particular principal/regular Whittaker reduction v.s. zero Hamiltonian reduction = symplectic reduction)==, also in the $D_4$ case [S. K. Devalapurkar](https://arxiv.org/pdf/2404.09853 ) checked derived geometric Satake for this duality. This space satisfies all BZSV conditions except hypersphericality. 
 
 The "nilpotent orbit dual" means it is not the duality defined in the literature; [Gan-Wang](https://arxiv.org/pdf/2309.08874) themselves point out that the orbit correspondence arising in some of their generalized-Whittaker dual pairs does **not** always coincide with Barbasch–Vogan duality. ==This might form a counterexample to MWZ conjecture?== ^Possible-Counterexample-1
 
