@@ -12,8 +12,8 @@
 
 新目标（先处理掉orbit的问题）：
 1. 继续试例子，第一类outside Mao and Rallis的theta，第二类non theta
-2. 试试[[Mao and Rallis#^Possible-Counterexample-1]]
-3. formulate [[rank one comparison#^d7befa]] 的Lagrangian foliation/toric parametrization以及comparison
+2. 试试[[Mao and Rallis#^Possible-Counterexample-1]]到底是不是反例
+3. formulate [[rank one comparison#^d7befa]] 的Lagrangian foliation/toric parametrization以及comparison，或者看看能不能在Mao的框架下自动有orbit matching
 4. regular Whittaker reduction情形下可能可以变成去比universal centralizer[[rank one comparison#^39b499]]
 
 
