@@ -13,7 +13,7 @@ To fit in "Venkatesh's principle", $G \times H$ acts on $\Tilde{M} = \mathcal O_
  v                         v
  M//_{Wh} G --Quant-->\Pi_{(N,\psi)}
 
- Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in the "Wh" quantization of $\mathcal S(Y)_{(U_{\iota'},tr)}$
+ Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian/configuration $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in $\mathcal S(Y)_{(U_{\iota'},tr)}$, the "Wh-red" of quantization of $V_\rho$ .
 
  After quantization, the picture becomes:
  
