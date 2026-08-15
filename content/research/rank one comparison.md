@@ -1,4 +1,4 @@
-[[2026-08-11]]的问题1
+[[Running Logs]]的问题1
 
 Assume $S_X = 0$ and $P(X)=B$ and $X$ affine homogeneous with no type N roots first (Call it assumption \*). $F$ is a number field. Then $X = H \backslash G$ and $X_1$ is $G_X$ Whittaker. We ignore the rationality problem for now.  
 
