@@ -13,13 +13,13 @@ To fit in "Venkatesh's principle", $G \times H$ acts on $\Tilde{M} = \mathcal O_
  v                         v
  M//_{Wh} G --Quant-->\Pi_{(N,\psi)}
 
- Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian/configuration base $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in $\mathcal S(Y)_{(U_{\iota'},tr)}$, the "Wh-red" of quantization of $V_\rho$ .
+ Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian/configuration base $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in $\mathcal S(Y)_{(U_{\iota'},tr)}$, the "Wh-red" of quantization of $V_\rho$ , it is the same space as $ind^{H}_{N}\psi$.
 
  After quantization, the picture becomes:
  
 - $\mathcal O_{min}(G') \to \Pi_{G'} = : \Pi$, the corresponding minimal representation. After taking $(N,\psi)$-coinvariants:
 - $M_1 \to \Pi_{U_\theta, \psi}= \Omega_{\psi, \rho} = \mathcal S(Y)$ which is the Weil representation attached to the symplectic $G$-space $V_\rho$
-- $M \to \Pi_{N_G,tr} =ind^{H}_{N}\psi$ which is the Whittaker induction of $SL_2$
+- $M \to \Pi_{N_G = U_{},tr} =ind^{H}_{N}\psi$ which is the Whittaker induction of $SL_2$
 
 GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle for both $G$ and $H$ ==(note that Venkatesh's principle more precisely is duality commutes with "nilpotent orbit dual" Hamiltonian reduction, in particular principal/regular Whittaker reduction v.s. zero Hamiltonian reduction = symplectic reduction)==, also in the $D_4$ case [S. K. Devalapurkar](https://arxiv.org/pdf/2404.09853 ) checked derived geometric Satake for this duality. This space satisfies all BZSV conditions except hypersphericality. So above all we have singular hyperspherical space is dual to a smooth non-hyperspherical space in this case.
 
