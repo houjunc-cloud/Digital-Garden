@@ -8,5 +8,5 @@
 
 2026-08-14
 
-
+上面该做的都做了，本质突破问题还是在orbit matching。现在发现在一些theta correspodence的情形下
 
