@@ -8,5 +8,10 @@
 
 2026-08-14
 
-上面该做的都做了，本质突破问题还是在orbit matching。现在发现在一些theta correspodence （有dual pair）的情形下应该是能做到orbit + function space matching，用Mao的方法。
+上面该做的都做了，剩下都是一些trivial的rephrasing或者tautology，本质突破问题还是在orbit matching。现在发现在一些theta correspodence （有dual pair）的情形下应该是能做到orbit + function space matching，用Mao的方法。
+
+新目标：
+1. 
+
+
 
