@@ -1,2 +1,2 @@
 - They are adjoint to each other
-- 
+- There is a shifting trick: $M ///_{\mathcal O_f} G = (M \times \mathcal O_f^-)///_{0}G$
