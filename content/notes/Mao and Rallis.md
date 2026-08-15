@@ -23,6 +23,8 @@ To fit in "Venkatesh's principle", $G \times H$ acts on $\Tilde{M} = \mathcal O_
 
 GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle for both $G$ and $H$ ==(note that Venkatesh's principle more precisely is duality commutes with "nilpotent orbit dual" Hamiltonian reduction, in particular principal/regular Whittaker reduction v.s. zero Hamiltonian reduction = symplectic reduction)==, also in the $D_4$ case [S. K. Devalapurkar](https://arxiv.org/pdf/2404.09853 ) checked derived geometric Satake for this duality. This space satisfies all BZSV conditions except hypersphericality. 
 
+The "nilpotent orbit dual" means it is not the duality defined in the literature. In fact, 
+
 So above all we have that a singular non-neutral-grading hyperspherical space is dual to a smooth non-hyperspherical space in this case.
 
 
