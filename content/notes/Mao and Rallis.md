@@ -34,7 +34,14 @@ For a regular \(a\neq 0\), the relevant \(N\)-orbit is unique, and the fiberwise
 $$
 \dim \mathcal S(\mathcal J)_{N,\xi_N;\,a}=1.
 $$
+ and on $\{a \neq 0\}$
  
+ $$
+\mathcal S(\mathbb G_m\times \mathcal J)_{N,\xi_N}
+\simeq
+\mathcal S(\mathbb G_m),
+$$
+up to the usual choices of measures and normalizations.
  The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{N}\psi)_{U_\theta,\psi}$. Therefore, the orbit matching and function matching is automatic! (It is the same idea of another paper of Mao, which suggests to do matching by comparing two representations)
 
  After quantization, the picture becomes:
