@@ -13,7 +13,7 @@ To fit in "Venkatesh's principle", $G \times H$ acts on $\Tilde{M} = \mathcal O_
  v                         v
  M//_{Wh} G --Quant-->\Pi_{(N,\psi)}
 
- Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian/configuration base $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in $\mathcal S(Y)_{(U_{\iota'},tr)}$. In Mao and Rallis, $Y = J \oplus \mathbb A^1$ hence . 
+ Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian/configuration base $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in $\mathcal S(Y)_{(U_{\iota'},tr)}$. In Mao and Rallis, $Y = J \oplus \mathbb A^1$ hence: 
 
 $$
 \mathcal S(Y)
@@ -33,7 +33,7 @@ $$
 For a regular \(a\neq 0\), the relevant \(N\)-orbit is unique, and the fiberwise coinvariant is essentially one-dimensional:
 $$
 \dim \mathcal S(\mathcal J)_{N,\xi_N;\,a}=1.
-\]
+$$
  
  The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{N}\psi)_{U_\theta,\psi}$. Therefore, the orbit matching and function matching is automatic! (It is the same idea of another paper of Mao, which suggests to do matching by comparing two representations)
 
