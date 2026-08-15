@@ -19,7 +19,7 @@ To fit in "Venkatesh's principle", $G \times H$ acts on $\Tilde{M} = \mathcal O_
 - $M_1 \to \Pi_{U_\theta, \psi}= \Omega_{\psi, \rho}$ which is the Weil representation attached to the symplectic $G$-space $V_\rho$
 - $M \to \Pi_{N_G,tr} =ind^{H}_{N}\psi$ which is the Whittaker induction of $SL_2$
 
-Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction. For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is 
+Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/$ For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is 
 
 GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle for both $G$ and $H$ ==(note that Venkatesh's principle more precisely is duality commutes with "nilpotent orbit dual" Hamiltonian reduction, in particular principal/regular Whittaker reduction v.s. zero Hamiltonian reduction = symplectic reduction)==, also in the $D_4$ case [S. K. Devalapurkar](https://arxiv.org/pdf/2404.09853 ) checked derived geometric Satake for this duality. This space satisfies all BZSV conditions except hypersphericality. So above all we have singular hyperspherical space is dual to a smooth non-hyperspherical space in this case.
 
