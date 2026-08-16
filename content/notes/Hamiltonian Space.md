@@ -2,6 +2,4 @@
 
 -(stratification) For a reductive group $G$ and Hamiltonian space $M$, let $\mu: M \to \mathfrak g ^*$ be the moment map. Identify $\mathfrak g^* \isom \mathfrak g$ by the bilinear form, $\mathfrak g$ has a finite stratification: $L$ is a Levi, $\mathcal O \subset L$ is a nilpotent $L$ - orbit. This is the standard parametrization of Jordan decompositions/classes, hence $\mathfrak g = \coprod_{[L,\mathcal O]} D_G(L,\mathcal O)$ where $D_G(L,\mathcal O) = G(\mathfrak {z(l)}^{reg} + \mathcal O) \isom G \times ^{N_G(L,e)}$ with $\mathfrak {z(l)}^{reg} = \{z \in \mathfrak {z(l)}: Z_G(z)^0 = L\}$, correspondingly $M = \coprod_{[L,\mathcal O]} \mu^{-1}(D_G(L,\mathcal O)) \isom \coprod_{[L,\mathcal O]} G \times ^{N_G(L,e)} Z_{L,e}(M)$ where $e$ is a representative of $\mathcal O$ and $N_G(L,e) = N_G(L) \cap Z_G(e)$ which differs from $Z_L(e)$ by a finite group. On the other hand, let $M_1 = M//_{Wh} G \isom \mu^{-1} (S)$ where $S \isom  \mathfrak c_G := \mathfrak g // G$ is the Slodowy slice and $e_L^{reg}$ be a regular nilpotent element, then  $M_{reg}:=\mu^{-1}(\mathfrak g_{reg}^*) \isom (G \times_{\mathfrak c_G} M_1) / J_G \isom \coprod_{[L]} G \times ^{N_G(L,e_L^{reg})} Z_{L,e_L^{reg}}(M)$.
 
-Relation with relevant orbits:
-
-Let $M$ bea 
+Relation with relevant orbits: $\mu_N^{-1}(\xi) = \mu_G^{-1}(f+ \mathfrak n^\perp) = $ 
