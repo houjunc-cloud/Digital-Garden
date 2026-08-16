@@ -52,7 +52,7 @@ up to the usual choices of measures and normalizations.
 
 We view the orbital integrals of $G$ and $H$ as linear functionals on $\Pi_{U_\theta, \psi}$ and $\Pi_{U_{\iota'},tr}$ (where the pushforward along one side of the integral lives) both factoring through $Q:=\Pi_{U_\theta, \psi,U_{\iota'},tr}$. So now we are in the setup that we have two families $\{\mathcal O\}, \{\mathcal O_1\} \subset Q^\vee$. Let $q: \Pi \to Q$.
 
-[Mao and Rallis](https://www.cambridge.org/core/journals/compositio-mathematica/article/jacquet-modules-of-the-weil-representations-and-families-of-relative-trace-identities/B90D24DD0BF3CE3E0151DB5B5303D01D) does not solve the orbit matching problem in a new way. Suppose we have matching $\mathcal O$ and $\mathcal O_1$, then to prove the RTF comparison:
+[Mao and Rallis](https://www.cambridge.org/core/journals/compositio-mathematica/article/jacquet-modules-of-the-weil-representations-and-families-of-relative-trace-identities/B90D24DD0BF3CE3E0151DB5B5303D01D) does not solve the orbit matching problem in a new way. Suppose we have matching toric families $\mathcal O$ and $\mathcal O_1$, then to prove the RTF comparison:
 
 1. Compute $I = q^* \mathcal O$ and $J = q^* \mathcal O_1$ as an integral distribution on $\Pi$ (minimal representation is Weil representation). Because $q$ is surjective, $\mathcal O = \Delta_{\mathcal O} \mathcal O_1 \iff I = \Delta_{\mathcal O} J$.
 2. 
