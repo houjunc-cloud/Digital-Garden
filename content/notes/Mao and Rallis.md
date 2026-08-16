@@ -55,7 +55,7 @@ We view the orbital integrals of $G$ and $H$ as linear functionals on $\Pi_{U_\t
 [Mao and Rallis](https://www.cambridge.org/core/journals/compositio-mathematica/article/jacquet-modules-of-the-weil-representations-and-families-of-relative-trace-identities/B90D24DD0BF3CE3E0151DB5B5303D01D) does not solve the orbit matching problem in a new way. Suppose we have matching toric families $\mathcal O$ and $\mathcal O_1$, then to prove the RTF comparison:
 
 1. Compute $I = q^* \mathcal O$ and $J = q^* \mathcal O_1$ as an integral distribution on $\Pi$ (minimal representation is Weil representation). Because $q$ is surjective, $\mathcal O = \Delta_{\mathcal O} \mathcal O_1 \iff I = \Delta_{\mathcal O} J$.
-2. For the explicit integral form of $I$, the group action on $\Phi \in \Pi$ can be computed 
+2. For the explicit integral form of $I$, the group action on $\Phi \in \Pi$ can be computed explicitl
 
 GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle for both $G$ and $H$ ==(note that Venkatesh's principle more generally is duality commutes with "nilpotent orbit dual" Hamiltonian reduction, in particular principal/regular Whittaker reduction v.s. zero Hamiltonian reduction = symplectic reduction)==, also in the $D_4$ case [S. K. Devalapurkar](https://arxiv.org/pdf/2404.09853 ) checked derived geometric Satake for this duality. This space satisfies all BZSV conditions except hypersphericality. 
 
