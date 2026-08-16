@@ -52,6 +52,8 @@ up to the usual choices of measures and normalizations.
 
 The following is [Mao and Rallis](https://www.cambridge.org/core/journals/compositio-mathematica/article/jacquet-modules-of-the-weil-representations-and-families-of-relative-trace-identities/B90D24DD0BF3CE3E0151DB5B5303D01D) procedure:
 
+1. Compute 
+
 We view the orbital integrals of $G$ and $H$ as linear functionals on $\Pi_{U_\theta, \psi}$ and $\Pi_{U_{\iota'},tr}$ (where the pushforward along one side of the integral lives) both factoring through $Q:=\Pi_{U_\theta, \psi,U_{\iota'},tr}$. So now we are in the setup that we have two families $\{\mathcal O\}, \{\mathcal O_1\} \subset Q^\vee$.
 
 GPT guesses, ignoring the hypersphericality condition, $\mathcal O_{min}(G') \bijection T^*(U_{\iota'^\vee} \backslash G^\vee, \Psi_{\iota'^\vee}) = WI^{G^\vee}_{H^\vee, \iota'^\vee}(T^*H^\vee)$ since it satisfies Venkatesh's principle for both $G$ and $H$ ==(note that Venkatesh's principle more generally is duality commutes with "nilpotent orbit dual" Hamiltonian reduction, in particular principal/regular Whittaker reduction v.s. zero Hamiltonian reduction = symplectic reduction)==, also in the $D_4$ case [S. K. Devalapurkar](https://arxiv.org/pdf/2404.09853 ) checked derived geometric Satake for this duality. This space satisfies all BZSV conditions except hypersphericality. 
