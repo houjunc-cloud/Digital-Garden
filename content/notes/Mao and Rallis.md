@@ -42,7 +42,7 @@ $$
 \mathcal S(\mathbb G_m),
 $$
 up to the usual choices of measures and normalizations.
- The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{U_{\theta}}\psi)_{U_\theta,\psi}$ (see below). It is the same idea of another paper of Mao and Rallis, which suggests to do matching by comparing two Jacquet modules.
+ The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{U_{\theta}}\psi)_{U_\theta,\psi}$ (see below). It is the same idea of [another paper of Mao and Rallis](https://www.cambridge.org/core/journals/compositio-mathematica/article/jacquet-modules-of-the-weil-representations-and-families-of-relative-trace-identities/B90D24DD0BF3CE3E0151DB5B5303D01D), which suggests to do matching by comparing two Jacquet modules.
 
  After quantization, the picture becomes:
  
@@ -50,7 +50,7 @@ up to the usual choices of measures and normalizations.
 - $M_1 \to \Pi_{U_\theta, \psi}= \Omega_{\psi, \rho} = \mathcal S(Y)$ which is the Weil representation attached to the symplectic $G$-space $V_\rho$
 - $M \to \Pi_{N_G = U_{\iota'},tr} =ind^{H}_{N = U_\theta}\psi$ which is the Whittaker induction of $SL_2$
 
-The following is Mao and Rallis procedure:
+The following is [Mao and Rallis](another paper of Mao and Rallis) procedure:
 
 We view the orbital integrals of $G$ and $H$ as linear functionals on $\Pi_{U_\theta, \psi}$ and $\Pi_{U_{\iota'},tr}$ (where the pushforward along one side of the integral lives) both factoring through $Q:=\Pi_{U_\theta, \psi,U_{\iota'},tr}$. So now we are in the setup that we have two families $\{\mathcal O\}, \{\mathcal O_1\} \subset Q^\vee$.
 
