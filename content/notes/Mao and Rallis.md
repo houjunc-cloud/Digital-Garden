@@ -42,7 +42,7 @@ $$
 \mathcal S(\mathbb G_m),
 $$
 up to the usual choices of measures and normalizations.
- The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{U_{\theta}}\psi)_{U_\theta,\psi}$. (It is the same idea of another paper of Mao, which suggests to do matching by comparing two representations) To have orbit and function matching, one needs to show a bit more:
+ The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{U_{\theta}}\psi)_{U_\theta,\psi}$. (It is the same idea of another paper of Mao, which suggests to do matching by comparing two representations)
 
  After quantization, the picture becomes:
  
