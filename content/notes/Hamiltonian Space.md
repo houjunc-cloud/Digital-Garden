@@ -1,4 +1,4 @@
 - Hamiltonian reduction and induction are adjoint to each other
 - There is a shifting trick: $M ///_{\mathcal O_f} G = (M \times \mathcal O_f^-)///_{0}G$
 - Don't mix Hamiltonian reduction with Whittaker reduction, the former is mod G and the latter is mod N
-- For a reductive group $G$ and Hamiltonian space $M$, let $\mu: M \to \mathfrak g ^*$ be the moment map. Identify $\mathfrak g^* \isom \mathfrak g$ by the bilinear form, $\mathfrak g$ has a finite stratification
+- For a reductive group $G$ and Hamiltonian space $M$, let $\mu: M \to \mathfrak g ^*$ be the moment map. Identify $\mathfrak g^* \isom \mathfrak g$ by the bilinear form, $\mathfrak g$ has a finite stratification: $L$ is
