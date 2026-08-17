@@ -57,7 +57,7 @@ This step is essential: we must study the "most singular part" of $X$, no matter
 Some new progress: Relate the relevant orbits to families of Lagrangians in the Whittaker reduction of $M$, then it becomes a problem of comparing the Whittaker reduction of $M$ and $M_1$. There are two conceptual approaches:
 
 1. (perfect explanation but assumption not true in many cases) If we believe Venkatesh's principle, assume $M'^\vee = T^*G^\vee \times S_X$ is a $G^\vee \times G_X^\vee$ - Hamiltonian space, then one should have $M//_{Wh} G = M_1//_{Wh} G_X$. By our reinterpretation for [[Mao and Rallis]], we may find an $M'$ that lies in the framework of extended BZSV which should still explain expectation. ^d7befa
-2. There is one more improvement on 1, $M^\vee = (T^*G^\vee \times S_X)//G_X^\vee$, so we already have $M^\vee//G^\vee \isom S_X// G_X^\vee = M_1^\vee// G_X^\vee$. Applying Venkatesh's principle 
+2. There is one more improvement on 1, $M^\vee = (T^*G^\vee \times S_X)//G_X^\vee$, so we already have $M^\vee//G^\vee \isom S_X// G_X^\vee = M_1^\vee// G_X^\vee$. Applying Venkatesh's principle we have $M//_{Wh} G = M_1//_{Wh} G_X$
 3. universal centralizer + BZSV duality, old way.  ^39b499
 
 ## Matching of Distribution
