@@ -31,4 +31,4 @@ and on the relative-regular locus $\chi_X^*J_{rel} \isom I_{H}|_{V_{reg}}$ where
 
 To recover $J_X$,  it suffices to eliminate the extra indices. $(\mathfrak h^\perp)_{H-reg} \subset \mathfrak g_{reg}^* \cap \mathfrak h^\perp$ from the lemma above. So the Kostant section only meets one point, so birationally $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$. Denote by $R_X:= \mathfrak h^\perp_{H-reg} // H$ the regular quotient, we also need to assume $R_X \to \mathfrak c_X$ is birational and surjective. Therefore $W_{X,c}$ is a $J_{X,c}$ - torsor and so $W_X \to \mathfrak c_X$ is a $J_X$-torsor by some fppf+gerbe+descent argument. 
 
-To have $W_X \isom J_X$ symplectically, we further needs a Lagrangian section $s: \mathfrak c_X \to W_X$
+To have $W_X \isom J_X$ symplectically, we further needs a Lagrangian section $s: \mathfrak c_X \to W_X$, hopefully it is some $\Lambda_{\mathcal O,\xi}$. Where does $S_X$
