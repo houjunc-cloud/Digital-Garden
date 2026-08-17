@@ -1046,3 +1046,4 @@ $$
 |W_G/W_{L_I}|.
 }
 $$
+This number is not a coincidence. It is related to degree of $\mathfrak t^*/ \to $
