@@ -13,4 +13,7 @@ When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$. Thus $\tilde{M} 
 
 Remark: I don't think this is actually a conjecture because one can in fact prove it case by case. However, a conceptual proof is worthy. The conjecture is somehow circular, we actually want $\tilde{M} //_{Wh} G \isom M_1 \implies T^*X//_{Wh} G \isom J_X$ and it should be simpler, not the converse. This is softly solved by Venkatesh's principle [[rank one comparison + matching#^9cda03]].
 
-Proof: $T^*X = G \times ^H V$ where $V = \mathfrak h^\perp$. Let $\chi_X:V \to \mathfrak c_X$ be the quotient map, then $\mathfrak c_X = T^*X//G = V//H$  $W_X := T^*X//_{Wh}G \isom T^*X \times_{\mathfrak g^*} S_G$. Compute the fibers of $\pi: W_X \to \mathfrak c_X$. Let $\iota: \mathfrak c_X \to \mathfrak c_G$ and $\kappa_G :\mathfrak c_G \to S_G \subset \mathfrak g_{reg}^*$. For $c \in \mathfrak c_X$, put $s_c:= \kappa_G(\iota(c))$, then $W_{X,c}=\{[g,\eta] \in G \times ^H \mathfrak h^\perp| \chi_X(\eta) = c, Ad^*(g)\}$
+Proof: $T^*X = G \times ^H V$ where $V = \mathfrak h^\perp$. Let $\chi_X:V \to \mathfrak c_X$ be the quotient map, then $\mathfrak c_X = T^*X//G = V//H$  $W_X := T^*X//_{Wh}G \isom T^*X \times_{\mathfrak g^*} S_G$. 
+
+The 
+ompute the fibers of $\pi: W_X \to \mathfrak c_X$. Let $\iota: \mathfrak c_X \to \mathfrak c_G$ and $\kappa_G :\mathfrak c_G \to S_G \subset \mathfrak g_{reg}^*$. For $c \in \mathfrak c_X$, put $s_c:= \kappa_G(\iota(c))$, then $W_{X,c}=\{[g,\eta] \in G \times ^H \mathfrak h^\perp| \chi_X(\eta) = c, Ad^*(g)(\eta) = s_c\}$
