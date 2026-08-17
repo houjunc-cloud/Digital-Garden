@@ -21,9 +21,9 @@ To compare it with $J_X$. [Hameister-Luo-Morrissey](https://arxiv.org/pdf/2409.1
 
 $$1 \to J_{rel} \to J_G|_{\mathfrak c_X} \to J_X \to 1 $$
 
-and on the relative-regular locus $\chi_X^*J_{rel} \isom I_{H}|_{V_{reg}}$ where $I_H$ is the universal centralizer of $H$ - action on $V$. Hence for an H-regular $\eta$, $J_{rel,c} = Z_H(\eta)$ and $J_{G,c} = Z_G(\eta)$ so $J_{X,c} \isom Z_G(\eta)/Z_H(\eta)$. Combining the two, we have $W_{X,c} = \coprod_{[\eta] \in R_c} W_{X,c,[\eta]}$ with $W_{X,c,[\eta]} \isom J_{X,c}$ at least birationally.
+and on the relative-regular locus $\chi_X^*J_{rel} \isom I_{H}|_{V_{reg}}$ where $I_H$ is the universal centralizer of $H$ - action on $V$. Hence for an H-regular $\eta$, $J_{rel,c} = Z_H(\eta)$ and $J_{G,c} = Z_G(\eta)$ so $J_{X,c} \isom Z_G(\eta)/Z_H(\eta)$. Combining the two, we have $W_{X,c} = \coprod_{[\eta] \in R_c} W_{X,c,[\eta]}$ with $W_{X,c,[\eta]} \isom J_{X,c}$ for regular $\eta$.
 
 >[Hameister-Luo-Morrissey](https://arxiv.org/pdf/2409.15691)
 >$X$ is tempered iff $(\mathfrak h^\perp)_{H-reg} \subset \mathfrak g_{reg}^*$
 
-To recover $J_X$, we need to assume $(\mathfrak h^\perp)_{H-reg} = \mathfrak g_{reg}^* \cap \mathfrak h^\perp$. The lemma above only gives one inclusion. With the assumption $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$
+To recover $J_X$, we need to assume $(\mathfrak h^\perp)_{H-reg} = \mathfrak g_{reg}^* \cap \mathfrak h^\perp$. The lemma above only gives one inclusion. With the assumption $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$ so $R_c$
