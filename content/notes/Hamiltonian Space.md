@@ -26,4 +26,4 @@ and on the relative-regular locus $\chi_X^*J_{rel} \isom I_{H}|_{V_{reg}}$ where
 >[Hameister-Luo-Morrissey](https://arxiv.org/pdf/2409.15691)
 >$X$ is tempered iff $(\mathfrak h^\perp)_{H-reg} \subset \mathfrak g_{reg}^*$
 
-To recover $J_X$, we need to assume $(\mathfrak h^\perp)_{H-reg} = \mathfrak g_{reg}^* \cap $
+To recover $J_X$, we need to assume $(\mathfrak h^\perp)_{H-reg} = \mathfrak g_{reg}^* \cap \mathfrak h^\perp$
