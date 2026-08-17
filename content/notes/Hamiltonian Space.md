@@ -8,5 +8,7 @@ $f + \mathfrak n^\perp \isom N \times S \subset \mathfrak g_{reg}^*$ by conjugat
 
 -(GPT's suggestion: unfold) $\tilde{M}:=G_X \times^{J_X} T^*X$ is a $G \times G_X$ - Hamiltonian space. $\tilde{M}//_{Wh}G_X \isom T^*X$.
 
->[!Conjecture]
+>[!"conjecture"]
 When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$. Thus $\tilde{M} //_{Wh} G \isom M_1 = T^*(G_X, \Psi) \isom G_X \times S_{G_X}$ where $S_{G_X}$ is the Slodowy slice for $G_X$.
+
+Proof: 
