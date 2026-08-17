@@ -1046,4 +1046,4 @@ $$
 |W_G/W_{L_I}|.
 }
 $$
-This number is not a coincidence. It is related to degree of $\mathfrak t^*/ \to $
+This number is not a coincidence. It is related to degree of Kostant-Whittaker descent $\pi_S: \mathfrak t^*/W_S \to \mathfrak t^*/W$.
