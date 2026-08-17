@@ -60,6 +60,10 @@ Some new progress: Relate the relevant orbits to families of Lagrangians in the 
 2. There is one more improvement on 1, we don't really need to find a $G \times H$ space: $M^\vee = (T^*G^\vee \times S_X)//G_X^\vee$, so we already have $M^\vee//G^\vee \isom S_X// G_X^\vee = M_1^\vee// G_X^\vee$. Applying Venkatesh's principle we have $M//_{Wh} G = M_1//_{Wh} G_X$ ^9cda03
 3. universal centralizer + BZSV duality, old way.  ^39b499
 
+Continuation of 1, 2:
+
+Suppose we already have $\Phi: M//_{Wh} G \to$
+
 ## Matching of Distribution
 
 
