@@ -62,7 +62,7 @@ Some new progress: Relate the relevant orbits to families of Lagrangians in the 
 
 Continuation of 1, 2:
 
-Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. Suppose furthermore $q_1 = q \circ \Phi$. My expectation is that $ \circ \Phi \circ H_1$
+Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. Suppose furthermore $q_1 = q \circ \Phi$. My expectation is that $T = H_1 \circ \Phi \circ H$, where $H, H_1$ are Hankel transforms the two families of Lagrangian fibrations on $Wh_G$ and $Wh_{G_X}$ respectively.
 
 ## Matching of Distribution
 
