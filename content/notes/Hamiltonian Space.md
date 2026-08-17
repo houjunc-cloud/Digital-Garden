@@ -14,7 +14,7 @@ When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$. Thus $\tilde{M} 
 Remark: I don't think this is actually a conjecture because one can in fact prove it case by case. However, a conceptual proof is worthy. The conjecture is somehow circular, we actually want $\tilde{M} //_{Wh} G \isom M_1 \implies T^*X//_{Wh} G \isom J_X$ and it should be simpler, not the converse. This is softly solved by Venkatesh's principle [[rank one comparison + matching#^9cda03]].
 
 Proof: 
-The proof holds birationally
+The proof holds birationally.
 
 $T^*X = G \times ^H V$ where $V = \mathfrak h^\perp$. Let $\chi_X:V \to \mathfrak c_X$ be the quotient map, then $\mathfrak c_X = T^*X//G = V//H$  $W_X := T^*X//_{Wh}G \isom T^*X \times_{\mathfrak g^*} S_G$. 
 
@@ -31,4 +31,5 @@ and on the relative-regular locus $\chi_X^*J_{rel} \isom I_{H}|_{V_{reg}}$ where
 
 To recover $J_X$,  it suffices to eliminate the extra indices. $(\mathfrak h^\perp)_{H-reg} \subset \mathfrak g_{reg}^* \cap \mathfrak h^\perp$ from the lemma above. So the Kostant section only meets one point, so birationally $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$. Denote by $R_X:= \mathfrak h^\perp_{H-reg} // H$ the regular quotient, we also need to assume $R_X \to \mathfrak c_X$ is birational and surjective. Therefore $W_{X,c}$ is a $J_{X,c}$ - torsor and so $W_X \to \mathfrak c_X$ is a $J_X$-torsor by some fppf+gerbe+descent argument. 
 
-To have $W_X \isom J_X$ symplectically, we further needs a Lagrangian section $s: \mathfrak c_X \to W_X$, hopefully it is some $\Lambda_{\mathcal O,\xi}$. Here's where $S_X = 0$ used: HLM conjectures that $S_X = 0 \implies R_X \isom \mathfrak c_X$ and there is a Lagrangian section
+To have $W_X \isom J_X$ symplectically, we further needs a Lagrangian section $s: \mathfrak c_X \to W_X$, hopefully it is some $\Lambda_{\mathcal O,\xi}$. Here's where $S_X = 0$ used: HLM conjectures that $S_X = 0 \implies R_X \isom \mathfrak c_X$ and there is a Lagrangian section. QED
+
