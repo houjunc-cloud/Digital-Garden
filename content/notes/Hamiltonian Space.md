@@ -11,4 +11,6 @@ $f + \mathfrak n^\perp \isom N \times S \subset \mathfrak g_{reg}^*$ by conjugat
 >[!"conjecture"]
 When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$. Thus $\tilde{M} //_{Wh} G \isom M_1 = T^*(G_X, \Psi) \isom G_X \times S_{G_X}$ where $S_{G_X}$ is the Slodowy slice for $G_X$.
 
+Remark: I don't think this is actually a conjecture because one can in fact prove it case by case. However, a conceptual proof is worthy.
+
 Proof: 
