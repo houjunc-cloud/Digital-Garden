@@ -62,7 +62,7 @@ Some new progress: Relate the relevant orbits to families of Lagrangians in the 
 
 Continuation of 1, 2:
 
-Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. S
+Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. Suppose furthermore $q_1 = q \circ \Phi$. My expectation is that 
 
 ## Matching of Distribution
 
