@@ -7,7 +7,7 @@ $$
 G=\mathrm{GL}_3,
 \qquad
 \mathfrak c_G
-=
+\isom T^*G//(G \times G) =
 \mathfrak g^*//G
 \simeq
 \mathbb A^3.
