@@ -62,7 +62,7 @@ Some new progress: Relate the relevant orbits to families of Lagrangians in the 
 
 Continuation of 1, 2:
 
-Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$
+Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$ and 
 
 ## Matching of Distribution
 
