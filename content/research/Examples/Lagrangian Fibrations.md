@@ -147,7 +147,7 @@ u_2,
 -\frac{\delta}{u_2},
 \frac{D}{\delta}
 \right)
-\$$3mm]
+\\[3mm]
 \{\alpha_1\}
 &
 \{u_2=0,\ u_1\neq0\}
@@ -159,7 +159,7 @@ q_1
 u_1,
 \frac{D}{u_1^2}
 \right)
-\$$3mm]
+\\[3mm]
 \{\alpha_2\}
 &
 \{u_2\neq0,\ \delta=0\}
@@ -171,7 +171,7 @@ q_2
 u_2,
 -\frac{\epsilon}{u_2}
 \right)
-\$$3mm]
+\\[3mm]
 \Delta
 &
 \{u_2=u_1=0\}
@@ -254,9 +254,9 @@ $$
 \boxed{
 \begin{array}{ccccc}
 &&J_G&&
-\$$1mm]
+\\[1mm]
 &\swarrow p&&q\searrow&
-\$$1mm]
+\\[1mm]
 \mathfrak c_G
 &&&
 \bigsqcup_{I\subset\Delta}A_I.
