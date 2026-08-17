@@ -14,7 +14,7 @@ When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$. Thus $\tilde{M} 
 Remark: I don't think this is actually a conjecture because one can in fact prove it case by case. However, a conceptual proof is worthy. The conjecture is somehow circular, we actually want $\tilde{M} //_{Wh} G \isom M_1 \implies T^*X//_{Wh} G \isom J_X$ and it should be simpler, not the converse. This is softly solved by Venkatesh's principle [[rank one comparison + matching#^9cda03]].
 
 Proof: 
-The proof holds birationally, 
+The proof holds birationally
 
 $T^*X = G \times ^H V$ where $V = \mathfrak h^\perp$. Let $\chi_X:V \to \mathfrak c_X$ be the quotient map, then $\mathfrak c_X = T^*X//G = V//H$  $W_X := T^*X//_{Wh}G \isom T^*X \times_{\mathfrak g^*} S_G$. 
 
@@ -29,4 +29,4 @@ and on the relative-regular locus $\chi_X^*J_{rel} \isom I_{H}|_{V_{reg}}$ where
 >[Hameister-Luo-Morrissey](https://arxiv.org/pdf/2409.15691)
 >$X$ is tempered iff $(\mathfrak h^\perp)_{H-reg} \subset \mathfrak g_{reg}^*$
 
-To recover $J_X$, we need to assume $(\mathfrak h^\perp)_{H-reg} = \mathfrak g_{reg}^* \cap \mathfrak h^\perp$. The lemma above only gives one inclusion. With the assumption $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$ so $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$. Denote by $R_X:= \mathfrak h^\perp_{H-reg} // H$ the regular quotient, we also need to assume $R_X \to \mathfrak c_X$ is an isomorphism
+To recover $J_X$,  $(\mathfrak h^\perp)_{H-reg} \subset \mathfrak g_{reg}^* \cap \mathfrak h^\perp$ from the lemma above only . So birationally $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$ and $R_c = H \backslash \mathfrak h^\perp_{H-reg} \cap \chi_X^{-1}(c)$. Denote by $R_X:= \mathfrak h^\perp_{H-reg} // H$ the regular quotient, we also need to assume $R_X \to \mathfrak c_X$ is an isomorphism
