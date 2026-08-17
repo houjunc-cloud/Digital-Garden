@@ -17,6 +17,8 @@ Proof: $T^*X = G \times ^H V$ where $V = \mathfrak h^\perp$. Let $\chi_X:V \to \
 
 The first observation is the fiberwise identification: we
 compute the fibers of $\pi: W_X \to \mathfrak c_X$. Let $\iota: \mathfrak c_X \to \mathfrak c_G$ and $\kappa_G :\mathfrak c_G \to S_G \subset \mathfrak g_{reg}^*$. For $c \in \mathfrak c_X$, put $s_c:= \kappa_G(\iota(c))$, then $W_{X,c}=\{[g,\eta] \in G \times ^H \mathfrak h^\perp| \chi_X(\eta) = c, Ad^*(g)(\eta) = s_c\}$. Denote $R_c:= H\backslash (V \cap G \cdot s_c)$ (R stands for representatives). Now fix an $H$ - orbit and choose $\eta \in V \cap G \cdot s_c$ and $g_\eta$ such that $Ad^*(g_\eta)(\eta) = s_c$ (a point in the fiber). Any other g such that $Ad^*(g)(\eta) = s_c$ is of the form $g = z g_{\eta}$ for $z \in Z_G(s_c)$, hence $$W_{X,c,[\eta]}:=\{[g,\eta'] \in W_{X,c}| \eta' \in H \eta \} \isom Z_G(s_c)/(g_{\eta}Z_H(\eta)g_{eta}^{-1}) \isom Z_G(\eta)/Z_H(\eta)$$
-To compare it with $J_X$. Hameister-Luo-Morrissey construct an exact sequence:
+To compare it with $J_X$. [Hameister-Luo-Morrissey](https://arxiv.org/pdf/2409.15691) construct an exact sequence:
 
 $$1 \to J_{rel} \to J_G|_{\mathfrak c_X} \to J_X \to 1 $$
+
+and on the regula
