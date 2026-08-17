@@ -21,4 +21,4 @@ To compare it with $J_X$. [Hameister-Luo-Morrissey](https://arxiv.org/pdf/2409.1
 
 $$1 \to J_{rel} \to J_G|_{\mathfrak c_X} \to J_X \to 1 $$
 
-and on the regula
+and on the relative-regular locus $\chi_X^*J_{rel} \isom I_{H}^{reg}$
