@@ -13,4 +13,4 @@ When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$ over the regular 
 
 Remark: I don't think this is actually a conjecture because one can in fact prove it case by case. However, a conceptual proof is worthy. The conjecture is somehow circular, we actually want $\tilde{M} //_{Wh} G \isom M_1 \implies T^*X//_{Wh} G \isom J_X$ and it should be simpler, not the converse.
 
-Proof: 
+Proof: $W_X := T^*X//_{Wh}G \isom $
