@@ -1048,4 +1048,4 @@ $$
 $$
 This number is not a coincidence. It is related to degree of Kostant-Whittaker descent $\pi_S: \mathfrak t^*/W_S \to \mathfrak t^*/W$.
 
-In general
+In general, let $\mathcal W_X$ be the Whittaker reduction of $T^*X$, then it is a $J_X$-torsor generically.
