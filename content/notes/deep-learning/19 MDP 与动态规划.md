@@ -205,6 +205,7 @@ $$\mathbb{E}^\pi\Big[\sum_t\gamma^tr(s_t,a_t)\Big]=\frac{1}{1-\gamma}\,\mathbb{E
 
 ## Related
 
+- [[A 概率与统计不等式手册]] — 本篇用到的不等式在附录里都有证明
 - [[index|深度学习（为纯数学研究者重写）]]
 - [[20 值函数方法]]
 - [[21 策略梯度方法]]
