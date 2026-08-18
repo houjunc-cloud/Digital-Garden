@@ -402,10 +402,35 @@ $$=\mathbb{E}_{S,S',\sigma}\sup_g\frac1n\sum_i\sigma_i\big(g(z_i')-g(z_i)\big)\ 
 **引理.** 设 $\mathcal{A}\subset\R^n$ 有限，$|\mathcal{A}|=N$，$\sup_{a\in\mathcal{A}}\Vert a\Vert_2\le R$。则
 $$\mathbb{E}_\sigma\Big[\max_{a\in\mathcal{A}}\frac1n\langle\sigma,a\rangle\Big]\ \le\ \frac{R\sqrt{2\log N}}{n}.$$
 
-*证明.* 对固定 $a$，$\langle\sigma,a\rangle=\sum_i\sigma_ia_i$ 是独立零均值有界变量之和，由 Hoeffding 引理是 $\Vert a\Vert_2^2\le R^2$-次高斯的。直接用 A2.3 的最大值界。$\square$
+*证明.* 记 $S=\max_{a}\langle\sigma,a\rangle$。对任意 $\lambda>0$，
+$$e^{\lambda\mathbb{E}S}\ \overset{\text{Jensen}}{\le}\ \mathbb{E}e^{\lambda S}\ =\ \mathbb{E}\max_a e^{\lambda\langle\sigma,a\rangle}\ \le\ \sum_{a\in\mathcal{A}}\mathbb{E}e^{\lambda\langle\sigma,a\rangle}.$$
+第三步只是"最大值 $\le$ 求和"，**看起来极其浪费，但因为发生在指数上，代价只有 $\log N$**。
 
-**推论（VC 情形）.** 对二值函数类，$\Vert a\Vert_2\le\sqrt n$，$N\le\Pi_{\mathcal{F}}(n)$（增长函数），故
-$$\widehat{\mathfrak{R}}_S(\mathcal{F})\ \le\ \sqrt{\frac{2\log\Pi_{\mathcal{F}}(n)}{n}}.$$
+对固定的 $a$，由 $\sigma_i$ 独立，
+$$\mathbb{E}e^{\lambda\langle\sigma,a\rangle}=\prod_{i=1}^n\mathbb{E}e^{\lambda\sigma_ia_i}=\prod_{i=1}^n\cosh(\lambda a_i)\ \le\ \prod_i e^{\lambda^2a_i^2/2}=e^{\lambda^2\Vert a\Vert_2^2/2}\le e^{\lambda^2R^2/2},$$
+其中 $\cosh x\le e^{x^2/2}$ 由逐项比较 Taylor 系数得到：$\cosh x=\sum_k\frac{x^{2k}}{(2k)!}$，$e^{x^2/2}=\sum_k\frac{x^{2k}}{2^kk!}$，而 $(2k)!\ge2^kk!$。（这比调用 Hoeffding 引理更干净——对 Rademacher 是直接算出来的，给出的次高斯参数 $\Vert a\Vert^2$ 恰好相同。）
+
+于是 $e^{\lambda\mathbb{E}S}\le Ne^{\lambda^2R^2/2}$，取对数除以 $\lambda$：
+$$\mathbb{E}S\ \le\ \frac{\log N}{\lambda}+\frac{\lambda R^2}{2},$$
+两项在 $\lambda^\star=\sqrt{2\log N}/R$ 处平衡，给出 $\mathbb{E}S\le R\sqrt{2\log N}$。除以 $n$。$\square$
+
+**加强（居中）.** 由 $\mathbb{E}\langle\sigma,c\rangle=0$，对任意固定 $c$ 有 $\mathbb{E}\max_a\langle\sigma,a\rangle=\mathbb{E}\max_a\langle\sigma,a-c\rangle$，故可把 $R$ 换成 $\mathcal{A}$ 的 **Chebyshev 半径** $\inf_c\max_a\Vert a-c\Vert_2$。Shalev-Shwartz–Ben-David 书中即取 $c=\bar a$ 的版本。
+
+**$\sqrt{2\log N}$ 不能再改进（常数意义下）.** 取 $\mathcal{A}=\{-1,1\}^n$：$N=2^n$、$R=\sqrt n$，界给 $n\sqrt{2\log2}\approx1.18\,n$，而真值 $=n$（取 $a=\sigma$）。**只差 $1.18$ 倍。**
+
+> [!tip] 为什么答案是 $\sqrt{\log N}$
+> $N$ 个 iid $\mathcal{N}(0,\sigma^2)$ 的最大值 $\approx\sigma\sqrt{2\log N}$，因为高斯尾 $e^{-t^2/2\sigma^2}$ 恰在 $t=\sigma\sqrt{2\log N}$ 处降到 $1/N$。所以这条引理在说：**任何 $N$ 个次高斯变量的最大值都不会超过 $N$ 个独立高斯的——相关性只会帮忙，不会添乱。**
+>
+> **这个尺度关系是整个学习理论成立的原因**：假设类的行为模式数是指数多的，取 $\log$ 后变成多项式，再开方就得到 $\tilde O(\sqrt{d/n})$。如果这里是 $N$ 或 $\log N$（不开方），VC 理论根本不存在。
+
+**推论（VC 情形）.** 取 $\mathcal{A}=\{(f(x_1),\dots,f(x_n)):f\in\mathcal{F}\}$。二值类给 $\Vert a\Vert_2\le\sqrt n$、$N\le\Pi_{\mathcal{F}}(n)$（增长函数），故
+$$\widehat{\mathfrak{R}}_S(\mathcal{F})\ \le\ \frac{\sqrt n\cdot\sqrt{2\log\Pi_{\mathcal{F}}(n)}}{n}=\sqrt{\frac{2\log\Pi_{\mathcal{F}}(n)}{n}}.$$
+**$\sqrt n$ 与 $n$ 约掉一半，这就是 $1/\sqrt n$ 的来源。**另外注意分子是 $\Vert a\Vert_2$ 而非 $n$：**函数类越稀疏（多数点上取零），界越好**——这在分析稀疏假设类时是免费的收益。
+
+> [!warning] 它的边界：只能处理有限类
+> 对实值/无限类，标准做法是在尺度 $\varepsilon$ 上取覆盖网再用本引理，付出 $\varepsilon$ 的逼近代价：
+> $$\widehat{\mathfrak{R}}_S(\mathcal{F})\ \lesssim\ \inf_{\varepsilon>0}\Big(\varepsilon+\sqrt{\tfrac{\log N(\varepsilon,\mathcal{F},L_2(P_n))}{n}}\Big).$$
+> 这叫**单尺度离散化**。Dudley 熵积分（A5.5）的全部改进就是不要只用一个尺度，而是沿所有尺度做望远镜分解，把 $\inf$ 换成积分——**链式法就是"Massart 用无穷多次"。**
 
 ### A5.3 Sauer–Shelah 引理
 
