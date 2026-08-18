@@ -28,3 +28,4 @@ settled than it is.
 有些东西一条笔记装不下，需要一整套互相引用的模块。这些放在子目录里，各有自己的索引页：
 
 - [[notes/deep-learning/index|深度学习（为纯数学研究者重写）]] — 在 Tony Feng 的 Berkeley Math 270 框架上按数学主题重组的 24 篇讲义：学习理论、逼近论、信息论、优化、NTK/mean-field、架构、生成模型、强化学习、AI for Math。
+- [[notes/scientific-foundation-models/index|科学基础模型的数学]] — 在 JHU Math 110.773（Fei Lu, 2026 Fall）大纲上补前置与深度：交互粒子系统与 attention、从数据学交互律、score matching 的率、in-context learning、算子里的核与算子学习。
