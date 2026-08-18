@@ -436,11 +436,42 @@ $$\widehat{\mathfrak{R}}_S(\mathcal{F})\ \le\ \frac{\sqrt n\cdot\sqrt{2\log\Pi_{
 
 **引理.** 若 $\mathrm{VC}(\mathcal{F})=d$，则 $\Pi_{\mathcal{F}}(n)\le\sum_{i=0}^d\binom ni\le\big(\tfrac{en}{d}\big)^d$。
 
-*证明（对 $n+d$ 归纳）.* $n\le d$ 或 $d=0$ 时平凡。设 $\mathcal{F}$ 限制在 $\{x_1,\dots,x_n\}$ 上得到集合族 $\mathcal{A}\subset\{0,1\}^n$。令
-$$\mathcal{A}_0=\{a\in\{0,1\}^{n-1}:\ (a,0)\in\mathcal{A}\ \text{或}\ (a,1)\in\mathcal{A}\},\qquad \mathcal{A}_1=\{a:\ (a,0)\in\mathcal{A}\ \text{且}\ (a,1)\in\mathcal{A}\}.$$
-则 $|\mathcal{A}|=|\mathcal{A}_0|+|\mathcal{A}_1|$。$\mathcal{A}_0$ 的 VC 维 $\le d$；而 $\mathcal{A}_1$ 若打散一个大小 $d$ 的集合，则 $\mathcal{A}$ 打散它加上 $x_n$（大小 $d+1$），矛盾——故 $\mathrm{VC}(\mathcal{A}_1)\le d-1$。归纳假设给
-$$|\mathcal{A}|\le\sum_{i=0}^{d}\binom{n-1}i+\sum_{i=0}^{d-1}\binom{n-1}i=\sum_{i=0}^d\binom ni,$$
-最后一步用 Pascal 恒等式。第二个不等号由 $\big(\frac dn\big)^d\sum_{i\le d}\binom ni\le\sum_i\binom ni(\frac dn)^i\le(1+\frac dn)^n\le e^d$。$\square$
+*证明（对 $n$ 归纳）.* 记 $\mathcal{A}:=\mathcal{F}|_{(x_1,\dots,x_n)}\subseteq\{0,1\}^n$。
+
+**思路：把 $n$ 个点上的计数归约成两个 $n-1$ 个点上的计数。**考虑砍掉最后一位的投影
+$$\pi:\{0,1\}^n\to\{0,1\}^{n-1},\qquad(a_1,\dots,a_n)\mapsto(a_1,\dots,a_{n-1}),$$
+并令
+$$\mathcal{A}_0:=\pi(\mathcal{A})=\{b:(b,0)\in\mathcal{A}\ \textbf{或}\ (b,1)\in\mathcal{A}\},\qquad
+\mathcal{A}_1:=\{b:(b,0)\in\mathcal{A}\ \textbf{且}\ (b,1)\in\mathcal{A}\}.$$
+
+**(1) 纤维计数：$|\mathcal{A}|=|\mathcal{A}_0|+|\mathcal{A}_1|$。**
+对每个 $b\in\{0,1\}^{n-1}$，纤维 $\pi^{-1}(b)\cap\mathcal{A}$ 至多含 $(b,0),(b,1)$ 两个元素，故大小 $\in\{0,1,2\}$。而 $\mathcal{A}_0=\{b:\text{纤维}\ge1\}$、$\mathcal{A}_1=\{b:\text{纤维}=2\}$，于是
+$$|\mathcal{A}|=\sum_b|\text{纤维}(b)|=\#\{b:\ge1\}+\#\{b:=2\}=|\mathcal{A}_0|+|\mathcal{A}_1|.$$
+（逐纤维核对：$2=1+1$，$1=1+0$，$0=0+0$。）**关键是 $\mathcal{A}_0,\mathcal{A}_1$ 都住在 $\{0,1\}^{n-1}$ 里——点数降了 1。**
+
+**(2) $\mathrm{VC}(\mathcal{A}_0)\le d$.**
+若 $\mathcal{A}_0$ 打散 $C\subseteq\{x_1,\dots,x_{n-1}\}$，则 $\mathcal{A}$ 也打散 $C$：$C$ 上任一模式由某 $b\in\mathcal{A}_0$ 实现，取 $b$ 的任一原像 $a\in\mathcal{A}$，它在 $C$ 上与 $b$ 一致。故 $\mathrm{VC}(\mathcal{A}_0)\le\mathrm{VC}(\mathcal{A})=d$。
+
+**(3) $\mathrm{VC}(\mathcal{A}_1)\le d-1$ —— 全部的巧妙之处在这里.**
+设 $\mathcal{A}_1$ 打散 $C\subseteq\{x_1,\dots,x_{n-1}\}$，$|C|=k$。断言 $\mathcal{A}$ 打散 $C\cup\{x_n\}$：取该集合上任一模式 $(\tau,\epsilon)$（$\tau$ 在 $C$ 上，$\epsilon$ 在 $x_n$ 上）。由打散性存在 $b\in\mathcal{A}_1$ 在 $C$ 上实现 $\tau$；由 $\mathcal{A}_1$ 的定义 **$(b,0)$ 与 $(b,1)$ 都在 $\mathcal{A}$ 中**，挑最后一位为 $\epsilon$ 的那个即可。于是 $k+1\le d$。
+
+> **$\mathcal{A}_1$ 用「且」而非「或」定义就是为了这一步：纤维翻倍等于白送一个可被打散的坐标。**这是整个引理的引擎。
+
+**(4) 归纳 + Pascal.**
+$\mathcal{A}_0,\mathcal{A}_1$ 是 $n-1$ 个点上的实例，VC 维分别 $\le d$、$\le d-1$，归纳假设给
+$$|\mathcal{A}|\ \le\ \sum_{i=0}^{d}\binom{n-1}i+\sum_{i=0}^{d-1}\binom{n-1}i
+=\binom{n-1}{0}+\sum_{i=1}^{d}\left[\binom{n-1}i+\binom{n-1}{i-1}\right]
+=1+\sum_{i=1}^d\binom ni=\sum_{i=0}^d\binom ni,$$
+中间对第二个和换了指标 $j=i+1$，然后逐项用 Pascal 恒等式 $\binom{n-1}i+\binom{n-1}{i-1}=\binom ni$。
+
+**基础情形.** $n\le d$：$|\mathcal{A}|\le2^n=\sum_{i=0}^n\binom ni\le\sum_{i=0}^d\binom ni$。$d=0$：无单点被打散意味着所有 $f$ 处处取值相同，$|\mathcal{A}|=1=\binom n0$。
+
+**第二个不等号.** 对 $n\ge d\ge1$，由 $d/n\le1$ 与 $i\le d$ 得 $(d/n)^d\le(d/n)^i$，故
+$$\Big(\frac dn\Big)^d\sum_{i=0}^d\binom ni\le\sum_{i=0}^d\binom ni\Big(\frac dn\Big)^i\le\sum_{i=0}^n\binom ni\Big(\frac dn\Big)^i=\Big(1+\frac dn\Big)^n\le e^d,$$
+最后用 $1+x\le e^x$。两边除以 $(d/n)^d$ 即得 $\sum_{i\le d}\binom ni\le(en/d)^d$。$\square$
+
+> [!example] 验一下界紧不紧
+> 区间类 $\{\mathbf 1[x\in[a,b]]\}$ 有 $d=2$。取 $n=3$：界给 $\sum_{i=0}^2\binom3i=1+3+3=7$，而精确计数也是 **7**（三点上能实现的模式必须是连续的一段：$\varnothing,\{1\},\{2\},\{3\},\{1,2\},\{2,3\},\{1,2,3\}$，唯独 $\{1,3\}$ 不行）。**界在这里恰好取等。**
 
 > **这是纯组合的**，与概率无关。它把"无限的函数类"约化成"多项式多的行为模式"，从而让 A5.2 可用。**多项式 vs 指数的二分（$\Pi_\mathcal{F}(n)$ 要么 $\le n^d$ 要么 $=2^n$）是这个理论最漂亮的地方。**
 
