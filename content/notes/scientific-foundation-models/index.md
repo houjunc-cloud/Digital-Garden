@@ -5,7 +5,7 @@ tags:
   - scientific-foundation-models
   - machine-learning
   - MOC
-stage: 🌱 seedling
+stage: 🌿 budding
 date: 2026-08-18
 ---
 
@@ -56,7 +56,7 @@ date: 2026-08-18
 
 ## 三、模块
 
-> 🚧 = 尚未写。索引先把结构定死，内容逐篇填。
+> 全部 18 篇已写完（3 篇前置 + 15 篇正课）。每篇独立标注成熟度，发现错误直接改。
 
 ### Part P — 前置补课（原课假设你已有）
 
@@ -66,36 +66,36 @@ date: 2026-08-18
 
 ### Part 1 — 学习问题的框架（9/1, 9/3）
 
-- 🚧 `01 科学基础模型：统计实验、损失与 oracle 基准` — 什么叫"基础模型"在科学计算语境下；把任务族写成统计实验 $\{P_\theta\}$；损失的选择如何决定可辨识性；oracle benchmark 作为"最好能做到多好"的定义
+- [[01 科学基础模型：统计实验、损失与 oracle 基准]] — 什么叫"基础模型"在科学计算语境下；把任务族写成统计实验 $\{P_\theta\}$；损失的选择如何决定可辨识性；oracle benchmark 作为"最好能做到多好"的定义
 
 ### Part 2 — attention 作为非局部算子与粒子系统（9/8–9/17）
 
-- 🚧 `02 attention 作为非局部映射与平均场极限` — softmax attention 写成对经验测度的非局部算子；token 数 $\to\infty$ 的 Vlasov 型平均场方程；与 [[notes/deep-learning/07 无限宽极限 NTK 与 mean-field|DL 07]] 的 mean-field 是**不同方向的极限**（那边是宽度，这边是序列长度）
-- 🚧 `03 自注意力作为交互粒子系统：聚类定理` — [Geshkovski–Letrouit–Polyanskiy–Rigollet](https://arxiv.org/abs/2312.10794) 的连续时间 Transformer 流；$t\to\infty$ 时 token 聚成有限簇的定理；与 Kuramoto 同步、Cucker–Smale flocking 的对应
+- [[02 attention 作为非局部映射与平均场极限]] — softmax attention 写成对经验测度的非局部算子；token 数 $\to\infty$ 的 Vlasov 型平均场方程；与 [[notes/deep-learning/07 无限宽极限 NTK 与 mean-field|DL 07]] 的 mean-field 是**不同方向的极限**（那边是宽度，这边是序列长度）
+- [[03 自注意力作为交互粒子系统：聚类定理]] — [Geshkovski–Letrouit–Polyanskiy–Rigollet](https://arxiv.org/abs/2312.10794) 的连续时间 Transformer 流；$t\to\infty$ 时 token 聚成有限簇的定理；与 Kuramoto 同步、Cucker–Smale flocking 的对应
 
 ### Part 3 — 从数据学交互律（9/22–10/1，含一格 TBD）
 
-- 🚧 `04 从轨迹学交互核：变分表述与可辨识性` — 一阶/二阶系统的 $\dot{x}_i=\frac1N\sum_j\phi(|x_{ij}|)x_{ij}$；把学 $\phi$ 写成加权 $L^2(\rho_T)$ 上的最小二乘；**coercivity 条件**是这里的"设计矩阵非退化"
-- 🚧 `05 学习交互核的最小最大率` — tLSE 达到 $M^{-2\beta/(2\beta+1)}$（[Wang–Seroussi–Lu](https://arxiv.org/abs/2311.16852)）；为什么高维粒子系统里能拿到**一维**的率（径向核是结构假设，见 P2 §5）
-- 🚧 `06 平均场方程、网络与异质系统` — 从有限 $N$ 到 McKean–Vlasov；[Lang–Lu 的平均场可辨识性](https://math.jhu.edu/~feilu/pub/LangLu_id_mfe.pdf)；网络与核的联合推断
+- [[04 从轨迹学交互核：变分表述与可辨识性]] — 一阶/二阶系统的 $\dot{x}_i=\frac1N\sum_j\phi(|x_{ij}|)x_{ij}$；把学 $\phi$ 写成加权 $L^2(\rho_T)$ 上的最小二乘；**coercivity 条件**是这里的"设计矩阵非退化"
+- [[05 学习交互核的最小最大率]] — tLSE 达到 $M^{-2\beta/(2\beta+1)}$（[Wang–Seroussi–Lu](https://arxiv.org/abs/2311.16852)）；为什么高维粒子系统里能拿到**一维**的率（径向核是结构假设，见 P2 §5）
+- [[06 平均场方程、网络与异质系统]] — 从有限 $N$ 到 McKean–Vlasov；[Lang–Lu 的平均场可辨识性](https://math.jhu.edu/~feilu/pub/LangLu_id_mfe.pdf)；网络与核的联合推断
 
 ### Part 4 — 生成建模（10/6–10/15，一格半 TBD）
 
-- 🚧 `07 score matching 作为统计回归` — Hyvärinen 恒等式的严格版本与积分条件；denoising score matching 就是**以 $\nabla\log p_t$ 为回归函数的非参数回归**；这一格是把 P2 直接用上去
-- 🚧 `08 从 score 到样本：采样误差与最优率` — score 误差如何传播到分布误差（KL / TV / $W_2$）；[Oko–Akiyama–Suzuki](https://arxiv.org/abs/2303.01861) 的最小最大最优性；[Wibisono–Wu–Yang 的 empirical Bayes 平滑](https://proceedings.mlr.press/v247/wibisono24a/wibisono24a.pdf)；与 [[notes/deep-learning/17 扩散模型与 flow matching|DL 17]] 的分工：那边讲构造，这边讲率
+- [[07 score matching 作为统计回归]] — Hyvärinen 恒等式的严格版本与积分条件；denoising score matching 就是**以 $\nabla\log p_t$ 为回归函数的非参数回归**；这一格是把 P2 直接用上去
+- [[08 从 score 到样本：采样误差与最优率]] — score 误差如何传播到分布误差（KL / TV / $W_2$）；[Oko–Akiyama–Suzuki](https://arxiv.org/abs/2303.01861) 的最小最大最优性；[Wibisono–Wu–Yang 的 empirical Bayes 平滑](https://proceedings.mlr.press/v247/wibisono24a/wibisono24a.pdf)；与 [[notes/deep-learning/17 扩散模型与 flow matching|DL 17]] 的分工：那边讲构造，这边讲率
 
 ### Part 5 — in-context learning（10/20–11/12）
 
-- 🚧 `09 ICL 的数学表述：任务分布与贝叶斯预测器` — 把 prompt 建模成来自任务先验 $\pi$ 的一个统计实验；ICL 的 oracle 就是**贝叶斯预测器**；这解释了"为什么预训练分布决定了 ICL 能做什么"
-- 🚧 `10 线性 attention 实现梯度下降` — 单层线性 attention 的前向恰好是一步预条件 GD；多层是多步；训练动力学的全局收敛（[Zhang–Frei–Bartlett](https://arxiv.org/abs/2306.09927)）
-- 🚧 `11 ICL 用于逆线性回归：学到的是先验与正则化` — [Lu–Yu (2025)](https://arxiv.org/abs/2505.12138)：训练好的 transformer 在病态设计下给出的不是 OLS 而是带正则的解，正则项由**跨任务先验**决定。**这是 Part 5 与 Part 6 的接缝**
-- 🚧 `12 transformer 作为 in-context solver：表达力与极限` — 能实现哪些算法（GD、Newton、岭回归、最小二乘）；深度—步数的对应；不能实现什么
+- [[09 ICL 的数学表述：任务分布与贝叶斯预测器]] — 把 prompt 建模成来自任务先验 $\pi$ 的一个统计实验；ICL 的 oracle 就是**贝叶斯预测器**；这解释了"为什么预训练分布决定了 ICL 能做什么"
+- [[10 线性 attention 实现梯度下降]] — 单层线性 attention 的前向恰好是一步预条件 GD；多层是多步；训练动力学的全局收敛（[Zhang–Frei–Bartlett](https://arxiv.org/abs/2306.09927)）
+- [[11 ICL 用于逆线性回归：学到的是先验与正则化]] — [Lu–Yu (2025)](https://arxiv.org/abs/2505.12138)：训练好的 transformer 在病态设计下给出的不是 OLS 而是带正则的解，正则项由**跨任务先验**决定。**这是 Part 5 与 Part 6 的接缝**
+- [[12 transformer 作为 in-context solver：表达力与极限]] — 能实现哪些算法（GD、Newton、岭回归、最小二乘）；深度—步数的对应；不能实现什么
 
 ### Part 6 — 算子中的核与算子学习（11/19–12/10）
 
-- 🚧 `13 学习算子中的核：正规算子、FSOI 与 DARTR` — 非局部算子 $\mathcal{L}_\phi u=\int \phi(|y|)\,g(u,y)\,dy$ 里学 $\phi$；这是 P3 的完整应用；最小最大率（[Zhang–Wang–Lu 2025](https://math.jhu.edu/~feilu/publications.html)）与小噪声分析（Lang–Lu 2023）
-- 🚧 `14 算子学习：DeepONet、FNO 与逼近理论` — 无限维之间的映射如何被参数化；万有逼近定理与它的**代价**（维数诅咒在算子层面的形式）；离散不变性
-- 🚧 `15 in-context operator learning` — [Yang–Osher 的 ICON (PNAS 2023)](https://www.pnas.org/doi/10.1073/pnas.2310142120)：把"求解一个新 PDE"当成一次 in-context 任务；与 Part 5 的框架合流
+- [[13 学习算子中的核：正规算子、FSOI 与 DARTR]] — 非局部算子 $\mathcal{L}_\phi u=\int \phi(|y|)\,g(u,y)\,dy$ 里学 $\phi$；这是 P3 的完整应用；最小最大率（[Zhang–Wang–Lu 2025](https://math.jhu.edu/~feilu/publications.html)）与小噪声分析（Lang–Lu 2023）
+- [[14 算子学习：DeepONet、FNO 与逼近理论]] — 无限维之间的映射如何被参数化；万有逼近定理与它的**代价**（维数诅咒在算子层面的形式）；离散不变性
+- [[15 in-context operator learning]] — [Yang–Osher 的 ICON (PNAS 2023)](https://www.pnas.org/doi/10.1073/pnas.2310142120)：把"求解一个新 PDE"当成一次 in-context 任务；与 Part 5 的框架合流
 
 ## 四、周次对照
 
@@ -144,7 +144,7 @@ date: 2026-08-18
 
 ---
 
-*状态：🌱 结构已定，内容逐篇填。前置三篇先写，正课按周补。发现错误直接改，不要另开一篇。*
+*状态：🌿 全 18 篇初稿完成。下一步是把每篇里标了「粗略陈述」的定理对着原文补精确假设，以及把 03 §7 与 15 §4 的开放问题清单变成真的题目。发现错误直接改，不要另开一篇。*
 
 ## Related
 
