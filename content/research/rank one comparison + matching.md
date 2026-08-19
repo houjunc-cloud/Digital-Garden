@@ -62,10 +62,10 @@ Some new progress: Relate the relevant orbits to families of Lagrangians in the 
 
 Continuation of 1, 2:
 
-Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. Usually we have $q_1 = q \circ \Phi$ but it is no 
+Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. Usually we have $q_1 = q \circ \Phi$ but I don't see how it is related to our problem. 
 
 >[!Expectation]
->Tranfer operator $T = H_1 \circ \Phi_* \circ H^{-1}$, where $H, H_1$ are Hankel transforms the two families of Lagrangian fibrations on $Wh_G$ and $Wh_{G_X}$ respectively. And $\Phi_*$ is the $\mathfrak c_X$-Lagrangian fiberwise pushforward.
+>$\Phi$ identifies the relevant Lagrangians on both sides.
 
 ## Matching of Distribution
 
