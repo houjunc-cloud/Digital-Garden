@@ -16,5 +16,9 @@
 3. formulate [[rank one comparison + matching#^d7befa]] 的Lagrangian foliation/toric parametrization以及comparison，或者看看能不能在Mao的框架下自动有orbit matching
 4. regular Whittaker reduction情形下可能可以变成去比universal centralizer[[rank one comparison + matching#^39b499]]
 
+2026-08-21
+
+说是只用regular semisimple orbit matching
+
 
 
