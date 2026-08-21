@@ -18,7 +18,7 @@
 
 2026-08-21
 
-说是只用regular semisimple orbit matching，然后 $A_X$ 上面的等同没有我想的那么简单。关于上面的想法
+说是只用regular semisimple orbit matching，然后 $A_X$ 上面的等同没有我想的那么简单。研究下components of Lagrangian fibration
 
 
 
