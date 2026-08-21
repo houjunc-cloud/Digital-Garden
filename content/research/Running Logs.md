@@ -18,7 +18,7 @@
 
 2026-08-21
 
-说是只用regular semisimple orbit matching，然后 $A_X$ 上面的等同没有我想的那么简单。研究下components of Lagrangian fibers。这个想法（Venkatesh's principle）能在geometric Satake的情形下被验证。
+说是只用regular semisimple orbit matching，然后 $A_X$ 上面的等同没有我想的那么简单（感觉就是用spherical coroot）。研究下components of Lagrangian fibers。这个想法（Venkatesh's principle）能在geometric Satake的情形下被验证。
 
 
 
