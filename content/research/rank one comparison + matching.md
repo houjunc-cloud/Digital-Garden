@@ -67,7 +67,7 @@ Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both s
 >[!Expectation]
 >$\Phi$ identifies the relevant Lagrangians on both sides.
 
-We try to relate $X//N$ to $X_1//N_{X} = Spec ~ k[X^*(A_X)^+]$. $\Lambda_{X_1}$ is the dominant weight lattice of $\Delta_X$. 
+We try to relate $X//N$ to $X_1//N_{X} = Spec ~ k[X^*(A_X)^+]$. $\Lambda_{X_1}$ is the dominant weight lattice of $\Delta_X$, while $\Lambda_X$ is the dominant weight lattice of color valuations and $G$ - stable divisor valuations.
 
 ## Matching of Distribution
 
