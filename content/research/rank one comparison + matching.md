@@ -67,6 +67,8 @@ Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both s
 >[!Expectation]
 >$\Phi$ identifies the relevant Lagrangians on both sides.
 
+
+
 ## Matching of Distribution
 
 
