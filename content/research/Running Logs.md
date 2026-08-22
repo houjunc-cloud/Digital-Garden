@@ -18,7 +18,7 @@
 
 2026-08-21
 
-说是只用regular semisimple orbit matching (A_X)，然后 $A_X$ 上面的等同没有我想的那么简单（感觉就是用spherical coroot, true for Lu-Wang-Xi，一般要扯一个rational map，考虑germ expansion，boundary用GIT quotient的fiber）。研究下components of Lagrangian fibers。这个想法（Venkatesh's principle）能在geometric Satake的情形下被验证。
+说是只用regular semisimple orbit matching (A_X)，然后 $A_X$ 上面的等同没有我想的那么简单（感觉就是用spherical coroot, true for Lu-Wang-Xi，一般要扯一个rational map（X_1//），考虑germ expansion，boundary用GIT quotient的fiber）。研究下components of Lagrangian fibers。这个想法（Venkatesh's principle）能在geometric Satake的情形下被验证。
 
 
 
