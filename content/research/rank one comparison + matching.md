@@ -65,11 +65,13 @@ Continuation of 1, 2:
 Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. Usually we have $q_1 = q \circ \Phi$ but I don't see how it is related to our problem. 
 
 >[!Expectation]
->$\Phi$ identifies the relevant Lagrangians on both sides.
+>$\Phi$ identifies the relevant Lagrangians on both sides. And $M//_{Wh}G$
 
 We try to relate $X//N$ to $X_1//N_{X} = Spec ~ k[X^*(A_X)^+]$. $\Lambda_{X_1}$ is the dominant weight lattice of $\Delta_X$ with dual cone $\Q_{\ge 0} \Delta_X^\vee$, while $\Lambda_X$ is the dominant weight lattice for color valuations and $G$ - stable divisor valuations. We have $\Q_{\ge 0} \Delta_X^\vee \subset C_X:= \Lambda_X^\vee$. Thus we always have $X_1//{N_X} \to X//N$ that identifies $A_X$ on both sides. When $P(X) = B$, $X$ has no even spherical roots iff $X$ has no type $a$ spherical roots. To make $S_X = 0$, one further requires that there is no $G$ - stable divisor in $X$. For a parabolic $P$, $C_{X,P}:=\Q_{\ge 0}\{\rho(D)| D \cap X^0 P \neq \emptyset\} \subset C_X$ and $X^0P$ has image $Spec ~ k[C_{X,P}^\vee]$ in $X//N$. 
 
 In particular, $C_{X,P_\gamma} = \Q_{\ge 0}\{\rho(D) | <\rho(D), \gamma> > 0\}$. Except for type T case of spherical root (where a spherical root is a positive root), there is a unique color in $X^0 P_\gamma$ such that  $\rho(D) = c_\gamma \gamma^\vee$ for $c_\gamma > 0$, hence $C_{X, P_\gamma} = \Q_{\ge 0} \gamma^\vee$. For type T case, we have two colors counted in multiplicity, and $\gamma^\vee = \rho(D^+) + \rho(D^-)$. The simplest strict containment appears in $X = GL_2 \backslash GL_3$. However, the two colors have same direction in essential, i.e. after modulo $Z(L)^0$ $\rho(D^+) = \rho(D^-) = \gamma^\vee /2$. 
+
+
 
 ## Matching of Distribution
 
