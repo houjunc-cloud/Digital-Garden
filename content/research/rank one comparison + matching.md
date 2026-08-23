@@ -22,7 +22,7 @@ With wavefront assumption, $X^L_\Theta / Z(L)^0 = X^L_\Theta / A_{X, \Theta}$ is
 
 Or, consider the rank $|\Theta|$ variety $X^{L,ad}_{\Theta, \psi}$ or its isogeny to avoid the Whittaker problem above; we know $X^*(X^{L,ad}_{\Theta})_\Q = \Q \Theta$, there is no room for other new simple roots to be added, therefore it is not a Whittaker induction. 
 
-In fact, $X^{L,ad}_{\Theta, \psi}$ is not a good notation since the $\psi$ -twisting is not preserved by $Z(L)^0$, that also explains why Whittaker induction is killed.
+In fact, $X^{L,ad}_{\Theta, \psi}$ is not a good notation since the $\psi$ -twisting is not preserved by $Z(L)^0$. It also explains why Whittaker induction is killed.
 ##  Support of Spherical Roots
 
 The cuspidal rank one spherical varieties of adjoint type are given in Knop's table in Spherical roots of spherical varieties. Those satisfying our assumption \* can only be:
