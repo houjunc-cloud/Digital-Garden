@@ -222,23 +222,62 @@ $$\Pr\big[f(X)-\mathbb{E}f(X)\ \ge\ t\big]\ \le\ \exp\Big(-\frac{2t^2}{\sum_ic_i
 
 **联合凸性.** $(P,Q)\mapsto D_f(P\Vert Q)$ 是联合凸的。
 
-*证明.* 关键是**透视函数**（perspective）$g(p,q):=q\,f(p/q)$ 在 $q>0$ 上联合凸——这是凸分析的标准事实（$g$ 的上图是 $f$ 的上图的锥化）。逐点积分保持凸性。$\square$
+*证明.* 关键是**透视函数**（perspective）$g(p,q):=q\,f(p/q)$ 在 $q>0$ 上联合凸——这是凸分析的标准事实。一行理由：
+$$\mathrm{epi}\,g=\{(p,q,t):q>0,\ (p/q,\,t/q)\in\mathrm{epi}f\}=\{q\cdot(u,1,s):(u,s)\in\mathrm{epi}f,\ q>0\}$$
+是 $\mathrm{epi}f$ 上的**锥**，而凸集上的锥是凸的。逐点积分保持凸性。$\square$
+
+> 联合凸性也可以**完全不用透视函数**地得到——它是 DPI 取"忘掉混合标签"这个核的特例，见 A3.3 的推论。两条路的根源相同：都只是 $f$ 的凸性。
 
 ### A3.3 数据处理不等式（DPI）
 
-**定理.** 设 $K$ 是 Markov 核（随机映射）。则 $D_f(KP\Vert KQ)\le D_f(P\Vert Q)$。
+**Markov 核.** $K$ 是从 $(\mathcal{X},\mathcal{A})$ 到 $(\mathcal{Y},\mathcal{B})$ 的 Markov 核：对每个 $B\in\mathcal{B}$，$x\mapsto K(x,B)$ 可测；对每个 $x$，$K(x,\cdot)$ 是 $\mathcal{Y}$ 上的概率测度。它作用在测度上：
+$$(KP)(B)=\int_{\mathcal{X}}K(x,B)\,dP(x),$$
+有限情形即**行随机矩阵**（$K_{xy}\ge0$，行和为 $1$），$P$ 为行向量、$KP=PK$。确定性映射 $g$ 是 $K(x,\cdot)=\delta_{g(x)}$ 的特例，所以 DPI 自动覆盖"作用一个函数"。
 
-*证明（KL 情形，用链式法则）.* 设 $X\sim P$、$Y\mid X\sim K$，联合分布记 $P_{XY}$；$Q_{XY}$ 同理（**同一个 $K$**）。KL 的链式法则给出两种分解：
-$$D(P_{XY}\Vert Q_{XY})=\underbrace{D(P_X\Vert Q_X)}_{}+\underbrace{\mathbb{E}_{P_X}D(K(\cdot|X)\Vert K(\cdot|X))}_{=0}=D(P_X\Vert Q_X),$$
+> [!note] 为什么以核为基本对象，而不是函数
+> 有限情形下行随机矩阵集合是若干单纯形之积，其**极点恰是**每行一个 $1$ 的 0-1 矩阵，即确定性映射。故
+> $$\{\text{Markov 核}\}=\mathrm{conv}\{\text{确定性映射}\}.$$
+> 函数的集合对凸组合不封闭（两个函数的混合不是函数），而下面要用的一切——Jensen、联合凸性、Blackwell 实验比较——都必须在凸集上做。**核是函数的凸包**：这才是理论以核为基本对象的理由，不是为了追求一般性。
+
+**定理.** 对任意 Markov 核 $K$ 与任意凸 $f$（$f(1)=0$），
+$$D_f(KP\Vert KQ)\ \le\ D_f(P\Vert Q).$$
+
+*证明（一般 $f$；离散写法，连续情形逐字照搬）.* 记 $(KQ)(y)=\sum_x Q(x)K(y|x)$，令
+$$w^{(y)}_x:=\frac{Q(x)K(y|x)}{(KQ)(y)}\ \ \text{——这正是 Bayes 后验 }Q(x\mid y),$$
+它非负且 $\sum_x w^{(y)}_x=1$。于是
+$$D_f(KP\Vert KQ)=\sum_y (KQ)(y)\,f\!\left(\frac{\sum_x P(x)K(y|x)}{(KQ)(y)}\right)=\sum_y (KQ)(y)\,f\!\left(\sum_x w^{(y)}_x\cdot\frac{P(x)}{Q(x)}\right).$$
+括号内是**凸组合**，Jensen 给出 $f\big(\sum_x w^{(y)}_x\frac{P(x)}{Q(x)}\big)\le\sum_x w^{(y)}_x f\big(\frac{P(x)}{Q(x)}\big)$。乘以 $(KQ)(y)$，用 $(KQ)(y)\,w^{(y)}_x=Q(x)K(y|x)$ 与 $\sum_y K(y|x)=1$，对 $y$ 求和：
+$$D_f(KP\Vert KQ)\ \le\ \sum_x\sum_y Q(x)K(y|x)\,f\Big(\tfrac{P(x)}{Q(x)}\Big)=\sum_x Q(x)\,f\Big(\tfrac{P(x)}{Q(x)}\Big)=D_f(P\Vert Q).\qquad\square$$
+
+> **一句话：DPI $=$ Jensen 用在 Bayes 后验上。** 唯一的假设是 $f$ 凸；核的随机性经由后验权重进入，$\sum_y K(y|x)=1$ 负责最后的收缩。这也预示了下面的逆定理：满足 DPI 的散度族恰好就是 $f$-散度族。
+
+*另证（仅 KL，用链式法则）.* 设 $X\sim P$、$Y\mid X\sim K$，联合分布记 $P_{XY}$；$Q_{XY}$ 同理（**同一个 $K$**）。KL 链式法则的两种分解：
+$$D(P_{XY}\Vert Q_{XY})=D(P_X\Vert Q_X)+\underbrace{\mathbb{E}_{P_X}D(K(\cdot|X)\Vert K(\cdot|X))}_{=0}=D(P_X\Vert Q_X),$$
 $$D(P_{XY}\Vert Q_{XY})=D(P_Y\Vert Q_Y)+\underbrace{\mathbb{E}_{P_Y}D(P_{X|Y}\Vert Q_{X|Y})}_{\ge0}\ \ge\ D(P_Y\Vert Q_Y).$$
-两式相比即得。一般 $f$-散度的情形用 A1.5 的 log-sum 型论证（或直接对 $f$ 用条件 Jensen）。$\square$
+两式相比即得。$\square$
 
-**互信息版本.** 若 $X\to Y\to Z$ 是 Markov 链，则 $I(X;Z)\le I(X;Y)$。
+**取等条件 $=$ 充分性.** 对严格凸的 $f$，
+$$D_f(KP\Vert KQ)=D_f(P\Vert Q)\quad\Longleftrightarrow\quad \exists\ \text{核 }L:\ L(KP)=P\ \text{且}\ L(KQ)=Q,$$
+即 $K$ 对 $\{P,Q\}$ 是**充分统计量**（Blackwell；Csiszár）。从证明看得很清楚：等号要求每个 $y$ 上 Jensen 取等，即似然比 $P/Q$ 在后验 $Q(\cdot\mid y)$ 的支撑上为常数——这正是 Fisher–Neyman 分解。**所以 DPI 不只是不等式，它给出了充分性的信息论刻画：无损处理 $=$ 分布意义下可逆。**
+
+**推论：联合凸性（A3.2）是 DPI 的特例.** 在扩大空间 $\mathcal{X}\times\{1,\dots,n\}$ 上令 $\tilde P(x,i)=\lambda_i P_i(x)$、$\tilde Q(x,i)=\lambda_i Q_i(x)$。$\lambda_i$ 在似然比里约掉，故
+$$D_f(\tilde P\Vert\tilde Q)=\sum_i\lambda_i\,D_f(P_i\Vert Q_i).$$
+取核 $K\big((x,i),\cdot\big)=\delta_x$，即**忘掉自己来自哪个成分**，DPI 立刻给出
+$$D_f\Big(\sum_i\lambda_i P_i\ \Big\Vert\ \sum_i\lambda_i Q_i\Big)\ \le\ \sum_i\lambda_i D_f(P_i\Vert Q_i).$$
+即联合凸性。概念上：**混合是一种信息销毁。**
+
+**逆定理：DPI 刻画 $f$-散度.** 反之，若一个散度在**一切** Markov 核下单调，加上温和的正则性，则它必是某个 $f$-散度（Csiszár 1972）。所以 DPI 不是 $f$-散度碰巧具有的一条性质，而是它的**定义性特征**。再加一层要求就得到唯一性：$f$-散度 $\cap$ Bregman 散度 $=\{c\cdot D_{\mathrm{KL}}\}$（Amari），见 [[04 统计推断#信息几何]]。
+
+**局部版本：Fisher 信息单调.** 设 $\{P_\theta\}$ 光滑。由 A4.4 的展开 $D_f(P_\theta\Vert P_{\theta+\varepsilon})=\tfrac{f''(1)}{2}\varepsilon^\top I(\theta)\varepsilon+o(\Vert\varepsilon\Vert^2)$，对族 $\{KP_\theta\}$ 用 DPI 并比较二阶项：
+$$I_{K\!P}(\theta)\ \preceq\ I_{P}(\theta)\qquad(\text{半正定序}).$$
+**处理不能增加 Fisher 信息**——这是 DPI 的无穷小版本。它说明 Cramér–Rao 下界（A4.3）在任何预处理之后只会变差，即"先压缩再估计"必然损失效率。注意 $f''(1)$ 只是常数因子：**所有 $f$-散度的局部展开都是同一个 Fisher 度量**，这正是 Chentsov 定理的局部内容。
+
+**互信息版本.** 若 $X\to Y\to Z$ 是 Markov 链，则 $I(X;Z)\le I(X;Y)$。取 $P=P_{XY}$、$Q=P_X\otimes P_Y$，核为 $(x,y)\mapsto(x,Z)$ 且 $Z\sim P_{Z|Y}$：由 Markov 性，$P$ 被送到 $P_{XZ}$，$Q$ 被送到 $P_X\otimes P_Z$。
 
 > [!note] 这条定理的哲学
-> **"处理数据不能创造信息。"**它是信息论里最像范畴论的一条：$D_f$ 是从"测度对"到 $\R_{\ge0}$ 的一个在 Markov 核作用下单调的函子性量。
+> **"处理数据不能创造信息。"**它是信息论里最像范畴论的一条：$D_f$ 是从"测度对"到 $\R_{\ge0}$ 的一个在 Markov 核作用下单调的量，而 Markov 核构成的正是可测空间上的一个范畴（Giry monad 的 Kleisli 范畴），确定性映射是其中的"纯"态射。
 >
-> **用在哪**：[[03 信息论]]、Pinsker 的证明（A3.4）、[[08 泛化之谜]] 里对信息瓶颈假说的讨论。
+> **用在哪**：[[03 信息论]] §2.2（推论清单：MCMC 收敛、差分隐私后处理、minimax 下界、信息瓶颈）、Pinsker 的证明（A3.4）、Fano（A3.8）、[[08 泛化之谜]] 里对信息瓶颈假说的讨论。
 
 ### A3.4 Pinsker 不等式
 
@@ -664,7 +703,7 @@ $$(1-\epsilon)\Vert x_i-x_j\Vert^2\ \le\ \Vert Ax_i-Ax_j\Vert^2\ \le\ (1+\epsilo
 | Bernstein (A2.6) | [[05 优化的数学]]（梯度裁剪的动机） |
 | McDiarmid (A2.9) | [[01 学习问题的数学表述]]（一致收敛、稳定性） |
 | Gibbs (A3.1) | [[03 信息论]]、[[04 统计推断]]、[[15 变分自编码器]]、[[22 RLHF 与推理 RL]] |
-| DPI (A3.3) | [[03 信息论]]、[[08 泛化之谜]]（信息瓶颈） |
+| DPI (A3.3) | [[03 信息论]] §2.2、[[08 泛化之谜]]（信息瓶颈）、Pinsker (A3.4)、Fano (A3.8) |
 | Pinsker (A3.4) | [[03 信息论]]、[[21 策略梯度方法]]（TRPO 换 KL） |
 | Donsker–Varadhan (A3.5) | [[03 信息论]]（MINE/InfoNCE）、[[04 统计推断]]（PAC-Bayes） |
 | 熵的界与 Shearer (A3.6) | [[03 信息论]]（素数无穷证明） |
