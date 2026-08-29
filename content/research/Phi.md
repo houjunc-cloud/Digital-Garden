@@ -7,4 +7,4 @@ An approach to prove $\Phi: Wh_{G_X} \isom Wh_{G}$ is:
 
 Then since both sides are normal affine, the isomorphism extends to the whole space.
 
-For 1, we need to show
+For 1, we need to show $Wh_G|_{A_X} \isom T^*(Z_G)$. 
