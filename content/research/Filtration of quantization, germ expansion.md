@@ -1,0 +1,3 @@
+# Universal centralizer
+
+Put $B_G:=N \backslash G // N =Spec~k[X^*(T)^+]$. Assume $G$ is semisimple simply connected split, then $B_G = \mathbb A^\Delta$. Let $B_I^0:=\{x_\alpha = 0 (\alpha \in I), x_\beta \neq 0 (\beta \notin I)\}$, and $\pi : J \to B_G$ the Lagrangian fibration. It is proved by Jin that $\pi^{-1}(B_I^0) = \mathfrak B_{w_0w_I} \isom \mathfrak c_{1;I} \times T^*(Z_{L_I})$ where $\mathfrak c_{1;I} = \mathfrak l^{der}_I // L^{der}_I$ and that $\pi^{-1}(U_I) \isom J_{L_I} \isom J_{L_I^{der}} \times ^{Z(L_I^{der})} T^*(Z(L_I))$ for a certain neighborhood of the union of faces below $I$.

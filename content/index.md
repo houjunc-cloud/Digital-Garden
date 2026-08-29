@@ -14,7 +14,7 @@ so you can tell a half-thought from a settled one.
 
 | Section | What goes there |
 | --- | --- |
-| [Daily](daily/index.md) | The running log. Raw, dated, unedited. |
+| [Mind Uploading](daily/index.md) | The running log. Raw, dated, unedited. |
 | [Notes](notes/index.md) | Evergreen ideas, one concept per note, heavily linked. |
 | [Research](research/index.md) | Papers, experiments, open questions, literature notes. |
 | [Reading](reading/index.md) | Books, articles, and what I actually took from them. |

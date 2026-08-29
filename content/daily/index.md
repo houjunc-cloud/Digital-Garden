@@ -1,12 +1,12 @@
 ---
-title: Daily Notes
+title: Mind Uploading
 description: The running log — one note per day, unedited.
 ---
 
 One file per day, named `YYYY-MM-DD`. This is the inbox for everything: what I did,
 what I read, what confused me, what I want to come back to.
 
-Daily notes are deliberately low-stakes. Nothing here has to be good. The value is
+These entries are deliberately low-stakes. Nothing here has to be good. The value is
 that ideas get captured with a date attached, and the good ones get promoted later
 into [evergreen notes](../notes/index.md) or [research](../research/index.md).
 

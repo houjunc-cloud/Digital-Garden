@@ -9,7 +9,7 @@ $f + \mathfrak n^\perp \isom N \times S \subset \mathfrak g_{reg}^*$ by conjugat
 -(GPT's suggestion: unfolding space, related to [[rank one comparison + matching#^d7befa]]) $\tilde{M}:=G_X \times^{J_X} T^*X = \frac{Wh_{G_X} \times_{\mathfrak c_X^*} T^*X}{J_X}$ is a $G \times G_X$ - Hamiltonian space. It is called unfold because it is the inverse operation to taking $G_X$ - Whittaker-Kostant section. More precisely, (over the regular locus) for $m \in \tilde{M}$ lying over $s = \kappa(a) \in S_{G_X}$ the $G_X$-orbit of the moment value is $G_X \cdot s \isom G_X/Z_{G_X}(s) = G_X/(J_X)_a$. $\tilde{M}//_{Wh}G_X \isom T^*X$. On the other hand,
 
 >[!"conjecture"]
-When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$ birationally. Thus $\tilde{M} //_{Wh} G \isom M_1 = T^*(G_X, \Psi) =:Wh_{G_X} \isom G_X \times S_{G_X}$ where $S_{G_X}$ is the Slodowy slice for $G_X$.
+When $S_X = 0$ and $\iota'^\vee= 0$,  $T^*X//_{Wh}G \isom J_X$ birationally. Thus $\tilde{M} //_{Wh} G \isom M_1 = T^*(G_X, \Psi) \isom G_X \times S_{G_X}$ where $S_{G_X}$ is the Slodowy slice for $G_X$.
 
 Remark: I don't think this is actually a conjecture because one can in fact prove it case by case. However, a conceptual proof is worthy. The conjecture is somehow circular, we actually want $\tilde{M} //_{Wh} G \isom M_1 \implies T^*X//_{Wh} G \isom J_X$ and it should be simpler. This is softly solved by Venkatesh's principle [[rank one comparison + matching#^9cda03]].
 

@@ -4,7 +4,7 @@ Mao and Rallis consider the comparison of $(G,G,\rho,0)$ and $(H = SL_2,1,0,\iot
 
 To fit in "Venkatesh's principle", $G \times H$ acts on $\tilde{M} = \mathcal O_{min}(G')$ ==(this space is not hyperspherical because it is not affine, its affine closure is singular at the origin. However, it satisfies coisotropicity. In fact, it only fails affineness and neutral grading).== $\tilde{M} //_{Wh}H = V_{\rho} = M$ and $\tilde{M}//_{Wh} G:=\tilde{M}//_{\mathcal O_G} G = T^*(SL_2 , \Psi) = M_1$ where $\mathcal O_G$ is a lifting of $\iota_{reg, SL_2}$, i.e. $\iota'$. In the end, $\tilde{M}//_{Wh}(G \times H) = \mathcal J (SL_2)$. (All computed in [Hanzer–Savin, *Multiplicity free Weil representations arising from exceptional groups*](https://arxiv.org/abs/2411.01243), IMRN 2025) In fact, they are both $Spec F[a,r,s]/(r^2-a^2s-1)$
 
- In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (since $(G,H)$ cocentralize each other), i.e. the following draft:
+ In addition to Venkatesh's principle, quanzation commutes with Whittaker reduction as well (this is also a principle), i.e. the following draft:
  
 $$
 \begin{array}{ccc}
@@ -14,35 +14,10 @@ M //_{Wh} G & \xrightarrow{\ \text{Quant}\ } & \Pi_{(N,\psi)}
 \end{array}
 $$
 
- Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian/configuration base $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in $\mathcal S(Y)_{(U_{\iota'},tr)}$. In Mao and Rallis, $Y = \mathcal J \oplus \mathbb A^1$ hence: 
+ Let $V_\rho = T^*Y$ be a polarization. It has a 2-dimension Whittaker reduction, and on the regular locus it is $T^*(Y^\times/U_{\iota'}) \isom T^* \Gm$, hence it has Lagrangian/configuration base $\mathbb A^1$.  For the MWZ distrubution/RTF, the geometric space of $RTF_M$ is this $\mathbb A^1$. One can also interpret the orbital integrals as vectors in $\mathcal S(Y)_{(U_{\iota'},tr)}$. In Mao and Rallis, $Y = \mathcal J \oplus \mathbb A^1$, we can compute the following exact sequence using the specific structure of cubic Jordan algebra:
 
-$$
-\mathcal S(Y)
-\simeq
-\int_{a\in F}^{\oplus}
-\mathcal S(\mathcal J)\,da.
-$$
+$$0 \to C_c^{\infty}(F^\times) \to \mathcal S(Y)_{N,\psi} \to \mathcal S(Y_0)_{N,\psi} \isom \C^2 \to 0$$
 
-Since \(N\) fixes \(a\), the Whittaker coinvariant is taken fiberwise:
-$$
-\mathcal S(Y)_{N,\xi_N}
-\simeq
-\int_{a\in F}^{\oplus}
-\mathcal S(\mathcal J)_{N,\xi_N;\,a}\,da.
-$$
-
-For a regular \(a\neq 0\), the relevant \(N\)-orbit is unique, and the fiberwise coinvariant is essentially one-dimensional:
-$$
-\dim \mathcal S(\mathcal J)_{N,\xi_N;\,a}=1.
-$$
- and 
- 
- $$
-\mathcal S(\mathbb G_m\times \mathcal J)_{N,\xi_N}
-\simeq
-\mathcal S(\mathbb G_m),
-$$
-up to the usual choices of measures and normalizations.
  The "Wh-red" of quantization of $V_\rho$ , it is the same space as $(ind^{H}_{U_{\theta}}\psi)_{U_\theta,\psi}$ (see below). It is the same idea of [another paper of Mao and Rallis](https://www.cambridge.org/core/journals/compositio-mathematica/article/jacquet-modules-of-the-weil-representations-and-families-of-relative-trace-identities/B90D24DD0BF3CE3E0151DB5B5303D01D), which suggests to do matching by comparing two Jacquet modules.
 
  After quantization, the picture becomes:
