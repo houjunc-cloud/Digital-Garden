@@ -9,4 +9,4 @@ Then since both sides are normal affine, the isomorphism extends to the whole sp
 
 Denote by $\kappa_G$ the Kostant section of $\mathfrak g \to \mathfrak g//G = \mathfrak c_G$. And denote $\iota: \mathfrak c_X \to \mathfrak c_G$ the induced inclusion from moment map.
 
-Then $Wh_{G, reg} = $
+Then $Wh_{G, reg} = \mu^{-1}(\kappa_G(\iota(\mathfrak c_{X,rs})))$
