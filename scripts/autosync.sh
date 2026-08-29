@@ -28,6 +28,22 @@ trap 'rmdir "$LOCK" 2>/dev/null' EXIT
 
 cd "$REPO" || { log "ERROR: $REPO not found"; exit 1; }
 
+# A stale index.lock (left behind by a crashed/interrupted git command — this
+# has happened at least once and silently blocked every run for days, since
+# git's error only ever reached this script's own log as "git add failed"
+# with no detail) wedges every future run the same way. Our own mkdir-based
+# LOCK above already rules out a *concurrent autosync.sh*; a lock older than
+# one run interval is not a git command that's merely slow, it's abandoned.
+# Confirm no git process is actually alive before touching it.
+GIT_LOCK="$REPO/.git/index.lock"
+if [ -e "$GIT_LOCK" ]; then
+  LOCK_AGE=$(( $(date +%s) - $(stat -f %m "$GIT_LOCK" 2>/dev/null || echo 0) ))
+  if [ "$LOCK_AGE" -gt 120 ] && ! pgrep -f "git.*Digital Garden" >/dev/null 2>&1; then
+    rm -f "$GIT_LOCK"
+    log "WARN: removed stale .git/index.lock (age ${LOCK_AGE}s, no live git process)"
+  fi
+fi
+
 # Nothing staged or unstaged under content/ means nothing to publish. Note that
 # content/private/ is gitignored, so edits there never trigger a sync — which is
 # the point of that folder.
@@ -38,7 +54,7 @@ fi
 FILES=$(git status --porcelain -- content/ | wc -l | tr -d ' ')
 log "detected $FILES changed file(s) under content/"
 
-git add -- content/ || { log "ERROR: git add failed"; exit 1; }
+ADD_ERR=$(git add -- content/ 2>&1) || { log "ERROR: git add failed: $ADD_ERR"; exit 1; }
 
 if git diff --cached --quiet; then
   log "nothing staged after add; skipping"
@@ -48,10 +64,7 @@ fi
 SUMMARY=$(git diff --cached --name-only | sed 's|^content/||' | head -3 | paste -sd', ' -)
 [ "$FILES" -gt 3 ] && SUMMARY="$SUMMARY and $((FILES - 3)) more"
 
-if ! git commit -q -m "notes: $SUMMARY"; then
-  log "ERROR: commit failed"
-  exit 1
-fi
+COMMIT_ERR=$(git commit -q -m "notes: $SUMMARY" 2>&1) || { log "ERROR: commit failed: $COMMIT_ERR"; exit 1; }
 log "committed: $SUMMARY"
 
 # Push failures are usually transient (offline, laptop asleep). Leave the commit
