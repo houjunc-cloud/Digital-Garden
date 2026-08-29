@@ -7,4 +7,6 @@ An approach to prove $\Phi: Wh_{G_X} \isom Wh_{G}$ is:
 
 Then since both sides are normal affine, the isomorphism extends to the whole space.
 
-Denote by $\kappa_G$ the Kostant section of $\mathfrak g \to \mathfrak g//G = \mathfrak c_G$. Then $$
+Denote by $\kappa_G$ the Kostant section of $\mathfrak g \to \mathfrak g//G = \mathfrak c_G$. And denote $\iota: \mathfrak c_X \to \mathfrak c_G$ the induced
+
+Then $Wh_G = $
