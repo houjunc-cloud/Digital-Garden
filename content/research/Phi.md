@@ -2,8 +2,8 @@
 
 An approach to prove $\Phi: Wh_{G_X} \isom Wh_{G}$ is:
 
->1. $Wh_{G_X}$ is isomorphic to $Wh_{G}$ over the regular locus of $\mathfrak c_X$
->2. The isomorphism extends to codimension one part
+>1. $Wh_{G_X}$ is isomorphic to $Wh_{G}$ over the regular locus of 
+>2. The isomorphism extends to the codimension one part
 
 Then since both sides are normal affine, the isomorphism extends to the whole space.
 
