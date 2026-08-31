@@ -8,4 +8,4 @@ Then since both sides are normal affine, the isomorphism extends to the whole sp
 
 Some remarks:
 
-The term term can have different meanings (already for $M = T^*X$): $\mathfrak c_X = M//G$ or $X//N$, to take the moment map into account one should consider the former one, and for germ expansions the latter one instead. 
+The term "base" can have different meanings (already for $M = T^*X$): $\mathfrak c_X = M//G$ or $X//N$, to take the moment map into account one should consider the former one, and for germ expansions the latter one instead. 
