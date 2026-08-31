@@ -7,4 +7,4 @@ An approach to prove $\Phi: Wh_{G_X} \isom Wh_{G}$ is:
 
 Then since both sides are normal affine, the isomorphism extends to the whole space.
 
-T
+The term "regular locus" can have different meanings (already for $M = T^*X$): $$
