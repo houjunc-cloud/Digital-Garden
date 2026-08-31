@@ -11,5 +11,5 @@ Some remarks:
 1. The term "base" can have different meanings (already for $M = T^*X$): $\mathfrak c_X = M//G$ or $X//N$, to take the moment map into account one should consider the former one, as everyone did in the literature, but for germ expansions the latter one instead, where in some sense it is reduced to generic rank one comparison.
 2. When assuming $M^\vee \bijection (G^\vee, G_X^\vee, 0, 0)$, we have some codimension 1 restrictions on $X$, which should give some answer to this picture.
 
-We choose $B = X//N$
+We choose $B = X_1//N_X$, over $A_X$ we have $Wh_{G_X}^0 \isom Wh_G^0$ 
 
