@@ -81,7 +81,7 @@ Try to relate $X//N$ to $X_1//N_{X} = Spec ~ k[X^*(A_X)^+]$. $\Lambda_{X_1}$ is 
 
 In particular, $C_{X,P_\gamma} = \Q_{\ge 0}\{\rho(D) | <\rho(D), \gamma> > 0\}$. Except for type T case of spherical root (where a spherical root is a positive root), there is a unique color in $X^0 P_\gamma$ such that  $\rho(D) = c_\gamma \gamma^\vee$ for $c_\gamma > 0$, hence $C_{X, P_\gamma} = \Q_{\ge 0} \gamma^\vee$, and the dimension of Whittaker fiber does not change. 
 
-For type T case, we have two colors counted in multiplicity, and $\gamma^\vee = \rho(D^+) + \rho(D^-)$. The Whittaker dimension adds one on the limit locus. The simplest strict containment appears in $X = GL_2 \backslash GL_3$. However, the two colors have same direction in essential, i.e. after modulo $Z(L)^0$, $\rho(D^+) = \rho(D^-) = \gamma^\vee /2$. 
+For type T case, we have two colors counted in multiplicity, and $\gamma^\vee = \rho(D^+) + \rho(D^-)$. The Whittaker dimension adds one on the limit locus, and the Lagrangian fiber becomes Lagrangian surface. The simplest strict containment appears in $X = GL_2 \backslash GL_3$. However, the two colors have same direction in essential, i.e. after modulo $Z(L)^0$, $\rho(D^+) = \rho(D^-) = \gamma^\vee /2$. 
 
 
 
