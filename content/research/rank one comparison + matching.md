@@ -33,7 +33,7 @@ The cuspidal rank one spherical varieties of adjoint type are given in Knop's ta
 4. $H_{G_2} \backslash G_2$ where $H_{G_2}=\operatorname{GL}_2^{\mathrm{long}}\ltimes\left(U_{2\alpha_1+\alpha_2}U_{3\alpha_1+\alpha_2}U_{3\alpha_1+2\alpha_2}\right)$
 5. (when relaxed to $S_X \neq 0$) $T \backslash PGL_2$
 
-2 and 5 are type T.
+1 and 5 are type T.
 
 How is Knop's table related to SV's Levi variety? Well, the latter by definition puts back the toric direction that Knop has modded out in Localization of Spherical Variety, i.e. $X^L_\Theta / T_Z \isom Z^L_\Theta$ where $T_Z = \Gm^{\Gamma_Z} \into A_{X, \Theta}$. 
 
