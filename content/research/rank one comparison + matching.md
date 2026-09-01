@@ -76,7 +76,7 @@ Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both s
 
 ^72ed67
 
-In the special case when there is a $G \times G_X$ Hamiltonian space $\tilde{M}$ such that $\tilde{M}///_0 G = M$ and $\tilde{M}///_0 G_X = M_1$ (for example $\tilde{M}$ is a minimal orbit).
+In the special case when there is a $G \times G_X$ Hamiltonian space $\tilde{M}$ such that $\tilde{M}///_0 G = M$ and $\tilde{M}///_0 G_X = M_1$ (for example $\tilde{M}$ is a minimal orbit), 1 and 2 are automatic.
 
 We go back to assumption \*.
 Try to relate $X//N$ to $X_1//N_{X} = Spec ~ k[X^*(A_X)^+]$. $\Lambda_{X_1}$ is the dominant weight lattice of $\Delta_X$ with dual cone $\Q_{\ge 0} \Delta_X^\vee$, while $\Lambda_X$ is the dominant weight lattice for color valuations and $G$ - stable divisor valuations. We have $\Q_{\ge 0} \Delta_X^\vee \subset C_X:= \Lambda_X^\vee$. Thus we always have $X_1//{N_X} \to X//N$ that identifies $A_X$ on both sides. When $P(X) = B$, $X$ has no even spherical roots iff $X$ has no type $a$ spherical roots. To make $S_X = 0$, one further requires that there is no $G$ - stable divisor in $X$. For a parabolic $P$, $C_{X,P}:=\Q_{\ge 0}\{\rho(D)| D \cap X^0 P \neq \emptyset\} \subset C_X$ and $X^0P$ has image $Spec ~ k[C_{X,P}^\vee]$ in $X//N$. 
