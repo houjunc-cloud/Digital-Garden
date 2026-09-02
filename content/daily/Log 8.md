@@ -6,6 +6,8 @@ tags:
 ---
 忽然发觉做纯数是猜想在前面跑，证明和补丁在后面追。AI也是业界在前面跑，学界和可解释性在后面追。下面的讨论限制在Langlands Program里面：一个非平凡的猜想能被广泛接受，就说明它大概率是正确的。这个方向严重路径依赖，几十年来本质创新都在
 1. 上个世纪的那些low rank正确的例子；
-2. 经典公式，比如Rallis inner 
+2. 经典公式，比如Rallis inner product、trace formula、orbit method；
+3. theta correspondence；
+4. Knop的spherical variety观点
 
 做后面那个跟风小弟有什么意思？
