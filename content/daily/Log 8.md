@@ -9,6 +9,6 @@ tags:
 2. 经典公式，比如Rallis inner product、trace formula、orbit method；
 3. theta correspondence；
 4. Knop的spherical variety观点……
-然而一个非平凡的猜想能被广泛接受，就说明它大概率是正确的。如果你能用各种principle、conjecture能证明出来，从概率角度ta
+然而一个非平凡的猜想能被广泛接受，就说明它大概率是正确的。如果你能用各种principle、conjecture能证明出来，从概率角度他大概率就是对的，那中间的填充工作又有什么意义？分为两种情况：1、我自己搞不出来，这时候
 
 做后面那个跟风小弟有什么意思？
