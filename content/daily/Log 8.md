@@ -9,7 +9,7 @@ tags:
 2. 经典公式，比如Rallis inner product、trace formula、orbit method；
 3. theta correspondence；
 4. Knop的spherical variety观点……
-可能一个比较惊天动地的例外是BSD猜想，这个我至今无法理解怎么猜出来准确形式的。不论怎么说，这些例子一律遵从first principle，所见即所得，
+可能一个比较惊天动地的例外是BSD猜想，这个我至今无法理解怎么猜出来准确形式的。不论怎么说，这些例子一律遵从first principle：by hand、能从纸笔或者数据表中看出、ke。
 
 我不排除有真正创新技术的大佬，比如算数里面Faltings，但我敢保证90%的人（包括我）都是那些小弟，而且这个比例严重高于其他领域。既然如此，作为那后90%的人，就该有退出的觉悟。这些人退出去为AI做posttrain、提升通用智能、建立正确的数学AI工程框架或者好用的agent（比如Rethlas这种），对这个领域的贡献都比尬留下来大，经济上的价值也是。
 
