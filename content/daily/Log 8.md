@@ -9,6 +9,6 @@ tags:
 2. 经典公式，比如Rallis inner product、trace formula、orbit method；
 3. theta correspondence；
 4. Knop的spherical variety观点……
-然而一个非平凡的猜想能被广泛接受，就说明它大概率是正确的。
+然而一个非平凡的猜想能被广泛接受，就说明它大概率是正确的。如果你能用各种principle、conjecture能证明出来，从概率角度ta
 
 做后面那个跟风小弟有什么意思？
