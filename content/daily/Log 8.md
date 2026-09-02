@@ -4,7 +4,7 @@ date: 2026-09-01
 tags:
   - daily
 ---
-忽然发觉做纯数是猜想在前面跑，证明和补丁在后面追。AI也是业界在前面跑，学界和可解释性在后面追，完完全全地跟风，甚至连提出比transformer更牛逼的架构，或者证明最优都做不了。下面的讨论限制在Langlands Program里面：纯数科研也差不多，一个大佬提出新的conjecture或者framework，后面一堆跟风小弟小帮派开始跟着打表、混饭，或者用各种derived category、Scholze的鬼话，现在BZSV就是新的饭碗罢了，剩下一小撮小众找例子自嗨（尝试千古失败，或者纯另类混饭，自找饭碗）。打个比方，就是人类向AI问一个有价值的问题，然后AI开几十个agent在那跑，那现在AI出现无非是把这个过程加速罢了，能让想法更快的落地。这个方向严重路径依赖，几十年来本质创新（千古）都在
+忽然发觉做纯数是猜想在前面跑，证明和补丁在后面追。AI也是业界在前面跑，学界和可解释性在后面追，完完全全地跟风，甚至连提出比transformer更牛逼的架构，或者证明最优都做不了。下面的讨论限制在Langlands Program里面：纯数科研也差不多，一个大佬提出新的conjecture或者framework，后面一堆跟风小弟小帮派开始跟着打表、混饭，或者用各种derived category、Scholze的鬼话或者什么乱七八糟的fancy words去给屎镀金，现在BZSV就是新的饭碗罢了，剩下一小撮小众找例子自嗨（尝试千古失败，或者纯另类混饭，自找饭碗）。打个比方，就是人类向AI问一个有价值的问题，然后AI开几十个agent在那跑，那现在AI出现无非是把这个过程加速罢了，能让想法更快的落地。这个方向严重路径依赖，几十年来本质创新（千古）都在
 1. 上个世纪的那些low rank正确的例子，Waldspurger，Gross Zagier；
 2. 经典公式，比如Rallis inner product、trace formula、orbit method；
 3. theta correspondence；
