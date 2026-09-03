@@ -13,5 +13,5 @@ Some remarks:
 
 We choose $B_1 = X_1//N_X$, over $A_X$ we have $Wh_{G_X}^0 \isom Wh_G^0 \isom T^*(A_X)$ by LST which only uses $P(X)=B$.  We expect when $M^\vee \bijection (G^\vee, G_X^\vee, 0, 0)$:
 
->The morphism $B_1 = X_1//N_X \to B = X//N$ maps $B_{L_\Theta}$ to $B_{L_{supp~\Theta}}$. It induces a bijection of relevant orbit families.
+>The morphism $B_1 = X_1//N_X \to B = X//N$ maps $B_{\Theta}$ to $B_{{supp~\Theta}}$. It induces a bijection of relevant orbit families.
 
