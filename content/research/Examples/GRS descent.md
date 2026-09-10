@@ -1,4 +1,4 @@
-It is $\Delta = (SO_{4n}, Sp_{2n}, (2^{2n}), 0)$ with $\Delta_1 = (SO_{2n+1}, 1, \iota_{reg}, 0)$. And $Ind_P^G M_{Sh,GL_{2n}}$
+It is $\Delta = (SO_{4n}, Sp_{2n}, (2^{2n}), 0)$ with $\Delta_1 = (SO_{2n+1}, 1, \iota_{reg}, 0)$. And $Ind_P^G M_{Sh,GL_{2n}} = M_{Sh,SO_{4n}}$, where $P$ has Levi $GL_{2n}$
 # Bessel reduction of the generalized Shalika Hamiltonian space
 
 We work over a field $k$ of characteristic zero. All groups are split, and the
