@@ -65,7 +65,7 @@ Continuation of 1, 2:
 Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both sides as Kostant-Slodowy slices. Let $q: M//_{Wh} G \to \mathfrak c_X = M//G$ and $q_1: M_1//_{Wh} G_X \to \mathfrak c_X$. Usually we have $q_1 = q \circ \Phi$ but I don't see how it is related to our problem. 
 
 >[!Proof Program]
->1. $\Phi$ is a symplectic isomorphism that identifies the relevant Lagrangians on both sides (this is wrong, a counterexample is Rankin-Selberg).
+>1. $\Phi$ is a symplectic isomorphism that identifies the relevant Lagrangians on both sides (this is wrong, a counterexample is Rankin-Selberg, a change of polarization is needed).
 >2. $M//_{Wh}G \to X//N$ is a Lagrangian fibration (this is not true for $GL_2 \backslash GL_3$).
 >3. We have quantizations well-defined for this setup, and geometric quantization commutes with reduction.
 >4. $Q(Wh_G) = Q(Wh_{G_X})$ is an isomorphism that,
