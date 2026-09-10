@@ -9,7 +9,7 @@ corresponding analytic character is $\psi\circ\lambda$. We use compatible trace
 pairings and conventions for which the residual moment maps have the forms
 written below.
 
-The following is just $\Delta_{Wh} = \Delta_{1, Wh}$
+The following is just 
 ## Proposition
 
 Let
