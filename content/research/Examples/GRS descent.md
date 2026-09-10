@@ -1,4 +1,4 @@
-It is $\Delta = (SO_{4n}, Sp_{2n}, ())$
+It is $\Delta = (SO_{4n}, Sp_{2n}, (2^{2n}), 0)$ with $\Delta_1 = (SO_{2n+1}, 1, 0, \iota_{reg})$
 # Bessel reduction of the generalized Shalika Hamiltonian space
 
 We work over a field $k$ of characteristic zero. All groups are split, and the
