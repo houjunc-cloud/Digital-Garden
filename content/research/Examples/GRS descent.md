@@ -1,4 +1,4 @@
-It is (self dual) $\Delta = (SO_{4n}, Sp_{2n}, (2^{2n}), 0)$ with $\Delta_1 = (SO_{2n+1}, 1, \iota_{reg}, 0)$, and $M_{Sh,GL_{2n}}$ with $M_1 = M_{\Delta_1}$. And $Ind_P^G M_{Sh,GL_{2n}}^{\vee} = Ind_P^G T^*(Sp_{2n} \backslash GL_{2n}) = M_{Sh,SO_{4n}} = M_{Sh,SO_{4n}}^\vee$, where $P$ has Levi $GL_{2n}$ and $G = SO_{4n}$.
+It is (self dual) $\Delta = (SO_{4n}, Sp_{2n}, (2^{2n}), 0)$ with $\Delta_1 = (SO_{2n+1}, 1, \iota_{reg}, 0)$, and $M_{Sh,GL_{2n}}$ with $M_1 = M_{\Delta_1}$. And $Ind_P^G M_{Sh,GL_{2n}}^{\vee} = Ind_P^G T^*(Sp_{2n} \backslash GL_{2n}) = M_{Sh,SO_{4n}} = M_{Sh,SO_{4n}}^\vee$, where $P$ has Levi $GL_{2n}$ and $G = SO_{4n}$. Moreover we have a family $\mathcal M \to \mathbb A^1$, whose generic fiber is $\mathcal M_t = T^*{t\lambda_S}(S \backslashG)$
 # Bessel reduction of the generalized Shalika Hamiltonian space
 
 We work over a field $k$ of characteristic zero. All groups are split, and the
