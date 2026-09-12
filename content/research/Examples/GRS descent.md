@@ -123,26 +123,21 @@ so $q$ is cyclic for $C$. There is a unique isometry
 $$\alpha:K\xrightarrow{\sim}E$$
 
 carrying $(C,q)$ to the principal Kostant normal form with the same
-characteristic polynomial and distinguished vector $q_0$. To verify this, map the two cyclic bases to one another: their initial moments agree, and the
-Cayley–Hamilton relation determines all subsequent moments.
+characteristic polynomial and distinguished vector $q_0$. To verify this, map the two cyclic bases to one another: their initial moments agree, and the Cayley–Hamilton relation determines all subsequent moments.
 
 Moreover, $x$ sends
 
 $$\operatorname{span}(q,\ldots,x^{2n-3}q)$$
 
-into $K$. Thus its component $K\to K^\perp$ is a vector times the covector
-$B(q,-)$. Under $\alpha$, this is precisely the off-diagonal term allowed in
-$f_B+\mathfrak g^{e_B}$.
+into $K$. Thus its component $K\to K^\perp$ is a vector times the covector $B(q,-)$. Under $\alpha$, this is precisely the off-diagonal term allowed in $f_B+\mathfrak g^{e_B}$.
 
 Consequently, $\mathcal R$ is the space of data
 
 $$(A,v,w,\beta),\qquad \beta:K^\perp\xrightarrow{\sim}V_H,\tag{4}$$
 
-satisfying $(3)$, modulo $\Sp(W)$, with the orientation of $\beta$ chosen so that
-$\alpha\oplus\beta$ belongs to $G$.
+satisfying $(3)$, modulo $\Sp(W)$, with the orientation of $\beta$ chosen so that $\alpha\oplus\beta$ belongs to $G$.
 
-We next determine the quotient of the triples $(A,v,w)$. Because $A$ is
-symplectically self-adjoint,
+We next determine the quotient of the triples $(A,v,w)$. Because $A$ is symplectically self-adjoint,
 
 $$\omega(A^iv,A^jv)=\omega(A^iw,A^jw)=0,$$
 
@@ -156,21 +151,15 @@ $$v,Av,\ldots,A^{n-1}v\quad\text{and}\quad w,Aw,\ldots,A^{n-1}w$$
 
 has invertible anti-diagonal. Hence these $2n$ vectors form a basis.
 
-The two halves span Lagrangians $L_v,L_w$. They are $A$-invariant: for example,
-$A^nv$ pairs trivially with every $A^iv$, so it belongs to $L_v^\perp=L_v$.
-Self-adjointness identifies the two restrictions of $A$ as transpose operators.
-They therefore have the same monic degree-$n$ polynomial
+The two halves span Lagrangians $L_v,L_w$. They are $A$-invariant: for example, $A^nv$ pairs trivially with every $A^iv$, so it belongs to $L_v^\perp=L_v$. Self-adjointness identifies the two restrictions of $A$ as transpose operators. They therefore have the same monic degree-$n$ polynomial
 
 $$P(s)=s^n+c_1s^{n-1}+\cdots+c_n,\qquad P(A)=0.\tag{5}$$
 
-The polynomial $P$ determines the triple up to a unique symplectic isomorphism.
-Explicitly, put
+The polynomial $P$ determines the triple up to a unique symplectic isomorphism. Explicitly, put
 
 $$R_P=k[s]/P(s),\qquad W_P=R_P\oplus R_P,$$
 
-take $A$ to be multiplication by $s$, and take $v=(1,0)$, $w=(0,1)$. If $\ell_P$
-extracts the coefficient of $s^{n-1}$ from the degree-${<}n$ representative, the
-symplectic form is
+take $A$ to be multiplication by $s$, and take $v=(1,0)$, $w=(0,1)$. If $\ell_P$ extracts the coefficient of $s^{n-1}$ from the degree-${<}n$ representative, the symplectic form is
 
 $$\omega_P((a,b),(c,d))=\frac{\varepsilon}{2}\,\ell_P(ad-bc).\tag{6}$$
 
@@ -179,9 +168,7 @@ This is nondegenerate and satisfies $(3)$. Thus
 $$\{(A,v,w)\text{ satisfying }(3)\}/\Sp(W)\simeq
 \mathbb A^n_{c_1,\ldots,c_n}.\tag{7}$$
 
-It remains to identify the residual $H$-moment map and the frame in $(4)$. Let
-$\pi_K,\rho$ denote orthogonal projection onto $K,K^\perp$, respectively, and
-define
+It remains to identify the residual $H$-moment map and the frame in $(4)$. Let $\pi_K,\rho$ denote orthogonal projection onto $K,K^\perp$, respectively, and define
 
 $$Z=\rho x|_{K^\perp},\qquad r=(w,0),\qquad u=\rho x^{2n-1}q.\tag{8}$$
 
