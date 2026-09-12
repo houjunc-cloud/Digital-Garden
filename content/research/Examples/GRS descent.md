@@ -18,8 +18,7 @@ Let
 $$G=\SO_{4n},\qquad n\geq 2,$$
 
 and let $S_{\mathrm{gSh}}=\Sp_{2n}\ltimes U_S$ be its generalized Shalika
-subgroup, where $U_S$ is the unipotent radical of the Siegel parabolic. Let
-$\lambda_S$ be the standard generalized Shalika character, and put
+subgroup, where $U_S$ is the unipotent radical of the Siegel parabolic. Let $\lambda_S$ be the standard generalized Shalika character, and put
 
 $$M=T^*_{\lambda_S}(S_{\mathrm{gSh}}\backslash G).$$
 
@@ -28,14 +27,11 @@ partition
 
 $$[\,2n-1,1^{2n+1}\,],$$
 
-whose residual group is $H=\SO_{2n+1}$. For the compatible principal Whittaker
-datum $(N_H,\lambda_H)$ specified in the proof, there is an $H$-equivariant
-symplectic isomorphism
+whose residual group is $H=\SO_{2n+1}$. For the compatible principal Whittaker datum $(N_H,\lambda_H)$ specified in the proof, there is an $H$-equivariant symplectic isomorphism
 
 $$\boxed{\,M\mathbin{/\!\!/}_{\lambda_B}U_B\simeq T^*_{\lambda_H}(N_H\backslash H).\,}$$
 
-It preserves the $H$-moment maps and is defined over the entire adjoint
-quotient.
+It preserves the $H$-moment maps and is defined over the entire adjoint quotient.
 
 ## Proof
 
@@ -68,16 +64,12 @@ $f_S+\mathfrak g^{e_S}$ has the form
 $$\begin{pmatrix}D&A\\1&D\end{pmatrix},\qquad
 D\in\mathfrak{sp}(W),\quad A\in\mathcal A.$$
 
-The zero moment condition for $\Sp(W)$ sets $D=0$. The generalized Whittaker
-slice presentation therefore gives
+The zero moment condition for $\Sp(W)$ sets $D=0$. The generalized Whittaker slice presentation therefore gives
 
 $$M\simeq G\times^{\Sp(W)}\mathcal A,\qquad
 \mu_G([g,A])=gx_Ag^{-1}.\tag{1}$$
 
-This is the standard construction of generalized Whittaker Hamiltonian spaces;
-see [GW, §4.2.1].
-
-Choose the Bessel triple so that
+This is the standard construction of generalized Whittaker Hamiltonian spaces; see [GW, §4.2.1]. Choose the Bessel triple so that
 
 $$V=E\perp V_H,\qquad \dim E=2n-1,\quad \dim V_H=2n+1,$$
 
@@ -92,8 +84,7 @@ $$\mathcal R:=M\mathbin{/\!\!/}_{\lambda_B}U_B\simeq
 \mu_G^{-1}(f_B+\mathfrak g^{e_B}).\tag{2}$$
 
 Indeed, the action map identifies the character moment level in $\mathfrak g^*$
-with $U_B$ times the slice; pulling back along $\mu_G$ and quotienting gives
-$(2)$. See [GG, Lemma 2.1].
+with $U_B$ times the slice; pulling back along $\mu_G$ and quotienting gives $(2)$. See [GG, Lemma 2.1].
 
 For a representative $[g,A]$, write
 
@@ -121,11 +112,9 @@ Set
 
 $$K=\operatorname{span}(q,xq,\ldots,x^{2n-2}q).$$
 
-Its Gram matrix has zero entries before its anti-diagonal and fixed nonzero
-anti-diagonal entries, so $K$ is nondegenerate.
+Its Gram matrix has zero entries before its anti-diagonal and fixed nonzero anti-diagonal entries, so $K$ is nondegenerate.
 
-Conversely, suppose that $(A,v,w)$ satisfies $(3)$. Let $C$ be the compression of
-$x$ to $K$. Then
+Conversely, suppose that $(A,v,w)$ satisfies $(3)$. Let $C$ be the compression of $x$ to $K$. Then
 
 $$C^iq=x^iq\qquad(0\leq i\leq 2n-2),$$
 
@@ -134,8 +123,7 @@ so $q$ is cyclic for $C$. There is a unique isometry
 $$\alpha:K\xrightarrow{\sim}E$$
 
 carrying $(C,q)$ to the principal Kostant normal form with the same
-characteristic polynomial and distinguished vector $q_0$. To verify this, map
-the two cyclic bases to one another: their initial moments agree, and the
+characteristic polynomial and distinguished vector $q_0$. To verify this, map the two cyclic bases to one another: their initial moments agree, and the
 Cayley–Hamilton relation determines all subsequent moments.
 
 Moreover, $x$ sends
