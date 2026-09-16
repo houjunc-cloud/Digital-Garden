@@ -29,3 +29,4 @@ settled than it is.
 
 - [[notes/deep-learning/index|深度学习（为纯数学研究者重写）]] — 在 Tony Feng 的 Berkeley Math 270 框架上按数学主题重组的 24 篇讲义：学习理论、逼近论、信息论、优化、NTK/mean-field、架构、生成模型、强化学习、AI for Math。
 - [[notes/scientific-foundation-models/index|科学基础模型的数学]] — 在 JHU Math 110.773（Fei Lu, 2026 Fall）大纲上补前置与深度：交互粒子系统与 attention、从数据学交互律、score matching 的率、in-context learning、算子里的核与算子学习。
+- [[notes/cs336/index|CS336：从零构建语言模型]] — 跟 Stanford CS336（Spring 2026，Percy Liang 与 Tatsunori Hashimoto）逐讲做的工程向笔记：tokenizer、架构与训练、GPU 与并行、scaling laws、数据、对齐。术语先行，数字可验算，代码能跑。
