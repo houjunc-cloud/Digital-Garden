@@ -24,7 +24,7 @@
 
 2026-09-20
 
-一个月过去了，基本没什么进展。Wh_G \to RTF base 未必是Lagrangian fibration，S_X \neq 0 还可能出现change of polarization。
+一个月过去了，基本没什么进展。Wh_G \to RTF base 未必是Lagrangian fibration，S_X \neq 0 还可能出现change of polarization。也许第一步要先把许多 ¥¥
 
 
 
