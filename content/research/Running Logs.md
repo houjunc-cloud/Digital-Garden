@@ -22,5 +22,9 @@
 
 研究下components of Lagrangian fibers。这个想法（Venkatesh's principle）能在geometric Satake （cf [Sanath](https://sanathdevalapurkar.github.io/files/hyperboloid_spectral_decomp.pdf)）的情形下被验证。
 
+2026-09-20
+
+一个月过去了，
+
 
 
