@@ -18,6 +18,8 @@ The RHS of JRL identity is Jacquet-Zagier, whose spectral expansion is summation
 
 ### $s \to \infty$
 #### Mellin parameter $s \to \infty$ sees geometry boundary
+
+#### Spectral explanation
 For example, if we look at the $GL_2$ case, we write Fourier expansion $f(z) = \sum_{n \ge 1} a_n e(nz)$ then Rankin-Selberg above gives $<|f|^2, E(\cdot,s)> = C(s) \sum_{n \ge 1} |a_n|^2/n^s$ where $C(s)$ is some normalization which does not quite matter. Now let $\operatorname{Re} s \to \infty$ we are left with $|a_1|^2$ which is the Whittaker coefficient. This explains the RHS at least for $GL_2$.
 
 On LHS, its spectral expansion is $P_{H_\epsilon} \circ R(f) \cdot \overline{ B_{s}^H}$. Similarly, after normalization $\tild{B^H_s}(\phi) = W_{\phi}(1) + \sum_{N \mathfrak a >1} W_{\phi}(\mathfrak a)N(\mathfrak a)^{-s}$. So the same game.
