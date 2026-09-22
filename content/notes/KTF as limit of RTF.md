@@ -1,4 +1,4 @@
-In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\epsilon} \int_{H_\epsilon} \int_{H} K_\epsilon(h_\epsilon,h) dh_\epsilon dh = \int_{G'}K'(g',g') \Theta'(g') dg'$$ where $G = GL_2(E), G'=GL_2(F)$, $E/F$ is a quadratic extension, $H_\epsilon \subset G$ is some nonsplit unitary group and $H \subset G$ is the split unitary group, $c(s) = |D_E|^{1/2}|D_F|^{-1}L(s, \mathbb 1_F)$. This formula is obtained from taking residue at $s=1$ of $$L(s,\eta) \sum_{\epsilon} \int_{H_\epsilon} \int_H K_\epsilon(h_\epsilon,h) E(h,s)dh_\epsilon dh = c(s) \int_{G'} K'(g',g') E'(g',s) \eta(\det g') dg'$$
+In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\epsilon} \int_{H_\epsilon} \int_{H} K_\epsilon(h_\epsilon,h) dh_\epsilon dh = \int_{G'}K'(g',g') \Theta'(g') dg'$$ where $G = Res_F^E GL_2, G'=GL_{2,F}$, $E/F$ is a quadratic extension, $H_\epsilon \subset G$ is some nonsplit unitary group and $H \subset G$ is the split unitary group, $c(s) = |D_E|^{1/2}|D_F|^{-1}L(s, \mathbb 1_F)$. This formula is obtained from taking residue at $s=1$ of $$L(s,\eta) \sum_{\epsilon} \int_{H_\epsilon} \int_H K_\epsilon(h_\epsilon,h) E(h,s)dh_\epsilon dh = c(s) \int_{G'} K'(g',g') E'(g',s) \eta(\det g') dg'$$
 On the other hand, they said $s \to \infty$ this identity should become $H_\epislon \backslash G / H \to H_\epsilon \backslash G / (N, \theta)$ comparing with $G'//G' \to (N',\theta') \backslash G' / (M',\theta')$
 
 ## Eisenstein series
@@ -13,3 +13,5 @@ The adjoint formula is then $$CT_{Q}(\phi \overline{\phi'})=W_{\phi}(g) \overlin
 ## Back to JRL
 
 The RHS of JRL identity is Jacquet-Zagier, whose spectral expansion is summation of $L(s,\pi' \tensor \eta \tensor \tilde{\pi'})$, while the LHS has spectral expansion summation of $L(s,\pi,Asai)$. 
+
+### The lim
