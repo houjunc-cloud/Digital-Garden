@@ -17,4 +17,4 @@ The RHS of JRL identity is Jacquet-Zagier, whose spectral expansion is summation
 
 ### $s \to \infty$
 #### Mellin parameter $s \to \infty$ sees geometry boundary
-For example, in the toy model $a \in F^\times$, then Mellin transform of a function $F$ is $\mathcal M F(s) = \int_{F^\times} F(a)|a|^s d^\times a ~ \sum_{m} F_m q$
+For example, in the toy model $a \in F^\times$, then Mellin transform of a function $F$ is $\mathcal M F(s) = \int_{F^\times} F(a)|a|^s d^\times a ~ \sum_{m} F_m q^{-ms}$ by $v(a) = m$. So $a \to \infty$
