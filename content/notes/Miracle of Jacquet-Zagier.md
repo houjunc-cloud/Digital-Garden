@@ -16,3 +16,4 @@ The RHS of JRL identity is Jacquet-Zagier, whose spectral expansion is summation
 ### $s \to 1$
 
 ### $s \to \infty$
+#### Mellin parameter $s \to \infty$ sees geometry boundary
