@@ -1,5 +1,7 @@
 In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\epsilon} \int_{H_\epsilon} \int_{H} K_\epsilon(h_\epsilon,h) dh_\epsilon dh = \int_{G'}K'(g',g') \Theta'(g') dg'$$ where $G = Res_F^E GL_2, G'=GL_{2,F}$, $E/F$ is a quadratic extension, $H_\epsilon \subset G$ is some nonsplit unitary group and $H \subset G$ is the split unitary group, $c(s) = |D_E|^{1/2}|D_F|^{-1}L(s, \mathbb 1_F)$. This formula is obtained from taking residue at $s=1$ of $$L(s,\eta) \sum_{\epsilon} \int_{H_\epsilon} \int_H K_\epsilon(h_\epsilon,h) E(h,s)dh_\epsilon dh = c(s) \int_{G'} K'(g',g') E'(g',s) \eta(\det g') dg'$$
-We admit these statements first. On the other hand, they said $s \to \infty$ this identity should become $H_\epislon \backslash G / H \xrightarrow{s \to \infty} H_\epsilon \backslash G / (N, \theta)$ comparing with $G'//G' \xrightarrow{s \to \infty} (N',\theta') \backslash G' / (N',\theta')$. This note is to make their statements 
+We admit these statements first. On the other hand, they said $s \to \infty$ this identity should become $H_\epislon \backslash G / H \xrightarrow{s \to \infty} H_\epsilon \backslash G / (N, \theta)$ comparing with $G'//G' \xrightarrow{s \to \infty} (N',\theta') \backslash G' / (N',\theta')$. 
+
+This note is to make their statements and slogan clear to myself.
 
 ## The Jacquet-Zagier kernel pairing <K,E>
 ### Eisenstein series
@@ -23,3 +25,5 @@ The RHS of JRL identity is Jacquet-Zagier, whose spectral expansion is summation
 For example, if we look at the $GL_2$ case, we write Fourier expansion $f(z) = \sum_{n \ge 1} a_n e(nz)$ then Rankin-Selberg above gives $<|f|^2, E(\cdot,s)> = C(s) \sum_{n \ge 1} |a_n|^2/n^s$ where $C(s)$ is some normalization which does not quite matter. Now let $\operatorname{Re} s \to \infty$ we are left with $|a_1|^2$ which is the Whittaker coefficient. This explains the RHS at least for $GL_2$.
 
 On LHS, its spectral expansion is $P_{H_\epsilon} \circ R(f) \cdot \overline{ B_{s}^H}$. Similarly, after normalization $\tild{B^H_s}(\phi) = W_{\phi}(1) + \sum_{N \mathfrak a >1} W_{\phi}(\mathfrak a)N(\mathfrak a)^{-s}$. So the same game.
+
+##### Geometric explanation
