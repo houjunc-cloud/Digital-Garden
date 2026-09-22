@@ -3,4 +3,4 @@ In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\e
 ## Eisenstein series
 For a parabolic $P=MN \subset G$, the Eisenstein operator $$Eis_P:Autom(M) \xrightarrow{\text{parabolic induction}} Ind_P^G(s) \to Autom(G)$$ is $\varphi \mapsto f_{\varphi,s} \mapsto E(g,f_{\varphi,s}) = \sum_{\gamma \in P(F) \backslash G(F)} f_{\varphi,s}(\gamma g)$
 and the constant term
-$$CT_P(F)(m):= \int_{[N]}F(nm)dn$$ are adjoint (we consider spherical section $f_s$, where)$$<F,Eis_P(f_s)>_{[G]} = <CT_P (F), f_s>_{[M]}$$ i.e. via Iwasawa decomposition, one can understand $Eis_P$ as an integral kernel 
+$$CT_P(F)(m):= \int_{[N]}F(nm)dn$$ are adjoint (we consider spherical section $f_s$ so that $K$-action is trivial)$$<F,Eis_P(f_s)>_{[G]} = <CT_P (F), f_s>_{[M]}$$ i.e. via Iwasawa decomposition, one can understand $Eis_P$ as an integral kernel 
