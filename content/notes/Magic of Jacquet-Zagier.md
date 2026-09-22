@@ -27,3 +27,4 @@ For example, if we look at the $GL_2$ case, we write Fourier expansion $f(z) = \
 On LHS, its spectral expansion is $P_{H_\epsilon} \circ R(f) \cdot \overline{ B_{s}^H}$. Similarly, after normalization $\tild{B^H_s}(\phi) = W_{\phi}(1) + \sum_{N \mathfrak a >1} W_{\phi}(\mathfrak a)N(\mathfrak a)^{-s}$. So the same game.
 
 ##### Geometric explanation
+It is equivalent to $$
