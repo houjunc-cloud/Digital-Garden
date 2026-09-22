@@ -2,3 +2,5 @@ In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\e
 
 ## Eisenstein series
 For a parabolic $P=MN \subset G$, the Eisenstein operator $$Eis_P:Autom(M) \xrightarrow{\text{parabolic induction}} Ind_P^G(s) \to Autom(H)$$ is $\varphi \mapsto f_{\varphi,s} \mapsto E(g,f_{\varphi,s}) = \sum_{\gamma \in P(F) \backslash G(F)} f_{\varphi,s}(\gamma g)$
+and the constant term
+$$CT_P(F)(m):= \int_{[N]}F(nm)$$
