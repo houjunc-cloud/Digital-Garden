@@ -1,1 +1,1 @@
-In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum $$
+In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\epsilon} \int_{H_\epsilon} \int_{H} K_\epsilon(h_\epsilon,h) dh_\epsilon dh = \int_{G'}K'(g',g') \Theta'(g') $$
