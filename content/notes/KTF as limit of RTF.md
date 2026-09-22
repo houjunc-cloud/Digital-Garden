@@ -1,5 +1,5 @@
 In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\epsilon} \int_{H_\epsilon} \int_{H} K_\epsilon(h_\epsilon,h) dh_\epsilon dh = \int_{G'}K'(g',g') \Theta'(g') dg'$$ where $G = GL_2(E), G'=GL_2(F)$, $E/F$ is a quadratic extension, $H_\epsilon \subset G$ is some nonsplit unitary group and $H \subset G$ is the split unitary group, $c(s) = |D_E|^{1/2}|D_F|^{-1}L(s, \mathbb 1_F)$. This formula is obtained from taking residue at $s=1$ of $$L(s,\eta) \sum_{\epsilon} \int_{H_\epsilon} \int_H K_\epsilon(h_\epsilon,h) E(h,s)dh_\epsilon dh = c(s) \int_{G'} K'(g',g') E'(g',s) \eta(\det g') dg'$$
-On the other hand, they said $s \to \infty$ this identity should
+On the other hand, they said $s \to \infty$ this identity should become 
 
 ## Eisenstein series
 For a parabolic $P=MN \subset G$, the Eisenstein operator $$Eis_P:Autom(M) \xrightarrow{\text{parabolic induction}} Ind_P^G(s) \to Autom(G)$$ is $\varphi \mapsto f_{\varphi,s} \mapsto E(g,f_{\varphi,s}) = \sum_{\gamma \in P(F) \backslash G(F)} f_{\varphi,s}(\gamma g)$
