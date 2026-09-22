@@ -18,4 +18,4 @@ The RHS of JRL identity is Jacquet-Zagier, whose spectral expansion is summation
 
 ### $s \to \infty$
 #### Mellin parameter $s \to \infty$ sees geometry boundary
-For example, if we look at the $GL_2$ case, we write Fourier expansion $f(z) = \sum_{n \ge 1} a_n e(nz)$
+For example, if we look at the $GL_2$ case, we write Fourier expansion $f(z) = \sum_{n \ge 1} a_n e(nz)$ then Rankin-Selberg above gives $<|f|^2, E(\cdot,s)> = C(s) \sum_{n \ge 1} |a_n|^$
