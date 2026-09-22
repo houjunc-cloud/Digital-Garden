@@ -1,7 +1,8 @@
 In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum_{\epsilon} \int_{H_\epsilon} \int_{H} K_\epsilon(h_\epsilon,h) dh_\epsilon dh = \int_{G'}K'(g',g') \Theta'(g') dg'$$ where $G = Res_F^E GL_2, G'=GL_{2,F}$, $E/F$ is a quadratic extension, $H_\epsilon \subset G$ is some nonsplit unitary group and $H \subset G$ is the split unitary group, $c(s) = |D_E|^{1/2}|D_F|^{-1}L(s, \mathbb 1_F)$. This formula is obtained from taking residue at $s=1$ of $$L(s,\eta) \sum_{\epsilon} \int_{H_\epsilon} \int_H K_\epsilon(h_\epsilon,h) E(h,s)dh_\epsilon dh = c(s) \int_{G'} K'(g',g') E'(g',s) \eta(\det g') dg'$$
-We admit these statements first. On the other hand, they said $s \to \infty$ this identity should become $H_\epislon \backslash G / H \xrightarrow{s \to \infty} H_\epsilon \backslash G / (N, \theta)$ comparing with $G'//G' \xrightarrow{s \to \infty} (N',\theta') \backslash G' / (M',\theta')$
+We admit these statements first. On the other hand, they said $s \to \infty$ this identity should become $H_\epislon \backslash G / H \xrightarrow{s \to \infty} H_\epsilon \backslash G / (N, \theta)$ comparing with $G'//G' \xrightarrow{s \to \infty} (N',\theta') \backslash G' / (N',\theta')$
 
-## Eisenstein series
+#
+### Eisenstein series
 For a parabolic $P=MN \subset G$, the Eisenstein operator $$Eis_P:Autom(M) \xrightarrow{\text{parabolic induction}} Ind_P^G(s) \to Autom(G)$$ is $\varphi \mapsto f_{\varphi,s} \mapsto E(g,f_{\varphi,s}) = \sum_{\gamma \in P(F) \backslash G(F)} f_{\varphi,s}(\gamma g)$
 and the constant term
 $$CT_P(F)(m):= \int_{[N]}F(nm)dn$$ are adjoint (we consider spherical section $f_s$ so that $K$-action is trivial)$$<F,Eis_P(f_s)>_{[G]} = <CT_P (F), f_s>_{[M]}$$ i.e. via Iwasawa decomposition, one can understand $Eis_P(f_s)$ as an integral kernel = constant term + Mellin transform (RHS viewed as a function of $s$). Note that the point here is not the automorphic input $\varphi$ on $M$, but the section $f_s$. 
