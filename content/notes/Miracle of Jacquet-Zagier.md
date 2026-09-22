@@ -13,3 +13,6 @@ The adjoint formula is then $$CT_{Q}(\phi \overline{\phi'})=W_{\phi}(g) \overlin
 ## Back to JRL
 
 The RHS of JRL identity is Jacquet-Zagier, whose spectral expansion is summation of $L(s,\pi' \tensor \eta \tensor \tilde{\pi'})$, while the LHS has spectral expansion summation of $L(s,\pi,Asai)$. 
+### $s \to 1$
+
+### $s \to \infty$
