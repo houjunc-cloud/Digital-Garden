@@ -1,0 +1,1 @@
+In Jacquet-Lai-Rallis, they mentioned a second trace-formula identity $$\sum $$
