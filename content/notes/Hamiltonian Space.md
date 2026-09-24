@@ -33,4 +33,4 @@ To recover $J_X$,  it suffices to eliminate the extra indices. $(\mathfrak h^\pe
 
 To have $W_X \isom J_X$ symplectically, we further needs a Lagrangian section $s: \mathfrak c_X \to W_X$, hopefully it is some $\Lambda_{\mathcal O,\xi}$. Here's where $S_X = 0$ used: HLM conjectures that $S_X = 0 \implies R_X \isom \mathfrak c_X$ and there is a Lagrangian section. QED
 
--(extended BZSV) According to BEZRUKAVNIKOV-YUN, for any $\psi = \psi_\Theta$, where $\psi_\Theta$ is the generic character of $U_\Theta$ extending trivially to the whole $$$(N, \psi_\Theta) \backslash G \bijection [P_\Theta^\vee, P_\Theta^\vee] \backslash G^\vee$
+-(extended BZSV) According to BEZRUKAVNIKOV-YUN, for any $\psi = \psi_\Theta$, where $\psi_\Theta$ is the generic character of $U_\Theta$ extending trivially to the whole $U$, $(U, \psi_\Theta) \backslash G = ((U_\Theta, \psi_\Theta) \backslash L_\Theta) \times ^ \bijection [P_\Theta^\vee, P_\Theta^\vee] \backslash G^\vee$
