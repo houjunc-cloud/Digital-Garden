@@ -1,0 +1,1 @@
+When we study the classical (R)TF $H = G_0^\Delta \into G_0 \times G$
