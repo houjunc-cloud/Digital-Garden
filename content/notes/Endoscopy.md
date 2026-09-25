@@ -1,6 +1,8 @@
 Let $F$ be a local field.
 
-When we study the classical (R)TF of $H = G_0^\Delta \into G_0 \times G_0$, the (strongly) regular semisimple (elliptic) orbits $[\gamma] \subset G(F)$ are good for convergence reasons. It has centralizer a maximal torus $T = G_\gamma$, $[\gamma_{st}]$ is the stable orbit of $\gamma$ which is indexed by $\ker(H^1(F,T) \to H^1(F,G))$
+# Pre-stabilization
+
+When we study the classical (R)TF of $H = G_0^\Delta \into G_0 \times G_0$, the (strongly) regular semisimple (elliptic) orbits $[\gamma] \subset G(F)$ are good for convergence reasons. It has centralizer a maximal torus $T = G_\gamma$, $[\gamma_{st}]$ is the stable orbit of $\gamma$ which is indexed by $\ker(H^1(F,T) \to H^1(F,G))$.
 
 The first step is pre-stabilization, $\mathcal{SO}^G_{\gamma} = \sum_{[\gamma] \in [\gamma]_{st}} \mathcal O_{\gamma}$
 
