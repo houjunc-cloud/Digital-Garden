@@ -1,1 +1,1 @@
-When we study the classical (R)TF of $H = G_0^\Delta \into G_0 \times G_0$, the regular semisimple (elliptic) orbits are good for convergence reasons. Over these 
+When we study the classical (R)TF of $H = G_0^\Delta \into G_0 \times G_0$, the regular semisimple (elliptic) orbits are good for convergence reasons. Over these orbits, we have endoscopy $TF = $
