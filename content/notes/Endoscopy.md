@@ -1,6 +1,6 @@
 Let $F$ be a local field.
 
-When we study the classical (R)TF of $H = G_0^\Delta \into G_0 \times G_0$, the (strongly) regular semisimple (elliptic) orbits $\gamma \in G(F)$ are good for convergence reasons. 
+When we study the classical (R)TF of $H = G_0^\Delta \into G_0 \times G_0$, the (strongly) regular semisimple (elliptic) orbits $\gamma \in G(F)$ are good for convergence reasons. It has centralizer a maximal torus $T = G_\gamma$
 
 The first step is pre-stabilization, $$
 
