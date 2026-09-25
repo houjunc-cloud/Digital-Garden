@@ -1,4 +1,4 @@
-Let $F$ be a local field.
+Let $F$ be a local field. In one word, endoscopy is a Fourier decomposition of a stable con
 
 # Pre-stabilization
 
