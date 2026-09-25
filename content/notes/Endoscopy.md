@@ -1,4 +1,4 @@
-Let $F$ be a local field. In one word, endoscopy is a Fourier decomposition of a stable con
+Let $F$ be a local field. In one word, endoscopy is a Fourier decomposition of a rational conjugacy class in a stable conjugacy class.
 
 # Pre-stabilization
 
