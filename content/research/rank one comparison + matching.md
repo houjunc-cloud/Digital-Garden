@@ -66,7 +66,7 @@ Suppose we already have $\Phi: M//_{Wh} G \isom M_1//_{Wh} G_X$. Identify both s
 
 >[!Proof Program]
 >1. $\Phi$ is a symplectic isomorphism that identifies the relevant Lagrangians on both sides (this is wrong, a counterexample is G-J comparison with Hecke. But MWZ is still right; the comparison is by Fourier transform = smooth transfer + Poisson + germ expansion).
->2. $M//_{Wh}G \to X//N$ is a Lagrangian fibration (this is not true for $GL_2 \backslash GL_3$).
+>2. $M//_{Wh}G \to X//N$ is a Lagrangian fibration (this is not true for $GL_2 \backslash GL_3$, however the polarizations are the same).
 >3. We have quantizations well-defined for this setup, and geometric quantization commutes with reduction.
 >4. $Q(Wh_G) = Q(Wh_{G_X})$ is an isomorphism that,
 >4.1 identifies a filtration of germs on $X_1//N_X \into X//N$ by spherical coroot limits and,
