@@ -263,15 +263,15 @@ $$\text{accuracy} = \text{efficiency} \times \text{resources}$$
 
 **架构**：起点是原始 Transformer (2017)，此后的主要改进：
 
-| 部件 | 演进 | 一句话动机 |
-|---|---|---|
-| 激活函数 | ReLU → SwiGLU | 带门控的 MLP，实验上更好（就是 §1.3"神的仁慈"那篇） |
-| 位置编码 | 正弦编码 → RoPE | 把位置编码成 query / key 向量的旋转，天然表达相对位置 |
-| 归一化 | LayerNorm → RMSNorm；post-norm → pre-norm；QK norm | 训练稳定性（RMSNorm 还更省算） |
-| 注意力 | 全注意力 → 稀疏 / 局部（滑动窗口）、GQA、MLA | 省计算和 KV cache 显存。GQA：多个 query 头共享一组 key/value；MLA：把 key/value 压缩到低维 |
-| 循环 / 状态空间 / 线性注意力 | Mamba、Gated DeltaNet | 计算量随序列长度线性增长的替代方案 |
-| MLP | 稠密 → MoE | 参数多，但每个 token 的计算少 |
-| 形状 | 隐藏维度、层数、头数、专家数 | 同样的参数量怎么分配 |
+| 部件                | 演进                                               | 一句话动机                                                               |
+| ----------------- | ------------------------------------------------ | ------------------------------------------------------------------- |
+| 激活函数              | ReLU → SwiGLU                                    | 带门控的 MLP，实验上更好（就是 §1.3"神的仁慈"那篇）                                     |
+| 位置编码              | 正弦编码 → RoPE                                      | 把位置编码成 query / key 向量的旋转，天然表达相对位置                                   |
+| 归一化               | LayerNorm → RMSNorm；post-norm → pre-norm；QK norm | 训练稳定性（RMSNorm 还更省算）                                                 |
+| 注意力               | 全注意力 → 稀疏 / 局部（滑动窗口）、GQA、MLA                     | 省计算和 KV cache 显存。GQA：多个 query 头共享一组 key/value；MLA：把 key/value 压缩到低维 |
+| 循环 / 状态空间 / 线性注意力 | Mamba、Gated DeltaNet                             | 计算量随序列长度线性增长的替代方案                                                   |
+| MLP               | 稠密 → MoE                                         | 参数多，但每个 token 的计算少                                                  |
+| 形状                | 隐藏维度、层数、头数、专家数                                   | 同样的参数量怎么分配                                                          |
 
 **训练**：参数怎么定？讲义列的旋钮：
 
