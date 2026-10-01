@@ -48,15 +48,15 @@ source: https://cs336.stanford.edu/lectures/?trace=lecture_01
 
 工业界训练一个可用的模型，大致分三段：
 
-| 术语 | 含义 |
-|---|---|
-| 预训练 (pretraining) | 在海量网页、书、代码上做"预测下一个 token"，得到 **base model**（只会续写，不会对话） |
-| 中期训练 (mid-training) | 预训练的后段换成更高质量、含长上下文的数据继续训 |
-| 后训练 (post-training) | 把 base model 调成可用的助手，包括下面的 SFT 和 RL |
-| 微调 (fine-tuning) | 在训好的模型上用较少的特定数据继续训练。**SFT**（supervised fine-tuning）是用"指令 → 理想回答"或对话数据做的微调 |
-| RLHF | reinforcement learning from human feedback：人给回答打分或排序，再用强化学习让模型偏向高分回答 |
-| 对齐 (alignment) | 让模型行为符合人的意图与偏好；本课第 5 模块泛指"在弱监督下继续改进模型"的方法 |
-| agent（智能体） | 能调用工具（终端、浏览器、代码执行）、多步自主完成任务的 LM 系统 |
+| 术语                  | 含义                                                                        |
+| ------------------- | ------------------------------------------------------------------------- |
+| 预训练 (pretraining)   | 在海量网页、书、代码上做"预测下一个 token"，得到 **base model**（只会续写，不会对话）                    |
+| 中期训练 (mid-training) | 预训练的后段换成更高质量、含长上下文的数据继续训                                                  |
+| 后训练 (post-training) | 把 base model 调成可用的助手，包括下面的 SFT 和 RL                                       |
+| 微调 (fine-tuning)    | 在训好的模型上用较少的特定数据继续训练。**SFT**（supervised fine-tuning）是用"指令 → 理想回答"或对话数据做的微调 |
+| RLHF                | reinforcement learning from human feedback：人给回答打分或排序，再用强化学习让模型偏向高分回答      |
+| 对齐 (alignment)      | 让模型行为符合人的意图与偏好；本课第 5 模块泛指"在弱监督下继续改进模型"的方法                                 |
+| agent（智能体）          | 能调用工具（终端、浏览器、代码执行）、多步自主完成任务的 LM 系统                                        |
 
 ### 0.3 算力与硬件
 
