@@ -212,12 +212,12 @@ $$\text{accuracy} = \text{efficiency} \times \text{resources}$$
 
 ### 2.2 开放程度光谱
 
-| 类型 | 公开什么 | 讲义列举 |
-|---|---|---|
-| 闭源 | 只有 API | GPT、Claude、Gemini 等 |
-| 早期复现 GPT-3 的尝试 | 数据集、权重 | EleutherAI 的 The Pile 数据集与 GPT-J 模型；Meta 的 OPT-175B（公开的训练日志记录了大量硬件故障）；Hugging Face / BigScience 的 BLOOM-176B（重点在数据来源） |
-| **open-weight** | 权重 + 论文 | Meta Llama；Mistral（法国）；DeepSeek（深度求索）；阿里 Qwen（通义千问）；Moonshot Kimi（月之暗面）；Z.ai GLM（智谱）；MiniMax；小米 MiMo |
-| **open-source** | 权重 + 论文 + 代码 + 数据 | AI2 Olmo；NVIDIA Nemotron；Marin（Percy Liang 等发起的"开放实验室"，连研发过程本身都公开，任何人可参与） |
+| 类型              | 公开什么              | 讲义列举                                                                                                                  |
+| --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------- |
+| 闭源              | 只有 API            | GPT、Claude、Gemini 等                                                                                                   |
+| 早期复现 GPT-3 的尝试  | 数据集、权重            | EleutherAI 的 The Pile 数据集与 GPT-J 模型；Meta 的 OPT-175B（公开的训练日志记录了大量硬件故障）；Hugging Face / BigScience 的 BLOOM-176B（重点在数据来源） |
+| **open-weight** | 权重 + 论文           | Meta Llama；Mistral（法国）；DeepSeek（深度求索）；阿里 Qwen（通义千问）；Moonshot Kimi（月之暗面）；Z.ai GLM（智谱）；MiniMax；小米 MiMo                  |
+| **open-source** | 权重 + 论文 + 代码 + 数据 | AI2 Olmo；NVIDIA Nemotron；Marin（Percy Liang 等发起的"开放实验室"，连研发过程本身都公开，任何人可参与）                                             |
 
 几点观察：
 - 讲义的判断：open-weight 模型正在逼近闭源模型。
