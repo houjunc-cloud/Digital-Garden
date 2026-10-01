@@ -26,4 +26,4 @@ $$P^\top R_mP=\bigoplus_j\begin{pmatrix}\cos m\theta_j&-\sin m\theta_j\\ \sin m\
 - 取 $m=0$：$R_n=\Phi(n)$，代回得 $R_m^\top R_n=R_{n-m}$，即 $R_n=R_mR_{n-m}$。所以 $m\mapsto R_m$ 是群同态 $\mathbb Z\to O(d)$，$R_m=R_1^m$。
 - 对正交矩阵 $R_1$ 用实正规矩阵的谱定理。
 
-P可以吸进 $Q,K$ 没影响，
+P可以吸进 $Q,K$ 没影响，所以RoPE是真的在结构上就实现了平移不变性，
