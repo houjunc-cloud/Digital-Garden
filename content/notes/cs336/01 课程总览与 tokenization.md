@@ -75,17 +75,17 @@ source: https://cs336.stanford.edu/lectures/?trace=lecture_01
 
 ### 0.4 模型与算法（本讲只点名，后面展开）
 
-| 术语 | 含义 |
-|---|---|
-| Transformer | 2017 年提出的神经网络架构，今天几乎所有 LM 的骨架：attention 层与 MLP 层交替堆叠。数学版见 [[notes/deep-learning/12 Transformer\|DL 12]] |
-| attention（注意力） | 每个位置对前面所有位置做加权汇总。计算量随序列长度 $n$ **平方**增长——"序列越短越好"的根源 |
-| MLP / FFN | Transformer 每层里对每个位置独立作用的两层全连接网络。大模型的多数 FLOPs 花在这里（§1.2） |
-| MoE (mixture of experts) | 把 MLP 拆成很多"专家"，每个 token 只激活其中几个：参数总量大，每个 token 的计算量小 |
-| KV cache | 生成时把已处理 token 的中间结果（key / value）缓存起来，避免每一步重算 |
-| scaling law（缩放定律） | loss 随算力、参数量、数据量按幂律下降的经验规律，用于"小规模实验外推大规模" |
-| emergence（涌现） | 某些能力在规模跨过某个量级后才突然出现 |
-| in-context learning | 不改参数，只在 prompt 里给几个例子，模型就能照着做（GPT-3 首次大规模展示）。理论见 [[09 ICL 的数学表述：任务分布与贝叶斯预测器]] |
-| optimizer（优化器） | 按梯度更新参数的规则，如 Adam、AdamW。数学版见 [[notes/deep-learning/05 优化的数学\|DL 05]] |
+| 术语                       | 含义                                                                                                      |
+| ------------------------ | ------------------------------------------------------------------------------------------------------- |
+| Transformer              | 2017 年提出的神经网络架构，今天几乎所有 LM 的骨架：attention 层与 MLP 层交替堆叠。数学版见 [[notes/deep-learning/12 Transformer\|DL 12]] |
+| attention（注意力）           | 每个位置对前面所有位置做加权汇总。计算量随序列长度 $n$ **平方**增长——"序列越短越好"的根源                                                     |
+| MLP / FFN                | Transformer 每层里对每个位置独立作用的两层全连接网络。大模型的多数 FLOPs 花在这里（§1.2）                                                |
+| MoE (mixture of experts) | 把 MLP 拆成很多"专家"，每个 token 只激活其中几个：参数总量大，每个 token 的计算量小                                                    |
+| KV cache                 | 生成时把已处理 token 的中间结果（key / value）缓存起来，避免每一步重算                                                            |
+| scaling law（缩放定律）        | loss 随算力、参数量、数据量按幂律下降的经验规律，用于"小规模实验外推大规模"                                                               |
+| emergence（涌现）            | 某些能力在规模跨过某个量级后才突然出现                                                                                     |
+| in-context learning      | 不改参数，只在 prompt 里给几个例子，模型就能照着做（GPT-3 首次大规模展示）。理论见 [[09 ICL 的数学表述：任务分布与贝叶斯预测器]]                           |
+| optimizer（优化器）           | 按梯度更新参数的规则，如 Adam、AdamW。数学版见 [[notes/deep-learning/05 优化的数学\|DL 05]]                                    |
 
 ### 0.5 行业格局
 
