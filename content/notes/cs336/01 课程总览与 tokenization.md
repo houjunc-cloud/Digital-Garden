@@ -193,22 +193,22 @@ $$\text{accuracy} = \text{efficiency} \times \text{resources}$$
 
 ### 2.1 技术演进
 
-| 阶段 | 里程碑 | 意义 |
-|---|---|---|
-| 前神经网络（2010 年代以前） | Shannon (1950) 用语言模型度量英文的熵 | "语言模型"这个概念比深度学习早半个多世纪 |
-| | n-gram 模型（Brants et al. 2007，Google） | 用前 $n-1$ 个词的出现计数预测下一个词；曾是机器翻译、语音识别的核心组件 |
-| 神经网络组件（2010 年代） | LSTM (1997)；第一个神经语言模型 (Bengio et al. 2003) | |
-| | seq2seq (2014)、attention (Bahdanau et al. 2015) | 都是为**机器翻译**提出的 |
-| | Adam 优化器 (2014) | 至今训练 LM 的默认优化器家族 |
-| | Transformer (2017，同样为机器翻译提出)、MoE (2017) | 今天 LM 的骨架与稀疏化手段 |
-| | 模型并行：GPipe (2018)、ZeRO (2019)、Megatron-LM (2019) | 单卡放不下之后怎么训 |
-| 早期基础模型（2010 年代末） | ELMo (2018, LSTM)、BERT (2018, Transformer) | 范式确立：**预训练 + 微调**，下游任务普遍提升 |
-| | Google T5 (2019, 11B) | 把所有任务统一成"文本到文本" |
-| 拥抱规模 | OpenAI GPT-2 (2019, 1.5B) | 文本流畅；首次出现 zero-shot（不给例子直接做任务）的迹象 |
-| | Scaling laws (Kaplan et al. 2020) | 让扩大规模变得**可预测** |
-| | OpenAI GPT-3 (2020, 175B) | in-context learning |
-| | Google PaLM (2022, 540B) | 规模巨大但 **undertrained**：540B 参数只训了 780B token，按 Chinchilla 配比应约 10T |
-| | DeepMind Chinchilla (2022, 70B) | compute-optimal scaling laws：同样算力下，模型小一点、数据多一点更好（§4.3） |
+| 阶段               | 里程碑                                              | 意义                                                                 |
+| ---------------- | ------------------------------------------------ | ------------------------------------------------------------------ |
+| 前神经网络（2010 年代以前） | Shannon (1950) 用语言模型度量英文的熵                       | "语言模型"这个概念比深度学习早半个多世纪                                              |
+|                  | n-gram 模型（Brants et al. 2007，Google）             | 用前 $n-1$ 个词的出现计数预测下一个词；曾是机器翻译、语音识别的核心组件                            |
+| 神经网络组件（2010 年代）  | LSTM (1997)；第一个神经语言模型 (Bengio et al. 2003)       |                                                                    |
+|                  | seq2seq (2014)、attention (Bahdanau et al. 2015)  | 都是为**机器翻译**提出的                                                     |
+|                  | Adam 优化器 (2014)                                  | 至今训练 LM 的默认优化器家族                                                   |
+|                  | Transformer (2017，同样为机器翻译提出)、MoE (2017)          | 今天 LM 的骨架与稀疏化手段                                                    |
+|                  | 模型并行：GPipe (2018)、ZeRO (2019)、Megatron-LM (2019) | 单卡放不下之后怎么训                                                         |
+| 早期基础模型（2010 年代末） | ELMo (2018, LSTM)、BERT (2018, Transformer)       | 范式确立：**预训练 + 微调**，下游任务普遍提升                                         |
+|                  | Google T5 (2019, 11B)                            | 把所有任务统一成"文本到文本"                                                    |
+| 拥抱规模             | OpenAI GPT-2 (2019, 1.5B)                        | 文本流畅；首次出现 zero-shot（不给例子直接做任务）的迹象                                  |
+|                  | Scaling laws (Kaplan et al. 2020)                | 让扩大规模变得**可预测**                                                     |
+|                  | OpenAI GPT-3 (2020, 175B)                        | in-context learning                                                |
+|                  | Google PaLM (2022, 540B)                         | 规模巨大但 **undertrained**：540B 参数只训了 780B token，按 Chinchilla 配比应约 10T |
+|                  | DeepMind Chinchilla (2022, 70B)                  | compute-optimal scaling laws：同样算力下，模型小一点、数据多一点更好（§4.3）             |
 
 ### 2.2 开放程度光谱
 
