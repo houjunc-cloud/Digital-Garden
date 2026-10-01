@@ -8,7 +8,7 @@ tokenization要加上位置向量。
 2. （previous token head）多头注意力相当于学多个特征，理想情况（expect这个是因为在 GPT-2 等早期模型观察到了这个现象）是对每个$k$，总有一个头h能学到位置关系 $^t Q^h K^h = c T_{k}$ ，$c$ 充分大。则（如果masked就$n \le m$，后文只能看前文） $s_{mn} = c p_m^t T_k p_n = c p_m^t p_{n+k} = c \sum_{i} \cos (m-n-k)w_i = c \kappa (m-n-k)$，在 $m = n + k$ 的时候得分最高，softmax以后往前 $k$ 权重最大。又因为 $c$ 充分大，softmax以后大致是一个（比如 $k = 1$ 的时候）$$A^h = \begin{pmatrix}1&&&&\\1&0&&&\\0&1&0&&\\0&0&1&0&\\0&0&0&1&0\end{pmatrix}$$，则 $o_m = \sum_{m} a_{mn} v_n = v_{m-1} = V^h x_{m-1}$ 只有上一个位置贡献。
 3. （平移不变）位置编码 $p: \mathbb Z \to \mathbb R^d$ 给出一个 $\mathbb Z$ 上的平移不变正定kernel $K(m,n) = <p_m, p_n> = \kappa(m-n)$。我们需要这个kernel本质上还是因为2的注意力机制（bilinear form）。关于这个有Bochner定理：平移不变正定kernel等价于正Borel测度（谱测度）的Fourier transform，放这里就是 $\kappa(t) = \int_{[-\pi, \pi]} e^{itw} d\mu (w)$  for some $\mu$。从这个出发可以证明有限维迫使谱测度离散，即 $\mu = \sum_i m_i \delta_{w_i}$。因此从设计角度讲，只要底层用Transformer并且位置编码是加法，那么位置编码就等价于选择频率。正弦编码是其中一种选择。
 4. 频率取几何级数，相似度随距离按对数衰减几何级数 $\omega_i=b^{-2i/d}$ 相当于在 $[1/b,1]$ 上取了**对数均匀**的谱密度 $d\omega/\omega$。把求和看成黎曼和：
-$$\frac{\kappa(D)}{d/2}\ \approx\ \int_0^1\cos(Db^{-u})\,du=\frac{\operatorname{Ci}(D)-\operatorname{Ci}(D/b)}{\ln b}\ \approx\ 1-\frac{\ln D+\gamma}{\ln b}\qquad(1\ll D\ll b).$$ 最后一步用了 $\operatorname{Ci}(x)\approx\gamma+\ln x$（$x\to0$）和 $\operatorname{Ci}(x)\to0$（$x\to\infty$）。所以长距离
+$$\frac{\kappa(D)}{d/2}\ \approx\ \int_0^1\cos(Db^{-u})\,du=\frac{\operatorname{Ci}(D)-\operatorname{Ci}(D/b)}{\ln b}\ \approx\ 1-\frac{\ln D+\gamma}{\ln b}\qquad(1\ll D\ll b).$$ 最后一步用了 $\operatorname{Ci}(x)\approx\gamma+\ln x$（$x\to0$）和 $\operatorname{Ci}(x)\to0$（$x\to\infty$）。所以区分1和2的距离和区分1000和2000的距离一样容易。
 5. 原论文有实验验证，正弦编码如果换成可学习的位置嵌入，效果差不多。
 
 # RoPE
