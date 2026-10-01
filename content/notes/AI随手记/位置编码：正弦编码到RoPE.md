@@ -16,9 +16,9 @@ $$\frac{\kappa(D)}{d/2}\ \approx\ \int_0^1\cos(Db^{-u})\,du=\frac{\operatorname{
 $$s(m+t,\ n+t;\ \theta)=s(m,n;\ \theta)\qquad\text{对所有 }m,n,t.\tag{$*$}$$
 从上面2看来，正弦编码其实是寄希望于模型自己学会那个合适的 $Q,K$ 。
 
-所以考虑RoPE：要求 $(*)$ 对所有参数都成立，再解出满足要求的结构.
+所以考虑RoPE：要求 $(*)$ 对所有参数都成立，再解出满足要求的结构。具体来说，规定位置以线性变换 $R_m$ 作用在 $q,k$ 上，未知的是整族 $\{R_m\}$。则分数是 $q^\top R_{n-m}k$，无论 $W_Q,W_K$ 学成什么样，都是平移不变的。
 
-分数是 $q^\top R_{n-m}k$，无论 $W_Q,W_K$ 学成什么样，都是平移不变的。具体来说可以证明：让位置以线性变换 $R_m$ **直接作用在 $q,k$ 上**：$q\mapsto R_mq$，$k\mapsto R_nk$。
+可以证明
 
 **命题.** 设 $\{R_m\}_{m\in\mathbb Z}\subset GL_d(\mathbb R)$，$R_0=I$。若对所有 $q,k$，$(R_mq)^\top(R_nk)$ 只依赖于 $(q,k,n-m)$，则存在正交矩阵 $U$ 使得 $R_m=U^m$。因此存在正交矩阵 $P$，使
 
