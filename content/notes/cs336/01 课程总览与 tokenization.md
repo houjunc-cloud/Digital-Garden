@@ -147,7 +147,7 @@ source: https://cs336.stanford.edu/lectures/?trace=lecture_01
 | 6.7B | $1.1\times10^{17}$ | 65% | 8.1% |
 | 175B | $2.4\times10^{18}$ | 80% | 3.3% |
 
-为什么：每层每个 token，FFN 的运算量 $\propto d^2$（$d$ = 隐藏维度），而 attention 里"打分 + 加权求和"那部分 $\propto n\cdot d$（$n$ = 序列长度）。OPT 的 $n$ 固定为 2048，$d$ 从 1536 涨到 12288，后者占比自然被稀释。表中 attn/FFN 与 $n/(4d)$ 吻合到 1% 左右（练习 7）。
+为什么：每层每个 token，FFN 的运算量 $\propto d^2$（$d$ = 隐藏维度），而 attention 里"打分 + 加权求和"那部分 $\propto n\cdot d$（$n$ = 序列长度）。OPT 的 $n$ 固定为 2048，$d$ 从 1536 涨到 12288，后者占比自然被稀释。表中 attn/FFN 与 $n/(4d)$ 吻合到 1% 左右（练习 7）。ƒ
 
 > [!tip] 工程含义
 > 在小模型上 profile，会以为 attention 是大头；到了大模型，矩阵乘法密集的 FFN 才是大头。前提是上下文长度不变——上下文拉长，天平又会拨回 attention 一侧。
