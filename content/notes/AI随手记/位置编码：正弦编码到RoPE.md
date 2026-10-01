@@ -18,7 +18,7 @@ $$s(m+t,\ n+t;\ \theta)=s(m,n;\ \theta)\qquad\text{对所有 }m,n,t.\tag{$*$}$$
 
 所以考虑RoPE：要求 $(*)$ 对所有参数都成立，再解出满足要求的结构。具体来说，规定位置以线性变换 $R_m$ 作用在 $q,k$ 上，未知的是整族 $\{R_m\}$。则分数是 $q^\top R_{n-m}k$，无论 $W_Q,W_K$ 学成什么样，都是平移不变的。
 
-可以证明
+可以证明：
 
 **命题.** 设 $\{R_m\}_{m\in\mathbb Z}\subset GL_d(\mathbb R)$，$R_0=I$。若对所有 $q,k$，$(R_mq)^\top(R_nk)$ 只依赖于 $(q,k,n-m)$，则存在正交矩阵 $U$ 使得 $R_m=U^m$。因此存在正交矩阵 $P$，使
 
@@ -26,3 +26,4 @@ $$P^\top R_mP=\bigoplus_j\begin{pmatrix}\cos m\theta_j&-\sin m\theta_j\\ \sin m\
 - 取 $m=0$：$R_n=\Phi(n)$，代回得 $R_m^\top R_n=R_{n-m}$，即 $R_n=R_mR_{n-m}$。所以 $m\mapsto R_m$ 是群同态 $\mathbb Z\to O(d)$，$R_m=R_1^m$。
 - 对正交矩阵 $R_1$ 用实正规矩阵的谱定理。
 
+P可以吸进 $Q,K$ 
