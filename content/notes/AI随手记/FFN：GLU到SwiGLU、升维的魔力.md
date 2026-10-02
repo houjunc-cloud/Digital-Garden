@@ -34,12 +34,16 @@ $\sigma$ 是激活函数，$W_1$ 是 $4d \times d$ 维，$W_2$ 是 $d \times 4d$
 
 Rmk：基于4的稀疏特性，可以去预测哪些地方出现稀疏，从而简化计算。
 
-**GLU**（gated linear unit，Dauphin et al. 2017）的形式是 $(Wx)\odot\mathrm{sigmoid}(Vx)$：一路提供内容，一路充当开关，$\odot$ 是Hadamard积（逐个元素相乘）。相当于先变换 x 然后从 x 本身做门控筛选。Shazeer (2020) 把这个结构的升级版本放进 FFN 的第一层：
+### 先看 ReLU：它本来就是一个门
 
-$$\mathrm{FFN}_{\text{SwiGLU}}(x)=W_2\big(\mathrm{Swish}(W_1x)\odot W_3x\big),\qquad \mathrm{Swish}(z)=z\cdot\mathrm{sigmoid}(z).$$
+$$\mathrm{ReLU}(w^\top x)=\mathbf 1[w^\top x>0]\cdot(w^\top x).$$
 
-Swish 也叫 SiLU，名字 SwiGLU 就是 Swish + GLU。门换成别的激活函数，就得到这一族的其他成员：sigmoid 对应原始 GLU，ReLU 对应 ReGLU，GELU 对应 GEGLU，恒等映射对应 Bilinear。
+ReLU 单元其实也是"门 × 内容"，只是**门和内容用的是同一个方向 $w$**：它能做的只是"当 $w$ 方向的条件成立时，输出 $w$ 方向上的量"。
 
-**参数对齐。**SwiGLU 多了一个矩阵 $W_3$。为了和基线保持同样的参数量和 FLOPs，隐藏维度从 $4d$ 缩到 $\tfrac83 d$：
+### GLU：把条件和内容分开
 
-$$3\cdot d\cdot\tfrac83 d=8d^2=2\cdot d\cdot 4d.$$
+$$\sigma(v^\top x)\cdot(w^\top x)\ \approx\ \mathbf 1[v^\top x>0]\cdot(w^\top x)\qquad(|v^\top x|\ \text{较大时}).$$
+
+现在条件看 $v$，内容看 $w$，两者互不相干。这个单元的含义是：**当 $v$ 方向的条件成立时，把 $w$ 方向上的量传过去。**举个只用来说明意思的例子：$v$ 检测"当前 token 是动词"，$w$ 读出"时态"，这个单元就只在动词上传递时态信息。ReLU 单元做不到这一点，因为它的"条件"和"报告的量"是同一件事。
+
+Dauphin et al. (2017) 当初提出 GLU 时还强调了另一点：对 $x$ 求导，有一项是 $\sigma(v^\top x)\,w$。也就是说，梯度沿内容分支回传时，只会被门值缩放，不会再乘上一个激活函数的导数。门打开时，这条路径近似是线性的，梯度很好走。
