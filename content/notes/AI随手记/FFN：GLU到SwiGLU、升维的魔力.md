@@ -35,12 +35,12 @@ $\sigma$ 是激活函数，$W_1$ 是 $4d \times d$ 维，$W_2$ 是 $d \times 4d$
 Rmk：基于4的稀疏特性，可以去预测哪些地方出现稀疏，从而简化计算。
 
 $$\mathrm{FFN}_{\text{GLU}}=\big(\sigma(xW)\odot xV\big)W_2,\qquad \mathrm{FFN}_{\text{SwiGLU}}=\big(\mathrm{Swish}(xW)\odot xV\big)W_2.$$
-![](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)![](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)其中 $\mathrm{Swish}(x) = x \sigma(\beta x)$
+![](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)![](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)其中一维时 $\mathrm{Swish}(x) = x \sigma(\beta x)$ 
 ### 先看 ReLU：它本来就是一个门
 
 $$\mathrm{ReLU}(w^\top x)=\mathbf 1[w^\top x>0]\odot(w^\top x).$$
 
-ReLU 单元其实也是"门 × 内容"，只是**门和内容用的是同一个方向 $w$**：它能做的只是"当 $w$ 方向的条件成立时，输出 $w$ 方向上的量"。
+ReLU 单元其实也是"门. × 内容"，只是**门和内容用的是同一个方向 $w$**：它能做的只是"当 $w$ 方向的条件成立时，输出 $w$ 方向上的量"。
 
 ### GLU：把条件和内容分开
 
@@ -65,4 +65,4 @@ $$\mathrm{Swish}(v^\top x)\cdot(w^\top x)\ \approx\ \mathbf 1[v^\top x>0]\cdot(v
 
 **1. 门不再饱和。**$\sigma'(z)=\sigma(z)(1-\sigma(z))\le\tfrac14$，并且当 $|z|$ 变大时以指数速度趋于 0。所以一个门一旦完全打开或完全关闭，$v$ 几乎就收不到梯度，门停止学习。这和 2010 年前后 ReLU 取代 sigmoid 作为激活函数是同一个原因。Swish 在 $z\to+\infty$ 时导数趋于 1，打开的门可以继续学习。
 
-**2. 门带有幅度。**sigmoid 门最大是 1，条件只能起"开或关"的作用。Swish 门的大小随 $v^\top x$ 线性增长，于是输出变成"条件成立的程度 × 内容"，这是两个特征的乘积，相当于一种软的"与"（AND）。所以第一条回答里说，SwiGLU 大致是"在半空间上打开的二次型"。
+**2. 门带有幅度。** sigmoid 门最大是 1，条件只能起"开或关"的作用。Swish 门的大小随 $v^\top x$ 线性增长，于是输出变成"条件成立的程度 × 内容"，这是两个特征的乘积，相当于一种软的"与"（AND）。所以第一条回答里说，SwiGLU 大致是"在半空间上打开的二次型"。
