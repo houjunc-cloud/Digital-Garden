@@ -34,7 +34,7 @@ $\sigma$ 是激活函数，$W_1$ 是 $4d \times d$ 维，$W_2$ 是 $d \times 4d$
 
 Rmk：基于4的稀疏特性，可以去预测哪些地方出现稀疏，从而简化计算。
 
-**GLU**（gated linear unit，Dauphin et al. 2017）的形式是 $(Wx)\odot\mathrm{sigmoid}(Vx)$：一路提供内容，一路充当开关。Shazeer (2020) 把这个结构放进 FFN 的第一层：
+**GLU**（gated linear unit，Dauphin et al. 2017）的形式是 $(Wx)\odot\mathrm{sigmoid}(Vx)$：一路提供内容，一路充当开关，$\odot$ 是Hadamard积（逐个元素相乘）。相当于筛选Shazeer (2020) 把这个结构的升级版本放进 FFN 的第一层：
 
 $$\mathrm{FFN}_{\text{SwiGLU}}(x)=W_2\big(\mathrm{Swish}(W_1x)\odot W_3x\big),\qquad \mathrm{Swish}(z)=z\cdot\mathrm{sigmoid}(z).$$
 
