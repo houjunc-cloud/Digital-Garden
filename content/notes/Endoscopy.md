@@ -15,3 +15,5 @@ Rmk: The miracle is mainly Fourier expansion, one changes the point of view from
 
 Note $H^\vee$ is a Levi of $G^\vee$, we rewrite it $L^\vee = H^\vee$, and the semisimple elements of $G^\vee$ are stratified by Levis
 $$G_{ss}^\vee / G^\vee = \coprod_{[L^\vee]}\{\text{points with centralizer of type }L^\vee\}$$
+Then what happens is
+$$ \boxed{ \operatorname{Tr}(\mathrm{Id}_G) \;\xleftrightarrow{S}\; LBG^\vee=[G^\vee/G^\vee] \supset BZ_{G^\vee}(s) = BH_s^\vee \;\xleftrightarrow{S^{-1}}\; \operatorname{Tr}^{\rm st}(\mathrm{Id}_{H_s}). } $$
