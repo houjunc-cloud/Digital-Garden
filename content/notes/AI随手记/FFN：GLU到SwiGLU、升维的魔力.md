@@ -34,6 +34,7 @@ $\sigma$ 是激活函数，$W_1$ 是 $4d \times d$ 维，$W_2$ 是 $d \times 4d$
 
 Rmk：基于4的稀疏特性，可以去预测哪些地方出现稀疏，从而简化计算。
 
+$$\mathrm{FFN}_{\text{GLU}}=\big(\sigma(xW)\odot xV\big)W_2,\qquad \mathrm{FFN}_{\text{SwiGLU}}=\big(\mathrm{Swish}(xW)\odot xV\big)W_2.$$
 ### 先看 ReLU：它本来就是一个门
 
 $$\mathrm{ReLU}(w^\top x)=\mathbf 1[w^\top x>0]\odot(w^\top x).$$
