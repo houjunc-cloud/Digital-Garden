@@ -11,5 +11,5 @@ The stabilization is a reinterpretation (**endoscopy miracle**): $$\sum_{\kappa}
 
 # BZSV viewpoint
 
-Note $H^\vee$ is a Levi of $G^\vee$, and the semisimple elements of $G^\vee$ are stratified by Levis
-$$G_{ss}^\vee / $$
+Note $H^\vee$ is a Levi of $G^\vee$, we rewrite it $L^\vee = H^\vee$, and the semisimple elements of $G^\vee$ are stratified by Levis
+$$G_{ss}^\vee / G^\vee = \coprod_{[L^\vee]}$$
