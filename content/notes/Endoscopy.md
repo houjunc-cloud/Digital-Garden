@@ -14,4 +14,4 @@ Rmk: The miracle is mainly Fourier expansion, one changes the point of view from
 # BZSV viewpoint
 
 Note $H^\vee$ is a Levi of $G^\vee$, we rewrite it $L^\vee = H^\vee$, and the semisimple elements of $G^\vee$ are stratified by Levis
-$$G_{ss}^\vee / G^\vee = \coprod_{[L^\vee]}\{\text{points with centralizer }L^\vee\}$$
+$$G_{ss}^\vee / G^\vee = \coprod_{[L^\vee]}\{\text{points with centralizer of type }L^\vee\}$$
