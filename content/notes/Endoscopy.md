@@ -4,7 +4,7 @@ Let $F$ be a local field. In one word, endoscopy is a Fourier decomposition of a
 
 We absorb the volume term into the definition of $\mathcal O_\gamma$
 
-When we study the classical (R)TF of $H = G^\Delta \into G \times G$ (this $H$ is not the one later and will not be used later; it's just for expressing the setup), the (strongly) regular semisimple (elliptic) orbits $[\gamma] \subset G(F)$ are good for convergence reasons. It has centralizer a maximal torus $T = G_\gamma$, $[\gamma]_{st}$ is the stable orbit of $\gamma$ which is indexed by $A_\gamma:=\ker(H^1(F,T) \to H^1(F,G))$. Define $\mathcal O^\kappa_\gamma(f):= \sum_{a \in A_\gamma} <a,\kappa> \mathcal O_{}$
+When we study the classical (R)TF of $H = G^\Delta \into G \times G$ (this $H$ is not the one later and will not be used later; it's just for expressing the setup), the (strongly) regular semisimple (elliptic) elements $\gamma \in G(F)$ are good for convergence reasons. It has centralizer a maximal torus $T = G_\gamma$, $[\gamma]_{st}$ is the stable orbit of $\gamma$ which is indexed by $A_\gamma:=\ker(H^1(F,T) \to H^1(F,G))$, say $. Define $\mathcal O^\kappa_\gamma(f):= \sum_{a \in A_\gamma} <a,\kappa> \mathcal O_{\gamma_a}$
 
 So on $G$ the stable orbital integral is $\mathcal{SO}^G_{\gamma} = \sum_{[\gamma] \in [\gamma]_{st}} \mathcal O_{\gamma} = \frac{1}{|A_\gamma|}\sum_{\kappa \in A_\gamma^\vee} <\gamma,\kappa> \mathcal O_{\gamma}^\kappa$. The second equality is Fourier inversion. This step is called pre-stabilization.
 
