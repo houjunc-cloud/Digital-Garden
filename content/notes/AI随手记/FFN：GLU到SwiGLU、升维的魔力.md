@@ -26,7 +26,7 @@ $\sigma$ 是激活函数，$W_1$ 是 $4d \times d$ 维，$W_2$ 是 $d \times 4d$
 	- **嵌套**：令 $a_{m+1}=0$ 可知 $\mathcal F_m\subset\mathcal F_{m+1}$。
 	- **万有逼近**：只要 $\sigma$ 不是多项式，$\bigcup_m\mathcal F_m$ 在紧集上的 $C(K)$ 中稠密（Leshno–Lin–Pinkus–Schocken 1993）。
 	- **定量版本**：Barron (1993) 证明，若 $f$ 满足 $\int|\omega|\,|\hat f(\omega)|\,d\omega<\infty$，则 $\mathcal F_m$ 中存在 $f_m$ 使 $\|f-f_m\|_{L^2(\mu)}\lesssim C_f/\sqrt m$，并且速率与维数 $d$ 无关。
-4. 数学定义
+4. 尽管没有好的解释，实验结果表明 $\sigma(W_1x)$ 会变成稀疏向量（大片0）
 	
 	给定字典 $D=[d_1,\dots,d_m]\in\mathbb R^{d\times m}$，其中 $m>d$（过完备），把信号写成
 	
