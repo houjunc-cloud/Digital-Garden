@@ -46,7 +46,6 @@ $$\sigma(v^\top x)\cdot(w^\top x)\ \approx\ \mathbf 1[v^\top x>0]\odot(w^\top x)
 
 现在条件看 $v$，内容看 $w$，两者互不相干。这个单元的含义是：**当 $v$ 方向的条件成立时，把 $w$ 方向上的量传过去。举个只用来说明意思的例子：$v$ 检测"当前 token 是动词"，$w$ 读出"时态"，这个单元就只在动词上传递时态信息。ReLU 单元做不到这一点，因为它的"条件"和"报告的量"是同一件事。
 
-Dauphin et al. (2017) 当初提出 GLU 时还强调了另一点：对 $x$ 求导，有一项是 $\sigma(v^\top x)\,w$。也就是说，梯度沿内容分支回传时，只会被门值缩放，不会再乘上一个激活函数的导数。门打开时，这条路径近似是线性的，梯度很好走。
 ### SwiGLU 改进了什么
 
 $$\mathrm{Swish}(v^\top x)\cdot(w^\top x)\ \approx\ \mathbf 1[v^\top x>0]\cdot(v^\top x)(w^\top x).$$
