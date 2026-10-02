@@ -9,7 +9,7 @@ Putting it back we get $$TF_{\text{sr,ell}}^G(f) = \sum_{a \in A_\gamma} \frac{1
 
 The stabilization is a reinterpretation (**endoscopy miracle**): $$\sum_{\kappa} <a,\kappa> \mathcal O_{\gamma}^\kappa(f) = \sum_{H \in \mathcal{E}(G)} \iota(G,H) \mathcal{SO}^H_{\gamma_H}(f^H)$$ where $\kappa \bijection s$  by Tate-Nakayama duality, $H^\vee = Z_{G^\vee}(s)^\circ$ and $\gamma \bijection \gamma_H$. From which one can infer globally $\mathcal O_{\gamma}^\kappa(f) = \mathcal{SO}_{\gamma_H}^H(f^H)$. We may assume $H^1(F,G) = 0$ since one can use stacky viewpoint to package all inner forms of $G$.
 
-Rmk: If one thinks of it 
+Rmk: One can think of the miracle is a position/frequency duality $s \bijection \kappa$
 
 # BZSV viewpoint
 
