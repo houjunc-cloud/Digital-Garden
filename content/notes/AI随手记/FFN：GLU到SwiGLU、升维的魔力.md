@@ -16,16 +16,5 @@ $\sigma$ 是激活函数，$W_1$ 是 $4d \times d$ 维，$W_2$ 是 $d \times 4d$
     - \(D(0,1) \rightarrow (0,1,0)\)
     
     现在你在三维空间里看，切一刀（切面），就能完美把 A、B 和 C、D 分开了！**这就是升维的意义：把复杂、扭曲的低维分布，拉直变成高维的线性分布。**
-1. 理论上会增强可学习性：
-
-只看 FFN 输出的一个坐标，记 $m=d_\text{ff}$：
-
-$$f(x)=\sum_{i=1}^{m}a_i\,\sigma(k_i^\top x).$$
-
-参数 $k_i\in\mathbb R^d$、$a_i\in\mathbb R$ 取遍所有值，得到的函数全体记为 $\mathcal F_m$。这就是"宽度为 $m$ 的 FFN 能表示的函数类"。
-
-"越宽越丰富"的准确含义有三层：
-
-- **嵌套**：令 $a_{m+1}=0$ 可知 $\mathcal F_m\subset\mathcal F_{m+1}$。
-- **万有逼近**：只要 $\sigma$ 不是多项式，$\bigcup_m\mathcal F_m$ 在紧集上的 $C(K)$ 中稠密（Leshno–Lin–Pinkus–Schocken 1993）。
-- **定量版本**：Barron (1993) 证明，若 $f$ 满足 $\int|\omega|\,|\hat f(\omega)|\,d\omega<\infty$，则 $\mathcal F_m$ 中存在 $f_m$ 使 $\|f-f_m\|_{L^2(\mu)}\lesssim C_f/\sqrt m$，并且速率与维数 $d$ 无关。
+3. 理论上会增强可学习性：
+    
