@@ -52,10 +52,12 @@ $$\mathrm{Swish}(v^\top x)\cdot(w^\top x)\ \approx\ \mathbf 1[v^\top x>0]\cdot(v
 
 对比如下：
 
-||在 $v^\top x>0$ 一侧|在 $v^\top x<0$ 一侧|门的取值范围|
-|---|---|---|---|
-|GLU|$\approx w^\top x$（一次）|$\approx0$|$(0,1)$，有上界|
-|SwiGLU|$\approx(v^\top x)(w^\top x)$（二次）|$\approx0$|正向无上界|
+> [!note] 
+>
+> |   | 在 $v^\top x>0$ 一侧 | 在 $v^\top x<0$ 一侧 | 门的取值范围 |
+> |---|---|---|---|
+> | GLU | $\approx w^\top x$（一次） | $\approx 0$ | $(0,1)$，有上界 |
+> | SwiGLU | $\approx (v^\top x)(w^\top x)$（二次） | $\approx 0$ | 正向无上界 |
 
 改进体现在两个方面。
 
