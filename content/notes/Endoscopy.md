@@ -11,4 +11,4 @@ The stabilization is a reinterpretation (**endoscopy miracle**): $$\sum_{\kappa}
 
 # BZSV viewpoint
 
-Note
+Note $H^\vee$ is a Levi of $G^\vee$.
