@@ -34,3 +34,12 @@ $\sigma$ 是激活函数，$W_1$ 是 $4d \times d$ 维，$W_2$ 是 $d \times 4d$
 
 Rmk：基于4的稀疏特性，可以去预测哪些地方出现稀疏，从而简化计算。
 
+**GLU**（gated linear unit，Dauphin et al. 2017）的形式是 $(Wx)\odot\mathrm{sigmoid}(Vx)$：一路提供内容，一路充当开关。Shazeer (2020) 把这个结构放进 FFN 的第一层：
+
+$$\mathrm{FFN}_{\text{SwiGLU}}(x)=W_2\big(\mathrm{Swish}(W_1x)\odot W_3x\big),\qquad \mathrm{Swish}(z)=z\cdot\mathrm{sigmoid}(z).$$
+
+Swish 也叫 SiLU，名字 SwiGLU 就是 Swish + GLU。门换成别的激活函数，就得到这一族的其他成员：sigmoid 对应原始 GLU，ReLU 对应 ReGLU，GELU 对应 GEGLU，恒等映射对应 Bilinear。
+
+**参数对齐。**SwiGLU 多了一个矩阵 $W_3$。为了和基线保持同样的参数量和 FLOPs，隐藏维度从 $4d$ 缩到 $\tfrac83 d$：
+
+$$3\cdot d\cdot\tfrac83 d=8d^2=2\cdot d\cdot 4d.$$
