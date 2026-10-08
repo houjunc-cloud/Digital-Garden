@@ -1,1 +1,1 @@
-1. WRed interface is a $G \times $
+1. WRed interface is a $G \times H$ -space $G \times S_{\iota}$, where $H = \mathrm{Stab}(\iota)$
