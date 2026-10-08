@@ -1,2 +1,2 @@
-1. WRed interface is a $G \times H$ -space $G \times S_{\iota}$, where $H = Z_G(\iota)^{\circ}$ and $S_{\iota}$ is the Slodowy slice corresponding to $\iota$;
+1. WRed interface is a $G \times H$ -space $W_{\iota}^{G,H} := G \times S_{\iota}$, where $H = Z_G(\iota)^{\circ}$ and $S_{\iota}$ is the Slodowy slice corresponding to $\iota$. As $G \times H$ -space $W_{\iota}^{G,H} \bijection P^{G^\vee, H^\vee}$
 2. 
