@@ -19,7 +19,7 @@ The guiding principle of the whole talk is that **$\mathcal M_a$ is a compactifi
 
 We first recall the definitions (§1). Then we work out the case of $GL_n$ (§2), where everything becomes commutative algebra: $\mathcal M_a$ is a space of lattices over a one-dimensional ring $B$, and $\mathcal P(J_a)$ is the local Picard group of $B$. This example already shows all the phenomena of the general theory, which we develop next: the dimension formula (§3), the Néron model (§4), the connected components of $\mathcal P(J_a)$ and their relation with the dual group (§5), the density of the regular locus (§6), and the comparison with endoscopic groups (§7). In §8 we explain how these results enter the proof, and we verify the fundamental lemma by hand in the simplest example.
 
-The boards of the talk covered the set-up and the linear case, up to the beginning of Example 2.5. Everything else — the recollections in §1.3, the remaining parts of §2, and §§3–8 — is written up from Ngô's paper, in the order of his sections 3.7–3.11 and 8.2–8.3.
+The boards of the talk covered the set-up and the linear case, up to the beginning of Example 2.5. Everything else — the recollections in §1.3, the remaining parts of §2, and §§3–8 — is written up from Ngô's paper, in the order of his sections 3.7–3.11 and 8.2–8.3. Figures 1–3 redraw the pictures from the boards, with some details added; Figure 4 is new.
 
 ## 1. Set-up and recollections
 
@@ -148,16 +148,34 @@ Before analysing $E^\times/B^\times$, let us step back and describe, for a gener
 
 An element of $\mathfrak g(\mathcal O)$ is an arc $D\to\mathfrak g$, where $D=\mathrm{Spec}\,\mathcal O$ is the formal disc; similarly, $\mathfrak c(\mathcal O)$ is the set of arcs $D\to\mathfrak c$. The disc has two points: the generic point, with residue field $F$, and the closed point, with residue field $k$. The condition $a\in\mathfrak c^\heartsuit(\mathcal O)$ says that the generic point of the arc $a$ lies in $\mathfrak c^{\mathrm{rs}}$, while the closed point is allowed to lie on the discriminant. If it does not, i.e. if $a$ lies in the smaller set $\mathfrak c^{\mathrm{rs}}(\mathcal O)$, then every integral element with characteristic polynomial $a$ lies in $\mathfrak g^{\mathrm{rs}}(\mathcal O)$, the group scheme $J_a$ is a torus over $\mathcal O$, and $\mathcal M_a=\mathcal M_a^{\mathrm{reg}}\cong\mathcal P(J_a)$ is discrete. All the interesting geometry comes from arcs that touch the discriminant.
 
+![[affine-springer-fig1-disc-arcs.svg]]
+
+*Figure 1. (a) The formal disc $D$: the closed point $\mathrm{Spec}\,k$, and the generic point $\mathrm{Spec}\,F$, drawn as the punctured disc. (b) Arcs in $\mathfrak c$ for $\mathfrak g=\mathfrak{gl}_2$; the red parabola is the discriminant $\mathfrak D$.*
+
+Panel (a) is the picture of $D$ drawn on the board. It helps to think of $\pi$ as a coordinate on a small disc: the closed point is the center $\pi=0$, and the generic point stands for the rest of the disc, where $\pi$ is invertible. An arc $a\colon D\to\mathfrak c$ sends the center to the point $a\bmod\pi$, and the rest of the disc to a small curve through this point. Panel (b) shows a few arcs for $\mathfrak g=\mathfrak{gl}_2$. Here $\mathfrak c\cong\mathbb A^2$ is the space of polynomials $T^2+a_1T+a_2$, and the discriminant $\mathfrak D$ is the parabola $a_1^2=4a_2$, where the two roots coincide. An arc whose center misses $\mathfrak D$ lies in $\mathfrak c^{\mathrm{rs}}(\mathcal O)$. An arc contained in $\mathfrak D$ is not in $\mathfrak c^\heartsuit(\mathcal O)$, because its generic point is not regular semisimple. The interesting arcs meet $\mathfrak D$ only at the center, and their order of contact with $\mathfrak D$ is $d(a)=\mathrm{val}(\mathrm{disc}\,P)$: we have $d(a)=1$ for a transverse arc, and $d(a)=2$ for an arc tangent to $\mathfrak D$, such as $P=T(T-\pi)$ from Example 2.5. This number will appear in the dimension formula of §3.
+
 The simplest example is $\mathfrak g=\mathfrak{sl}_2$. Here $\mathfrak c=\mathbb A^1$, $\chi(x)=-\det(x)$, and the Kostant section is
 $$\epsilon(a)=\begin{pmatrix}0&a\\1&0\end{pmatrix}.$$
 The discriminant is $4a$, so $\mathfrak c^\heartsuit(\mathcal O)=\mathcal O\smallsetminus\{0\}$ and $\mathfrak c^{\mathrm{rs}}(\mathcal O)=\mathcal O^\times$; the order of contact of the arc $a$ with the discriminant is $\mathrm{val}(a)$.
+
+![[affine-springer-fig2-kostant-sl2.svg]]
+
+*Figure 2. (a) The diagram from the board, for $\mathfrak{sl}_2$. (b) The fibers of $\chi$ on the plane of matrices $\left(\begin{smallmatrix}0&y\\z&0\end{smallmatrix}\right)$, and the Kostant section.*
+
+Panel (a) is the diagram drawn on the board. The Kostant section is a section of $\chi$, so $\chi(\gamma_0)=a$. The entries of $\epsilon(a)$ are polynomials in $a$, so $\epsilon$ takes an integral $a$ to an integral matrix $\gamma_0$. Panel (b) shows the geometry of $\chi$ and $\epsilon$. On the plane of matrices $\left(\begin{smallmatrix}0&y\\z&0\end{smallmatrix}\right)$ we have $\chi=yz$, so the fibers of $\chi$ are the hyperbolas $yz=c$. For $c\neq0$ the fiber is smooth, and all its points are regular semisimple. The fiber over $0$ is the union of the two axes. It is the nilpotent cone, cut by our plane, and it is singular at the origin, which is the only non-regular element of $\mathfrak{sl}_2$. The Kostant section is the line $z=1$, that is, $\epsilon(c)=(c,1)$. It meets every fiber exactly once, and over $c=0$ it passes through the regular nilpotent element $\epsilon(0)=\left(\begin{smallmatrix}0&0\\1&0\end{smallmatrix}\right)$, not through the origin. This is what it means for $\epsilon$ to take values in $\mathfrak g^{\mathrm{reg}}$. Over $\mathcal O$ this has the following consequence. If the arc $a$ meets the discriminant, then $\epsilon(a)$ reduces mod $\pi$ to the regular nilpotent element, but other integral elements with characteristic polynomial $a$ may reduce to the non-regular element $0$. For example, if $a=\pi^2$, the element $\pi\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$ has $\chi=\pi^2$ and reduces to $0$.
 
 Now consider the map
 $$\mathcal M_a(\bar k)\longrightarrow\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O}),\qquad[g]\longmapsto\big[\mathrm{ad}(g)^{-1}\gamma_0\big],$$
 which records the conjugacy class of $\gamma_0$ as seen in the integral structure $[g]\in G(\breve F)/G(\breve{\mathcal O})$. Its image lies in the fiber over $a$ of the map $\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O})\to\mathfrak c(\breve{\mathcal O})$, and in fact it is all of that fiber: an integral element $\gamma$ with $\chi(\gamma)=a$ is conjugate to $\gamma_0$ over $\breve F$, because $H^1(\breve F,J_a)=0$ by Steinberg's theorem. Two points $[g]$ and $[g']$ have the same image if and only if $\mathrm{ad}(g')^{-1}\gamma_0=\mathrm{ad}(h)\,\mathrm{ad}(g)^{-1}\gamma_0$ for some $h\in G(\breve{\mathcal O})$, i.e. $g'hg^{-1}$ centralizes $\gamma_0$, i.e. $[g']\in J_a(\breve F)\cdot[g]$. Therefore
 $$\mathcal M_a(\bar k)\big/\mathcal P(J_a)(\bar k)\;\cong\;\{\gamma\in\mathfrak g(\breve{\mathcal O}):\chi(\gamma)=a\}\big/G(\breve{\mathcal O}).$$
 
-So the quotient of $\mathcal M_a$ by its symmetries is the set of integral conjugacy classes in the stable class $a$. One can draw $\mathfrak g(\mathcal O)/G(\mathcal O)$ as a region fibered over the line $\mathfrak c(\mathcal O)$, with the Kostant section as a curve inside it. The fiber over $a$ is the set of integral classes with characteristic polynomial $a$. Exactly one of them is regular, namely the class of $\epsilon(a)$: this is Proposition 1.8, read through the bijection above. The non-regular classes correspond to the boundary $\mathcal M_a\smallsetminus\mathcal M_a^{\mathrm{reg}}$ modulo symmetries. For $GL_n$, the quotient is the set of isomorphism classes of torsion-free rank one $B$-modules, and the regular class is the class of $B$.
+So the quotient of $\mathcal M_a$ by its symmetries is the set of integral conjugacy classes in the stable class $a$. This was the main picture on the board, and Figure 3 redraws it.
+
+![[affine-springer-fig3-fiber-over-a.svg]]
+
+*Figure 3. The map $\mathcal M_a(\bar k)\to\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O})$, $[g]\mapsto[\mathrm{ad}(g)^{-1}\gamma_0]$. Its image is the fiber $\chi^{-1}(a)$. The regular locus goes to the single regular class $[\epsilon(a)]$, and the boundary goes to the non-regular classes.*
+
+The hatched region on the right is the set $\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O})$ of integral conjugacy classes. Taking the characteristic polynomial maps it to $\mathfrak c(\breve{\mathcal O})$, the line at the bottom, and the vertical lines are the fibers of this map. The Kostant section is a curve in the region that meets every fiber once. The thick line is the fiber over $a$: the integral classes with characteristic polynomial $a$, which by the bijection above form the set $\mathcal M_a(\bar k)/\mathcal P(J_a)(\bar k)$. Exactly one point of this fiber is regular, namely the class of $\epsilon(a)$, where the fiber meets the Kostant section. This is Proposition 1.8, read through the bijection. The other points of the fiber are the non-regular classes. On the left is $\mathcal M_a(\bar k)$, a subset of the affine Grassmannian $G(\breve F)/G(\breve{\mathcal O})$. The preimage of each point of the fiber is a single $\mathcal P(J_a)$-orbit. Over $[\epsilon(a)]$ lies the open orbit $\mathcal M_a^{\mathrm{reg}}$ (which is dense, by Proposition 6.1), and over the non-regular classes lie the smaller orbits that make up the boundary $\mathcal M_a\smallsetminus\mathcal M_a^{\mathrm{reg}}$. For example, for $\mathfrak{sl}_2$ and $a=\pi^2$, the fiber contains the regular class of $\epsilon(\pi^2)$ and the non-regular class of $\pi\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$. For $GL_n$, the fiber is the set of isomorphism classes of torsion-free $B$-modules of rank one, and the regular class is the class of $B$. For the node of Example 2.5 the fiber has exactly two points, the classes of $B$ and of $B^\flat$.
 
 Over $k$ rather than $\bar k$, this bijection gets twisted by Galois cohomology, and counting $k$-points of the quotient stack $[\mathcal M_a/\mathcal P(J_a)]$ amounts to counting integral elements in a stable conjugacy class, with suitable weights. This is exactly what an orbital integral of $1_{\mathfrak g(\mathcal O)}$ does; we come back to this in §8.
 
@@ -203,15 +221,19 @@ Fix $(m,n)$, and consider the lattices $L$ with $\pi L_{m,n}\subset L\subset L_{
 $$C_{m,n}=\big\{L_c:=\pi L_{m,n}+\breve{\mathcal O}\cdot(\pi^m,c\,\pi^n)\ :\ c\in\mathbb P^1\big\}.$$
 Each $L_c$ is stable under $T=(0,\pi)$, so it is a $B$-lattice. For $c\in\bar k^\times$ one checks that $L_c=(\pi^m,c\,\pi^n)B$, which is a regular point. The two remaining points are $L_0=L_{m,n+1}$ and $L_\infty=L_{m+1,n}$. Every free lattice can be written as $(\pi^m,c\,\pi^n)B$ after multiplying its generator by a unit of $B$, so we conclude that
 $$\mathcal M_a=\bigcup_{(m,n)\in\mathbb Z^2}C_{m,n},$$
-where the line $C_{m,n}$ joins the non-regular points $L_{m,n+1}$ and $L_{m+1,n}$. Each non-regular point lies on exactly two lines, $C_{m,n}\cap C_{m+1,n-1}=\{L_{m+1,n}\}$. So for each value of $\mathrm{val}\det=m+n+1$ we get an infinite chain of projective lines:
-```
- ... —— L_{m,n+1} ——[ C_{m,n} ]—— L_{m+1,n} ——[ C_{m+1,n-1} ]—— L_{m+2,n-1} —— ...
-```
+where the line $C_{m,n}$ joins the non-regular points $L_{m,n+1}$ and $L_{m+1,n}$. Each non-regular point lies on exactly two lines, $C_{m,n}\cap C_{m+1,n-1}=\{L_{m+1,n}\}$. So for each value of $\mathrm{val}\det=m+n+1$ we get an infinite chain of projective lines, as in Figure 4(a).
+
+![[affine-springer-fig4-node-chains.svg]]
+
+*Figure 4. (a) Two of the chains that make up $\mathcal M_a$ for the node. Blue: free lattices (regular). Red circles: the lattices $L_{m,n}$ (non-regular). (b) The quotient by $\Lambda=\mathbb Z^2$.*
+
+In Figure 4(a), each line $C_{m,n}$ is a copy of $\mathbb P^1$ with coordinate $c$. Its two red points are $L_0=L_{m,n+1}$ and $L_\infty=L_{m+1,n}$. The rest of the line, where $c\in\bar k^\times$, is a single orbit of $\mathcal R_a\cong\mathbb G_m$, which acts by rescaling $c$. Multiplication by $(\pi,\pi^{-1})$ moves each line one step along its chain, and multiplication by $(\pi,1)$ moves it to the next chain, where $\mathrm{val}\det$ is one larger.
+
 This example already shows everything we will prove in general:
 - the dimension of $\mathcal M_a$ is $1=\delta$ (Theorem 3.3);
 - the regular locus is the disjoint union of the open orbits $C_{m,n}\smallsetminus\{0,\infty\}\cong\mathbb G_m$, i.e. a copy of $\mathcal P(J_a)\cong\mathbb Z^2\times\mathbb G_m$ (Proposition 1.8), and it is dense (Proposition 6.1);
 - the irreducible components $C_{m,n}$ are indexed by $\mathbb Z^2=\pi_0(\mathcal P(J_a))$ (Corollary 6.2);
-- the lattice $\Lambda=\mathbb Z^2$, acting by multiplication by $(\pi^i,\pi^j)$, acts freely, and the quotient $\mathcal M_a/\Lambda$ is a single projective line with $0$ and $\infty$ glued together: a nodal rational curve, which is projective (Proposition 1.9).
+- the lattice $\Lambda=\mathbb Z^2$, acting by multiplication by $(\pi^i,\pi^j)$, acts freely, and the quotient $\mathcal M_a/\Lambda$ is a single projective line with $0$ and $\infty$ glued together: a nodal rational curve (Figure 4(b)), which is projective (Proposition 1.9).
 
 This is the example treated in Ngô §8.3 ("un cas très simple"), where it is used to check the fundamental lemma by hand. We do the same in Example 8.2.
 
