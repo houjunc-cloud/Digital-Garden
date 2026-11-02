@@ -385,7 +385,7 @@ Ngô's §8.3 treats the general case $d(a)=2$, $c(a)=0$, of which Example 2.5 is
 $$\#[\mathcal M_a/\mathcal P(J_a)](k)_\kappa=\frac{q}{\#(T/\ker\alpha)(k)}.$$
 Ngô uses computations of this kind to check the stabilization identity over a dense open part of the Hitchin base, where all local singularities are this mild; the support theorem then propagates the identity to the whole base.
 
-Let us end by summarizing how today's results are used in the global argument. The projectivity of $\mathcal M_a/\Lambda$ makes all point counts finite and all cohomology groups finite-dimensional. Approximation allows one to realize any local $a$ inside a global Hitchin fiber, so that local identities can be deduced from global ones. The δ-invariant controls the codimension of the strata of the Hitchin base, which is the key geometric input of the support theorem. The description of $\pi_0(\mathcal P(J_a))$ through the dual torus matches the κ-decomposition of the cohomology of Hitchin fibers with endoscopy. Density identifies the top cohomology with functions on $\pi_0$. And Lemma 7.1 accounts for the factor $q^{r^G_H(a_H)}$.
+Let us end by summarizing how today's results are used in the global argument. The projectivity of $\mathcal M_a/\Lambda$ makes all point counts finite and all cohomology groups finite-dimensional. Approximation allows one to realize any local $a$ inside a global Hitchin fiber, so that local identities can be deduced from global ones. The δ-invariant controls the codimension of the strata of the Hitchin base, which is the key geometric input of the support theorem. The description of $\pi_0(\mathcal P(J_a))$ through the dual torus matches the κ-decomposition of the cohomology of Hitchin fibers with endoscopy. Density identifies the top cohomology with functions on $\pi_0$. And Lemma 7.1 accounts for the factor $q^{r^G_H(a_H)}$. The global objects themselves, the Hitchin fibration and the symmetries of its fibers, are the subject of the next talk, written up in [[The Hitchin fibration]].
 
 ## References
 
@@ -396,4 +396,4 @@ Let us end by summarizing how today's results are used in the global argument. T
 - G. Laumon, *Fibres de Springer et jacobiennes compactifiées*, in *Algebraic Geometry and Number Theory*, Progr. Math. 253, Birkhäuser (2006), 515–563.
 - J.-P. Serre, *Corps locaux*, chap. III.
 
-Related: [[Endoscopy]]
+Related: [[Endoscopy]] · next talk: [[The Hitchin fibration]]
