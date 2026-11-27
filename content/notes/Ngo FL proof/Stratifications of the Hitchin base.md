@@ -48,7 +48,7 @@ $$
 $$
 Here $\mathfrak t$ and the action of $W$ are understood with the quasi-split descent on $\bar X$.
 
-![[../attachments/hitchin-base-stratifications-fig1-normalization.svg]]
+![[hitchin-base-stratifications-fig1-normalization.svg]]
 
 *Figure 1. Normalization and local Picard defects.*
 
@@ -86,7 +86,7 @@ $$
 $$
 The coinvariants impose the monodromy relations. Passing to $\mathcal P_a$ adds the local relations from $\pi_0(J_{a,v})$, which on characters give the inertia condition.
 
-![[../attachments/hitchin-base-stratifications-fig2-monodromy.svg]]
+![[hitchin-base-stratifications-fig2-monodromy.svg]]
 
 *Figure 2. The cameral marking, monodromy and inertia.*
 
@@ -139,7 +139,7 @@ $$
 $$
 Here $\widetilde{\mathcal P}'$ and $\widetilde{\mathcal P}$ are pullbacks to the marked base. The small opens form an étale basis. Restriction to a smaller open with a larger monodromy pair is dual to the reverse inclusion of character groups. Over $\mathcal A^\diamondsuit_{\bar k}$ the component group is constant with value $(Z(\widehat G)^\Theta)^*$ (Ngô 5.7.5).
 
-![[../attachments/hitchin-base-stratifications-fig3-etale-neighborhood.svg]]
+![[hitchin-base-stratifications-fig3-etale-neighborhood.svg]]
 
 *Figure 3. The board sketch of a marked stratum and the normalization over it.*
 
