@@ -13,13 +13,13 @@ date: 2026-11-13
 
 *Notes on the Ngô fundamental lemma seminar, 13 November 2026. Reference: B. C. Ngô, Le lemme fondamental pour les algèbres de Lie, Publ. Math. IHÉS 111 (2010), §§4.8–4.10 and ch. 5; numbering as in [arXiv:0801.0446](https://arxiv.org/abs/0801.0446). We continue [[The Hitchin fibration]].*
 
-**The normalized cameral curve controls the affine part and the component group of the Hitchin Picard stack.** The boards start with the Néron model and monodromy, then stratify the marked base and return to dimensions and gluing. Ngô supplies the precise stratification and specialization statements.
+**The normalization map measures the affine defect. Monodromy on the normalization determines the Picard component group.** The boards start with the Néron model and monodromy, then stratify the marked base and return to dimensions and gluing. Ngô supplies the precise stratification and specialization statements.
 
 ## 1. The affine part of the Picard stack
 
-Keep the quasi-split group $G$, its root system $\Phi$ and Weyl group $W$, the curve $X/k$ of genus $g$ over a finite field, and the line bundle $D$ of degree $>2g$ with a square root $D'$. Assume $\operatorname{char}k\nmid |W|$. For a geometric point $a\in\mathcal A^\heartsuit$, set $U_a=a^{-1}(\mathfrak c_D^{\mathrm{rs}})$ and normalize the cameral curve by $\widetilde X_a^\flat\to\widetilde X_a$.
+Let $G$ be quasi-split over the curve $X/k$ of genus $g$, with split root system $\Phi$ and Weyl group $W$. Assume $k$ is finite, $\operatorname{char}k\nmid |W|$, and the twisting line bundle $D$ has degree $>2g$ and a square root $D'$. For a geometric point $a\in\mathcal A^\heartsuit$, set $U_a=a^{-1}(\mathfrak c_D^{\mathrm{rs}})$ and normalize the cameral curve by $\widetilde X_a^\flat\to\widetilde X_a$.
 
-**Proposition 1.1** (Néron model; Ngô 4.8.1–4.8.2, 4.10.1). Let $J_a^0$ be the fiberwise identity component of $J_a$ and $J_a^\flat$ the finite-type open subgroup of the Néron model used by Ngô. All three models agree over $U_a$. Their stacks of torsors on $\bar X$ fit into
+**Proposition 1.1** (Néron model; Ngô 4.8.1–4.8.2, 4.10.1). Let $J_a^0$ be the fiberwise identity component of $J_a$ and $J_a^\flat$ its finite-type Néron model. All three models agree over $U_a$. Their stacks of torsors on $\bar X$ fit into
 $$
 \begin{aligned}
 J_a^0 &\longrightarrow J_a \longrightarrow J_a^\flat,
@@ -31,7 +31,7 @@ J_a^\flat|_{\bar X_v} &=(J_{a,v})^\flat\quad(v\notin U_a),
 $$
 Here $\bar X_v$ is the completed disc, $\mathcal P'_a\to\mathcal P_a$ has finite kernel, and $(\mathcal P_a^\flat)^0$ is an abelian stack. For split $G$, $J_a^\flat$ is the $W$-fixed part of the Weil restriction of $T$ along $\pi_a^\flat:\widetilde X_a^\flat\to\bar X$. For quasi-split $G$, use the diagonal action after an étale splitting cover.
 
-A point of $R_a$ is a $J_a$-torsor with a trivialization of its induced $J_a^\flat$-torsor. The quotient sheaf $J_a^\flat/J_a$ is supported on $\bar X-U_a$, which gives the product of affine groups $R_v(a)$.
+A point of $R_a$ is a $J_a$-torsor with a trivialization of its induced $J_a^\flat$-torsor. The quotient sheaf $J_a^\flat/J_a$ is supported on $\bar X-U_a$. Each local factor is $R_v(a)=\ker[\mathcal P(J_{a,v})\to\mathcal P((J_{a,v})^\flat)]$.
 
 **Proposition 1.2** (Defect; Ngô 4.9.1–4.9.3). Let $d_v=\operatorname{ord}_v(a^*\mathfrak D_{G,D})$ and let $c_v$ be the drop in torus rank of $J_a^\flat$ at $v$. Then
 $$
@@ -46,8 +46,9 @@ $$
   \bigl((\pi_a^\flat)_*\mathcal O_{\widetilde X_a^\flat}/
          (\pi_a)_*\mathcal O_{\widetilde X_a}\bigr)\right]^W\right).
 $$
+Here $\mathfrak t$ and the action of $W$ are understood with the quasi-split descent on $\bar X$.
 
-![[hitchin-base-stratifications-fig1-normalization.svg]]
+![[../attachments/hitchin-base-stratifications-fig1-normalization.svg]]
 
 *Figure 1. Normalization and local Picard defects.*
 
@@ -85,9 +86,9 @@ $$
 $$
 The coinvariants impose the monodromy relations. Passing to $\mathcal P_a$ adds the local relations from $\pi_0(J_{a,v})$, which on characters give the inertia condition.
 
-![[hitchin-base-stratifications-fig2-monodromy.svg]]
+![[../attachments/hitchin-base-stratifications-fig2-monodromy.svg]]
 
-*Figure 2. The cameral marking and the monodromy and inertia conditions on a character.*
+*Figure 2. The cameral marking, monodromy and inertia.*
 
 The mark identifies the regular centralizer at $\infty$ with $T$. The fundamental groups of the punctured and complete curve distinguish monodromy from inertia.
 
@@ -95,7 +96,7 @@ The mark identifies the regular centralizer at $\infty$ with $T$. The fundamenta
 
 **Definition 3.1** (Ngô 5.1.1). For a proper flat family of reduced curves $y:Y\to S$, a simultaneous normalization is a proper birational map $\xi:Y^\flat\to Y$ that is an isomorphism over a fiberwise dense open, with $Y^\flat\to S$ proper and smooth. Thus $\xi$ normalizes each geometric fiber, and $y_*(\xi_*\mathcal O_{Y^\flat}/\mathcal O_Y)$ is locally free on $S$ (Ngô 5.1.2).
 
-**Theorem 3.2** (Ngô 5.2.1, 5.2.3–5.2.5). The functor $\mathcal B$ of triples $(a,\widetilde X_a^\flat,\xi)$ with $a\in\mathcal A^\heartsuit(S)$ and $\xi$ a $W$-equivariant simultaneous normalization is represented by a finite-type scheme. For the reduced connected components $\mathcal B_\psi$ over $\bar k$, their images give
+**Theorem 3.2** (Ngô 5.2.1, 5.2.3–5.2.5). For $a\in\mathcal A^\heartsuit(S)$, let $\mathcal B(S)$ classify triples $(a,\widetilde X_a^\flat,\xi)$ with $\xi$ a $W$-equivariant simultaneous normalization and $\widetilde X_a^\flat\to X\times S$ finite flat and generically a $W$-torsor on each fiber. This functor is represented by a finite-type scheme. The images of its reduced connected components $\mathcal B_\psi$ over $\bar k$ give
 $$
 \mathcal A^\heartsuit_{\bar k}=\coprod_{\psi\in\Psi}\mathcal A_\psi,\qquad
 \mathcal B_\psi\longrightarrow\mathcal A_\psi
@@ -103,7 +104,7 @@ $$
 $$
 Any reduced connected base with a simultaneous normalization maps into one stratum. The largest stratum is $\mathcal A^\diamondsuit_{\bar k}$.
 
-*Sketch of proof.* Uniqueness of normalization gives a bijection on geometric points. Chevalley's theorem gives constructible images. Zariski's main theorem and the uniqueness of the geometric point over a specialization give the locally closed strata and their finite radicial covers. Over $\mathcal A^\diamondsuit$ the cameral curves are already smooth. ∎
+*Sketch of proof.* Uniqueness of normalization gives a bijection on geometric points. Chevalley's theorem gives constructible images. Zariski's main theorem and specialization give the locally closed strata and their finite radicial covers. The board pulls back $\mathcal B$ to $\widetilde{\mathcal A}$ and uses Noetherian induction to refine the pieces to smooth strata. Over $\mathcal A^\diamondsuit$ the cameral curves are already smooth. ∎
 
 ## 4. Defect and monodromy strata
 
@@ -122,9 +123,9 @@ $$
 \widetilde{\mathcal A}_{\widetilde\psi}.
 \end{aligned}
 $$
-The $\delta\ge d$ and $(I,W)\leq(I_0,W_0)$ conditions define closed sets. The monodromy stratification descends to $\mathcal A^\heartsuit_{\bar k}$ by taking $W$-conjugacy classes. The types with $(X_*)^{W_0}=0$ form the marked anisotropic open.
+The $\delta\ge d$ loci are closed in $\mathcal A^\heartsuit$, and $(I,W)\leq(I_0,W_0)$ defines a closed subset of $\widetilde{\mathcal A}$. The monodromy stratification descends to $\mathcal A^\heartsuit_{\bar k}$ by taking $W$-conjugacy classes. The types with $(X_*)^{W_0}=0$ form $\widetilde{\mathcal A}^{\mathrm{ani}}$, the pullback of the locus where $\pi_0(\mathcal P_a)$ is finite.
 
-**Proposition 4.2** (Component sheaves; Ngô 5.7.1–5.7.4). Marking gives surjections of étale sheaves
+**Proposition 4.2** (Component sheaves; Ngô 5.7.1–5.7.4). The stalk of $\pi_0(\mathcal P)$ at $a$ is $\pi_0(\mathcal P_a)$, and likewise for $\mathcal P'$. Marking gives surjections of étale sheaves on $\widetilde{\mathcal A}$
 $$
 X_*\times\widetilde{\mathcal A}\ \twoheadrightarrow\
 \pi_0(\widetilde{\mathcal P}')\ \twoheadrightarrow\ \pi_0(\widetilde{\mathcal P}).
@@ -136,9 +137,9 @@ $$
 \Gamma(V,\pi_0(\widetilde{\mathcal P}))&=\widehat T(I_0,W_0)^*.
 \end{aligned}
 $$
-These opens form an étale basis. Restriction to a smaller open with a larger monodromy pair is dual to the reverse inclusion of character groups. Over $\mathcal A^\diamondsuit_{\bar k}$ the component group is constant with value $(Z(\widehat G)^\Theta)^*$ (Ngô 5.7.5).
+Here $\widetilde{\mathcal P}'$ and $\widetilde{\mathcal P}$ are pullbacks to the marked base. The small opens form an étale basis. Restriction to a smaller open with a larger monodromy pair is dual to the reverse inclusion of character groups. Over $\mathcal A^\diamondsuit_{\bar k}$ the component group is constant with value $(Z(\widehat G)^\Theta)^*$ (Ngô 5.7.5).
 
-![[hitchin-base-stratifications-fig3-etale-neighborhood.svg]]
+![[../attachments/hitchin-base-stratifications-fig3-etale-neighborhood.svg]]
 
 *Figure 3. The board sketch of a marked stratum and the normalization over it.*
 
@@ -158,7 +159,7 @@ $$
 0\to H^0(\bar X,F_a)\to F_a|_\infty
 \to H^1(\bar X,F_a(-\infty))\to H^1(\bar X,F_a)\to 0.
 $$
-The Picard stack is the quotient of the framed space by $J_{a,\infty}$. Riemann–Roch gives the formulas on the board (Ngô §4.4).
+The Picard stack is the quotient of the framed space by $J_{a,\infty}$. Since $H^1(\bar X,\mathfrak c_D)=0$ for the chosen degree, Riemann–Roch gives both dimension formulas (Ngô §4.4).
 $$
 \begin{aligned}
 \dim\mathcal P_a&=h^1(F_a(-\infty))-r=-\chi(F_a)
