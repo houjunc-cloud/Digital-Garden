@@ -80,11 +80,11 @@ $$
 \qquad
 \mathcal P_{a,v}\simeq\mathcal M_{a,v}^{\mathrm{reg}}.
 $$
-Here $J_a(F_v)\simeq G_{\gamma_0}(F_v)$. Using the identity component $J_a^0$ in the local symmetry group, Ngô 8.2.5 relates the point count to the orbital integral.
+Here $J_a(F_v)\simeq G_{\gamma_0}(F_v)$. For a character $\kappa$ of $H^1(k_v,\mathcal P_{a,v})$, also used for its pullback to $H^1(F_v,J_a)$, Ngô 8.2.7 gives
 $$
-\#\big[\mathcal M_{a,v}/\mathcal P(J_a^0)\big](k_v)_\kappa
-=\operatorname{vol}\bigl(J_a^0(\mathcal O_v)\bigr)\,
-\mathbf O^\kappa_{\gamma_0}\bigl(\mathbf 1_{\mathfrak g(\mathcal O_v)}\bigr).
+\#\big[\mathcal M_{a,v}/\mathcal P_{a,v}\big](k_v)_\kappa
+=\operatorname{vol}\bigl(J_a^0(\mathcal O_v),dt\bigr)\,
+\mathbf O^\kappa_{\gamma_0}\bigl(\mathbf 1_{\mathfrak g(\mathcal O_v)},dt\bigr).
 $$
 
 ## 2. The Hitchin space and base
@@ -111,7 +111,7 @@ $$
 H^1(X,\operatorname{ad}(E))^\vee\simeq H^0(X,\operatorname{ad}(E)\otimes K_X),
 \qquad \mathcal M\simeq T^*\mathrm{Bun}_G.
 $$
-On the stable moduli space Hitchin obtains a completely integrable system with abelian generic fibers. Ngô uses high degree for connected cameral curves and the support theorem’s codimension estimates. The total space $\mathcal M^\heartsuit=f^{-1}(\mathcal A^\heartsuit)$ is smooth over $k$ for $\deg D>2g-2$ (Ngô 4.12.1).
+On the stable moduli space Hitchin obtains a completely integrable system with abelian generic fibers. Ngô uses high degree for connected cameral curves and the support theorem’s codimension estimates.
 
 The stacks $\mathrm{Bun}_G$ and $\mathcal M$ are algebraic and locally of finite type. The fiber of $\mathcal M\to\mathrm{Bun}_G$ over $E$ is $H^0(X,\operatorname{ad}(E)\otimes D)$. Ngô §4.1 gives
 $$
@@ -140,7 +140,7 @@ f:\mathcal M\longrightarrow\mathcal A,\quad
 (E,\phi)\longmapsto a=\chi(\phi),\qquad
 \mathcal M_a=f^{-1}(a).
 $$
-For split $G$ with invariant degrees $e_1,\dots,e_r$ and root system $\Phi$, Riemann–Roch gives
+For split $G$ with invariant degrees $e_1,\dots,e_r$ and root system $\Phi$, Riemann–Roch gives (Ngô 4.4.1)
 $$
 \mathfrak c_D=\bigoplus_{i=1}^r D^{\otimes e_i},\qquad
 \dim\mathcal A=\sum_{i=1}^r(e_i\deg D+1-g)=\frac{|\Phi|}{2}\deg D+r(1-g+\deg D).
@@ -325,7 +325,7 @@ $$
 $$
 The map is an equivalence on geometric points. On the anisotropic locus $\mathcal A^{\mathrm{ani}}$, where $\pi_0(\mathcal P_a)$ is finite, Ngô proves that using the reductions of the local factors and groups gives a proper Deligne–Mumford source and a homeomorphism. The contracted product uses the action of local symmetries on the local fibers and the homomorphism from local to global symmetries.
 
-*Density* (Ngô 4.14.1–4.14.3). For $a\in\mathcal A^\heartsuit$, the product formula controls the dimension of the non-regular locus. The local complete intersection argument rules out smaller irreducible components, so
+*Density* (Ngô 4.14.1–4.14.3). The product formula controls the dimension of the non-regular locus. The total space $f^{-1}(\mathcal A^\heartsuit)$ is smooth over $k$ for $\deg D>2g-2$ (Ngô 4.12.1). The local complete intersection argument then rules out smaller irreducible components. For $a\in\mathcal A^\heartsuit$,
 $$
 \overline{\mathcal M_a^{\mathrm{reg}}}=\mathcal M_a,\qquad
 \dim\mathcal M_a=\dim\mathcal P_a,\qquad

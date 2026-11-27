@@ -11,385 +11,401 @@ date: 2026-10-23
 
 # Affine Springer fibers and their symmetries
 
-*Notes on the talk "Affine Springer fiber (§3.6–3.11 in Ngô's paper)", Ngô fundamental lemma seminar, 23 October 2026. Reference: B. C. Ngô, Le lemme fondamental pour les algèbres de Lie, Publ. Math. IHÉS 111 (2010); numbering as in [arXiv:0801.0446](https://arxiv.org/abs/0801.0446).*
+*Notes on the talk “Affine Springer fiber (§3.6–3.11 in Ngô's paper)”, Ngô fundamental lemma seminar, 23 October 2026. Reference: B. C. Ngô, Le lemme fondamental pour les algèbres de Lie, Publ. Math. IHÉS 111 (2010), numbering as in [arXiv:0801.0446](https://arxiv.org/abs/0801.0446).*
 
-Let us begin by recalling what we are trying to understand. The fundamental lemma for Lie algebras compares κ-orbital integrals of the characteristic function of $\mathfrak g(\mathcal O)$ with stable orbital integrals of the characteristic function of $\mathfrak h(\mathcal O)$, where $H$ is an endoscopic group. Following Kazhdan–Lusztig and Goresky–Kottwitz–MacPherson, it turns out that such orbital integrals can be computed geometrically. Roughly speaking, they are numbers of points over finite fields of certain spaces, the affine Springer fibers, divided by the action of a group of symmetries. To a large extent, Ngô's proof is a study of the geometry of these spaces and of their global versions, the Hitchin fibers. This talk covers the local part of that geometry. In other words, we study the affine Springer fiber $\mathcal M_a$ attached to a characteristic polynomial $a$, together with its symmetry group $\mathcal P(J_a)$.
+The fundamental lemma compares $\kappa$-orbital integrals for $G$ with stable orbital integrals for an endoscopic group $H$. Locally, these are weighted counts of integral structures in a stable conjugacy class. The space of structures is the affine Springer fiber $\mathcal M_a$, and its symmetries form the local Picard group $\mathcal P(J_a)$. **The regular locus is a dense orbit isomorphic to $\mathcal P(J_a)$.**
 
-The guiding principle of the whole talk is that, roughly speaking, **$\mathcal M_a$ is a compactification of the group $\mathcal P(J_a)$**. More precisely, the group acts on $\mathcal M_a$, and on a dense open subset, namely the regular locus $\mathcal M_a^{\mathrm{reg}}$, it acts simply transitively. For this reason, most geometric invariants of $\mathcal M_a$ — its dimension, its irreducible components, and in the end its number of points over finite fields — can be read off from $\mathcal P(J_a)$. This is very useful, because $\mathcal P(J_a)$ is a much simpler object: as we will see, it is an algebraic group extended by a lattice.
-
-Here is the plan. We first recall the definitions (§1). Then we work out the case of $GL_n$ in detail (§2). In this case everything becomes commutative algebra: $\mathcal M_a$ is a space of lattices over a one-dimensional ring $B$, and $\mathcal P(J_a)$ is the local Picard group of $B$. It turns out that this example already shows all the phenomena of the general theory, which we develop next: the dimension formula (§3), the Néron model (§4), the connected components of $\mathcal P(J_a)$ and their relation with the dual group (§5), the density of the regular locus (§6), and the comparison with endoscopic groups (§7). Finally, in §8 we explain how these results enter the proof, and we verify the fundamental lemma by hand in the simplest example.
-
-A word on sources. The boards of the talk covered the set-up and the linear case, up to the beginning of Example 2.5. Everything else — the recollections in §1.3, the remaining parts of §2, and §§3–8 — is written up from Ngô's paper, following the order of his sections 3.7–3.11 and 8.2–8.3. Figures 1–3 redraw the pictures from the boards, with some details added to make them easier to read; Figure 4 is new.
+The boards introduced the fiber and the $GL_n$ calculation through the start of Example 2.5. Figures 1–3 redraw the boards. The paper supplies the regular centralizer recollections, the rest of the examples, and §§3–8. Figure 4 illustrates the node calculation. We start with integral lattices, then pass to dimension, components, and orbital integrals.
 
 ## 1. Set-up and recollections
 
-We begin by fixing notation and recalling the main definitions. Most of this section is a review, but it is worth going through it slowly, since everything later is built on it.
-
 ### 1.1 Notation
 
-Let $k=\mathbb F_q$, $\mathcal O=k[[\pi]]$ and $F=k((\pi))$. Let $G$ be a split reductive group over $k$, with Lie algebra $\mathfrak g$, a maximal torus $T$ with Lie algebra $\mathfrak t$, roots $\Phi$ and Weyl group $W$. We assume throughout that the characteristic $p$ of $k$ does not divide $|W|$.
-
-Let $\mathfrak c=\mathfrak t/\!/W=\mathrm{Spec}\,k[\mathfrak g]^G$, and let $\chi:\mathfrak g\to\mathfrak c$ be the Chevalley morphism. For $G=GL_n$, $\mathfrak c$ is the space of monic polynomials of degree $n$, and $\chi$ takes a matrix to its characteristic polynomial; for this reason, for a general group we still call $\chi(x)$ the characteristic polynomial of $x$. The discriminant divisor $\mathfrak D\subset\mathfrak c$ is defined by $\prod_{\alpha\in\Phi}d\alpha$, and its complement $\mathfrak c^{\mathrm{rs}}$ is the regular semisimple locus. Finally, the Kostant section $\epsilon:\mathfrak c\to\mathfrak g^{\mathrm{reg}}$ attaches to every $a$ a regular element $\epsilon(a)$ with $\chi(\epsilon(a))=a$; for $GL_n$ one may simply take the companion matrix.
-
-The characteristic polynomials we consider are the elements of
-$$\mathfrak c^\heartsuit(\mathcal O):=\mathfrak c(\mathcal O)\cap\mathfrak c^{\mathrm{rs}}(F).$$
-In other words, these are the integral characteristic polynomials which are regular semisimple at the generic point. Since we are mainly interested in geometric properties, we will mostly work over $\bar k$, with
-$$\breve{\mathcal O}=\bar k[[\pi]],\qquad\breve F=\bar k((\pi)),$$
-and we will describe the $\bar k$-points of our spaces in terms of $\breve{\mathcal O}$ and $\breve F$.
+Let $G$ be split reductive over $k=\mathbb F_q$, with maximal torus $T$, roots $\Phi$, Weyl group $W$, and Lie algebras $\mathfrak g$ and $\mathfrak t$. Assume $p=\mathrm{char}\,k$ does not divide $|W|$. Write
+$$
+\mathcal O=k[[\pi]],\qquad F=k((\pi)),\qquad
+\breve{\mathcal O}=\bar k[[\pi]],\qquad \breve F=\bar k((\pi)).
+$$
+$$
+\mathfrak c=\mathfrak t/\!/W=\mathrm{Spec}\,k[\mathfrak g]^G,\qquad
+\chi\colon\mathfrak g\to\mathfrak c,\qquad \epsilon\colon\mathfrak c\to\mathfrak g^{\mathrm{reg}},
+\qquad \chi\circ\epsilon=\mathrm{id}.
+$$
+The Chevalley map $\chi$ gives the characteristic polynomial for $GL_n$, and the Kostant section $\epsilon$ gives its companion matrix. Write $\mathfrak D$ for the discriminant cut out by $\prod_{\alpha\in\Phi}d\alpha$ on $\mathfrak t$ and descended to $\mathfrak c$. We use arcs that are regular semisimple at the generic point:
+$$
+\mathfrak c^{\mathrm{rs}}=\mathfrak c\smallsetminus\mathfrak D,
+\qquad
+\mathfrak c^\heartsuit(\mathcal O)=\mathfrak c(\mathcal O)\cap\mathfrak c^{\mathrm{rs}}(F).
+$$
 
 ### 1.2 Affine Springer fibers
 
-Before giving the definition, let us recall the language of stacks that Ngô uses. For a $k$-scheme $S$, the quotient stack $[\mathfrak g/G]$ has as $S$-points the groupoid of pairs $(E,\phi)$, where $E$ is a $G$-torsor over $S$ and $\phi$ is a section of the adjoint vector bundle $\mathrm{ad}(E)=E\times^G\mathfrak g$. Intuitively, a pair $(E,\phi)$ is an element of $\mathfrak g$ up to conjugacy, twisted by a torsor; for $G=GL_n$ it is simply a vector bundle of rank $n$ together with an endomorphism. Since $\chi$ is $G$-invariant, such a pair still has a well-defined characteristic polynomial $[\chi](E,\phi)\in\mathfrak c(S)$. Ngô thinks of $[\mathfrak g/G]$ as a kind of universal template: evaluated on the formal disc it gives affine Springer fibers, and evaluated on a projective curve it gives Hitchin fibers.
+An $S$-point of $[\mathfrak g/G]$ is a $G$-torsor $E$ with a section $\phi$ of $\mathrm{ad}(E)=E\times^G\mathfrak g$. Invariance of $\chi$ defines $[\chi](E,\phi)\in\mathfrak c(S)$. For $GL_n$ this is the characteristic polynomial of a vector bundle endomorphism.
 
-Let $\gamma\in\mathfrak g(F)$ be regular semisimple, and let $E_0$ denote the trivial $G$-torsor.
+**Definition 1.1** (affine Springer fiber). Fix $\gamma\in\mathfrak g(F)$ regular semisimple and let $E_0$ be the trivial torsor. For a $k$-algebra $R$, put $D_R=\mathrm{Spec}\,R[[\pi]]$ and $D_R^\times=\mathrm{Spec}\,R((\pi))$. The points of $\mathrm{Gr}_\gamma(R)$ are triples $(E,\phi,\iota)$ with $(E,\phi)$ over $D_R$ and
+$$
+\iota\colon(E,\phi)|_{D_R^\times}\xrightarrow{\sim}(E_0,\gamma)|_{D_R^\times}.
+$$
+The pair $(E,\iota)$ specifies an integral structure on the trivial torsor over $D_R^\times$. The condition is that $\gamma$ extends to that structure.
 
-**Definition 1.1** (affine Springer fiber). For a $k$-algebra $R$, let $\mathrm{Gr}_\gamma(R)$ be the groupoid of triples $(E,\phi,\iota)$, where $E$ is a $G$-torsor over $\mathrm{Spec}\,R[[\pi]]$, $\phi$ is a global section of $\mathrm{ad}(E)$ over $\mathrm{Spec}\,R[[\pi]]$, and $\iota$ is an isomorphism $(E,\phi)\cong(E_0,\gamma)$ over $\mathrm{Spec}\,R((\pi))$.
+**Proposition 1.2** (Ngô 3.2.1). Forgetting $\phi$ gives a closed immersion $\mathrm{Gr}_\gamma\hookrightarrow\mathrm{Gr}_G$. The reduced fiber is a scheme locally of finite type over $k$.
 
-Let us unwind this definition slowly. If we forget $\phi$, a pair $(E,\iota)$ is a $G$-torsor on the disc together with a trivialization on the punctured disc, and this is precisely a point of the affine Grassmannian $\mathrm{Gr}_G$. One can think of it as a new integral structure on the trivial torsor over the punctured disc. Note that the section $\phi$ is not really additional data: over the punctured disc, $\iota$ forces it to be $\gamma$. So the only content of the definition is that $\gamma$, viewed in the new integral structure, extends over the closed point of the disc. In other words, **$\mathrm{Gr}_\gamma$ is the space of integral structures that are preserved by $\gamma$.** Since extending a given section is a closed condition, we obtain the first half of the following proposition.
+**Lemma 1.3.** For $R$ such that every $G$-torsor over $D_R$ is trivial, in particular $R=\bar k$,
+$$
+\mathrm{Gr}_\gamma(R)=
+\left\{[g]\in G(R((\pi)))/G(R[[\pi]])\;\middle|\;
+\mathrm{ad}(g)^{-1}\gamma\in\mathfrak g(R[[\pi]])\right\}.
+$$
+A trivialization of $E$ identifies $\iota$ with $g$ and $\phi$ with $\mathrm{ad}(g)^{-1}\gamma$. For $GL_n$, the coset corresponds to $L=g\breve{\mathcal O}^{\,n}$, with condition $\gamma L\subseteq L$.
 
-**Proposition 1.2** (Ngô 3.2.1). The forgetful map $(E,\phi,\iota)\mapsto(E,\iota)$ is a closed immersion
-$$\mathrm{Gr}_\gamma\hookrightarrow\mathrm{Gr}_G$$
-of the affine Springer fiber into the affine Grassmannian; in particular $\mathrm{Gr}_\gamma$ is an ind-scheme. Moreover, $(\mathrm{Gr}_\gamma)_{\mathrm{red}}$ is a scheme locally of finite type over $k$.
+**Definition 1.4.** The regular locus $\mathrm{Gr}_\gamma^{\mathrm{reg}}$ is the open subfunctor where the classifying map of $(E,\phi)$ lands in $[\mathfrak g^{\mathrm{reg}}/G]$. On geometric points, this says
+$$\mathrm{ad}(g)^{-1}\gamma\bmod\pi\in\mathfrak g^{\mathrm{reg}}(\bar k).$$
 
-The second statement is a theorem of Kazhdan and Lusztig, which we will not prove. It is worth pointing out that the word "locally" cannot be removed. Indeed, $\mathrm{Gr}_\gamma$ is finite-dimensional, but in general it has infinitely many irreducible components, which are permuted by a lattice of symmetries (see Proposition 1.9 and Example 2.5).
+**Definition 1.5.** For $a\in\mathfrak c^\heartsuit(\mathcal O)$, set $\gamma_0=\epsilon(a)$ and $(\mathcal M_a,\mathcal M_a^{\mathrm{reg}})=(\mathrm{Gr}_{\gamma_0},\mathrm{Gr}_{\gamma_0}^{\mathrm{reg}})$. The Kostant point $[1]$ belongs to $\mathcal M_a^{\mathrm{reg}}$.
 
-On points, Definition 1.1 takes the following more familiar form.
+### 1.3 The regular centralizer and the symmetry group
 
-**Lemma 1.3.** $\mathrm{Gr}_\gamma(R)=\big\{[g]\in G(R((\pi)))/G(R[[\pi]])\ :\ \mathrm{ad}(g)^{-1}(\gamma)\in\mathfrak g(R[[\pi]])\big\}$.
+To compare the integral structures, we need a group that acts on every pair with invariant $a$.
 
-Indeed, if $E$ is trivial, the isomorphism $\iota$ is given by an element $g\in G(R((\pi)))$, which is well defined up to $G(R[[\pi]])$, and $\phi$ corresponds to $\mathrm{ad}(g)^{-1}\gamma$, which has to be integral. (Note that the argument needs $E$ to be trivial. This holds for instance when $R=\bar k$; for general $R$ the description is only true étale locally on $R$.) For $G=GL_n$, the coset $g\,GL_n(\breve{\mathcal O})$ corresponds to the lattice $L=g\breve{\mathcal O}^n$ in $\breve F^n$, and the condition simply becomes $\gamma L\subset L$. So, concretely, **$\mathrm{Gr}_\gamma(\bar k)$ is the set of $\breve{\mathcal O}$-lattices in $\breve F^n$ that are stable under $\gamma$.** This is the description we will use in §2.
+**Proposition 1.6** (Ngô 2.1.1). Let $I\to\mathfrak g$ be the centralizer scheme. There is a unique smooth commutative group scheme $J\to\mathfrak c$ with a $G$-equivariant isomorphism $\chi^*J|_{\mathfrak g^{\mathrm{reg}}}\cong I|_{\mathfrak g^{\mathrm{reg}}}$. It extends to a homomorphism $\chi^*J\to I$. One can take $J=\epsilon^*I$.
 
-Next we single out the points where the integral element $\mathrm{ad}(g)^{-1}\gamma$ is regular. As we will see, these points form the part of $\mathrm{Gr}_\gamma$ that is easiest to understand.
+Two regular elements in the same geometric fiber of $\chi$ are conjugate. Conjugation identifies their centralizers independently of the chosen conjugating element, since the centralizers are commutative. The generic fiber of $J_a=a^*J$ is the torus $G_{\gamma_0}$.
 
-**Definition 1.4.** $\mathrm{Gr}_\gamma^{\mathrm{reg}}\subset\mathrm{Gr}_\gamma$ is the open subfunctor of those $[g]$ with $\mathrm{ad}(g)^{-1}(\gamma)\in\mathfrak g^{\mathrm{reg}}(R[[\pi]])$.
-
-Since $\gamma$ is already regular at the generic point of the disc, the condition only concerns the closed point. In other words, $[g]$ lies in the regular part if and only if $\mathrm{ad}(g)^{-1}(\gamma)\bmod\pi$ is a regular element of $\mathfrak g$. In terms of stacks, a point $(E,\phi,\iota)$ defines a map from the disc to $[\mathfrak g/G]$, and $\mathrm{Gr}^{\mathrm{reg}}_\gamma$ is the locus where this map lands in the open substack $[\mathfrak g^{\mathrm{reg}}/G]$.
-
-Finally, we would like to attach an affine Springer fiber to a characteristic polynomial rather than to an element. For this we use the Kostant section.
-
-**Definition 1.5.** For $a\in\mathfrak c^\heartsuit(\mathcal O)$, let $\gamma_0=\epsilon(a)\in\mathfrak g(\mathcal O)$, and put $\mathcal M_a:=\mathrm{Gr}_{\gamma_0}$ and $\mathcal M_a^{\mathrm{reg}}:=\mathrm{Gr}^{\mathrm{reg}}_{\gamma_0}$.
-
-The point of the Kostant section is that it provides, uniformly in $a$, an element of the stable class of $a$ which is both integral and regular. As a consequence, the base point $[1]$ of the affine Grassmannian always lies in $\mathcal M_a^{\mathrm{reg}}$; in particular, $\mathcal M_a^{\mathrm{reg}}$ is never empty.
-
-The aim of the talk is to establish further geometric properties of $\mathcal M_a$. From now on we work over $\bar k$: $a\in\mathfrak c^\heartsuit(\breve{\mathcal O})$, and $\mathcal M_a(\bar k)$ is a set of cosets in $G(\breve F)/G(\breve{\mathcal O})$.
-
-### 1.3 Recollections: the regular centralizer and the symmetry group
-
-The main structure on $\mathcal M_a$ is a large commutative group acting on it. This group comes from the regular centralizer, which we recall now.
-
-**Proposition 1.6** (Ngô 2.1.1). Let $I\to\mathfrak g$ be the group scheme of centralizers, $I_x=\{g\in G:\mathrm{ad}(g)x=x\}$. There is a unique smooth commutative group scheme $J\to\mathfrak c$ with a $G$-equivariant isomorphism $\chi^*J|_{\mathfrak g^{\mathrm{reg}}}\cong I|_{\mathfrak g^{\mathrm{reg}}}$. This isomorphism extends to a homomorphism $\chi^*J\to I$ over all of $\mathfrak g$. One can take $J=\epsilon^*I$.
-
-The idea behind this proposition is quite simple. If $x$ and $x'$ are regular with the same characteristic polynomial, then $x'=\mathrm{ad}(g)x$ for some $g$, and the isomorphism $\mathrm{ad}(g):I_x\to I_{x'}$ does not depend on the choice of $g$, because $I_x$ is commutative. So all regular elements with characteristic polynomial $a$ have, canonically, the same centralizer $J_a$. The extension $\chi^*J\to I$ says a little more: $J_a$ maps into the centralizer of every element with characteristic polynomial $a$, regular or not. As we will see, this is exactly what allows $J_a$ to act on the whole affine Springer fiber, and not only on its regular part.
-
-For $a\in\mathfrak c^\heartsuit(\mathcal O)$ we write $J_a:=a^*J$. It is a smooth commutative group scheme over $\mathcal O$ whose generic fiber is the torus $G_{\gamma_0}$, the centralizer of $\gamma_0$ over $F$. At the closed point, however, it can degenerate when $a$ meets the discriminant. For example, for $GL_n$ the centralizer of a companion matrix $\gamma_0$ is the unit group of $\mathcal O[\gamma_0]\cong\mathcal O[T]/(P)$, so that $J_a=\mathrm{Res}_{B/\mathcal O}\mathbb G_m$ with $B=\mathcal O[T]/(P)$.
-
-**Definition 1.7** (Ngô §3.3). $\mathcal P(J_a)$ is the functor which sends a $k$-algebra $R$ to the group of isomorphism classes of $J_a$-torsors over $\mathrm{Spec}\,R[[\pi]]$ together with a trivialization over $\mathrm{Spec}\,R((\pi))$. It is represented by a group ind-scheme over $k$, and
+**Definition 1.7** (Ngô §3.3). The group ind-scheme $\mathcal P(J_a)$ parametrizes $J_a$-torsors on the disc trivialized on the punctured disc. In particular,
 $$\mathcal P(J_a)(\bar k)=J_a(\breve F)/J_a(\breve{\mathcal O}).$$
+It acts by twisting $(E,\phi)$ via $J_a\to\mathrm{Aut}(E,\phi)$. On geometric points this is $j\cdot[g]=[jg]$. For $\gamma=\mathrm{ad}(g)^{-1}\gamma_0$, the extension in Proposition 1.6 gives
+$$
+g^{-1}J_a(\breve{\mathcal O})g\subseteq I_\gamma(\breve{\mathcal O})
+\subseteq G(\breve{\mathcal O}),
+$$
+so $J_a(\breve{\mathcal O})$ fixes $[g]$.
 
-Thus, roughly speaking, $\mathcal P(J_a)$ is the affine Grassmannian of the commutative group scheme $J_a$. It acts on $\mathcal M_a$ in a natural way: we can twist a pair $(E,\phi)$ by a $J_a$-torsor, using the homomorphism $J_a\to\mathrm{Aut}(E,\phi)$ given by Proposition 1.6, and a trivialization over the punctured disc carries over. On $\bar k$-points the action is simply left multiplication. Indeed, $J_a(\breve F)$ is identified with the centralizer $G_{\gamma_0}(\breve F)$, and it acts by $j\cdot[g]=[jg]$. It may not be obvious that this descends to the quotient $J_a(\breve F)/J_a(\breve{\mathcal O})$, and this is where the extension $\chi^*J\to I$ is needed. If $\gamma=\mathrm{ad}(g)^{-1}\gamma_0$ is integral, then $\mathrm{ad}(g)^{-1}$ carries $J_a$ into the centralizer $I_\gamma$ over $\breve{\mathcal O}$, so $J_a(\breve{\mathcal O})\subset g\,G(\breve{\mathcal O})\,g^{-1}$, which means exactly that $J_a(\breve{\mathcal O})$ fixes the point $[g]$.
+**Proposition 1.8** (Ngô 3.3.1). The Kostant point trivializes the $\mathcal P(J_a)$-torsor $\mathcal M_a^{\mathrm{reg}}$:
+$$\mathcal P(J_a)\xrightarrow{\sim}\mathcal M_a^{\mathrm{reg}},\qquad p\longmapsto p\cdot[1].$$
 
-The basic structural result is that the regular part is a single orbit with trivial stabilizers.
+*Proof.* The map $[\mathfrak g^{\mathrm{reg}}/G]\to\mathfrak c$ is a $J$-gerbe neutralized by $\epsilon$ (Ngô 2.2.1). The sheaf $\mathrm{Isom}((E_0,\gamma_0),(E,\phi))$ is therefore a $J_a$-torsor, and $\iota$ trivializes it over the punctured disc. This inverts the orbit map. ∎
 
-**Proposition 1.8** (Ngô 3.3.1). $\mathcal M_a^{\mathrm{reg}}$ is a principal homogeneous space under $\mathcal P(J_a)$. Since it contains the Kostant point $[1]$, it is a trivial torsor:
-$$\mathcal P(J_a)\xrightarrow{\ \sim\ }\mathcal M_a^{\mathrm{reg}},\qquad p\longmapsto p\cdot[1].$$
+**Proposition 1.9** (Kazhdan–Lusztig; Ngô 3.4.1). Over $\bar k$, any lift $\Lambda\to\mathcal P(J_a)$ of the maximal free quotient $\Lambda$ of $\pi_0(\mathcal P(J_a))$ acts freely on $(\mathcal M_a)_{\mathrm{red}}$. The quotient $(\mathcal M_a)_{\mathrm{red}}/\Lambda$ is projective.
 
-*Proof.* By Ngô 2.2.1, the morphism $[\mathfrak g^{\mathrm{reg}}/G]\to\mathfrak c$ is a gerbe banded by $J$, and the Kostant section neutralizes it. So a regular pair $(E,\phi)$ over the disc with characteristic polynomial $a$ is locally isomorphic to $(E_0,\gamma_0)$, and the sheaf of isomorphisms $(E_0,\gamma_0)\cong(E,\phi)$ is a $J_a$-torsor. The isomorphism $\iota$ trivializes this torsor over the punctured disc, and the resulting point of $\mathcal P(J_a)$ is the inverse of the map in the statement. On $\bar k$-points one can also argue directly, as follows. The regular integral elements with characteristic polynomial $a$ form a single $G(\breve{\mathcal O})$-orbit, so for $[g]\in\mathcal M_a^{\mathrm{reg}}$ we have $\mathrm{ad}(g)^{-1}\gamma_0=\mathrm{ad}(h)^{-1}\gamma_0$ for some $h\in G(\breve{\mathcal O})$. Then $gh^{-1}$ centralizes $\gamma_0$, so $[g]=[gh^{-1}]\in J_a(\breve F)\cdot[1]$. ∎
-
-So, in a picture, $\mathcal M_a$ consists of a copy of the group $\mathcal P(J_a)$ together with a boundary $\mathcal M_a\smallsetminus\mathcal M_a^{\mathrm{reg}}$. We will also use two further results from Ngô §3.4–3.5, which we state without proof.
-
-**Proposition 1.9** (Kazhdan–Lusztig; Ngô 3.4.1). Let $\Lambda$ be the maximal free quotient of $\pi_0(\mathcal P(J_a))$, and choose a lift $\Lambda\to\mathcal P(J_a)$. Then $\Lambda$ acts freely on $(\mathcal M_a)_{\mathrm{red}}$, and the quotient $(\mathcal M_a)_{\mathrm{red}}/\Lambda$ is a projective scheme.
-
-**Proposition 1.10** (approximation; Ngô 3.5.1). There is an integer $N$ such that for every $a'$ (defined over any finite extension of $k$) with $a'\equiv a\bmod\pi^N$, the pair $(\mathcal M_{a'},\mathcal P(J_{a'}))$ is isomorphic to $(\mathcal M_a,\mathcal P(J_a))$.
-
-One can view Proposition 1.10 as a geometric form of Harish-Chandra's theorem that regular semisimple orbital integrals are locally constant. The key point of its proof is that $\mathcal M_a$ only depends on the commutative subalgebra $\mathrm{Lie}(I_{\gamma_0})\subset\mathfrak g$, which in turn is determined by the cameral cover of the disc attached to $a$.
-
-With these preliminaries in place, the rest of the talk is about two questions. First, what does the group $\mathcal P(J_a)$ look like? Second, how small is the boundary? We begin with $GL_n$, where both questions can be answered by hand.
+**Proposition 1.10** (approximation; Ngô 3.5.1). For some $N$, every $a'$ over a finite extension $k'/k$ with $a'\equiv a\bmod\pi^N$ gives
+$$
+(\mathcal M_{a'},\mathcal P(J_{a'}))\cong
+(\mathcal M_a,\mathcal P(J_a))\otimes_k k'
+$$
+with the action. The proof uses the cameral cover to recover $\mathrm{Lie}(I_{\gamma_0})$, which determines the integrality condition. This is a geometric version of local constancy of regular semisimple orbital integrals.
 
 ## 2. The linear case
 
-(Ngô §3.6, following Laumon.) In this section $G=GL_n$, and we assume $n<p$. This assumption implies that $p$ does not divide $|W|=n!$, and also that every extension of $\breve F$ of degree at most $n$ is tamely ramified; we will use the latter in Corollary 2.4. As we will see, in this case the whole theory can be described in terms of a single ring $B$.
-
 ### 2.1 The ring $B$
 
-A point $a\in\mathfrak c^\heartsuit(\breve{\mathcal O})$ is a monic polynomial
-$$P(T)=T^n+a_1T^{n-1}+\dots+a_n\in\breve{\mathcal O}[T]$$
-with nonzero discriminant, in other words, a polynomial that is separable over $\breve F$, and $\gamma_0=\epsilon(a)$ is its companion matrix. (Ngô writes the coefficients with signs $(-1)^ia_i$, which makes no difference.) Let us put
-$$B:=\breve{\mathcal O}[T]/(P(T)),\qquad E:=B\otimes_{\breve{\mathcal O}}\breve F=\breve F[T]/(P(T)).$$
-The ring $B$ is free of rank $n$ as an $\breve{\mathcal O}$-module, and $E$ is a finite étale $\breve F$-algebra of dimension $n$:
-$$E\cong E_1\times\dots\times E_s,$$
-where each $E_i/\breve F$ is a finite separable field extension, one for each irreducible factor of $P$ over $\breve F$. Since $\bar k$ is algebraically closed, each $E_i$ is totally ramified over $\breve F$, say of degree $n_i$, with $n_1+\dots+n_s=n$.
-
-It helps a lot to keep a geometric picture in mind. One can think of $\mathrm{Spec}\,B$ as the germ at $\pi=0$ of the spectral curve $\{P(T)=0\}$ in the $(T,\pi)$-plane. This is a plane curve singularity (possibly a smooth point), and $\mathrm{Spec}\,E$ is the corresponding punctured germ: a disjoint union of $s$ punctured discs, one for each branch of the curve. The companion matrix identifies $\breve F^n$, with $\gamma_0$ acting on it, with $E$, with multiplication by $T$ acting on it; under this identification, the standard lattice $\breve{\mathcal O}^n$ corresponds to $B$.
+For $G=GL_n$ and $n<p$, let $a$ correspond to a monic polynomial $P(T)\in\breve{\mathcal O}[T]$ of degree $n$, separable over $\breve F$. Put
+$$
+B=\breve{\mathcal O}[T]/(P),\qquad
+E=B\otimes_{\breve{\mathcal O}}\breve F=\prod_{i=1}^s E_i,\qquad
+\sum_{i=1}^s [E_i:\breve F]=n.
+$$
+The $E_i$ are the field factors of $P$, each totally and tamely ramified. The companion basis identifies $(\breve F^n,\gamma_0,\breve{\mathcal O}^{\,n})$ with $(E,T,B)$. The curve $P(T)=0$ has one branch for each $E_i$.
 
 ### 2.2 The points of $\mathcal M_a$
 
-With this dictionary, the affine Springer fiber has a very concrete description.
+**Proposition 2.1** (Ngô 3.6.1). Via Lemma 1.3 the companion basis gives
+$$\mathcal M_a(\bar k)=
+\{L\subset E:\ L \text{ is a }B\text{-submodule and a full }\breve{\mathcal O}\text{-lattice}\}.$$
+Such a $B$-lattice is a rank-one torsion-free module with a generic trivialization. This is the local model of a compactified Jacobian.
 
-**Proposition 2.1** (Ngô 3.6.1).
-$$\mathcal M_a(\bar k)=\{\breve{\mathcal O}\text{-lattices }L\subset\breve F^{\oplus n}\text{ stable under }\gamma_0\}=\{B\text{-submodules }L\subset E\text{ that are free }\breve{\mathcal O}\text{-modules of rank }n\}.$$
+**Lemma 2.2.** $\mathcal M_a^{\mathrm{reg}}(\bar k)=\{xB:x\in E^\times\}$.
 
-*Proof.* The first equality is Lemma 1.3 for $GL_n$. For the second one, we transport everything along the identification of $(\breve F^n,\gamma_0)$ with $(E,T)$: a lattice stable under $\gamma_0$ becomes an $\breve{\mathcal O}$-lattice in $E$ stable under multiplication by $T$, in other words a $B$-submodule of $E$ which is an $\breve{\mathcal O}$-lattice. ∎
-
-Ngô calls these $B$-lattices ("$B$-réseaux"). Note that, up to isomorphism, a $B$-lattice is the same thing as a torsion-free $B$-module of rank one. So one may think of $\mathcal M_a$ as a local version of the compactified Jacobian of the spectral curve; this is Laumon's point of view.
-
-Next we identify the regular locus. It turns out to have a very simple description.
-
-**Lemma 2.2.** $\mathcal M_a^{\mathrm{reg}}(\bar k)$ consists of the $B$-lattices $L$ with $L\cong B$ as $B$-modules, i.e. the lattices $L=xB$ with $x\in E^\times$.
-
-*Proof.* By definition, $L$ lies in the regular locus if and only if the endomorphism $T$ of $L/\pi L$ is a regular element of $\mathfrak{gl}_n(\bar k)$. Recall that a matrix is regular if and only if it has a cyclic vector, and note that the characteristic polynomial of $T$ on $L/\pi L$ is $\bar P=P\bmod\pi$. So $L$ is regular if and only if $L/\pi L\cong\bar k[T]/(\bar P)$, that is, if and only if $L/\pi L$ is a cyclic module over $B/\pi B$. By Nakayama's lemma this happens if and only if $L$ is a cyclic $B$-module, $L=Bx$. Finally, a surjection $B\to L$ between free $\breve{\mathcal O}$-modules of the same rank is an isomorphism, so $L$ is cyclic if and only if $L\cong B$. ∎
-
-So the regular locus consists of the locally free modules, and the boundary consists of the torsion-free modules which are not locally free at the singular point. This is exactly the same picture as for compactified Jacobians.
+*Proof.* Regularity of $T$ on $L/\pi L$ is equivalent to the existence of a cyclic vector, so
+$$
+L\in\mathcal M_a^{\mathrm{reg}}(\bar k)
+\quad\Longleftrightarrow\quad
+L/\pi L\cong\bar k[T]/(P\bmod\pi)
+\quad\Longleftrightarrow\quad L\cong B.
+$$
+The last step is Nakayama's lemma and equality of the $\breve{\mathcal O}$-ranks. A generator of $L$ must be a unit of $E$. ∎
 
 ### 2.3 Symmetries
 
-For $GL_n$ the symmetry group can also be written down directly. We have $J_a=\mathrm{Res}_{B/\breve{\mathcal O}}\mathbb G_m$, so
-$$J_a(\breve F)=\big(\breve F[T]/(P(T))\big)^\times=E^\times,\qquad J_a(\breve{\mathcal O})=B^\times,\qquad\text{hence}\qquad\mathcal P(J_a)(\bar k)=E^\times/B^\times,$$
-acting on $B$-lattices by multiplication. In this language Proposition 1.8 becomes evident: $E^\times$ acts transitively on the free lattices $xB$, with stabilizer $B^\times$, so $x\mapsto xB$ is a bijection $E^\times/B^\times\cong\mathcal M_a^{\mathrm{reg}}(\bar k)$. The group $E^\times/B^\times$ is the local Picard group of the singularity, or, in other words, the generalized Jacobian of the germ.
+The companion matrix has commutant $B$, so $J_a=\mathrm{Res}_{B/\breve{\mathcal O}}\mathbb G_m$. On points, Proposition 1.8 is
+$$\mathcal P(J_a)(\bar k)=E^\times/B^\times\xrightarrow{\sim}\mathcal M_a^{\mathrm{reg}}(\bar k),\qquad x\longmapsto xB.$$
 
-### 2.4 Digression: what $\mathcal M_a$ parametrizes
+### 2.4 Integral conjugacy classes
 
-Before analysing $E^\times/B^\times$, let us step back for a moment and describe, for a general group, what $\mathcal M_a$ and its quotient by the symmetries parametrize. This will explain why it is the quotient, and not $\mathcal M_a$ itself, that computes orbital integrals.
-
-An element of $\mathfrak g(\mathcal O)$ can be viewed as an arc $D\to\mathfrak g$, where $D=\mathrm{Spec}\,\mathcal O$ is the formal disc; similarly, $\mathfrak c(\mathcal O)$ is the set of arcs $D\to\mathfrak c$. The disc has two points: the generic point, with residue field $F$, and the closed point, with residue field $k$. The condition $a\in\mathfrak c^\heartsuit(\mathcal O)$ says that the generic point of the arc $a$ lies in $\mathfrak c^{\mathrm{rs}}$, while the closed point is allowed to lie on the discriminant. If it does not, that is, if $a$ lies in the smaller set $\mathfrak c^{\mathrm{rs}}(\mathcal O)$, then every integral element with characteristic polynomial $a$ lies in $\mathfrak g^{\mathrm{rs}}(\mathcal O)$, the group scheme $J_a$ is a torus over $\mathcal O$, and $\mathcal M_a=\mathcal M_a^{\mathrm{reg}}\cong\mathcal P(J_a)$ is discrete. So, in a sense, all the interesting geometry comes from arcs that touch the discriminant.
+Let $D=\mathrm{Spec}\,\mathcal O$. An arc $a\colon D\to\mathfrak c$ can meet $\mathfrak D$ at the closed point. When it misses $\mathfrak D$, $J_a$ is a torus over $\mathcal O$ and $\mathcal M_a=\mathcal M_a^{\mathrm{reg}}\cong\mathcal P(J_a)$ is topologically discrete.
 
 ![[affine-springer-fig1-disc-arcs.svg]]
 
-*Figure 1. (a) The formal disc $D$: the closed point $\mathrm{Spec}\,k$, and the generic point $\mathrm{Spec}\,F$, drawn as the punctured disc. (b) Arcs in $\mathfrak c$ for $\mathfrak g=\mathfrak{gl}_2$; the red parabola is the discriminant $\mathfrak D$.*
+*Figure 1. (a) The closed and generic points of the formal disc. (b) Arcs in the space of quadratic polynomials.*
 
-Panel (a) is the picture of $D$ that was drawn on the board. It helps to think of $\pi$ as a coordinate on a small disc: the closed point is the center $\pi=0$, and the generic point stands for the rest of the disc, where $\pi$ is invertible. An arc $a\colon D\to\mathfrak c$ then sends the center to the point $a\bmod\pi$, and the rest of the disc to a small curve through this point. Panel (b) shows a few arcs for $\mathfrak g=\mathfrak{gl}_2$. Here $\mathfrak c\cong\mathbb A^2$ is the space of polynomials $T^2+a_1T+a_2$, and the discriminant $\mathfrak D$ is the parabola $a_1^2=4a_2$, where the two roots coincide. An arc whose center misses $\mathfrak D$ lies in $\mathfrak c^{\mathrm{rs}}(\mathcal O)$. On the other hand, an arc contained in $\mathfrak D$ is not in $\mathfrak c^\heartsuit(\mathcal O)$, because its generic point is not regular semisimple. The interesting arcs are those that meet $\mathfrak D$ only at the center. For them, the order of contact with $\mathfrak D$ is $d(a)=\mathrm{val}(\mathrm{disc}\,P)$: we have $d(a)=1$ for a transverse arc, and $d(a)=2$ for an arc tangent to $\mathfrak D$, such as $P=T(T-\pi)$ from Example 2.5. As we will see, this number appears in the dimension formula of §3.
+In (a), the center represents $\pi=0$ and the punctured disc represents $\mathrm{Spec}\,F$. In (b), the red parabola is $a_1^2=4a_2$ for $P=T^2+a_1T+a_2$. An arc entirely in the parabola fails generic regular semisimplicity. A transverse arc gives $d(a)=1$, whereas $P=T(T-\pi)$ gives $d(a)=2$.
 
-The simplest example is $\mathfrak g=\mathfrak{sl}_2$, and it is worth looking at it in some detail. Here $\mathfrak c=\mathbb A^1$, $\chi(x)=-\det(x)$, and the Kostant section is
-$$\epsilon(a)=\begin{pmatrix}0&a\\1&0\end{pmatrix}.$$
-The discriminant is $4a$, so $\mathfrak c^\heartsuit(\mathcal O)=\mathcal O\smallsetminus\{0\}$ and $\mathfrak c^{\mathrm{rs}}(\mathcal O)=\mathcal O^\times$; in other words, the order of contact of the arc $a$ with the discriminant is simply $\mathrm{val}(a)$.
+For $\mathfrak{sl}_2$ the map and section take the form
+$$
+\chi=-\det,\qquad
+\chi\begin{pmatrix}0&y\\z&0\end{pmatrix}=yz,\qquad
+\epsilon(a)=\begin{pmatrix}0&a\\1&0\end{pmatrix},\qquad d(a)=\mathrm{val}(4a).
+$$
 
 ![[affine-springer-fig2-kostant-sl2.svg]]
 
-*Figure 2. (a) The diagram from the board, for $\mathfrak{sl}_2$. (b) The fibers of $\chi$ on the plane of matrices $\left(\begin{smallmatrix}0&y\\z&0\end{smallmatrix}\right)$, and the Kostant section.*
+*Figure 2. (a) The Chevalley map and the Kostant section for $\mathfrak{sl}_2$. (b) Their restriction to the plane of off-diagonal matrices.*
 
-Panel (a) is the diagram that was drawn on the board. The Kostant section is a section of $\chi$, so $\chi(\gamma_0)=a$. Moreover, the entries of $\epsilon(a)$ are polynomials in $a$, so $\epsilon$ takes an integral $a$ to an integral matrix $\gamma_0$. Panel (b) shows the geometry of $\chi$ and $\epsilon$. On the plane of matrices $\left(\begin{smallmatrix}0&y\\z&0\end{smallmatrix}\right)$ we have $\chi=yz$, so the fibers of $\chi$ are the hyperbolas $yz=c$. For $c\neq0$ the fiber is smooth, and all its points are regular semisimple. The fiber over $0$, on the other hand, is the union of the two axes. It is the nilpotent cone, cut by our plane, and it is singular at the origin, which is the only non-regular element of $\mathfrak{sl}_2$. The Kostant section is the line $z=1$, that is, $\epsilon(c)=(c,1)$. Note that it meets every fiber exactly once, and that over $c=0$ it passes through the regular nilpotent element $\epsilon(0)=\left(\begin{smallmatrix}0&0\\1&0\end{smallmatrix}\right)$, and not through the origin. This is what it means for $\epsilon$ to take values in $\mathfrak g^{\mathrm{reg}}$. Over $\mathcal O$ this has the following consequence. If the arc $a$ meets the discriminant, then $\epsilon(a)$ reduces mod $\pi$ to the regular nilpotent element, but other integral elements with characteristic polynomial $a$ may reduce to the non-regular element $0$. For example, if $a=\pi^2$, the element $\pi\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$ has $\chi=\pi^2$ and reduces to $0$.
+In (b), $z=1$ meets every hyperbola $yz=a$. Over $a=0$, it meets the vertical axis at a regular nilpotent. When $a=\pi^2$, $\epsilon(a)$ reduces to this point while $\pi\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$ reduces to the origin.
 
-With this picture in mind, let us now consider the map
-$$\mathcal M_a(\bar k)\longrightarrow\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O}),\qquad[g]\longmapsto\big[\mathrm{ad}(g)^{-1}\gamma_0\big],$$
-which records the conjugacy class of $\gamma_0$ as seen in the integral structure $[g]\in G(\breve F)/G(\breve{\mathcal O})$. Its image lies in the fiber over $a$ of the map $\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O})\to\mathfrak c(\breve{\mathcal O})$, and in fact it is all of that fiber. Indeed, an integral element $\gamma$ with $\chi(\gamma)=a$ is conjugate to $\gamma_0$ over $\breve F$, because $H^1(\breve F,J_a)=0$ by Steinberg's theorem. Moreover, two points $[g]$ and $[g']$ have the same image if and only if $\mathrm{ad}(g')^{-1}\gamma_0=\mathrm{ad}(h)\,\mathrm{ad}(g)^{-1}\gamma_0$ for some $h\in G(\breve{\mathcal O})$, that is, $g'hg^{-1}$ centralizes $\gamma_0$, which means that $[g']\in J_a(\breve F)\cdot[g]$. Therefore
-$$\mathcal M_a(\bar k)\big/\mathcal P(J_a)(\bar k)\;\cong\;\{\gamma\in\mathfrak g(\breve{\mathcal O}):\chi(\gamma)=a\}\big/G(\breve{\mathcal O}).$$
-
-In other words, the quotient of $\mathcal M_a$ by its symmetries is the set of integral conjugacy classes in the stable class $a$. This was the main picture on the board, and Figure 3 redraws it.
+The map $[g]\mapsto[\mathrm{ad}(g)^{-1}\gamma_0]$ gives
+$$
+\mathcal M_a(\bar k)/\mathcal P(J_a)(\bar k)
+\xrightarrow{\sim}
+\{\gamma\in\mathfrak g(\breve{\mathcal O}):\chi(\gamma)=a\}/G(\breve{\mathcal O}).
+$$
+Steinberg's theorem gives $H^1(\breve F,J_a)=0$, hence surjectivity. Two cosets have conjugate images precisely when $g'hg^{-1}\in J_a(\breve F)$ for some $h\in G(\breve{\mathcal O})$.
 
 ![[affine-springer-fig3-fiber-over-a.svg]]
 
-*Figure 3. The map $\mathcal M_a(\bar k)\to\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O})$, $[g]\mapsto[\mathrm{ad}(g)^{-1}\gamma_0]$. Its image is the fiber $\chi^{-1}(a)$. The regular locus goes to the single regular class $[\epsilon(a)]$, and the boundary goes to the non-regular classes.*
+*Figure 3. Integral conjugacy classes over $a$ and their preimages in $\mathcal M_a$.*
 
-Let us read the picture from right to left. The hatched region on the right is the set $\mathfrak g(\breve{\mathcal O})/G(\breve{\mathcal O})$ of integral conjugacy classes. Taking the characteristic polynomial maps it to $\mathfrak c(\breve{\mathcal O})$, the line at the bottom, and the vertical lines are the fibers of this map. The Kostant section is a curve in the region that meets every fiber once. The thick line is the fiber over $a$, in other words the set of integral classes with characteristic polynomial $a$, which by the bijection above is the set $\mathcal M_a(\bar k)/\mathcal P(J_a)(\bar k)$. Exactly one point of this fiber is regular, namely the class of $\epsilon(a)$, where the fiber meets the Kostant section; this is just Proposition 1.8, read through the bijection. The other points of the fiber are the non-regular classes. On the left is $\mathcal M_a(\bar k)$, a subset of the affine Grassmannian $G(\breve F)/G(\breve{\mathcal O})$. The preimage of each point of the fiber is a single $\mathcal P(J_a)$-orbit. Over $[\epsilon(a)]$ lies the open orbit $\mathcal M_a^{\mathrm{reg}}$ (which is dense, by Proposition 6.1), and over the non-regular classes lie the smaller orbits that make up the boundary $\mathcal M_a\smallsetminus\mathcal M_a^{\mathrm{reg}}$. For example, for $\mathfrak{sl}_2$ and $a=\pi^2$, the fiber contains the regular class of $\epsilon(\pi^2)$ and the non-regular class of $\pi\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$. For $GL_n$, the fiber is the set of isomorphism classes of torsion-free $B$-modules of rank one, and the regular class is the class of $B$. For instance, for the node of Example 2.5 the fiber has exactly two points, the classes of $B$ and of $B^\flat$.
+On the right, the Kostant section selects the unique regular class in each vertical fiber. On the left, its preimage is the open orbit $\mathcal M_a^{\mathrm{reg}}$. For $GL_n$, the fiber on the right consists of isomorphism classes of $B$-lattices. For the node below these are $B$ and $B^\flat$. Over $k$, Frobenius descent turns this orbit picture into a weighted count (§8).
 
-Over $k$ rather than $\bar k$, this bijection gets twisted by Galois cohomology. Roughly speaking, counting $k$-points of the quotient stack $[\mathcal M_a/\mathcal P(J_a)]$ amounts to counting integral elements in a stable conjugacy class, with suitable weights. This is exactly what an orbital integral of $1_{\mathfrak g(\mathcal O)}$ does, and we will come back to this in §8.
+### 2.5 Normalization
 
-### 2.5 The normalization and the structure of $E^\times/B^\times$
+Normalize $B$ in $E$ to get $B^\flat=\prod_i\mathcal O_{E_i}$. The component valuations give
+$$
+0\longrightarrow(B^\flat)^\times/B^\times
+\longrightarrow E^\times/B^\times
+\longrightarrow\mathbb Z^s\longrightarrow0.\tag{2.1}
+$$
 
-We now return to the group $E^\times/B^\times$ and analyse its structure. The main tool is the normalization. Let $B^\flat$ be the normalization of $B$ in $E$. Since $E=\prod_iE_i$, the ring $B^\flat=\prod_i\mathcal O_{E_i}$ is the ring of integers of $E$. The inclusions $B^\times\subset(B^\flat)^\times\subset E^\times$ give an exact sequence
-$$0\longrightarrow(B^\flat)^\times/B^\times\longrightarrow E^\times/B^\times\longrightarrow E^\times/(B^\flat)^\times\longrightarrow0.\tag{2.1}$$
-The quotient on the right is easy to understand: taking the valuations of the components gives $E^\times/(B^\flat)^\times=\prod_iE_i^\times/\mathcal O_{E_i}^\times\cong\mathbb Z^s$. In other words, it is a free abelian group of finite rank, with a basis indexed by the branches of the curve. The subgroup on the left is more interesting, and it is described by the following lemma.
+**Lemma 2.3.** $(B^\flat)^\times/B^\times$ is the group of geometric points of a connected affine algebraic group $\mathcal R_a$ of dimension $\dim_{\bar k}(B^\flat/B)$.
 
-**Lemma 2.3.** $(B^\flat)^\times/B^\times$ is the group of $\bar k$-points of a connected affine algebraic group $\mathcal R_a$ of dimension $\dim_{\bar k}(B^\flat/B)$.
+*Proof.* Choose $N$ so $\pi^N B^\flat$ is in the conductor. Dividing numerator and denominator by $1+\pi^N B^\flat$ reduces to the unit groups of finite-dimensional $\bar k$-algebras. Each unit group is open in the underlying affine space, so it is connected and has the dimension of that algebra. Subtracting the dimensions gives $\dim_{\bar k}(B^\flat/B)$. ∎
 
-*Proof.* Since $B^\flat$ is finite over $B$ and $B\otimes\breve F=B^\flat\otimes\breve F$, the conductor of $B$ contains a power of $\pi$: there is $N$ with $\pi^NB^\flat\subset B$. Then $1+\pi^NB^\flat\subset B^\times$, and
-$$(B^\flat)^\times/B^\times=(B^\flat/\pi^NB^\flat)^\times\big/(B/\pi^NB^\flat)^\times.$$
-Now recall that, for a finite-dimensional $\bar k$-algebra $A$, the unit group $A^\times$ is the complement in the affine space $A$ of the hypersurface $\{x:\det(\text{multiplication by }x)=0\}$, hence a connected algebraic group of dimension $\dim_{\bar k}A$. A quotient of a connected group is connected, and our quotient has dimension $\dim_{\bar k}(B^\flat/\pi^NB^\flat)-\dim_{\bar k}(B/\pi^NB^\flat)=\dim_{\bar k}(B^\flat/B)$. ∎
+**Corollary 2.4** (Ngô 3.6.2–3.6.3). The group $\mathcal R_a$ is the neutral component of $\mathcal P(J_a)$, with $\pi_0(\mathcal P(J_a))\cong\mathbb Z^s$. Serre's formula for the local $\delta$-invariant is
+$$
+\delta_a=\dim\mathcal P(J_a)=\dim_{\bar k}(B^\flat/B)
+=\frac{d(a)-c(a)}2,qquad
+d(a)=\mathrm{val}(\mathrm{disc}\,P),\qquad c(a)=n-s.
+$$
 
-Combining Lemma 2.3 with the exact sequence (2.1), we obtain a complete description of the symmetry group.
+*Proof of the dimension formula.* The discriminant of $B$ differs from that of $B^\flat$ by the square of the index. Each tame totally ramified factor contributes $[E_i:\breve F]-1$, so
+$$
+d(a)=\mathrm{val}\,\mathrm{disc}(B^\flat)+2\dim_{\bar k}(B^\flat/B)
+=\sum_i([E_i:\breve F]-1)+2\delta_a.
+$$
+∎
 
-**Corollary 2.4** (Ngô 3.6.2, 3.6.3).
-1. The neutral component of $\mathcal P(J_a)$ is $\mathcal R_a=(B^\flat)^\times/B^\times$, and $\pi_0(\mathcal P(J_a))=E^\times/(B^\flat)^\times\cong\mathbb Z^s$ is a free abelian group with a basis indexed by the connected components of $\mathrm{Spec}\,B^\flat$.
-2. $\dim\mathcal P(J_a)=\delta(a):=\dim_{\bar k}(B^\flat/B)$, the δ-invariant of Serre of the singularity $\mathrm{Spec}\,B$.
-3. (Serre) $\delta(a)=\dfrac{d(a)-c(a)}{2}$, where $d(a)=\mathrm{val}(\mathrm{disc}\,P)$ and $c(a)=n-s$.
-
-*Proof of 3.* The discriminant of an order differs from that of the maximal order by the square of the index: $\mathrm{val}\,\mathrm{disc}(B)=\mathrm{val}\,\mathrm{disc}(B^\flat)+2\,\mathrm{length}(B^\flat/B)$. Here $\mathrm{disc}(B)=\mathrm{disc}(P)$, and $\mathrm{disc}(B^\flat)=\prod_i\mathrm{disc}(\mathcal O_{E_i})$. Each $E_i$ is totally ramified of degree $n_i$, and tamely ramified because $n_i\le n<p$, so its different has valuation $n_i-1$ and $\mathrm{val}\,\mathrm{disc}(\mathcal O_{E_i})=n_i-1$. Summing over $i$ gives $\mathrm{val}\,\mathrm{disc}(B^\flat)=n-s$. ∎
-
-One can say a little more about $\mathcal R_a$. Like any connected commutative affine algebraic group, it is the product of a torus and a unipotent group. If $B$ is local, its unit group is $\bar k^\times\times(1+\mathfrak m_B)$, while $(B^\flat)^\times$ has a torus part $(\bar k^\times)^s$, with one factor for each branch; so $\mathcal R_a\cong\mathbb G_m^{s-1}\times U$ with $U$ unipotent. Roughly speaking, the torus part comes from the branches of the singularity, and the unipotent part comes from its "cuspidal" nature. The following examples illustrate both phenomena.
+For local $B$, the reductions of the units give the torus $\mathbb G_m^s/\mathbb G_m\cong\mathbb G_m^{s-1}$ in $\mathcal R_a$. The remaining factor is unipotent.
 
 ### 2.6 Examples
 
-**Example 2.5** (a node). Let $n=2$ and $P(T)=T(T-\pi)$, so that $\gamma_0=\left(\begin{smallmatrix}0&0\\1&\pi\end{smallmatrix}\right)$. The spectral curve is the union of the lines $T=0$ and $T=\pi$, which meet transversally, so we have an ordinary node with two branches. Algebraically,
-$$E=\breve F[T]/\big(T(T-\pi)\big)\xrightarrow{\ \sim\ }\breve F\times\breve F,\qquad f\longmapsto\big(f(0),f(\pi)\big).$$
-The image of $B$ consists of the pairs $(c_0,c_0+c_1\pi)$, so
-$$B=\{(x,y)\in\breve{\mathcal O}^2:\ x\equiv y\bmod\pi\},\qquad B^\flat=\breve{\mathcal O}\times\breve{\mathcal O}.$$
-Hence $B^\flat/B\cong\bar k$ and $\delta=1$. This agrees with Serre's formula: $d=\mathrm{val}\big((0-\pi)^2\big)=2$ and $c=2-2=0$.
+**Example 2.5** (a node). For $P=T(T-\pi)$, evaluation at $0,\pi$ identifies $E$ with $\breve F^2$ and gives
+$$
+B=\{(x,y)\in\breve{\mathcal O}^2:x\equiv y\bmod\pi\},\qquad
+B^\flat=\breve{\mathcal O}^2,\qquad
+(d,c,\delta)=(2,0,1).
+$$
+The symmetry group has component lattice $\mathbb Z^2$ and $\mathcal R_a\cong\mathbb G_m$ via $(x,y)\mapsto\bar x/\bar y$.
 
-The symmetry group is easy to write down. The map $(x,y)\mapsto\bar x/\bar y$ identifies $\mathcal R_a=(B^\flat)^\times/B^\times$ with $\mathbb G_m$, and $(x,y)\mapsto(\mathrm{val}\,x,\mathrm{val}\,y)$ identifies $\pi_0(\mathcal P(J_a))=E^\times/(B^\flat)^\times$ with $\mathbb Z^2$.
-
-Let us now determine all $B$-lattices $L\subset E=\breve F^2$. The key observation is that the ring $\{x\in E:xL\subset L\}$ is an order containing $B$, and since $B^\flat/B$ is one-dimensional, it must be either $B^\flat$ or $B$.
-
-- If it is $B^\flat$, then $L$ is a $B^\flat$-module, so $L=L_{m,n}:=\pi^m\breve{\mathcal O}\oplus\pi^n\breve{\mathcal O}$ for some $(m,n)\in\mathbb Z^2$. These lattices are not regular: $T$ acts on $E$ as $(0,\pi)$, hence by zero on $L_{m,n}/\pi L_{m,n}$.
-- If it is $B$, then $L$ is an invertible $B$-module, because $B$ is Gorenstein (it is a complete intersection). Since $B$ is local, $L$ is then free, $L=xB$, and it is regular.
-
-To see how these two kinds of lattices fit together, fix $(m,n)$, and consider the lattices $L$ with $\pi L_{m,n}\subset L\subset L_{m,n}$ and $\dim_{\bar k}L_{m,n}/L=1$. They correspond to lines in $L_{m,n}/\pi L_{m,n}\cong\bar k^2$, so they form a projective line
-$$C_{m,n}=\big\{L_c:=\pi L_{m,n}+\breve{\mathcal O}\cdot(\pi^m,c\,\pi^n)\ :\ c\in\mathbb P^1\big\}.$$
-Each $L_c$ is stable under $T=(0,\pi)$, so it is a $B$-lattice. For $c\in\bar k^\times$ one checks that $L_c=(\pi^m,c\,\pi^n)B$, so this is a regular point. The two remaining points are $L_0=L_{m,n+1}$ and $L_\infty=L_{m+1,n}$. Finally, every free lattice can be written as $(\pi^m,c\,\pi^n)B$ after multiplying its generator by a unit of $B$, so we conclude that
-$$\mathcal M_a=\bigcup_{(m,n)\in\mathbb Z^2}C_{m,n},$$
-where the line $C_{m,n}$ joins the non-regular points $L_{m,n+1}$ and $L_{m+1,n}$. Each non-regular point lies on exactly two lines, $C_{m,n}\cap C_{m+1,n-1}=\{L_{m+1,n}\}$. So for each value of $\mathrm{val}\det=m+n+1$ we get an infinite chain of projective lines, as in Figure 4(a).
+For a $B$-lattice $L$, its saturation $B^\flat L$ is some $L_{m,n}=\pi^m\breve{\mathcal O}\oplus\pi^n\breve{\mathcal O}$. Since $\pi B^\flat\subset B$, we have $\pi L_{m,n}\subseteq L\subseteq L_{m,n}$. The image of $L$ modulo $\pi L_{m,n}$ projects onto both coordinate lines. The full plane gives $L_{m,n}$, where $T=(0,\pi)$ acts by zero modulo $\pi$. A line with both projections nonzero gives the free lattice $(\pi^m,c\pi^n)B$. Allowing every line in the plane gives the component
+$$
+C_{m,n}=\big\{\pi L_{m,n}+\breve{\mathcal O}(\pi^m,c\pi^n):c\in\mathbb P^1\big\},\qquad
+c=0\longmapsto L_{m,n+1},\qquad c=\infty\longmapsto L_{m+1,n}.
+$$
+At $c=\infty$ the line is generated by the second basis vector. The intersection $C_{m,n}\cap C_{m+1,n-1}$ is the point $L_{m+1,n}$.
 
 ![[affine-springer-fig4-node-chains.svg]]
 
-*Figure 4. (a) Two of the chains that make up $\mathcal M_a$ for the node. Blue: free lattices (regular). Red circles: the lattices $L_{m,n}$ (non-regular). (b) The quotient by $\Lambda=\mathbb Z^2$.*
+*Figure 4. (a) Projective lines at two values of $\mathrm{val}\det=m+n+1$. (b) The quotient by $\Lambda=\mathbb Z^2$.*
 
-Let us describe Figure 4(a) in words. Each line $C_{m,n}$ is a copy of $\mathbb P^1$ with coordinate $c$, and its two red points are $L_0=L_{m,n+1}$ and $L_\infty=L_{m+1,n}$. The rest of the line, where $c\in\bar k^\times$, is a single orbit of $\mathcal R_a\cong\mathbb G_m$, which acts by rescaling $c$. Multiplication by $(\pi,\pi^{-1})$ moves each line one step along its chain, and multiplication by $(\pi,1)$ moves it to the next chain, where $\mathrm{val}\det$ is one larger.
+Each blue open line is a $\mathbb G_m$-orbit. Its endpoints are the two red non-regular lattices. Multiplication by $(\pi,\pi^{-1})$ moves along a chain and $(\pi,1)$ moves between chains. In the quotient one line remains and its two endpoints are identified. Example 8.2 counts these two orbits over $k$.
 
-It is remarkable that this small example already shows everything we will prove in general:
-- the dimension of $\mathcal M_a$ is $1=\delta$ (Theorem 3.3);
-- the regular locus is the disjoint union of the open orbits $C_{m,n}\smallsetminus\{0,\infty\}\cong\mathbb G_m$, i.e. a copy of $\mathcal P(J_a)\cong\mathbb Z^2\times\mathbb G_m$ (Proposition 1.8), and it is dense (Proposition 6.1);
-- the irreducible components $C_{m,n}$ are indexed by $\mathbb Z^2=\pi_0(\mathcal P(J_a))$ (Corollary 6.2);
-- the lattice $\Lambda=\mathbb Z^2$, acting by multiplication by $(\pi^i,\pi^j)$, acts freely, and the quotient $\mathcal M_a/\Lambda$ is a single projective line with $0$ and $\infty$ glued together: a nodal rational curve (Figure 4(b)), which is projective (Proposition 1.9).
-
-This is the example treated in Ngô §8.3 ("un cas très simple"), where it is used to check the fundamental lemma by hand. We will do the same in Example 8.2.
-
-**Example 2.6** (a smooth point and a cusp). It is instructive to compare the node with two other germs for $n=2$. In both cases $E=\breve F(\sqrt\pi)$ is a ramified quadratic extension, so $s=1$ and $c=1$.
-
-If $P(T)=T^2-\pi$, the spectral curve is smooth. Then $B=\breve{\mathcal O}[\sqrt\pi]=\mathcal O_E=B^\flat$ and $\delta=0$ (indeed $d=\mathrm{val}(4\pi)=1$). Every $B$-lattice is a fractional ideal $\pi^{m/2}\mathcal O_E$, so $\mathcal M_a=\mathcal M_a^{\mathrm{reg}}\cong E^\times/\mathcal O_E^\times=\mathbb Z$ is discrete.
-
-If $P(T)=T^2-\pi^3$, the curve has a cusp. Then $B=\breve{\mathcal O}[\pi\sqrt\pi]=\breve{\mathcal O}+\pi\mathcal O_E$ and $B^\flat=\mathcal O_E$, with $B^\flat/B\cong\bar k$, so $\delta=1$ (indeed $d=\mathrm{val}(4\pi^3)=3$). This time $\mathcal R_a=\mathcal O_E^\times/B^\times\cong\mathbb G_a$, via $u_0+u_1\sqrt\pi\mapsto\overline{u_1/u_0}$; in other words, the symmetry group is unipotent rather than a torus. The regular lattices $\pi^{m/2}(1+c\sqrt\pi)B$, $c\in\bar k$, form an affine line, and as $c\to\infty$ they converge to the single non-regular lattice $\pi^{(m+1)/2}\mathcal O_E$. So $\mathcal M_a$ is a disjoint union of projective lines, indexed by $\mathbb Z$.
-
-To summarize, roughly speaking: a node gives a torus and chains of lines, a cusp gives an additive group and isolated lines, and a smooth point gives no continuous symmetries at all.
+**Example 2.6** (a smooth point and a cusp). Put $u=\sqrt\pi$, so $E=\breve F(u)$ and $B^\flat=\breve{\mathcal O}[u]$ in both cases:
+$$
+\begin{aligned}
+P=T^2-\pi&\colon & B&=B^\flat, & \delta_a&=(1-1)/2=0,\\
+P=T^2-\pi^3&\colon & B&=\breve{\mathcal O}+\pi B^\flat, & \delta_a&=(3-1)/2=1.
+\end{aligned}
+$$
+In the smooth case all lattices are $u^mB^\flat$, so the reduced fiber is discrete. In the cusp case, the map $u_0+u_1u\mapsto\overline{u_1/u_0}$ identifies $(B^\flat)^\times/B^\times$ with $\mathbb G_a$. Fixing $M=u^mB^\flat$, the projective line of lattices between $\pi M$ and $M$ of colength one has regular points $u^m(1+cu)B$, $c\in\bar k$. The remaining point gives $u^{m+1}B^\flat$. Indeed, these regular points are exactly the residue lines generating $M$ over $B^\flat$, and the full residue plane gives a lattice $M$ that occurs as an endpoint of the preceding component. Thus the reduced fiber is a disjoint union of projective lines indexed by $m\in\mathbb Z$.
 
 ## 3. Dimension
 
-(Ngô §3.7.) We now return to a general group $G$, and we start with the dimension of $\mathcal M_a$. By Proposition 1.8 the regular locus is a copy of $\mathcal P(J_a)$, so the question splits naturally into two parts: how big is $\mathcal P(J_a)$, and is the boundary smaller? The second question was answered by Kazhdan and Lusztig.
+**Proposition 3.1** (Kazhdan–Lusztig; Ngô 3.7.1).
+$$
+\dim\big(\mathcal M_a\smallsetminus\mathcal M_a^{\mathrm{reg}}\big)
+<\dim\mathcal M_a=\dim\mathcal M_a^{\mathrm{reg}}.
+$$
 
-**Proposition 3.1** (Kazhdan–Lusztig; Ngô 3.7.1). $\dim\mathcal M_a=\dim\mathcal M_a^{\mathrm{reg}}$. More precisely, the complement $\mathcal M_a\smallsetminus\mathcal M_a^{\mathrm{reg}}$ has strictly smaller dimension than $\mathcal M_a$.
-
-*Sketch of proof.* The idea is to compare with the affine Springer fiber in the affine flag variety,
-$$\mathcal B_a=\{g\in G(\breve F)/\mathrm{Iw}\ :\ \mathrm{ad}(g)^{-1}\gamma_0\in\mathrm{Lie}(\mathrm{Iw})\},$$
-where $\mathrm{Iw}$ is an Iwahori subgroup. Kazhdan and Lusztig proved that $\mathcal B_a$ is equidimensional; for classical Springer fibers this is due to Spaltenstein. The projection $\mathcal B_a\to\mathcal M_a$ is finite over $\mathcal M_a^{\mathrm{reg}}$, since a regular element lies in only finitely many Borel subalgebras, while over a non-regular point its fiber is a classical Springer fiber of positive dimension. Equidimensionality then forces the boundary to be smaller. ∎
+*Sketch of proof.* For an Iwahori subgroup $\mathrm{Iw}\subset G(\breve{\mathcal O})$, the affine flag Springer fiber $\mathcal B_a$ is equidimensional by Kazhdan–Lusztig. In the map
+$$
+\mathcal B_a=
+\{[g]\in G(\breve F)/\mathrm{Iw}:\mathrm{ad}(g)^{-1}\gamma_0\in\mathrm{Lie}(\mathrm{Iw})\}
+\longrightarrow\mathcal M_a,
+$$
+the fibers are classical Springer fibers of the reductions of $\mathrm{ad}(g)^{-1}\gamma_0$. They are finite over $\mathcal M_a^{\mathrm{reg}}$ and positive-dimensional over the boundary. ∎
 
 **Corollary 3.2** (Ngô 3.7.2). If $\dim\mathcal M_a=0$, then $\mathcal M_a=\mathcal M_a^{\mathrm{reg}}$.
 
-This simple consequence will be used again in the next talk. The dimension of $\mathcal P(J_a)$, on the other hand, is given by a formula that was conjectured by Kazhdan and Lusztig and proved by Bezrukavnikov. It involves two invariants of $a$. The first one measures how deeply the arc $a$ dips into the discriminant:
-$$d(a):=\deg(a^*\mathfrak D)=\mathrm{val}\Big(\prod_{\alpha\in\Phi}\alpha(\gamma_0)\Big).$$
-For the second one, we restrict $a$ to the punctured disc and pull back the étale $W$-cover $\mathfrak t^{\mathrm{rs}}\to\mathfrak c^{\mathrm{rs}}$. This gives a $W$-torsor over $\breve F$, that is, after choosing a base point, a homomorphism $\pi_a:I\to W$ from the inertia group. Since $p\nmid|W|$, it factors through the tame inertia, so its image is cyclic. We put
-$$c(a):=\dim\mathfrak t-\dim\mathfrak t^{\pi_a(I)}.$$
-Intuitively, this number measures how ramified the torus $J_{a,\breve F}$ is.
+The discriminant gives the contact order $d(a)$. Pulling back $\mathfrak t^{\mathrm{rs}}\to\mathfrak c^{\mathrm{rs}}$ to $\mathrm{Spec}\,\breve F$ gives a $W$-torsor with inertia action $\pi_a\colon I\to W$. Its image is tame and cyclic since $p\nmid|W|$. For a lift $\widetilde a\in\mathfrak t(\breve F^{\mathrm{sep}})$ of the generic point,
+$$
+d(a)=\deg(a^*\mathfrak D)=\sum_{\alpha\in\Phi}\mathrm{val}\big(d\alpha(\widetilde a)\big),
+\qquad c(a)=\dim\mathfrak t-\dim\mathfrak t^{\pi_a(I)}.
+$$
 
-**Theorem 3.3** (Bezrukavnikov; Ngô §3.7).
-$$\dim\mathcal M_a^{\mathrm{reg}}=\dim\mathcal P(J_a)=\frac{d(a)-c(a)}{2}.$$
-
-Ngô writes $\delta_a:=\dim\mathcal P(J_a)$ and calls it the local δ-invariant. The name is justified by the linear case. Indeed, for $GL_n$ the inertia permutes the roots of $P$, with one orbit for each factor $E_i$, so $c(a)=n-s$, and Theorem 3.3 is exactly Serre's formula (Corollary 2.4). Another special case is also worth noting. When the torus $J_{a,\breve F}$ is unramified we have $c(a)=0$, and then $\delta_a=\sum_{\alpha>0}\mathrm{val}\,\alpha(\gamma_0)$ is the sum of the root valuations. For instance, in Example 2.5 there is one positive root, and its valuation is $\mathrm{val}(0-\pi)=1$. We will not prove Theorem 3.3, but the next section gives a second formula for $\delta_a$, which generalizes $\delta=\dim_{\bar k}B^\flat/B$.
+**Theorem 3.3** (Bezrukavnikov; Ngô 3.7.5).
+$$
+\delta_a:=\dim\mathcal P(J_a)=\dim\mathcal M_a^{\mathrm{reg}}=\frac{d(a)-c(a)}2.
+$$
+For $GL_n$, inertia permutes the roots with $s$ orbits, giving $c(a)=n-s$. If the torus $J_{a,\breve F}$ is unramified, then $c(a)=0$ and $\delta_a=\sum_{\alpha>0}\mathrm{val}(d\alpha(\widetilde a))$.
 
 ## 4. The Néron model
 
-(Ngô §3.8.) Let us recall how we obtained the structure of $\mathcal P(J_a)$ in the linear case. There, everything came from the normalization $B^\flat$: the units of $B^\flat$ form the bounded part of $E^\times$, and the exact sequence (2.1) split $\mathcal P(J_a)$ into an algebraic group and a lattice. For a general group there is no ring $B$, so we need a replacement for $B^\flat$. It turns out that the role of $B^\flat$ is played by the Néron model of $J_a$.
+The normalization $B^\flat$ in §2 is the linear case of a construction for any $J_a$.
 
-**Definition 4.1.** The Néron model $J_a^\flat$ of $J_a$ is the unique smooth group scheme of finite type over $\breve{\mathcal O}$ with generic fiber $J_{a,\breve F}$ which is maximal for this property: every smooth group scheme of finite type over $\breve{\mathcal O}$ with the same generic fiber maps to $J_a^\flat$, compatibly with the identity on generic fibers.
+**Definition 4.1.** The finite-type Néron model $J_a^\flat$ is the smooth finite-type group scheme over $\breve{\mathcal O}$ extending $J_{a,\breve F}$ such that every other smooth finite-type group model maps uniquely to it, inducing the identity on the generic fiber. Its integral points form the maximal bounded subgroup:
+$$
+J_a(\breve{\mathcal O})\subseteq J_a^\flat(\breve{\mathcal O})\subseteq J_a(\breve F).
+$$
+For $GL_n$, $J_a^\flat=\mathrm{Res}_{B^\flat/\breve{\mathcal O}}\mathbb G_m$.
 
-(Bosch, Lütkebohmert and Raynaud also construct a Néron model which is only locally of finite type; Ngô uses the finite type version.) In particular, there is a canonical homomorphism $J_a\to J_a^\flat$, and on points
-$$J_a(\breve{\mathcal O})\subset J_a^\flat(\breve{\mathcal O})\subset J_a(\breve F),$$
-where $J_a^\flat(\breve{\mathcal O})$ is the maximal bounded subgroup of the torus $J_a(\breve F)$. For example, for $GL_n$ we have $J_a^\flat=\mathrm{Res}_{B^\flat/\breve{\mathcal O}}\mathbb G_m$.
+Let $\breve D=\mathrm{Spec}\,\breve{\mathcal O}$. The cameral cover $\widetilde X_a=\breve D\times_{a,\mathfrak c}\mathfrak t$ is finite flat, generically étale, and carries a $W$-action. Let $\widetilde X_a^\flat$ be its normalization.
 
-The Néron model can be constructed quite explicitly, by the same recipe as $J$ itself, after a normalization. Let $\widetilde X_a=D\times_{a,\mathfrak c}\mathfrak t$ be the cameral cover of the disc attached to $a$. It is finite and flat over $D$, generically étale, and carries an action of $W$. Let $\widetilde X_a^\flat$ be its normalization.
+**Proposition 4.2** (Ngô 3.8.2). With diagonal $W$-action,
+$$
+J_a^\flat=\left(\mathrm{Res}_{\widetilde X_a^\flat/\breve D}(T\times_k\widetilde X_a^\flat)\right)^W.
+$$
+This is the description of the generic torus by cameral descent applied to the normalized cover.
 
-**Proposition 4.2** (Ngô 3.8.2). The Néron model is the group of fixed points of $W$, acting diagonally, on the Weil restriction of the constant torus:
-$$J_a^\flat=\Big(\mathrm{Res}_{\widetilde X_a^\flat/D}\big(T\times\widetilde X_a^\flat\big)\Big)^W.$$
+**Lemma 4.3** (Ngô 3.8.1). There is an exact sequence
+$$
+1\longrightarrow\mathcal R_a\longrightarrow\mathcal P(J_a)
+\longrightarrow\mathcal P(J_a^\flat)\longrightarrow1,
+\qquad
+\mathcal R_a(\bar k)=J_a^\flat(\breve{\mathcal O})/J_a(\breve{\mathcal O}).
+$$
+Here $\mathcal R_a$ is an affine algebraic group of finite type and $\mathcal P(J_a^\flat)$ is topologically a free abelian group of finite rank.
 
-It may help to compare this with the Galois description of $J$ due to Donagi and Gaitsgory (Ngô 2.4): over $\mathfrak c^{\mathrm{rs}}$, $J=\big(\mathrm{Res}_{\mathfrak t/\mathfrak c}(T\times\mathfrak t)\big)^W$. So Proposition 4.2 says that the Néron model is obtained by the same construction, applied to the normalized cameral cover. For $GL_n$ this is just the statement that the units of the normalization $B^\flat$ give the Néron model.
-
-Replacing $J_a$ by $J_a^\flat$ in Definition 1.7, we obtain a group ind-scheme $\mathcal P(J_a^\flat)$ and a homomorphism $\mathcal P(J_a)\to\mathcal P(J_a^\flat)$. The following lemma describes this homomorphism.
-
-**Lemma 4.3** (Ngô 3.8.1). The group $\mathcal P(J_a^\flat)$ is discrete and isomorphic to a free abelian group of finite rank. The homomorphism $\mathcal P(J_a)\to\mathcal P(J_a^\flat)$ is surjective, and its kernel $\mathcal R_a$ is an affine algebraic group of finite type over $\bar k$, with $\mathcal R_a(\bar k)=J_a^\flat(\breve{\mathcal O})/J_a(\breve{\mathcal O})$. Thus there is an exact sequence
-$$1\longrightarrow\mathcal R_a\longrightarrow\mathcal P(J_a)\longrightarrow\mathcal P(J_a^\flat)\longrightarrow1.$$
-
-*Proof.* $\mathcal P(J_a^\flat)(\bar k)=J_a(\breve F)/J_a^\flat(\breve{\mathcal O})$ is the quotient of a torus by its maximal bounded subgroup, which is free of finite rank; for a split torus it is the cocharacter lattice. Surjectivity is clear on points. For $N$ large, $J_a(\breve{\mathcal O})$ contains the kernel of the reduction map $J_a^\flat(\breve{\mathcal O})\to J_a^\flat(\breve{\mathcal O}/\pi^N)$. Hence $\mathcal R_a$ is a quotient of the Weil restriction of $J_a^\flat\otimes\breve{\mathcal O}/\pi^N$ from $\breve{\mathcal O}/\pi^N$ to $\bar k$, which is a smooth affine algebraic group of finite type. ∎
-
-This is the general version of Lemma 2.3, and the proof is essentially the same, with the conductor replaced by a power of $\pi$. So $\mathcal P(J_a)$ always looks as in the linear case: an affine algebraic group $\mathcal R_a$, consisting of the symmetries that preserve the integral structure as much as possible, extended by a lattice of translations. By Theorem 3.3 we have $\dim\mathcal R_a=\delta_a$, and the Néron model gives a formula for this number which directly generalizes $\dim_{\bar k}(B^\flat/B)$.
+*Proof.* The right-hand term on geometric points is the generic torus modulo its maximal bounded subgroup. For large $N$, the kernel of reduction of $J_a^\flat(\breve{\mathcal O})$ modulo $\pi^N$ lies in $J_a(\breve{\mathcal O})$. The quotient defining $\mathcal R_a$ thus comes from a finite jet group. ∎
 
 **Corollary 4.4** (Ngô 3.8.3). Write $\widetilde X_a=\mathrm{Spec}\,\widetilde{\mathcal O}$ and $\widetilde X_a^\flat=\mathrm{Spec}\,\widetilde{\mathcal O}^\flat$. Then
-$$\delta_a=\dim_{\bar k}\big(\mathfrak t\otimes_{\breve{\mathcal O}}\widetilde{\mathcal O}^\flat/\widetilde{\mathcal O}\big)^W.$$
-
-The other invariant $c(a)$ also has a nice meaning here: it is the drop of the toric rank of the Néron model, that is, the rank of $T$ minus the toric rank of the special fiber of $J_a^\flat$. For example, in Example 2.5, $J_a^\flat=\mathbb G_m^2$ has special fiber a torus of rank $2$, and $c=0$. In Example 2.6, the special fiber of $\mathrm{Res}_{\mathcal O_E/\breve{\mathcal O}}\mathbb G_m$ is $(\bar k[\varepsilon]/\varepsilon^2)^\times\cong\mathbb G_m\times\mathbb G_a$, of toric rank $1$, and $c=1$.
+$$
+\delta_a=\dim\mathcal R_a=
+\dim_{\bar k}\left(\mathfrak t\otimes_k(\widetilde{\mathcal O}^\flat/\widetilde{\mathcal O})\right)^W.
+$$
+The other invariant is $c(a)=\mathrm{rk}\,T-\mathrm{rk}_{\mathrm{tor}}(J_a^\flat\times_{\breve D}\mathrm{Spec}\,\bar k)$. For the node of Example 2.5 the special fiber is $\mathbb G_m^2$. For Example 2.6 it is $(\bar k[u]/u^2)^\times\cong\mathbb G_m\times\mathbb G_a$.
 
 ## 5. Connected components
 
-(Ngô §3.9.) Next we compute the group of connected components $\pi_0(\mathcal P(J_a))$. In the linear case it was the free group $E^\times/(B^\flat)^\times\cong\mathbb Z^s$. In general, two new phenomena appear: $\pi_0$ can have torsion, and it is naturally described in terms of the dual group. As we will see, this is the place where the dual group, and with it endoscopy, enters the geometry.
+Let $J_a^0$ be the model with neutral fibers. Smoothness identifies $J_a(\breve{\mathcal O})/J_a^0(\breve{\mathcal O})$ with the group of geometric components $\pi_0(J_{a,v})$ of the special fiber. We have
+$$
+1\longrightarrow\pi_0(J_{a,v})\longrightarrow\mathcal P(J_a^0)
+\longrightarrow\mathcal P(J_a)\longrightarrow1.
+$$
+For instance, for $SL_2$ the norm-one equation is $u^2-av^2=1$. If $\pi\mid a$, the special fiber is $\mu_2\times\mathbb G_a$.
 
-Part of the torsion comes from $J_a$ itself, whose fibers need not be connected. For $GL_n$ they are connected, because the center of $GL_n$ is connected (Ngô 2.3.1). For $SL_2$, however, the regular centralizer is $J_a=\{u+vT:u^2-av^2=1\}$ inside $\mathrm{Res}_{B/\breve{\mathcal O}}\mathbb G_m$, with $B=\breve{\mathcal O}[T]/(T^2-a)$. If $\pi\mid a$, its special fiber is $\{u=\pm1\}\cong\mu_2\times\mathbb G_a$, which is disconnected. (Among groups of semisimple rank one, $SL_2$ is in fact the only one with this behavior, Ngô 2.4.7.) In general, let $J_a^0\subset J_a$ be the open subgroup scheme of neutral components. Then $\pi_0(J_{a,v}):=J_a(\breve{\mathcal O})/J_a^0(\breve{\mathcal O})$ is a finite group, and there is an exact sequence
-$$1\longrightarrow\pi_0(J_{a,v})\longrightarrow\mathcal P(J_a^0)\longrightarrow\mathcal P(J_a)\longrightarrow1.$$
-So $\pi_0(\mathcal P(J_a))$ is the quotient of $\pi_0(\mathcal P(J_a^0))$ by the image of $\pi_0(J_{a,v})$.
+Write $\Lambda^*=\mathrm{Spec}\,\overline{\mathbb Q}_\ell[\Lambda]$ for the diagonalizable group with character group $\Lambda$. Let $W_a=\pi_a(I)$ and $\widehat H_\kappa=Z_{\widehat G}(\kappa)^0$ for $\kappa\in\widehat T$.
 
-The answer is best stated by duality. For a finitely generated abelian group $\Lambda$, write $\Lambda^*=\mathrm{Spec}\,\overline{\mathbb Q}_\ell[\Lambda]$ for the diagonalizable group with character group $\Lambda$. Let $\hat T$ be the dual torus, with its action of $W$, and recall the monodromy $\pi_a:I\to W$ from §3.
+**Theorem 5.1** (Ngô 3.9.2).
+$$
+\begin{aligned}
+\pi_0(\mathcal P(J_a^0))&\cong X_*(T)_{W_a},
+& \pi_0(\mathcal P(J_a^0))^*&\cong\widehat T^{W_a},\\
+\pi_0(\mathcal P(J_a))^*&\cong
+\{\kappa\in\widehat T^{W_a}:W_a\subseteq W(\widehat H_\kappa,\widehat T)\}.
+\end{aligned}
+$$
+The first identity uses $\pi_0(\mathcal P(J_a^0))=J_a(\breve F)/J_a^{\flat,0}(\breve{\mathcal O})$ and Kottwitz's torus formula. For the second, Ngô embeds $G$ in a group with connected center and takes the image on inertia coinvariants. Since $\pi_0(Z_G)\to\pi_0(J_{a,v})$ is surjective (Ngô 2.3.2), the exact sequence also gives
+$$\pi_0(\mathcal P(J_a))=X_*(T)_{W_a}/\mathrm{im}(\pi_0(Z_G)).$$
 
-**Theorem 5.1** (Ngô §3.9).
-1. $\pi_0(\mathcal P(J_a^0))\cong X_*(T)_{\pi_a(I)}$ (coinvariants); dually, $\pi_0(\mathcal P(J_a^0))^*\cong\hat T^{\pi_a(I)}$.
-2. $\pi_0(\mathcal P(J_a))^*\cong\hat T(\pi_a(I))$, where $\hat T(\pi_a(I))$ is the subgroup of those $\kappa\in\hat T^{\pi_a(I)}$ such that $\pi_a(I)$ is contained in the Weyl group of $\hat H_\kappa$, the neutral component of the centralizer of $\kappa$ in $\hat G$. Equivalently, $\pi_0(\mathcal P(J_a))=X_*(T)_{\pi_a(I)}/\mathrm{im}\,\pi_0(Z_G)$.
+For $GL_n$, $X_*(T)_{W_a}=\mathbb Z^s$ and $J_a$ has connected fibers. For $a=\pi$ in $SL_2$ and $PGL_2$, $W_a=W$ acts by inversion, giving $X_*(T)_W=\mathbb Z/2$. On the $SL_2$ side the class of the nontrivial element of $\mu_2$ kills this quotient, and the sole volume-zero stable lattice is $\mathcal O_E$. On the $PGL_2$ side the two components are represented by the homothety classes of $\mathcal O_E$ and $\sqrt\pi\,\mathcal O_E$.
 
-Let us say a few words about the proof. For the first part, one shows that $\pi_0(\mathcal P(J_a^0))=J_a(\breve F)/J_a^{\flat,0}(\breve{\mathcal O})$, where $J_a^{\flat,0}$ is the neutral component of the Néron model, and then uses Kottwitz's computation $A(\breve F)/A^{\flat,0}(\breve{\mathcal O})=X_*(A)_I$, valid for any torus $A$ over $\breve F$. For the second part, Ngô embeds $G$ into a group $G_1$ with connected center (a z-extension). For $G_1$ there is no difference between $J$ and $J^0$, and one shows that $\pi_0(\mathcal P(J_a))$ injects into the corresponding group for $G_1$. Rather than going into the details, let us check the statement in some examples.
-
-For $GL_n$, the inertia permutes the $n$ roots of $P$, with one orbit for each factor $E_i$. So $X_*(T)_{\pi_a(I)}=(\mathbb Z^n)_{\pi_a(I)}=\mathbb Z^s$, and since the center is connected, $\pi_0(\mathcal P(J_a))=\mathbb Z^s$, which agrees with what we found in Corollary 2.4.
-
-A more interesting example is $a=\pi$ in $\mathfrak{sl}_2$ or in $\mathfrak{pgl}_2$. This is a ramified elliptic element with $\delta=0$, and we have $\pi_a(I)=W=\{\pm1\}$ and $X_*(T)_W=\mathbb Z/2$ in both cases. For $SL_2$, the center $\mu_2$ maps onto this group, so $\pi_0(\mathcal P(J_a))=0$. This is indeed right: with $E=\breve F(\sqrt\pi)$, the only lattice stable under $\gamma_0$ with the same volume as $\breve{\mathcal O}^2$ is $\mathcal O_E$, so $\mathcal M_a$ is a point. For $PGL_2$, on the other hand, we get $\pi_0(\mathcal P(J_a))=\mathbb Z/2$, and indeed $\mathcal M_a$ consists of the two homothety classes of $\mathcal O_E$ and $\sqrt\pi\,\mathcal O_E$. It is instructive to look at the dual side as well. For $PGL_2$, the group $\hat T^W=\{\pm1\}\subset SL_2(\mathbb C)$ consists of central elements, so both of them are allowed. For $SL_2$, the element $\kappa=\mathrm{diag}(-1,1)\in PGL_2(\mathbb C)$ has $\hat H_\kappa=\hat T$, whose Weyl group is trivial and does not contain $\pi_a(I)=W$, so $\kappa$ is excluded.
-
-Why should we care about all this? The reason is that the κ-orbital integrals in the fundamental lemma are weighted by characters κ of $H^1(F,J_a)$, and we will see in §8 that the orbital integral of $1_{\mathfrak g(\mathcal O)}$ vanishes unless κ factors through $\pi_0(\mathcal P(J_a))$. So the κ's that matter locally are the Frobenius-invariant points of $\hat T(\pi_a(I))$, in other words those κ whose endoscopic group $\hat H_\kappa$ contains the monodromy of $a$. Informally, these are the κ for which $a$ comes from the endoscopic group. In this way Tate–Nakayama duality acquires a geometric meaning: components of the symmetry group correspond to points of the dual torus. (Compare [[Endoscopy]].)
+Dually, the element of order two in $\widehat T^W$ is central in the dual of $PGL_2$, whereas its centralizer in the dual of $SL_2$ has neutral component $\widehat T$ with trivial Weyl group. Thus the monodromy condition in Theorem 5.1 selects the endoscopic characters that can enter the orbital integral (§8 and [[Endoscopy]]).
 
 ## 6. Density of the regular orbit
 
-(Ngô §3.10.) We know from Proposition 3.1 that the boundary has smaller dimension than the regular locus. In fact, something stronger is true.
+**Proposition 6.1** (Ngô 3.10.1). $\mathcal M_a^{\mathrm{reg}}$ is dense in $\mathcal M_a$. Ngô deduces this from the global density result for Hitchin fibers.
 
-**Proposition 6.1** (Ngô 3.10.1). $\mathcal M_a^{\mathrm{reg}}$ is dense in $\mathcal M_a$.
-
-Interestingly, Ngô only sketches the proof of this local statement. It follows from the analogous statement for Hitchin fibers, which he proves in detail, and only the global statement is used in the rest of the paper. Since $\mathcal M_a^{\mathrm{reg}}\cong\mathcal P(J_a)$, we obtain the following consequence.
-
-**Corollary 6.2** (Ngô 3.10.2). The irreducible components of $\mathcal M_a$ are the closures of the connected components of $\mathcal M_a^{\mathrm{reg}}$. Hence they are in canonical bijection with $\pi_0(\mathcal P(J_a))$.
-
-For $GL_n$, Proposition 6.1 says that every $B$-lattice is a limit of free ones, and Corollary 6.2 says that the irreducible components of $\mathcal M_a$ are indexed by $\mathbb Z^s$. One can view this as a local analogue of a theorem of Altman, Iarrobino, Kleiman and Rego: the compactified Jacobian of an integral curve with planar singularities is irreducible, with the Jacobian as a dense open subset. (Our curve $\mathrm{Spec}\,B$ is planar because $B$ is generated by one element.) In Example 2.5, for instance, the components are the lines $C_{m,n}$, indexed by $\mathbb Z^2$.
-
-Since every component is the closure of an orbit of the neutral component of $\mathcal P(J_a)$, all components have dimension $\delta_a$. As a consequence, Corollary 6.2 identifies the top-degree Borel–Moore homology of $\mathcal M_a$ with $\overline{\mathbb Q}_\ell[\pi_0(\mathcal P(J_a))]$, on which $\mathcal P(J_a)$ acts by translations. Roughly speaking, the global analogue of this statement is how Ngô detects the characters κ in the cohomology of Hitchin fibers.
+**Corollary 6.2** (Ngô 3.10.2). The irreducible components are the closures of the connected components of $\mathcal M_a^{\mathrm{reg}}$. Together with Proposition 1.8 this gives
+$$
+\mathrm{Irr}(\mathcal M_a)\cong\pi_0(\mathcal P(J_a)),\qquad
+H_{2\delta_a}^{\mathrm{BM}}(\mathcal M_a,\overline{\mathbb Q}_\ell)(-\delta_a)
+\cong\overline{\mathbb Q}_\ell[\pi_0(\mathcal P(J_a))].
+$$
+The local Picard group acts by translation on these component classes. For $GL_n$, every $B$-lattice is a limit of free lattices, as in the planar compactified Jacobian. At the node each component is a line $C_{m,n}$.
 
 ## 7. Comparison with an endoscopic group
 
-(Ngô §3.11.) Let us now explain how the symmetry groups for $G$ and for an endoscopic group are related. Let $H$ be an endoscopic group of $G$ attached to some κ, let $\nu:\mathfrak c_H\to\mathfrak c$ be the corresponding map, and let $a_H\in\mathfrak c_H(\breve{\mathcal O})$ with $a=\nu(a_H)\in\mathfrak c^\heartsuit(\breve{\mathcal O})$. There is no direct relation between the affine Springer fibers $\mathcal M_{H,a_H}$ and $\mathcal M_a$, but, as it turns out, there is one between their symmetry groups. By Ngô 2.5.1 there is a homomorphism
-$$\mu:J_a\longrightarrow J_{H,a_H}$$
-which is an isomorphism over the punctured disc: the two group schemes have the same generic fiber, because $G$ and $H$ share their maximal torus. Hence $J_a(\breve{\mathcal O})\subset J_{H,a_H}(\breve{\mathcal O})$ inside the common torus $J_a(\breve F)$, and we get an exact sequence
-$$1\longrightarrow\mathcal R^G_H(a_H)\longrightarrow\mathcal P(J_a)\longrightarrow\mathcal P(J_{H,a_H})\longrightarrow1,\qquad\mathcal R^G_H(a_H)(\bar k)=J_{H,a_H}(\breve{\mathcal O})/J_a(\breve{\mathcal O}).$$
-Intuitively, the group $\mathcal R^G_H(a_H)$ measures how much more symmetric the $G$-side is than the $H$-side.
+Let $H$ be endoscopic for $G$, with $\nu\colon\mathfrak c_H\to\mathfrak c$, and let $a=\nu(a_H)\in\mathfrak c^\heartsuit(\breve{\mathcal O})$. Ngô 2.5.1 gives $J_a\to J_{H,a_H}$, an isomorphism on the generic fiber. Thus
+$$
+1\longrightarrow\mathcal R_H^G(a_H)\longrightarrow\mathcal P(J_a)
+\longrightarrow\mathcal P(J_{H,a_H})\longrightarrow1,
+\qquad
+\mathcal R_H^G(a_H)(\bar k)=J_{H,a_H}(\breve{\mathcal O})/J_a(\breve{\mathcal O}).
+$$
 
-To compute its dimension, recall the resultant divisor $\mathfrak R^G_H$ on $\mathfrak c_H$ (Ngô 1.10.2), defined by $\nu^*\mathfrak D_G=\mathfrak D_H+2\mathfrak R^G_H$. On $\mathfrak t$ it is cut out by the product of $d\alpha$ over one root from each pair $\pm\alpha$ of roots of $G$ that are not roots of $H$.
+The resultant divisor $\mathfrak R_H^G$ satisfies $\nu^*\mathfrak D_G=\mathfrak D_H+2\mathfrak R_H^G$ (Ngô 1.10.3). Its pullback to $\mathfrak t$ is defined by one root differential from each pair $\pm\alpha$ in $\Phi_G\smallsetminus\Phi_H$.
 
-**Lemma 7.1** (Ngô §3.11). $\dim\mathcal R^G_H(a_H)=r^G_H(a_H):=\deg(a_H^*\mathfrak R^G_H)$.
+**Lemma 7.1** (Ngô 3.11.2). $\dim\mathcal R_H^G(a_H)=r_H^G(a_H):=\deg(a_H^*\mathfrak R_H^G)$.
 
-*Proof.* From the exact sequence, $\dim\mathcal R^G_H(a_H)=\delta_a-\delta_{a_H}$. The invariants $c(a)$ and $c(a_H)$ agree, since $J_a$ and $J_{H,a_H}$ have the same generic fiber. So Bezrukavnikov's formula gives
-$$\dim\mathcal R^G_H(a_H)=\tfrac12\big(d(a)-d(a_H)\big)=\tfrac12\deg a_H^*\big(\nu^*\mathfrak D_G-\mathfrak D_H\big)=\deg a_H^*\mathfrak R^G_H.$$
-(The corresponding display in the arXiv version omits the factor $\tfrac12$; this is a typo.) ∎
+*Proof.* The generic torus is the same, hence $c(a)=c(a_H)$. Theorem 3.3 gives
+$$
+\dim\mathcal R_H^G(a_H)=\delta_a-\delta_{a_H}
+=\tfrac12\big(d(a)-d(a_H)\big)=\deg(a_H^*\mathfrak R_H^G).
+$$
+The display in the arXiv proof drops the factor $\tfrac12$. ∎
 
-The number $r^G_H(a_H)$ is exactly the exponent in the fundamental lemma,
-$$\mathbf O^\kappa_a\big(1_{\mathfrak g(\mathcal O)}\big)=q^{\,r^G_H(a_H)}\,\mathbf{SO}_{a_H}\big(1_{\mathfrak h(\mathcal O)}\big),$$
-and Lemma 7.1 gives it a geometric meaning: the $G$-side has $r^G_H(a_H)$ more dimensions of symmetry than the $H$-side. Heuristically, one may imagine $[\mathcal M_a/\mathcal P(J_a)]_\kappa$ as fibered over $[\mathcal M_{H,a_H}/\mathcal P(J_{H,a_H})]_{\mathrm{st}}$, with fibers affine spaces of dimension $r^G_H(a_H)$; this would explain the factor $q^r$ in point counts. It should be stressed, however, that Ngô does not prove the fundamental lemma this way. The closure of the graph of $\mu$ gives a correspondence between $\mathcal M_a$ and $\mathcal M_{H,a_H}$, but he explicitly does not use it; instead, the identity comes from the global argument.
+The lemma gives the exponent of the transfer factor in
+$$
+\mathbf O_a^\kappa(1_{\mathfrak g(\mathcal O)})=
+q^{r_H^G(a_H)}\mathbf{SO}_{a_H}(1_{\mathfrak h(\mathcal O)}).
+$$
+The closure of the graph of the map on Picard groups gives a correspondence of affine Springer fibers. Ngô proves the transfer identity by passing to Hitchin fibers.
 
-For $GL_n$ everything is again explicit. An endoscopic group is a Levi subgroup, say $H=GL_{n_1}\times GL_{n_2}$, and $a_H$ corresponds to a factorization $P=P_1P_2$. Then $B=\breve{\mathcal O}[T]/(P)\subset B_1\times B_2$ with $B_i=\breve{\mathcal O}[T]/(P_i)$, and $\mathcal R^G_H(a_H)=(B_1\times B_2)^\times/B^\times$. In this case Lemma 7.1 becomes the classical fact that $\dim_{\bar k}(B_1\times B_2)/B=\mathrm{val}\,\mathrm{Res}(P_1,P_2)$. For instance, in Example 2.5 we have $P_1=T$ and $P_2=T-\pi$, the resultant is $\pi$, so $r=1$ and $\mathcal R^G_H(a_H)=\mathcal R_a\cong\mathbb G_m$.
+For the Levi $H=GL_{n_1}\times GL_{n_2}$, write $P=P_1P_2$ and $B_i=\breve{\mathcal O}[T]/(P_i)$. Then
+$$
+\mathcal R_H^G(a_H)(\bar k)=(B_1\times B_2)^\times/B^\times,
+\qquad
+r_H^G(a_H)=\dim_{\bar k}((B_1\times B_2)/B)=\mathrm{val}\,\mathrm{Res}(P_1,P_2).
+$$
+For $P_1=T$ and $P_2=T-\pi$, the resultant has valuation one and the kernel is $\mathbb G_m$.
 
 ## 8. Outlook: counting points
 
-(Ngô §8.2–8.3.) Finally, let us explain why all this is relevant to orbital integrals. For this we now work over $k$: $\mathcal M_a$ and $\mathcal P(J_a)$ are defined over $k$ and carry a Frobenius $\sigma$. An object of the groupoid $[\mathcal M_a/\mathcal P(J_a)](k)$ is a pair $(m,p)$ with $m\in\mathcal M_a(\bar k)$, $p\in\mathcal P(J_a)(\bar k)$ and $p\,\sigma(m)=m$. Its class $\mathrm{cl}(m,p)$ is the σ-conjugacy class of $p$, an element of $H^1(k,\mathcal P(J_a))$. If $J'_a$ is a model of $J_a$ with connected special fiber (for instance $J_a^0$), then Steinberg's theorem over $\breve F$ and Lang's theorem over $k$ give
-$$H^1(F,J_a)=H^1\big(k,\mathcal P(J'_a)\big).$$
-So the characters κ of $H^1(F,J_a)$, which are the weights in κ-orbital integrals, can be evaluated on these classes, and we define the κ-weighted count
-$$\#[\mathcal M_a/\mathcal P(J_a)](k)_\kappa=\sum_x\frac{\langle\mathrm{cl}(x),\kappa\rangle}{\#\mathrm{Aut}(x)},$$
-where the sum runs over the isomorphism classes of objects $x$.
+Work over $k$ and write $P_a=\mathcal P(J_a)$ and $\sigma$ for Frobenius. An object $x=(m,p)$ of $[\mathcal M_a/P_a](k)$ satisfies $p\sigma(m)=m$. Its class $\mathrm{cl}(x)$ in $H^1(k,P_a)$ is represented by $p$. The weighted mass is
+$$
+\#[\mathcal M_a/P_a](k)_\kappa
+=\sum_{[x]}\frac{\langle\mathrm{cl}(x),\kappa\rangle}{\#\mathrm{Aut}(x)}.
+$$
+For a model $J'_a\to J_a$ inducing an isomorphism on the generic fiber and having connected fibers, Steinberg and Lang identify $H^1(F,J_a)$ with $H^1(k,\mathcal P(J'_a))$. Taking $J'_a=J_a^0$ gives the map
+$$
+H^1(F,J_a)\cong H^1(k,\mathcal P(J_a^0))\longrightarrow H^1(k,P_a).
+$$
 
-**Proposition 8.1** (Ngô §8.2). For every Haar measure $dt$ on $J_a(F)$,
-$$\#[\mathcal M_a/\mathcal P(J_a)](k)_\kappa=\mathrm{vol}\big(J_a^0(\mathcal O),dt\big)\cdot\mathbf O^\kappa_a\big(1_{\mathfrak g(\mathcal O)},dt\big).$$
-Moreover, $\mathbf O^\kappa_a(1_{\mathfrak g(\mathcal O)})=0$ if κ does not factor through $H^1(k,\mathcal P(J_a))$.
+**Proposition 8.1** (Ngô 8.2.5, 8.2.7). If $\kappa$ is a character of $H^1(k,P_a)$, pull it back to $H^1(F,J_a)$. For any Haar measure $dt$ on $J_a(F)$,
+$$
+\#[\mathcal M_a/P_a](k)_\kappa
+=\mathrm{vol}(J_a^0(\mathcal O),dt)\,\mathbf O^\kappa_a(1_{\mathfrak g(\mathcal O)},dt).
+$$
+A character of $H^1(F,J_a)$ that does not descend to $H^1(k,P_a)$ has zero orbital integral. The proof groups the integral structures by the rational conjugacy class in the stable class, then weights them by stabilizer volumes.
 
-The proof essentially unwinds the definitions, following Goresky, Kottwitz and MacPherson. Roughly speaking, the objects with a given class $\xi\in H^1(F,J_a)$ correspond to the integral structures preserved by the element $\gamma_\xi$ of the stable class with invariant ξ, up to the action of $J_a(F)$. These are exactly the terms of the orbital integral of $\gamma_\xi$, and summing over ξ with the weights $\langle\xi,\kappa\rangle$ gives $\mathbf O^\kappa_a$. Thanks to Proposition 1.9, the cohomology of $[\mathcal M_a/\Lambda]$ is finite-dimensional, and there is also a cohomological version: the alternating sum of the traces of Frobenius on the κ-parts of the cohomology of $[\mathcal M_a/\Lambda]$ equals $\mathrm{vol}(J_a^{\flat,0}(\mathcal O),dt)\cdot\mathbf O^\kappa_a(1_{\mathfrak g(\mathcal O)},dt)$.
+For a suitable Frobenius-stable lattice $\Lambda\subset\mathcal P(J_a^0)$, the cohomological version is (Ngô 8.2.10)
+$$
+\sum_i(-1)^i\mathrm{Tr}\big(\sigma,H^i(\mathcal M_a/\Lambda)_\kappa\big)
+=\mathrm{vol}(J_a^{\flat,0}(\mathcal O),dt)\,\mathbf O_a^\kappa(1_{\mathfrak g(\mathcal O)},dt).
+$$
 
-**Example 8.2** (the fundamental lemma for the node). Let us compute both sides of the fundamental lemma in Example 2.5, now over $k=\mathbb F_q$. So $G=GL_2$, $\gamma_0$ is the companion matrix of $P=T(T-\pi)$, and $H=T=GL_1\times GL_1$ is the diagonal torus, with $a_H=(T,\,T-\pi)$. The torus $J_{a,F}$ is split, so $H^1(F,J_a)=0$, and the κ-orbital integral is just the orbital integral. We normalize $dt$ by $\mathrm{vol}(T(\mathcal O))=1$, and we note that $T(\mathcal O)=J_a^\flat(\mathcal O)$. The torus $T(F)=E^\times$ acts on $\mathcal M_a(\mathbb F_q)$ with exactly two orbits: the lattices $L_{m,n}$, with stabilizer $T(\mathcal O)$, and the free lattices $xB$, with stabilizer $B^\times$, which is a subgroup of index $\#\mathcal R_a(\mathbb F_q)=\#\mathbb G_m(\mathbb F_q)=q-1$ in $T(\mathcal O)$. Hence
-$$\mathbf O_{\gamma_0}\big(1_{\mathfrak{gl}_2(\mathcal O)}\big)=\frac{1}{\mathrm{vol}\,T(\mathcal O)}+\frac{1}{\mathrm{vol}\,B^\times}=1+(q-1)=q.$$
-On the other side, $\mathbf{SO}_{a_H}(1_{\mathfrak t(\mathcal O)})=1$, since on a torus the orbital integral of $1_{\mathfrak t(\mathcal O)}$ at an integral point is just the volume of a point; and $r^G_H(a_H)=\mathrm{val}\,\mathrm{Res}(T,T-\pi)=1$. So the fundamental lemma predicts $q=q^1\cdot1$, which is indeed correct.
+**Example 8.2** (the fundamental lemma for the node). Return to $P=T(T-\pi)$ over $k$. Here $J_{a,F}=T_F$ is split, $H^1(F,J_a)=0$, and $H=T=GL_1\times GL_1$. The two $T(F)$-orbits are represented by the normalization lattice and the free $B$-lattice. Their stabilizers are $T(\mathcal O)$ and $B^\times$, with $B$ now defined over $\mathcal O$. Reduction of the ratio of units gives $[T(\mathcal O):B^\times]=q-1$. Normalize $\mathrm{vol}(T(\mathcal O))=1$. Then
+$$
+\mathbf O_{\gamma_0}(1_{\mathfrak{gl}_2(\mathcal O)})
+=1+(q-1)=q=q^1\,\mathbf{SO}_{a_H}(1_{\mathfrak t(\mathcal O)}).
+$$
+The stable torus integral is $1$ and the resultant has valuation one. Equivalently, the regular orbit has trivial stabilizer in $P_a$ and the boundary stabilizer is $\mathbb G_m$, so the quotient mass is $1+(q-1)^{-1}=q/(q-1)$. For $GL_n$ the general identity reduces to parabolic descent, with the same resultant factor.
 
-In the normalization of Proposition 8.1, where $\mathrm{vol}(J_a(\mathcal O))=\mathrm{vol}(B^\times)=1$, the same computation reads
-$$\#[\mathcal M_a/\mathcal P(J_a)](\mathbb F_q)=1+\frac{1}{q-1}=\frac{q}{q-1}.$$
-Here the regular orbit contributes $1$, since its stabilizer is trivial, and the non-regular orbit contributes $1/\#\mathcal R_a(\mathbb F_q)$, since its stabilizer is $\mathcal R_a\cong\mathbb G_m$.
+Ngô §8.3 treats $d(a)=2$, $c(a)=0$ for any $G$. A single pair of roots $\pm\alpha$ has positive valuation. Over $\bar k$, the orbit of $\pi^\lambda U_\alpha(x\pi^{-1})$ for $x\ne0$ closes to a line with endpoints $\pi^\lambda$ and $\pi^{\lambda-\alpha^\vee}$. For $A=T/\ker\alpha$ and a Frobenius-invariant finite-order $\kappa$ with $\kappa(\alpha^\vee)\ne1$, Ngô 8.3.8 gives
+$$
+\#[\mathcal M_a/P_a](k)_\kappa=\frac{q}{\#A(k)}.
+$$
 
-It should be said that for $GL_n$ the fundamental lemma is not deep: $H^1(F,J_a)$ is always trivial, endoscopic groups are Levi subgroups, and the identity reduces to parabolic descent, where the factor $q^{r^G_H}$ is $|D^G_H(\gamma_0)|^{-1/2}=q^{\mathrm{val}\,\mathrm{Res}(P_1,P_2)}$. Its real content lies in groups such as $SL_2$, $Sp_{2n}$ or $U_n$, where κ can be nontrivial.
-
-Ngô's §8.3 treats the general case $d(a)=2$, $c(a)=0$, of which Example 2.5 is an instance. In this case there is a unique pair of roots $\pm\alpha$ with valuation one, $\mathcal R_a$ is the one-dimensional torus $T/\ker\alpha$, and $\mathcal M_a$ is a disjoint union of infinite chains of projective lines: the closure of the $\mathcal R_a$-orbit of $\pi^\lambda U_\alpha(x\pi^{-1})$ adds the two points $\pi^\lambda$ and $\pi^{\lambda-\alpha^\vee}$. (In Example 2.5, $(m+1,n)-(m,n+1)=(1,-1)=\alpha^\vee$.) For κ with $\kappa(\alpha^\vee)\neq1$ one finds
-$$\#[\mathcal M_a/\mathcal P(J_a)](k)_\kappa=\frac{q}{\#(T/\ker\alpha)(k)}.$$
-Ngô uses computations of this kind to check the stabilization identity over a dense open part of the Hitchin base, where all local singularities are this mild; the support theorem then propagates the identity to the whole base.
-
-Let us end by summarizing how today's results are used in the global argument. The projectivity of $\mathcal M_a/\Lambda$ makes all point counts finite and all cohomology groups finite-dimensional. Approximation allows one to realize any local $a$ inside a global Hitchin fiber, so that local identities can be deduced from global ones. The δ-invariant controls the codimension of the strata of the Hitchin base, and this is the key geometric input of the support theorem. The description of $\pi_0(\mathcal P(J_a))$ through the dual torus matches the κ-decomposition of the cohomology of Hitchin fibers with endoscopy. Density identifies the top cohomology with functions on $\pi_0$. And, finally, Lemma 7.1 accounts for the factor $q^{r^G_H(a_H)}$. The global objects themselves, namely the Hitchin fibration and the symmetries of its fibers, are the subject of the next talk, which is written up in [[The Hitchin fibration]].
+On the Hitchin base, these local calculations supply identities on a dense open set. Approximation and the product formula connect local and global fibers. The $\delta$-invariant bounds the strata in the support argument, and the component group determines which endoscopic characters occur. The global geometry is the subject of [[The Hitchin fibration]].
 
 ## References
 
