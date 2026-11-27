@@ -13,7 +13,7 @@ date: 2026-10-30
 
 *Notes on the talk "Hitchin fibration", Ngô fundamental lemma seminar, 30 October 2026. Reference: B. C. Ngô, Le lemme fondamental pour les algèbres de Lie, Publ. Math. IHÉS 111 (2010), chapter 4, with numbering as in [arXiv:0801.0446](https://arxiv.org/abs/0801.0446). The previous talk is [[Affine Springer fibers and their symmetries]].*
 
-**A Hitchin fiber globalizes the affine Springer fiber.** The formal disc becomes a smooth projective curve $X$, and the local characteristic polynomial becomes a section $a$ on $X$. After a local recap (§1), the boards cover the Hitchin map and its symmetries (§§2–3, Ngô §§4.1–4.3) and spectral and cameral curves (§§4–5, Ngô §§4.5–4.7). Figures 1–3 redraw the board diagrams. The dimension formulas, proof sketches and results in §6 use Ngô’s paper.
+**A Hitchin fiber globalizes the affine Springer fiber.** The formal disc becomes a smooth projective curve $X$, and the local characteristic polynomial becomes a section $a$ on $X$. Varying $a$ in a finite-dimensional base lets us study local degenerations in one family. After a local recap (§1), the boards cover the Hitchin map and its symmetries (§§2–3, Ngô §§4.1–4.3) and spectral and cameral curves (§§4–5, Ngô §§4.5–4.7). Figures 1–3 redraw the board diagrams. The dimension formulas, proof sketches and results in §6 use Ngô’s paper.
 
 ## 1. The local picture
 
@@ -243,7 +243,9 @@ $$
 =\dim H^0(Y_a,\xi_*\mathcal O_{Y_a^\flat}/\mathcal O_{Y_a}).
 \end{gathered}
 $$
-Here $\mathcal R_a$ is connected and affine. Since $Y_a$ has planar singularities, $\operatorname{Pic}(Y_a)$ is dense in $\overline{\operatorname{Pic}}(Y_a)$ by Altman–Iarrobino–Kleiman (Ngô 4.7.4). Using $p_*\mathcal O_{Y_a}=\bigoplus_{i=0}^{n-1}D^{-i}$ as an $\mathcal O_{\bar X}$-module gives
+The kernel $\mathcal R_a$ is connected and affine. At a node it records the identification of the line fibers over the two preimages in the normalization. For general $G$, [[Stratifications of the Hitchin base#1. The affine part of the Picard stack|the next talk]] recovers the affine kernel from the Néron model of $J_a$.
+
+Since $Y_a$ has planar singularities, $\operatorname{Pic}(Y_a)$ is dense in $\overline{\operatorname{Pic}}(Y_a)$ by Altman–Iarrobino–Kleiman (Ngô 4.7.4). Using $p_*\mathcal O_{Y_a}=\bigoplus_{i=0}^{n-1}D^{-i}$ as an $\mathcal O_{\bar X}$-module gives
 $$
 \dim\mathcal P_a=p_a(Y_a)-1=-\chi(\mathcal O_{Y_a})
 =n(g-1)+\frac{n(n-1)}2\deg D,
@@ -317,13 +319,13 @@ $$
 \qquad \dim(\mathcal P|_{\mathcal A^\heartsuit})=(r+|\Phi|)\deg D.
 $$
 
-*Product formula* (Ngô 4.13.1). Put $S_a=\bar X\smallsetminus U_a$. Gluing local objects to the Kostant section on $U_a$ gives
+*Product formula* (Ngô 4.13.1). Put $S_a=\bar X\smallsetminus U_a$. On each punctured disc the [[Affine Springer fibers and their symmetries#1.2 Affine Springer fibers|local framing]] identifies the local pair with the Kostant pair on $U_a$. Gluing and then twisting by the global Picard stack gives
 $$
 \left(\prod_{v\in S_a}\mathcal M_{a,v}\right)
 \times^{\prod_{v\in S_a}\mathcal P_{a,v}}\mathcal P_a
 \longrightarrow\mathcal M_a.
 $$
-The map is an equivalence on geometric points. On the anisotropic locus $\mathcal A^{\mathrm{ani}}$, where $\pi_0(\mathcal P_a)$ is finite, Ngô proves that using the reductions of the local factors and groups gives a proper Deligne–Mumford source and a homeomorphism. The contracted product uses the action of local symmetries on the local fibers and the homomorphism from local to global symmetries.
+The contracted product identifies a change of local framing with the corresponding change of the global twist. The map is an equivalence on geometric points. On the anisotropic locus $\mathcal A^{\mathrm{ani}}$, where $\pi_0(\mathcal P_a)$ is finite, using the reductions of the local factors and groups gives a proper Deligne–Mumford source and a homeomorphism.
 
 *Density* (Ngô 4.14.1–4.14.3). The product formula controls the dimension of the non-regular locus. The total space $f^{-1}(\mathcal A^\heartsuit)$ is smooth over $k$ for $\deg D>2g-2$ (Ngô 4.12.1). The local complete intersection argument then rules out smaller irreducible components. For $a\in\mathcal A^\heartsuit$,
 $$

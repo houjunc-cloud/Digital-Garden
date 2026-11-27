@@ -64,7 +64,7 @@ $$
 \mathrm{ad}(g)^{-1}\gamma\in\mathfrak g(R[[\pi]])\right\}.
 $$
 
-A trivialization of $E$ identifies $\iota$ with $g$ and $\phi$ with $\mathrm{ad}(g)^{-1}\gamma$. For $GL_n$, the coset corresponds to $L=g\breve{\mathcal O}^{\,n}$, with condition $\gamma L\subseteq L$.
+A trivialization of $E$ identifies $\iota$ with $g$ and $\phi$ with $\mathrm{ad}(g)^{-1}\gamma$. For $GL_n$, the coset corresponds to $L=g\breve{\mathcal O}^{\,n}$, with condition $\gamma L\subseteq L$. A single generic operator can therefore have different reductions as the lattice varies.
 
 **Definition 1.4.** The regular locus $\mathrm{Gr}_\gamma^{\mathrm{reg}}$ is the open subfunctor where the classifying map of $(E,\phi)$ lands in $[\mathfrak g^{\mathrm{reg}}/G]$. On geometric points, this says
 
@@ -212,6 +212,8 @@ $$
 \longrightarrow\mathbb Z^s\longrightarrow0.\tag{2.1}
 $$
 
+The valuations distinguish independent rescalings of the branches. The unit quotient tracks the freedom in generators on the normalization. These local groups make up the global affine part studied in [[Stratifications of the Hitchin base]].
+
 **Lemma 2.3.** $(B^\flat)^\times/B^\times$ is the group of geometric points of a connected affine algebraic group $\mathcal R_a$ of dimension $\dim_{\bar k}(B^\flat/B)$.
 
 *Proof.* Choose $N$ so $\pi^N B^\flat$ is in the conductor. Dividing numerator and denominator by $1+\pi^N B^\flat$ reduces to the unit groups of finite-dimensional $\bar k$-algebras. Each unit group is open in the underlying affine space, so it is connected and has the dimension of that algebra. Subtracting the dimensions gives $\dim_{\bar k}(B^\flat/B)$. ∎
@@ -355,6 +357,8 @@ The other invariant is $c(a)=\mathrm{rk}\,T-\mathrm{rk}_{\mathrm{tor}}(J_a^\flat
 
 ## 5. Connected components
 
+The lattice in §4 gives the free quotient of the component group. The remaining torsion can affect which character weights appear in §8.
+
 Let $J_a^0$ be the model with neutral fibers. Smoothness identifies $J_a(\breve{\mathcal O})/J_a^0(\breve{\mathcal O})$ with the group of geometric components $\pi_0(J_{a,v})$ of the special fiber. We have
 
 $$
@@ -445,6 +449,8 @@ $$
 For $P_1=T$ and $P_2=T-\pi$, the resultant has valuation one and the kernel is $\mathbb G_m$.
 
 ## 8. Outlook: counting points
+
+The quotient groupoid retains the stabilizers that supply the orbital-integral weights. Frobenius descent records the class on which the character from [[Endoscopy]] is evaluated.
 
 Work over $k$ and write $P_a=\mathcal P(J_a)$ and $\sigma$ for Frobenius. An object $x=(m,p)$ of $[\mathcal M_a/P_a](k)$ satisfies $p\sigma(m)=m$. Its class $\mathrm{cl}(x)$ in $H^1(k,P_a)$ is represented by $p$. The weighted mass is
 

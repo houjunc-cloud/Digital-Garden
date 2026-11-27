@@ -52,9 +52,11 @@ Here $\mathfrak t$ and the action of $W$ are understood with the quasi-split des
 
 *Figure 1. Normalization and local Picard defects.*
 
-Normalization separates the branches. The affine kernel receives contributions only from the bad points.
+For an irreducible nodal spectral curve of $GL_n$, a line bundle on the normalization descends once we identify its two fibers above each node. Each identification gives one gluing parameter in $\mathbb G_m$. This is the simplest model for the local factors of $R_a$.
 
 ## 2. A marking and two monodromy groups
+
+For $GL_n$, marking is like numbering the eigenvalues at a regular point. Loops then give permutations of a specific set of labels, so we can compare monodromy subgroups as $a$ varies.
 
 **Definition 2.1** (Marked Hitchin base; Ngô 5.5.1–5.5.2). Fix $\infty\in X(\bar k)$ and set
 $$
@@ -93,6 +95,8 @@ The coinvariants impose the monodromy relations. Passing to $\mathcal P_a$ adds 
 The mark identifies the regular centralizer at $\infty$ with $T$. The fundamental groups of the punctured and complete curve distinguish monodromy from inertia.
 
 ## 3. Simultaneous normalization
+
+As an irreducible nodal curve smooths, its normalization has lower genus than the nearby smooth fibers. We stratify the base so that the normalizations fit into smooth families and their invariants can be followed together.
 
 **Definition 3.1** (Ngô 5.1.1). For a proper flat family of reduced curves $y:Y\to S$, a simultaneous normalization is a proper birational map $\xi:Y^\flat\to Y$ that is an isomorphism over a fiberwise dense open, with $Y^\flat\to S$ proper and smooth. Thus $\xi$ normalizes each geometric fiber, and $y_*(\xi_*\mathcal O_{Y^\flat}/\mathcal O_Y)$ is locally free on $S$ (Ngô 5.1.2).
 
@@ -178,7 +182,7 @@ This is an equivalence on geometric points over $\mathcal A^\heartsuit$ and a ho
 
 ## 6. Outlook
 
-On the anisotropic open the quotient of $X_*$ is finite. The next talk uses its characters to split the Hitchin direct image and identifies the locus carrying each character. See [[Geometric stabilization]].
+In the support theorem, $\delta_a$ supplies a dimension to compare with the codimension of a locus. The monodromy pair tells us which characters of the Picard component group can occur there. On the anisotropic open these character groups are finite, and the next talk uses them to split the Hitchin direct image. See [[Geometric stabilization]].
 
 ## References
 

@@ -38,7 +38,7 @@ The regular centralizer bounds the automorphism group by $T^{W_{\widetilde a}}$.
 
 *Figure 1. Picard actions on the nested opens and the marked anisotropic base.*
 
-Restriction to the anisotropic open gives a proper map. Pullback to the marked base gives a fixed lattice acting through a sheaf of finite groups.
+For $GL_n$, the degree of a line bundle on a smooth spectral curve already gives infinitely many Picard components. Anisotropy is the condition that monodromy leaves no such free degree direction. After marking, we can apply finite-group character theory to the component groups.
 
 ## 2. The character decomposition
 
@@ -58,6 +58,8 @@ $$
 $$
 
 Pull back to $\widetilde{\mathcal A}^{\mathrm{ani}}=\widetilde{\mathcal A}\times_{\mathcal A}\mathcal A^{\mathrm{ani}}$. By the homotopy lemma, the Picard action on perverse cohomology factors through $\pi_0(\widetilde{\mathcal P}^{\mathrm{ani}})$. The marking gives a surjection from $X_*$ to this sheaf, so each $\kappa\in\widehat T$ specifies an eigensummand.
+
+This is the cohomological version of the Fourier expansion in [[Endoscopy]]. The trace on an eigensummand picks out the corresponding character-weighted contribution to the count.
 
 **Proposition 2.1** (Ngô 6.2.3–6.2.6). Put $K_G^n={}^pH^n(R\widetilde f^{\mathrm{ani}}_*\Lambda)$. Then
 $$
@@ -117,6 +119,8 @@ For the datum so obtained, $W_{\widetilde a}$ lands in the preimage of its graph
 
 **Example 3.3** ($SL_2$). Take $\kappa=-1\in\widehat T$ for $\widehat G=PGL_2$. The Weyl involution fixes $\kappa$, and $\widehat H$ is a torus, so $W_H=1$. A nontrivial unramified double cover given by $L^{\otimes2}\simeq\mathcal O_{\bar X}$ gives an anisotropic norm-one torus $H$. For $s\in H^0(\bar X,D\otimes L)$ with simple zeros, the endoscopic image is $a=s^2$. Its cameral normalization is the double cover, with $W_{\widetilde a}=\mathbb Z/2$ and $I_{\widetilde a}=1$. The local crossings give $\delta_a=\deg D$, and both characters of $\mathbb Z/2$ occur in the component group dual. The corresponding endoscopic image has codimension $\deg D$.
 
+The nodes look just like those in Example 4.3 of [[Stratifications of the Hitchin base]]. Here the local square roots can change sign along loops, so the same local defects give a different global component group.
+
 ## 4. Geometric stabilization
 
 For a datum defined over $k$ with compatible rational markings, write $i_\xi=\widetilde\nu_\xi$ on the anisotropic open. On the marked domain, the $H$-anisotropic open is the inverse image of $\widetilde{\mathcal A}^{\mathrm{ani}}$, since $J_{H,a_H}$ and $J_a$ have the same generic torus. Set $K_{H,\mathrm{st}}^n={}^pH^n(R\widetilde f_{H,*}^{\mathrm{ani}}\Lambda)_1$, the summand fixed by the Picard component group for $H$.
@@ -130,7 +134,7 @@ $$
 \left(i_\xi^* K_{G,\kappa}^{n+2r_\xi}(r_\xi)\right)^{\mathrm{ss}}
 \simeq (K_{H,\mathrm{st}}^n)^{\mathrm{ss}}.
 $$
-The shift lowers the $G$ grading by $2r_\xi$ and the Tate twist lowers the weight by $2r_\xi$. This is the shift $[2r_\xi](r_\xi)$ on the $G$ side of 6.4.3. Over $\bar k$ the perverse sheaves are already semisimple, and pushing forward gives the formula drawn on the board:
+The Picard dimension formulas give $r_\xi=\dim\mathcal P_a-\dim\mathcal P_{H,a_H}$. An affine space of dimension $r_\xi$ contributes $\Lambda[-2r_\xi](-r_\xi)$ in compactly supported cohomology, which is the model for this degree and weight correction. Over $\bar k$ the perverse sheaves are already semisimple. Pushing forward gives the formula drawn on the board:
 $$
 K_{G,\kappa}^n\simeq
 \bigoplus_{\xi=(\kappa,\rho_\kappa^\bullet)}
