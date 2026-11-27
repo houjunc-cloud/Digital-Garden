@@ -50,7 +50,7 @@ $$
 $$
 Over $\mathcal O_v$, the regular orbit can split, with the splitting measured by cohomology over $k_v$.
 
-![[hitchin-fibration-fig1-local-orbits.svg]]
+![[../../attachments/hitchin-fibration-fig1-local-orbits.svg]]
 
 *Figure 1. The map from integral, generically regular semisimple elements to their characteristic polynomials.*
 
@@ -201,7 +201,7 @@ Y_a=V(P_a)\subset\operatorname{Tot}(D|_{\bar X}),\qquad p:Y_a\longrightarrow\bar
 $$
 The map $p$ is finite flat of degree $n$, with distinct eigenvalues over $U_a$. The board indexed coefficients by powers of $t$, and Ngô uses alternating signs.
 
-![[hitchin-fibration-fig2-spectral-curve.svg]]
+![[../../attachments/hitchin-fibration-fig2-spectral-curve.svg]]
 
 *Figure 2. The eigenvalue sheets in $\operatorname{Tot}(D)$ and their projection to the base curve.*
 
@@ -265,7 +265,7 @@ $$
 $$
 The cover is finite flat of degree $|W|$ and is a $W$-torsor over $U_a$. For $GL_n$ the projection to the first eigenvalue is the quotient $Y_a=\widetilde X_a/S_{n-1}$.
 
-![[hitchin-fibration-fig3-cameral-cover.svg]]
+![[../../attachments/hitchin-fibration-fig3-cameral-cover.svg]]
 
 *Figure 3. (a) The cameral pullback. (b) Transverse intersection with the discriminant. (c) Tangency.*
 

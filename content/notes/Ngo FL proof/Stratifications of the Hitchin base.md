@@ -48,7 +48,7 @@ $$
 $$
 Here $\mathfrak t$ and the action of $W$ are understood with the quasi-split descent on $\bar X$.
 
-![[hitchin-base-stratifications-fig1-normalization.svg]]
+![[../../attachments/hitchin-base-stratifications-fig1-normalization.svg]]
 
 *Figure 1. Normalization and local Picard defects.*
 
@@ -88,7 +88,7 @@ $$
 $$
 The coinvariants impose the monodromy relations. Passing to $\mathcal P_a$ adds the local relations from $\pi_0(J_{a,v})$, which on characters give the inertia condition.
 
-![[hitchin-base-stratifications-fig2-monodromy.svg]]
+![[../../attachments/hitchin-base-stratifications-fig2-monodromy.svg]]
 
 *Figure 2. The cameral marking, monodromy and inertia.*
 
@@ -96,7 +96,7 @@ The mark identifies the regular centralizer at $\infty$ with $T$. The fundamenta
 
 ## 3. Simultaneous normalization
 
-As an irreducible nodal curve smooths, its normalization has lower genus than the nearby smooth fibers. We stratify the base so that the normalizations fit into smooth families and their invariants can be followed together.
+The normalization of an irreducible nodal curve has lower genus than a nearby smooth fiber. Stratifying the base lets us follow the normalized curves in smooth families after the base change below.
 
 **Definition 3.1** (Ngô 5.1.1). For a proper flat family of reduced curves $y:Y\to S$, a simultaneous normalization is a proper birational map $\xi:Y^\flat\to Y$ that is an isomorphism over a fiberwise dense open, with $Y^\flat\to S$ proper and smooth. Thus $\xi$ normalizes each geometric fiber, and $y_*(\xi_*\mathcal O_{Y^\flat}/\mathcal O_Y)$ is locally free on $S$ (Ngô 5.1.2).
 
@@ -143,7 +143,7 @@ $$
 $$
 Here $\widetilde{\mathcal P}'$ and $\widetilde{\mathcal P}$ are pullbacks to the marked base. The small opens form an étale basis. Restriction to a smaller open with a larger monodromy pair is dual to the reverse inclusion of character groups. Over $\mathcal A^\diamondsuit_{\bar k}$ the component group is constant with value $(Z(\widehat G)^\Theta)^*$ (Ngô 5.7.5).
 
-![[hitchin-base-stratifications-fig3-etale-neighborhood.svg]]
+![[../../attachments/hitchin-base-stratifications-fig3-etale-neighborhood.svg]]
 
 *Figure 3. The board sketch of a marked stratum and the normalization over it.*
 

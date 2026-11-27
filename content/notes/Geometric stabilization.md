@@ -59,7 +59,7 @@ $$
 
 Pull back to $\widetilde{\mathcal A}^{\mathrm{ani}}=\widetilde{\mathcal A}\times_{\mathcal A}\mathcal A^{\mathrm{ani}}$. By the homotopy lemma, the Picard action on perverse cohomology factors through $\pi_0(\widetilde{\mathcal P}^{\mathrm{ani}})$. The marking gives a surjection from $X_*$ to this sheaf, so each $\kappa\in\widehat T$ specifies an eigensummand.
 
-This is the cohomological version of the Fourier expansion in [[Endoscopy]]. The trace on an eigensummand picks out the corresponding character-weighted contribution to the count.
+This is the cohomological version of the Fourier expansion in [[Endoscopy]]. When Frobenius preserves an eigensummand, its trace picks out the corresponding character-weighted contribution to the count.
 
 **Proposition 2.1** (Ngô 6.2.3–6.2.6). Put $K_G^n={}^pH^n(R\widetilde f^{\mathrm{ani}}_*\Lambda)$. Then
 $$
